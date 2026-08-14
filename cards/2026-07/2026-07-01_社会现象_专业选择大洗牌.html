@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-07-01 社会现象 · 专业选择大洗牌</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">社会现象 · 03 类</span>
+    <div class="date">2026-07-01 周三 · 热点认知卡</div>
+    <h1>专业选择大洗牌</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>2026 高考，「计算机」首次跌出高薪榜前十，法学、养老服务管理等文科专业分数线逆势上涨。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>想象你在朋友圈刷到一家爆火的网红奶茶店，全网都在推。你排队 2 小时终于喝上——发现店里已经没什么人了，隔壁新开的更火。</p>
+<p><strong>报考专业本质就是一次"提前 4 年买单"</strong>：你 2022 年冲进去的时候是网红顶流（计算机分数线飙到 650+），等 2026 年毕业时，店里已经挤不进去（岗位供给过剩，AI 又抢走一半初级活）。</p>
+<p>而当年被嫌弃"没前途"的隔壁小店（法学、微电子、自动化），4 年后反而成了新的顶流。</p>
+<p><strong>这就是市场周期最残忍的一面：热度和红利，永远错开一整个身位。</strong></p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3><span class="tag">① 供给视角</span></h3><p>全国 1200+ 所高校开了计算机专业，每年毕业几十万人，AI 又替代了 9/10 的基础编码技能——<strong>供给爆炸，需求萎缩，价格必崩</strong>。</p></div>
+      <div class="view"><h3><span class="tag">② 数据视角</span></h3><p>麦可思《2026 就业报告》显示，2025 届毕业生中，计算机专业分数线连续两年下滑的高校占比 45.9%，软件工程超 50%。而法学专业上涨院校占比 51%（连涨 + 波动涨），涨幅甚至超过工科整体。</p></div>
+      <div class="view"><h3><span class="tag">③ 认知视角</span></h3><p>家长和考生的报考逻辑，<strong>永远滞后于市场变化 4 年</strong>——用今天的红利数据，去预测 4 年后的岗位需求，本身就是刻舟求剑。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><p><strong>核心模型：周期错配（Cyclical Mismatch）</strong></p>
+<ul>
+<li>
+<p>一句话版：<strong>你决策时看到的热度，从来不是你收获时能拿到的红利。</strong></p>
+</li>
+<li>
+<p>生活类比：奶茶店排队时最火 → 你喝到时已过气；股市涨最猛时你追进 → 高位站岗；专业招生最热时报考 → 毕业时供给过剩。</p>
+</li>
+</ul>
+<p><strong>辅助模型：反脆弱护城河</strong></p>
+<ul>
+<li>
+<p>一句话版：<strong>能扛住波动的能力，才是长期资产。</strong></p>
+</li>
+<li>
+<p>应用：法学考公赛道涨得凶，本质不是"文科翻红"，而是<strong>"制度性岗位"能吸收 AI 冲击</strong>；养老、家政管理涨，是因为<strong>"人际服务 + 场景决策"AI 替代不了</strong>。同样是文科，泛管理、市场营销却被大量停招。</p>
+</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p><span class="kw">警报</span>：你转行数据分析，也在做一次"提前 4 年买单"式的决策。要问自己：</p>
+<ol>
+<li><strong>数据分析师这个岗位，会不会走计算机的老路？</strong> —— 3 年后 AI 编程工具能替代多少 SQL 取数、看板搭建？大概率能替代 70%+ 的初级活。</li>
+<li><strong>你的护城河在哪？</strong> —— 大概率<strong>不在"会用 Python"</strong>，而在<strong>"行政管理背景 + 业务理解 + 数据能力"</strong> 这个复合圈。别人只能给数字，你能给"数字背后的组织和流程问题"。</li>
+<li><span class="kw">《认知觉醒》里的元认知</span>：跳出"数据分析师现在很火"这个一阶信息，问自己"为什么火""还能火多久""我毕业时红利还在吗"——这才是二阶思考。</li>
+</ol>
+<p><span class="kw">具体动作</span>：学工具的同时，务必往「业务+数据」方向靠。招聘 JD 里高频出现的"沟通能力""业务理解""汇报能力"——这 3 项 AI 完全替代不了，也正好是你行政管理背景的优势。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p><strong>别用今天的热度，为 4 年后的自己买单。</strong></p>
+<p>选路径前先问一句："这个岗位 3 年后，AI 能干掉多少？我剩下的价值靠什么撑？" 能答清楚，就下注；答不清，先补护城河。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">周期错配</span>：市场热度和实际红利中间隔着一个时间差，你看到的"最火"往往是别人快撤退的信号。类比：网红店你排到位置时，它已经不火了。</p></div>
+      <div class="dict"><p><span class="term">反脆弱</span>：不是"不怕冲击"，而是"越有冲击越强"。类比：健身房里被杠铃压过的肌肉，长得比不训练时更结实。</p></div>
+      <div class="dict"><p><span class="term">护城河</span>：你的能力里，别人（尤其是 AI）短期学不会、也复制不了的那部分。类比：一家店的好口碑，能靠 3 年积累，但没法 3 天买来。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-07-06 商业经济 · 21家造假公司退市</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">商业经济 · 01 类</span>
+    <div class="date">2026-07-06 周一 · 热点认知卡</div>
+    <h1>21家造假公司退市</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>2024 年 7 月新"国九条"落地满 2 年，A股累计 21 家严重造假公司被强制退市，罚没 90.51 亿元，267 人被公诉。</p>
+<p><strong>关键反差</strong>：广道数字连续 <strong>7 年造假</strong>，虚增营收 <strong>14 亿元</strong>（占实际营收的 99%）——一家"半张财报都是假的"的公司，居然安稳待在市场上 7 年。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>你去二手车市场，一辆车看起来锃亮，卖家说"没出过事故、里程真实"。你信不过，就往低了压价。</p>
+<p>结果：<strong>真的好车主觉得亏，把好车牵走了</strong>；只有烂车主愿意用低价卖。市场里剩下的全是烂车，价格越压越低，最后没人敢来买——市场直接崩了。</p>
+<p>这就是 A 股过去的样子：造假成本几十万、造假收益几个亿，好公司老实做账反而被"造假老千"用虚假高业绩压估值。<strong>投资者不敢信任何一家的财报，好公司也被牵连</strong>。</p>
+<p>新"国九条"干的事：不是让每辆车都变好，而是<strong>把烂车主关起来+让他们赔钱</strong>。烂车主怕了→不敢再骗→市场里的好车才有人愿意认真看。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3><span class="tag">① 商业视角：造假的"死亡曲线"</span></h3><p>清越科技三年造假比例的走势最有意思：</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th>虚增利润占披露利润的比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td>21.72%（小尝甜头）</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>104.58%（真利润是负的，全靠编）</td>
+</tr>
+<tr>
+<td>2023H1</td>
+<td>145.10%（越编越离谱，收不了手）</td>
+</tr>
+</tbody>
+</table>
+<p>启示：造假<strong>几乎不可能只造一次</strong>——一旦第一年虚增，第二年必须在虚增基础上再虚增，否则同比就崩了。<strong>这是一条不归路</strong>。</p></div>
+      <div class="view"><h3><span class="tag">② 数据视角：造假留下的"数字指纹"</span></h3><p>监管部门这次靠的不是举报，是"<strong>监管大数据仓库 + 财务舞弊 AI 大模型</strong>"常态化扫描。造假数据通常有几个特征：</p>
+<ul>
+<li>应收账款增速远大于营收增速（东西卖了，但钱没收回来）</li>
+<li>毛利率异常高于同行（其他公司卖同样的东西赚 10%，你赚 40%？）</li>
+<li>现金流长期跟净利润背离（账面赚钱，兜里没钱）</li>
+</ul>
+<p><strong>这就是数据分析师的活</strong>——你未来要做的很多分析，本质就是"用数据交叉验证数据"。</p></div>
+      <div class="view"><h3><span class="tag">③ 制度视角：为什么必须"退市不免责"</span></h3><p>过去的漏洞：造假→东窗事发→退市→大家散伙，责任人换个马甲重来。这次是：<strong>行政罚（90 亿）+ 刑事罚（267 人公诉）+ 民事赔（金通灵案 4.3 万投资者获赔 7.7 亿）</strong>——三道锁一起上。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>主模型：柠檬市场（信息不对称）</h4><ul>
+<li><strong>一句话</strong>：当买家分不清好东西和烂东西时，最终市场上只会剩下烂东西。</li>
+<li><strong>提出者</strong>：经济学家 Akerlof，凭这个理论拿了 2001 年诺贝尔奖。</li>
+<li><strong>生活类比</strong>：二手车市场（前面讲过）、菜市场没有明码标价时你只敢往低了砍价、招聘时 HR 看不出简历真假只能靠学历/背景硬筛。</li>
+<li><strong>A 股应用</strong>：造假横行时，投资者只敢给所有公司都打折估值，好公司被误伤；打击造假=帮好公司"发信号"=市场重建信任。</li>
+</ul></div>
+      <div class="model"><h4>副模型：信号与噪音（Signal vs Noise）</h4><ul>
+<li><strong>一句话</strong>：真正有价值的信息只占 5%，剩下 95% 是干扰你判断的"噪音"。</li>
+<li><strong>生活类比</strong>：抖音刷 100 条视频，只有 3-5 条你事后还记得——其他都是噪音。</li>
+<li><strong>数据分析场景</strong>：你未来做用户行为分析，"用户点击了 100 次"是数据，但"哪 3 次点击预示了他会付费"才是信号。识别信号=数据分析师的核心能力。</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p>你转行数据分析师，本质是干<strong>三件事</strong>，全都跟这次退市事件底层同构：</p>
+<ol>
+<li><strong>区分真数据和假数据</strong>——广道数字虚增 99% 的营收，就是"看起来 100 分、实际 1 分"的假数据。你未来接手一份业务表，第一件事永远是"这数据能信吗？"（做数据清洗和异常检测）</li>
+<li><strong>在噪音中找信号</strong>——224 家 ST 股每天在跳，但真正预示"要退市"的信号只有几个（应收/营收背离、审计非标、现金流恶化）。你要练的就是"从看似繁杂的指标里，挑出真正说明问题的那 2-3 个"。</li>
+<li><strong>用交叉验证防止被骗</strong>——单看营收会被骗，配上现金流就露馅了。数据分析里叫"三角验证（Triangulation）"，两个指标互相印证，才算数。</li>
+</ol>
+<p><span class="kw">《底层逻辑》里刘润讲过一句话</span>：<em>"信任的本质，是可预测。"</em> 造假破坏的就是"可预测性"——今年财报和明年财报可能完全是两个人。所以监管出清造假=帮市场恢复"可预测"=让数据能被信任。<strong>这也是你未来做数据的价值所在</strong>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p><strong>下周 WPS 备考期间，做一个 5 分钟小练习</strong>：</p>
+<p>打开一家你熟悉品牌（比如老干妈、蜜雪冰城）的近 3 年财报（东方财富/雪球都能查），只看三个指标：</p>
+<ul>
+<li>营业收入增速</li>
+<li>应收账款增速</li>
+<li>经营性现金流</li>
+</ul>
+<p><strong>如果"应收账款增速 &gt; 营业收入增速" 且 "现金流远低于净利润"</strong>——不管这家公司故事讲得多好，都存疑。</p>
+<p>（不是让你选股，是训练你"用数据识别数据"的直觉，这是数据分析师最基础的手感。）</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">柠檬市场（Market for Lemons）</span>：Lemon 在美国俚语指"次品车"。经济学里指"买家因为分不清好坏，最终市场只剩烂货"的现象。反面案例：淘宝靠"评分+退货险"降低了柠檬市场程度。</p></div>
+      <div class="dict"><p><span class="term">重大违法强制退市</span>：不是简单的"业绩差就退"，而是"造假 or 欺诈发行"这类<strong>性质恶劣</strong>的行为触发，公司不管账面是否赚钱都必须走人。</p></div>
+      <div class="dict"><p><span class="term">退市不免责</span>：过去公司退市就"翻篇了"；现在退市之后还要继续罚款（行政）、坐牢（刑事）、赔钱（民事），三道锁一起上。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

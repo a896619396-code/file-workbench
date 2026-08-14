@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-07-16 心理认知 · 姆巴佩心态崩了 归因错位</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">心理认知 · 04 类</span>
+    <div class="date">2026-07-16 周四 · 热点认知卡</div>
+    <h1>姆巴佩心态崩了 归因错位</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>7-15 凌晨美加墨世界杯半决赛，法国 0-2 输西班牙。第 86 分钟落后两球时，姆巴佩故意冲撞西班牙门将染黄，「姆巴佩心态崩了」冲上热搜第一。</p>
+<p>但把整场数据摊开就会发现另一个故事：</p>
+<ul>
+<li>法国全场控球率 <strong>38%</strong>，西班牙 <strong>91%</strong> 的传球成功率碾压</li>
+<li>姆巴佩 3 射门 <strong>0 射正</strong>、6 次过人只成 1 次、只摸到 28 次球（远低于平均）</li>
+<li>法国全队 10 射 0 射正，预期进球 0.3，是 <strong>1994 年以来世界杯半决赛最低</strong></li>
+</ul>
+<p>姆巴佩赛后自己说得比谁都清楚：「战术和技术都没达标，我们配不上决赛」。<strong>那一撞不是崩溃的起点，是 90 分钟压制的终点</strong>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>想象你家孩子这次期末考砸了。你问怎么回事，孩子红着眼说「我最后一道大题太紧张写不下去」。你叹口气：「哎，就是心态不行」。</p>
+<p>但翻开卷子看：前 80 分钟的选择填空错了一半，说明基础没打牢；同桌换了、老师上个月换了、这学期难度上了一个台阶。最后那道大题的失控，只是<strong>前面所有裂缝汇总到最后一刻的爆点</strong>，不是原因。</p>
+<p>「心态崩了」是最省事的解释——一句话就能收工。真原因藏在数据里，得花时间翻。</p>
+<p>大脑天生偷懒，专挑省事的那条路走。这就是今天要拆的两个心理机制。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角一 · 心理学：把"环境的问题"错记成"人的问题"</h3>
+<p>社会心理学有个词叫「基本归因错误」——<strong>看别人的时候，我们习惯把行为归到人格/心态上，忽略当时的环境</strong>。</p>
+<p>轮到自己呢？完全反过来。自己失败一定是「今天路上堵车/客户临时变卦/系统卡了」，别人失败就是「他抗压不行」。同一件事，视角一换，归因就换一套标准。</p></div>
+      <div class="view"><h3>视角二 · 传播学：一个画面吃掉九十分钟</h3>
+<p>赛场上真正决定胜负的是 90 分钟的传球、跑位、控球率——但这些是<strong>数据</strong>，抽象、无聊、要读。</p>
+<p>姆巴佩冲撞门将那一下呢？是<strong>画面</strong>，3 秒钟，有表情、有动作、有情绪。摄像机一切给他，全网表情包立刻出来。</p>
+<p><strong>画面永远赢数据</strong>。这就是「显著性偏差」——注意力被最刺眼的那一刻锁定，剩下 99% 的信息集体隐身。媒体标题党一直吃这口饭。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>模型一：基本归因错误（Fundamental Attribution Error）</h4><ul>
+<li><strong>一句话版本</strong>：看别人失败，我们爱怪他"人不行"；看自己失败，我们爱怪"运气差"。</li>
+<li><strong>生活类比</strong>：同事上班迟到 → 你心里"这人真散漫"。你自己迟到 → "地铁太挤又碰上下雨"。同一件事，两套解释。</li>
+</ul></div>
+      <div class="model"><h4>模型二：显著性偏差（Salience Bias）</h4><ul>
+<li><strong>一句话版本</strong>：刺眼的画面永远盖过枯燥的数据。</li>
+<li><strong>生活类比</strong>：小区一年发生 1 起入室盗窃，大家连夜换门锁；但小区里每天真正伤人的其实是电动车乱骑——这个概率高 100 倍，却没人当回事。<strong>因为电动车没画面感，盗窃有</strong>。</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p>眠总下一步的方向就是<strong>数据分析师</strong>，核心工作之一就是「归因分析」——业务方问"这周 GMV 为什么跌了"，一半人期待你说"运营偷懒了"（个人归因，省事、能甩锅），一半人真的想知道是季节、品类结构、竞品促销、还是渠道抽风（结构归因，要花时间挖）。</p>
+<p>分析师值不值钱，就看能不能顶住"给我一个简单的人的解释"这种压力，把结构因素挖出来。</p>
+<p>再联动你在读的《认知觉醒》——周岭讲的「元认知」，就是<strong>在下判断之前，先问自己一句：我这个结论是数据推出来的，还是画面/情绪推出来的？</strong></p>
+<p>眠总每天剪 5 条视频也一样。哪条数据爆了 → 别急着归因"我今天状态好"或者"选题对了"，先看看是不是刚好卡在算法推荐窗口、时段红利、或者用了某个热门 BGM 蹭上流量。<strong>归因错了，下条视频复制的就是错误路径</strong>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p><strong>下次听到「XX 心态崩了」「XX 就是不行」这种一句话结论时，问自己三个问题：</strong></p>
+<ol>
+<li>说话的人是拿数据说话，还是拿画面说话？</li>
+<li>如果换个人在同样处境下，大概率会不会做出同样的选择？</li>
+<li>这个结论如果是错的，会让谁受益？（推卸责任的人、抢流量的媒体、卖焦虑的博主）</li>
+</ol>
+<p>三个问题答完，「心态说」通常已经站不住脚了。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">归因（Attribution）</span>：判断一件事「为什么发生」的过程。分两种——内部归因（怪人）和外部归因（怪环境）。</p></div>
+      <div class="dict"><p><span class="term">元认知（Metacognition）</span>：<strong>"对自己思考过程的思考"</strong>。简单说就是：你在想事情的时候，还能同时留一只眼盯着"我这么想对不对"。</p></div>
+      <div class="dict"><p><span class="term">预期进球（xG, Expected Goals）</span>：足球专业数据，把一次射门按位置、角度、防守情况打分，0-1 分。全场加起来就是「按这场机会质量算，你该进几个球」。法国 xG 只有 0.3，说明他们连一次真正靠谱的机会都没打出来——<strong>这是「他们本来就赢不了」的硬证据</strong>。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

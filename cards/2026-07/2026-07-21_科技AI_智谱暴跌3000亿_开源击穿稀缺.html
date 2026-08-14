@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-07-21 科技AI · 智谱暴跌3000亿 开源击穿稀缺</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">科技AI · 02 类</span>
+    <div class="date">2026-07-21 周二 · 热点认知卡</div>
+    <h1>智谱暴跌3000亿 开源击穿稀缺</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>Kimi K3（2.8万亿参数）开源发布登顶全球编程榜，智谱两天暴跌近48%、蒸发超3000亿港元。314亿配售资金一周浮亏44%。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>想象小区门口只有一家奶茶店生意火爆，每天排长队、涨价30%还有人抢——因为"只有这一家"。突然隔壁也开了一家，而且免费试喝、味道还更好。第一天排队就少了一半，一周后没人再愿意为"排队"付溢价了。</p>
+<p>智谱就是那家"唯一奶茶店"——GLM模型强、限量抢购、涨价83%还有开发者蹲点抢。Kimi K3开源 = 隔壁开了一家免费还更好的店。<strong>"稀缺"一旦不存在，围绕稀缺建起来的所有溢价，一夜归零。</strong></p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3><span class="tag">🏗️ 商业视角：</span></h3><p>智谱的万亿估值建立在两个前提上——"大模型第一股"的稀缺 + ARR（年度经常性收入，类似一年的订阅总收入）15倍增长。K3一开源，两个前提同时松动：港股马上要有第三家大模型公司（月之暗面要上市），"唯一性"没了；开源模型免费部署，企业客户可能迁移，ARR增速存疑。</p></div>
+      <div class="view"><h3><span class="tag">💻 技术视角：</span></h3><p>K3用896个"专家"里的16个就干完了活（MoE架构，类似一栋50层大楼每次只用3层），算力效率比上一代提升2.5倍。这意味着"堆算力=出好模型"的铁律出现了裂痕——架构创新可能比砸钱买GPU更关键。</p></div>
+      <div class="view"><h3><span class="tag">📉 资本视角：</span></h3><p>全球芯片股72小时蒸发4700亿美元，费城半导体指数跌入技术性熊市。不是K3有多强，是市场突然意识到：<strong>如果开源能做出顶级模型，整个AI产业链的定价逻辑都要重写。</strong></p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><p><strong>① 稀缺性溢价（第2次出现）</strong></p>
+<ul>
+<li>一句话：越少越值钱，但一旦不少了，溢价最先崩。</li>
+<li>生活类比：限量版球鞋全城就一双，炒到1万；品牌方突然宣布不限量发售，二手价当天腰斩。</li>
+</ul>
+<p><strong>② 竞争护城河蒸发</strong> 🆕
+- 一句话：你以为的壁垒，可能只是对手还没追上来。
+- 生活类比：你学会了做蛋糕方圆十里最好吃——直到隔壁新搬来一个蓝带毕业的。你的"护城河"不是真的深，只是别人还没开始挖。
+- 核心识别：当一个优势建立在"时间差"而非"结构性差异"上时，它不是护城河，是临时领先。</p></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p>你正在学WPS二级、走数据分析转行路。这件事对你的启示很直接：</p>
+<ul>
+<li><strong>"我会Excel/SQL"也是一种稀缺溢价</strong>——现在够用所以值钱，但当AI能直接写代码、做分析时，纯工具能力就是智谱的"闭源模型"，迟早被开源打穿</li>
+<li><strong>真正的护城河 = 业务理解 + 沟通汇报 + 跨领域迁移</strong>——这些是"结构性差异"，不是"时间差"。AI能帮你跑数据，但帮不了你理解老板到底想解决什么问题</li>
+<li>你正在读《底层逻辑》——刘润说"所有能被标准化的能力，最终都会被更便宜的方案替代"，智谱今天就是活生生的例子</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p>学任何工具时，多问一句：<strong>"如果这个工具免费且人人都能用，我还剩什么？"</strong> 剩下的那个东西，才是你真正该投入时间的方向。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><table>
+<thead>
+<tr>
+<th>术语</th>
+<th>人话定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARR</td>
+<td>年度经常性收入（Annual Recurring Revenue）——按现在的合同，未来一年能稳收到的钱。类似健身房年卡续费总额，不是卖饮料零食的钱</td>
+</tr>
+<tr>
+<td>开源权重</td>
+<td>把AI模型的"配方"全部公开，谁都可以免费下载、自己部署、修改。相当于把可口可乐配方贴在了公告栏</td>
+</tr>
+<tr>
+<td>MoE架构</td>
+<td>混合专家模型——模型很大但每次只用一小部分参数干活，类似医院有50个科室但你看病只挂1个号</td>
+</tr>
+</tbody>
+</table></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

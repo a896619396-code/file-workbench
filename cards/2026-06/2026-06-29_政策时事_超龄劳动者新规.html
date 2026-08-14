@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-06-29 政策时事 · 超龄劳动者新规</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">政策时事 · 08 类</span>
+    <div class="date">2026-06-29 周一 · 热点认知卡</div>
+    <h1>超龄劳动者新规</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p><strong>5 部门联合发新规：超过法定退休年龄还在打工的人（全国 6000+ 万），从 7 月 1 日起也能享受工伤保险、最低工资保护、加班费——以前他们被劳动法当"局外人"。</strong></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>想象小区门口有一栋"保障楼"，住进去的人可以享受暖气、电梯、保安服务。规矩是：<strong>得签正式购房合同</strong>才能住进去。</p>
+<ul>
+<li>老张 65 岁了，没有合同——他是来给小区做保洁的，每月赚 2000 块补贴养老金，住不进保障楼，下雪天暖气坏了没人管。</li>
+<li>老李 70 岁了，没有合同——他是被原单位返聘的退休专家，月薪 3 万，但他真摔倒了医院也只能按"自付"算账。</li>
+<li><strong>新规干的事</strong>：在保障楼旁边加盖一栋"老年楼"，没合同也能住进去，工伤、工资底线一样保护。<strong>但住的标准要重新规划</strong>——比如不让大爷大妈通宵值守（避免出事）。</li>
+</ul>
+<p>这就是这次政策的核心：<strong>不强行改老制度（劳动法），而是单独开一栋"老年楼"专门兜底</strong>。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3><span class="tag">🌐 社会视角（数字反差很大）</span></h3><p>全国 60 岁以上老人 <strong>3.23 亿</strong>，其中 <strong>19% 还在工作</strong>——也就是约 <strong>6144 万人</strong>。农村比例更高（24.5%）。但这群人在过去 40 多年里，被劳动法明确划出去：<strong>只要过了退休年龄，就不是"劳动者"了，是"劳务关系"</strong>。摔伤了？企业不用赔。被拖欠工资？不归劳动监察管，只能打民事官司。</p></div>
+      <div class="view"><h3><span class="tag">💼 商业视角（企业老板的算盘要变了）</span></h3><p>以前请退休大爷做保安/保洁有个"暗中红利"：<strong>不用交社保不用买工伤险</strong>，出了事赔个几万块就完事。7 月 1 日后这条捷径堵死——必须给老人单独参保工伤险（企业全额出钱），还得签书面协议、按最低工资付薪。短期是企业成本上升，长期会倒逼"<strong>银发用工合规化</strong>"，催生一批新岗位（专门做合规外包的服务公司）。</p></div>
+      <div class="view"><h3><span class="tag">📊 数据视角（重点·跟你转行有关）</span></h3><p>"6144 万在岗老人"这个数字本身没问题，但<strong>藏着两群完全不同的人</strong>：</p>
+<ul>
+<li>一群是<strong>返聘技术专家</strong>（医院老主任、高校老教授、企业元老），月薪 3 万起</li>
+<li>一群是<strong>为温饱打工的基层老人</strong>（保安/保洁/家政），月薪 2000 出头，靠这个补贴 1000 多的退休金</li>
+</ul>
+<p>新闻评论区吵翻天——支持的说"我退休金 1300 不打工喝粥都不够"，反对的说"返聘的高级岗位应该让给年轻人"。<strong>两边都对，因为他们在说完全不同的两群人</strong>。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>主模型：平均数陷阱（Average Trap）</h4><blockquote>
+<p><strong>一句话版本：一个标签底下，可能塞着完全不同的两群人。只看"平均"，决策一定错。</strong></p>
+</blockquote>
+<p><strong>生活例子帮你记住：</strong></p>
+<ul>
+<li>
+<p>说"95 后月薪 1 万" → 其实是「互联网大厂的 2.5 万」+「县城便利店的 4000」平均出来的，<strong>没有任何一个真实 95 后是 1 万</strong></p>
+</li>
+<li>
+<p>说"中国家庭存款 13 万" → 其实是「1% 家庭存几百万」+「大多数家庭存几万」平均出来的</p>
+</li>
+<li>说"超龄劳动者" → <strong>其实是高薪返聘专家 + 为温饱打工的老人</strong>，两群人需要的政策完全不同</li>
+</ul>
+<p><strong>规律</strong>：<strong>做决策的人盯着"平均数"，被决策的人活在"分布"里</strong>。</p></div>
+      <div class="model"><h4>辅模型：制度真空区（Institutional Void）</h4><blockquote>
+<p><strong>一句话版本：任何制度的边界处，都有一群被"漏掉"的人。社会进步，就是不断给这些漏洞打补丁。</strong></p>
+</blockquote>
+<p><strong>生活类比</strong>：游戏刚出第一版规则总有 bug——有人发现"穿过墙缝可以卡进 BOSS 房白拿装备"。开发者要么改墙（重写劳动法，工程量巨大），要么发个"补丁包"（这次的暂行规定）专门处理。这次政策选的是<strong>补丁路线</strong>。</p></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p>这条新闻是数据分析师的<strong>必修课</strong>，比上次的"银行刷数据"更隐蔽：</p>
+<table>
+<thead>
+<tr>
+<th>报表里</th>
+<th>真实分布可能是</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>超龄就业人口 6144 万</td>
+<td>高薪返聘 ≈ 5%，温饱打工 ≈ 95%</td>
+</tr>
+<tr>
+<td>用户人均消费 200 元</td>
+<td>1% 重度用户拉高的，大多数用户 &lt; 50 元</td>
+</tr>
+</tbody>
+</table>
+<p><span class="kw">业务型数据分析师的核心能力之一</span>：<strong>看到"平均数"就先拆"分布"</strong>。<br />
+- 拿到一个 KPI 数字 → 先问「这是中位数还是平均数？」<br />
+- 看到"用户增长 30%" → 先问「是哪一群用户？高活 / 沉睡 / 新增？」</p>
+<p>你<strong>专升本读的行政管理 + HR 背景</strong>反而是优势：你天生对"群体的真实结构"敏感（HR 的 OD 视角天生就要看人群分层）。技术党算均值很快，<strong>但能识别"被均值掩盖的群体"才是真本事</strong>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p><strong>今天就能用的"数据分析三问·进阶版"</strong>（接昨天的"数据三问"继续抄）：<br />
+1. <strong>这是平均数还是中位数？</strong>（差距越大，平均数越骗人）<br />
+2. <strong>这群人能不能再切一刀？</strong>（再细分一层往往能看到真实结构）<br />
+3. <strong>如果只看 Top 5% 和 Bottom 5%，结论会反转吗？</strong>（反转了说明全靠极端值在拉）</p>
+<blockquote>
+<p>数据不会骗人，<strong>平均数会</strong>。</p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">超龄劳动者</span>：过了法定退休年龄（女 50/55，男 60）还在工作的人。我国 6144 万。</p></div>
+      <div class="dict"><p><span class="term">暂行规定</span>：政策正式立法前的"过渡版"，效力比"法律"低一级，比"通知"高一级，可以理解为"试运行的法律补丁包"。</p></div>
+      <div class="dict"><p><span class="term">平均数陷阱</span>：用一个平均数概括一群差异极大的人。"中国家庭年均收入 13 万"——可能 1 万亿户家庭年收入 5 万，少数家庭年入百万被平均上去了。看到平均数，先问分布。</p></div>
+      <div class="dict"><p><span class="term">工伤保险</span>：员工因工作受伤/职业病，由用人单位（不是个人）出钱买的保险。受伤后医疗、停工工资、伤残补助都从这里出，企业不用单独再赔。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

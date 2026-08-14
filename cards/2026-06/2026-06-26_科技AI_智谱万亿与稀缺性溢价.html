@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-06-26 科技AI · 智谱万亿与稀缺性溢价</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">科技AI · 02 类</span>
+    <div class="date">2026-06-26 周五 · 热点认知卡</div>
+    <h1>智谱万亿与稀缺性溢价</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p><strong>国产 AI 公司"智谱"上市 5 个月，股价从 116 元涨到 2980 元（涨了 24 倍），公司市值冲破 1 万亿港元——但同期它一年亏了 47 亿。</strong></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>想象小区里有一家 100 平米的小店，老板<strong>只卖一双限量版球鞋</strong>，开价 10 万。</p>
+<ul>
+<li>整个小区都知道这双鞋"未来可能值 100 万"（<strong>故事够性感</strong>）</li>
+<li>但<strong>全店就这一双</strong>（<strong>供应特别少</strong>）</li>
+<li>隔壁小区刚把官方球鞋店赶走了，只能来这家买（<strong>没有替代品</strong>）</li>
+<li>网红博主每天直播喊"快去抢"（<strong>情绪炒起来了</strong>）</li>
+</ul>
+<p>结果：<strong>每天都有人加价转手</strong>，10 万 → 30 万 → 80 万。但鞋的真实成本只有 1000 块，老板自己都没想到能炒这么高。</p>
+<p><strong>智谱的股价就是这双"鞋"</strong>：故事是真的（AI 是未来）、稀缺是真的（能买到的股票只占 2.67%）、情绪是真的（美国封了 Claude、马斯克隔空喊话）。三个真东西叠加，产生了一个虚的价格。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3><span class="tag">💰 供需视角（最直接的原因）</span></h3><p>智谱上市的股票，真正能交易的只有总盘子的 <strong>2.67%</strong>（行话叫"流通盘小"）。
+意思是：<strong>大部分股票被原始股东锁着不能卖，市场上能买到的特别少</strong>。
+就像那双限量鞋——不是大家有钱就能买，而是"能抢到才算赢"。少量资金就能把价格推得很高。</p></div>
+      <div class="view"><h3><span class="tag">📊 估值视角（重点·跟你转行有关）</span></h3><p>怎么判断一家公司股价"贵不贵"？通常用一个比值：</p>
+<table>
+<thead>
+<tr>
+<th>看法</th>
+<th>智谱给出的答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按盈利看</td>
+<td>亏的，没法算</td>
+</tr>
+<tr>
+<td>按营收看</td>
+<td>卖 1 块钱业务，市场给 1000 块估值（正常公司是 5-20 块）</td>
+</tr>
+<tr>
+<td>按"故事"看</td>
+<td>"它将来会成为中国的 ChatGPT" → 万亿合理</td>
+</tr>
+</tbody>
+</table>
+<p><strong>同一家公司，换一个评价标准，结论就完全反过来</strong>。这就是为什么券商研报给的目标价才 912 港元——<strong>不到现价的 40%</strong>。</p></div>
+      <div class="view"><h3><span class="tag">🧬 真实需求视角（不全是泡沫）</span></h3><p>公司本身不是骗子：API 涨价 83% 后调用量还涨了 4 倍，国内 Top10 互联网公司有 9 家在用它的模型。<strong>技术是真的，商业化是真的，只是市值被吹得离谱</strong>——这两件事要分开看。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>凯恩斯选美悖论</h4><blockquote>
+<p><strong>一句话版本：股市不是看"谁最好"，而是看"大多数人会觉得谁最好"。</strong></p>
+</blockquote>
+<p><strong>生活例子帮你记住：</strong>
+报纸办"最美面孔"评选，谁投票多就能拿奖。<strong>你会投谁？</strong></p>
+<ul>
+<li>投你自己最喜欢的脸 → 大概率输（个人口味不代表大众）</li>
+<li>投<strong>你猜大家都会觉得漂亮的那张</strong> → 才有可能赢</li>
+</ul>
+<p>凯恩斯说：股市就是这种游戏。
+- 你不是在判断"智谱真值多少钱"
+- 你是在判断"<strong>别人会不会觉得它值这么多，愿意接你的盘</strong>"</p>
+<p><strong>只要"大家都觉得别人会接盘"，泡沫就能持续</strong>。一旦有一天大家开始怀疑——就崩。</p></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p>这是评价框架"打架"的教科书案例。同一个数据，换个指标就换个结论：</p>
+<ul>
+<li>用"利润"看 → 智谱不值钱</li>
+<li>用"营收增速"看 → 智谱值得期待</li>
+<li>用"对标 ChatGPT"看 → 智谱被低估了</li>
+</ul>
+<p><strong>业务型数据分析师真正的本事</strong>，不是 SQL 跑得快，而是<strong>意识到「换一个评价标准 = 换一个故事」</strong>。</p>
+<p>未来你给老板做企业分析报告时，最关键的不是"数字多大"，而是 <strong>"你为什么选这个指标"</strong>。这正是你 HR + 行政管理背景的优势——<strong>你天然懂"不同立场的人会用不同标准评价同一件事"</strong>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p><strong>做任何"暴涨/暴跌"分析前，先问 3 个问题：</strong><br />
+1. 现在市场在用<strong>哪个指标</strong>给这家公司估值？<br />
+2. 这个指标<strong>什么时候会被换掉</strong>？（如：禁令解除、有新对手出来、流通盘变大）<br />
+3. <strong>换回常规指标后，结论会反转吗？</strong></p>
+<blockquote>
+<p>数据不会骗人，<strong>但评价数据的"那把尺子"会</strong>。</p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">流通盘</span>：一家上市公司里，<strong>真正能在市场上交易的股票占比</strong>。流通盘越小，越容易被少量资金炒高。智谱的 2.67% 是极端值。</p></div>
+      <div class="dict"><p><span class="term">PS 估值（市销率）</span>：拿"公司市值 ÷ 一年营收"。比如智谱市值 1 万亿、一年营收 10 亿，PS 就是 1000 倍。正常公司是 5-20 倍。<strong>比值越大越贵</strong>。</p></div>
+      <div class="dict"><p><span class="term">稀缺性溢价</span>：因为"少"而被多卖的那部分价格。比如限量球鞋、唯一的国产 AI 上市公司。<strong>好处：估值最高；坏处：一旦不再稀缺，最先崩</strong>。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

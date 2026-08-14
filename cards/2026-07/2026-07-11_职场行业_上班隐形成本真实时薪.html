@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-07-11 职场行业 · 上班隐形成本真实时薪</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">职场行业 · 06 类</span>
+    <div class="date">2026-07-11 周六 · 热点认知卡</div>
+    <h1>上班隐形成本真实时薪</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>微博热搜「上班隐形成本真的很高」+ 知乎问题同题双上榜。数据显示：月薪1万，到手8000，扣通勤/外卖/咖啡后实际到手6350，除以「工作+通勤」220小时，真实时薪≈29元；月薪3000者名义时薪17元，扣完隐性成本跌到11.4元，比外卖员低。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>健身房年卡3000元，看着一天不到10元很划算。但你去一次要算：打车15元一趟、来去2小时、去之前买了运动服500元、办卡时被推销了8000元私教课、每月再补几瓶蛋白粉。一年花下来1.2万，真实"单次使用价"翻了4倍。</p>
+<p><strong>上班这份"年卡"也一样</strong>——月薪是"卡面价"，通勤、外卖、社交、情绪回血、形象维护，全都要从这张卡里悄悄扣。你看到的是数字，扣的是命。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3><span class="tag">💰 财务账</span></h3><p>真实时薪 = （月薪 − 上班相关全部支出）÷（工作 + 通勤 + 加班 + 情绪恢复时长）。名义分子被砍、名义分母被拉长，商自然崩塌。</p>
+<p><strong>⏱ 时间账</strong>：全国单程通勤超45分钟的打工人有1400万，每年在路上528小时 = 无偿加班66个工作日。跨城通勤者月均132小时耗在路上，等于白干半个月。</p>
+<p><strong>🧠 心理账</strong>：情绪回血消费（周末大餐/按摩/旅行）+ 职场社交（份子钱/拼单奶茶）+ 形象维护（通勤装/化妆品）三项叠加，构成"越累越花、越花越累"的闭环——赚的钱正在为"能继续赚钱"续命。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>名义视角</th>
+<th>全成本视角</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月薪1万岗位</td>
+<td>时薪≈57元（1万÷176小时）</td>
+<td>真实时薪≈29元（扣净后÷220小时）</td>
+</tr>
+<tr>
+<td>通勤时间</td>
+<td>"不算工作"</td>
+<td>每天2小时=每年66天无偿加班</td>
+</tr>
+</tbody>
+</table></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><p><strong>1. 有效时薪 EHW（Effective Hourly Wage）</strong>——真实时薪的核心公式，最早由《每周工作4小时》提出。<strong>关键动作</strong>：把所有为工作让渡的时间都算进分母、所有为工作花掉的钱都从分子里扣掉，剩下的才是"你实际用命换到的每小时收入"。</p>
+<p><strong>2. 总拥有成本 TCO</strong>（7-9 情绪劳动卡出现过·累计第2次）——<strong>售价只是首付，维护才是月供</strong>。一份工作的成本 = 打卡时间 + 通勤 + 情绪损耗 + 形象采购 + 健康折旧，全生命周期加起来才是真账单。</p></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">对眠总的直接映射</span>：当前每天剪辑5条视频、8小时强度满额，若再叠加通勤和情绪恢复，真实"日投入时长"可能已经11-12小时。用EHW一算，眠总能自己判断这份实习的"真实性价比"到底几何。</li>
+<li><span class="kw">数据分析视角</span>：这就是典型的"数据清洗"训练——账面数字（月薪）是<strong>脏数据</strong>，加上隐性支出和时间成本的<strong>清洗</strong>，才得到干净的决策依据。未来做业务分析时，"名义指标 vs 全成本指标"是必修的思维切换。</li>
+<li><span class="kw">与《认知觉醒》呼应</span>：书里讲"元认知"是审视自己想法的能力。EHW 就是给"我在挣钱"这个想法做的一次元认知审视——账面在挣，元账未必。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p>今天花15分钟做一张「个人EHW速算表」（Excel两列就够）：</p>
+<ul>
+<li><strong>A列</strong>：本月工资到手 / 通勤费 / 外卖 / 咖啡 / 形象维护 / 社交摊派 / 情绪回血消费</li>
+<li><strong>B列</strong>：本月工时 / 通勤时长 / 加班时长 / 情绪恢复时长（预估）</li>
+</ul>
+<p>算一次真实时薪。以后评估任何岗位、任何副业、任何"看着挺赚"的机会，先算EHW再决定。<strong>账不算清，努力就是盲目。</strong></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">有效时薪 EHW</span>：把所有为工作让渡的时间放进分母、把所有工作相关花销从工资里扣掉，得到的"真实每小时收入"。名义时薪看上去美，EHW才是你实际时薪。</p></div>
+      <div class="dict"><p><span class="term">总拥有成本 TCO</span>：不只看买入价（月薪），要算全生命周期的维护、损耗、机会成本，加起来的总账才是真成本。</p></div>
+      <div class="dict"><p><span class="term">机会成本</span>：你花2小时通勤，代价是同一时间不能学WPS、不能剪片、不能陪家人——那些"没做成的事"的价值，就是通勤的隐性账。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

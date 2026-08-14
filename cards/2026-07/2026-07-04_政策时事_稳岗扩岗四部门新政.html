@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-07-04 政策时事 · 稳岗扩岗四部门新政</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">政策时事 · 08 类</span>
+    <div class="date">2026-07-04 周六 · 热点认知卡</div>
+    <h1>稳岗扩岗四部门新政</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>人社部、教育部、财政部、税务总局四部门联合发文，<strong>"两延续一优化"三项就业补贴延期至 2026 年底</strong>：企业不裁员返最多 60%失业保险费、招应届生每人补 1500 元、职工考证最多领 2000 元。</p>
+<p><strong>关键数字看这三行就够：</strong></p>
+<table>
+<thead>
+<tr>
+<th>补贴给谁</th>
+<th>补贴什么条件</th>
+<th>最高能拿多少</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>企业（中小微）</td>
+<td>不裁员/少裁员</td>
+<td>上年失业保险费的 <strong>60%</strong> 返还</td>
+</tr>
+<tr>
+<td>企业</td>
+<td>每招 1 个应届生 / 16-24 岁失业青年</td>
+<td>一次性 <strong>1500 元</strong></td>
+</tr>
+<tr>
+<td>个人（在职/失业）</td>
+<td>考对口"急需紧缺职业"证书</td>
+<td>初级 1000 / 中级 1500 / 高级 <strong>2000 元</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>一季度全国已发 44 亿元，其中稳岗返还占 70%（31 亿）。</p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>把整个政策翻译成小区里的故事：</p>
+<ul>
+<li>
+<p><strong>稳岗返还</strong> = 物业跟社区超市说："你去年交了 1 万块物业费，只要今年不关店、不裁员工，年底返你 6000 用来发工资" → <strong>奖励"稳定"</strong></p>
+</li>
+<li>
+<p><strong>扩岗补助</strong> = 物业跟超市说："你每雇 1 个刚毕业的学生做收银，我再补你 1500 电费" → <strong>奖励"招新"</strong></p>
+</li>
+<li>
+<p><strong>技能提升补贴</strong> = 物业跟你个人说："你自己去考个电工证/收银员证，物业给你发 1000-2000" → <strong>奖励"升级"</strong></p>
+</li>
+</ul>
+<p>👉 三件套一组合：<strong>企业更愿意留人 + 更愿意招应届 + 员工更愿意学</strong>。政府一分钱没直接发给应届生，但应届生的入职门槛已经被"1500 元"悄悄推低了。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角 1：博弈论 —— 为什么钱要发给企业，不是打工人？</h3>
+<p>打工人最想被招，但<strong>决定"招不招"的是老板不是打工人</strong>。政府直接把 1500 塞给应届生，老板照样不招；把 1500 塞给老板，老板一算："社保工资本来就要发，白得 1500，招吧。"</p>
+<blockquote>
+<p>💡 <strong>核心逻辑：想让谁做事，把好处给能拍板的人。</strong></p>
+</blockquote></div>
+      <div class="view"><h3>视角 2：机制设计 —— "免申即享"砍掉的是什么？</h3>
+<p>以前补贴叫"申请领取"，需要企业跑窗口、提交台账、等审核 30 天。今年改<strong>免申即享</strong>——人社后台数据比对，自动算完金额、短信推送、企业线上确认就到账。</p>
+<p>砍掉的<strong>不是钱，是摩擦</strong>。以前很多小微企业根本懒得申报（"6000 块，跑三趟大厅算了"），流程简化后，覆盖面直接翻倍。</p></div>
+      <div class="view"><h3>视角 3：数据视角 —— 44 亿背后的分维度信号</h3>
+<p>一季度 44 亿的"平均数"没意义，<strong>拆开看才有洞察</strong>：</p>
+<ul>
+<li>拆<strong>发放类型</strong>：稳岗返还 70% &gt; 技能补贴 18% &gt; 扩岗补助 12% → 说明企业主动招应届的意愿仍弱，政府在硬推</li>
+<li>
+<p>拆<strong>地区/行业</strong>：哪些省领得多？大概率是中小微密集的东南沿海——这就是<strong>产业结构信号</strong></p>
+</li>
+<li>
+<p>拆<strong>证书类型</strong>：数字经济类证书补贴上浮 20%，用脚投票告诉你"国家最缺什么工种"</p>
+</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>模型 A：激励对齐（Incentive Alignment）</h4><ul>
+<li><strong>一句话</strong>：想让谁做事，就把好处给那个能拍板的人。</li>
+<li><strong>生活类比</strong>：想让孩子写作业，与其奖励孩子零花钱，不如奖励妈妈——<strong>因为妈妈才是能拍板"关电视让孩子写作业"的人</strong>。</li>
+<li><strong>反例警示</strong>：很多公司想让员工"多提创新想法"，就给员工发奖金 → 无效。真正有效的是<strong>给员工的经理发奖金</strong>——因为经理才是决定"这想法值不值得试"的人。</li>
+</ul></div>
+      <div class="model"><h4>模型 B：摩擦成本（Friction Cost）</h4><ul>
+<li><strong>一句话</strong>：一件事没做成，往往不是不愿做，而是<strong>流程太麻烦</strong>。</li>
+<li><strong>生活类比</strong>：外卖买 5 元的东西满 20 减 10，你懒得凑单直接原价买了——<strong>10 块钱没拿，不是因为你不想要钱，是"凑单"这个动作太麻烦</strong>。</li>
+<li><strong>数据分析场景</strong>：用户注册流失率高 ≠ 用户不想用产品，往往是"要填 8 个字段"这个摩擦劝退了他们。<strong>分析漏斗时先看每一步的摩擦，再谈需求。</strong></li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p>这条政策跟你<strong>同时命中两个身份</strong>：</p>
+<ol>
+<li>
+<p><strong>应届生身份</strong>（明年 6 月本科毕业）→ 你入职时候，如果新公司符合条件，招你能给公司拿 1500 补助。这个数字不大，但它是一个<strong>信号</strong>：</p>
+</li>
+<li>
+<p>一个主动去申报这补助的公司，说明它<strong>财务规范 + 对应届生态度积极 + 有耐心走流程</strong>——这是找工作时"通过一个信号推断多个隐藏属性"的经典打法</p>
+</li>
+<li><strong>在职考证身份</strong> → 你 7 月启动的 WPS 二级、后续的数据分析证书，如果最终能落进当地"急需紧缺职业目录"或"数字经济类"，就能触发技能补贴（社保满 12 月就够）</li>
+</ol>
+<p><strong>数据分析视角的启示更重要：</strong></p>
+<ul>
+<li>44 亿的补贴数据是<strong>公开的</strong>——各省人社厅会披露发放明细</li>
+<li>"拆开看 → 找信号"这个动作，就是你未来做业务分析师的看家肌肉</li>
+<li><strong>"免申即享"本身就是数据分析在政策端的最高级应用</strong>：后台数据比对 → 精准识别符合条件的企业 → 自动发放。这跟企业里"用户分层运营 → 自动触发优惠券"是<strong>同一个模型</strong></li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p><strong>明年 6 月找工作面 HR 时，试着问一句：</strong></p>
+<blockquote>
+<p>"咱们公司之前有申报过一次性扩岗补助吗？"</p>
+</blockquote>
+<p><strong>不是为了争这 1500 块</strong>，而是用这个问题<strong>试探公司</strong>：</p>
+<ul>
+<li>答得上来 → 财务规范 + 熟悉政府政策 + 大概率合规缴社保</li>
+<li>答不上来但愿意查 → 靠谱</li>
+<li>支支吾吾或说"没听说过" → 警惕，可能连社保都没足额缴</li>
+</ul>
+<blockquote>
+<p>这就是<strong>"信号推断法"</strong>——面试时提一个不重要的小问题，探出一堆重要的隐藏属性。数据分析师在业务里的日常动作。</p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><ul>
+<li><strong>稳岗返还</strong> = 企业"不裁员的奖金券"。去年交了 1 万块失业保险，今年不裁员，最多返你 6000 用来发工资/交社保/搞培训</li>
+<li><strong>免申即享</strong> = 后台自动算好、短信通知你确认领取，<strong>不用你主动跑腿申报</strong>。政府端的"数据驱动决策"典型场景</li>
+<li><strong>证岗相适</strong> = 你的证书得跟岗位对得上才给补贴（比如做数据的就得考数据类证书，不能拿着电工证来领）。<strong>防止"考证骗补贴"的对齐机制</strong></li>
+</ul>
+<blockquote>
+<p><strong>一句话洞察</strong>：政府发钱看似发给企业，其实是<strong>通过雇主之手悄悄把应届生的入场券推低</strong>——好政策不是喊口号，而是<strong>找到能拍板的人 + 砍掉领取的摩擦</strong>。</p>
+</blockquote></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

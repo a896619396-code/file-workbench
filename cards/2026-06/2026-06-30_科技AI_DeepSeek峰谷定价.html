@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-06-30 科技AI · DeepSeek峰谷定价</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">科技AI · 02 类</span>
+    <div class="date">2026-06-30 周二 · 热点认知卡</div>
+    <h1>DeepSeek峰谷定价</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>DeepSeek V4 七月中旬上线，工作日 9-12 点、14-18 点调用 API 价格翻倍，其余时段维持低价。</p>
+<blockquote>
+<p>📌 划重点：<strong>同一个模型、同一个请求，仅因为你"几点用"，账单差一倍。</strong> 这是国内大模型 API 第一次玩这套。</p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>不用怕"API""token"这些词，先看一个你交过钱的场景——<strong>居民峰谷电</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>时段</th>
+<th>你交的电费</th>
+<th>谁在用电</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>白天高峰（8:00-21:00）</td>
+<td>约 0.6 元/度</td>
+<td>全城开空调、开机器</td>
+</tr>
+<tr>
+<td>夜间低谷（21:00-次日8:00）</td>
+<td>约 0.3 元/度</td>
+<td>大家睡觉，电厂空转</td>
+</tr>
+</tbody>
+</table>
+<p>电厂的逻辑：<strong>白天发电不够用，半夜发电没人用</strong>。怎么办？用价格把一部分人"赶到"半夜——洗衣机定时夜里转、热水器夜里烧水。</p>
+<p>DeepSeek 这次做的是一模一样的事，只不过把"电"换成了"算力"：</p>
+<ul>
+<li>白天上班时间，全国程序员都在调 AI 写代码、跑业务 → 服务器挤爆</li>
+<li>半夜没人用 → 算力空转浪费</li>
+<li>于是：<strong>白天调用翻倍计费，把不着急的活儿"赶到"晚上和周末跑</strong></li>
+</ul>
+<p>再举一个你天天遇到的——<strong>滴滴早高峰加价 1.5 倍</strong>，同样的车、同样的路，只因为 8 点和 11 点价格不同。本质都是一回事：<strong>用价格当指挥棒，把需求挪一挪</strong>。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>💼 商业视角：这不是涨价，是「让出选择权」</h3>
+<p>表面看高峰翻倍像是变相涨价，实际算账：</p>
+<ul>
+<li>
+<p>V4-Pro 高峰输出 12 元/百万 tokens，<strong>仍只有 GPT-4o 的 1/6、Claude 的 1/15</strong></p>
+</li>
+<li>
+<p>整体国内云厂商都在涨：百度涨 5-30%、腾讯连涨两次、智谱年内涨三次</p>
+</li>
+<li>DeepSeek 反向操作：<strong>整体不涨，但给你"用便宜价"的开关——错峰就给你便宜</strong></li>
+</ul>
+<p>聪明在哪？把决策权交给用户：着急的人原价用，省钱的人挪时间。</p></div>
+      <div class="view"><h3>📊 数据视角：缓存命中差价拉到 120 倍</h3>
+<p>这次还藏了个细节——<strong>缓存命中 vs 未命中价差</strong>：</p>
+<ul>
+<li>V4-Pro 输入：缓存命中 0.025 元 vs 未命中 3 元 → <strong>差 120 倍</strong></li>
+</ul>
+<p>翻译成人话：<strong>你问过的问题（缓存住了）几乎免费再答；新问题才贵</strong>。等于在用价格逼开发者优化代码——能复用就复用，别每次都重新问。</p></div>
+      <div class="view"><h3>🤖 技术视角：电网的老办法，AI 行业第一次用</h3>
+<p>「峰谷电价」电网用了几十年。DeepSeek 直接把这套搬过来，开了大模型 API 分时计费的先例。如果跑通，其他厂商大概率跟进——<strong>以后调 AI，可能真要像用电一样看着表</strong>。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>① 动态定价（Dynamic Pricing）</h4><blockquote>
+<p><strong>一句话版</strong>：同一商品，按"什么时候买、谁来买、买多少"动态调价，用价格把需求"摊平"。</p>
+<p><strong>生活类比</strong>：春运火车票 vs 淡季火车票、周末电影 vs 周二半价、滴滴早高峰 vs 凌晨打车。</p>
+</blockquote>
+<p><strong>关键洞察</strong>：好的定价不是"一刀切收钱"，而是<strong>让不同需求强度的人，付不同的价格</strong>——着急的人付溢价，灵活的人享折扣，双方都满意。</p></div>
+      <div class="model"><h4>② 价格信号（Price Signal）</h4><blockquote>
+<p><strong>一句话版</strong>：价格不只是数字，它是一种"指令"，告诉用户"该往哪走"。</p>
+<p><strong>生活类比</strong>：奶茶店"第二杯半价" = 在喊"你再多买一杯"；超市临期商品打折 = 在喊"快帮我处理掉"。</p>
+</blockquote>
+<p>DeepSeek 翻倍价 = 在向用户喊：<strong>"批处理任务请挪到晚上，谢谢配合"</strong>。</p></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <p>这事跟你转行数据分析师<strong>强相关</strong>，因为「动态定价」恰好是数据分析师最经典的应用场景 Top3：</p>
+<ol>
+<li><span class="kw">需求曲线分析</span>：DeepSeek 怎么知道"翻倍"是合适的倍数？背后一定跑了用户调用量曲线 + 价格弹性测算——这正是数据分析师的活儿</li>
+<li><span class="kw">A/B 实验设计</span>：定价方案上线前一定经过小流量测试，对比"涨 1.5 倍"vs"涨 2 倍"对错峰效果的差异</li>
+<li><span class="kw">行为分析</span>：缓存命中率从 30% 提到 60%，能省多少钱？这种「价格→行为变化」的归因分析，是面试必考题</li>
+</ol>
+<p>📚 还可以联动你正在读的《认知觉醒》—— 书里说"用环境逼自己改变行为"，DeepSeek 这步就是教科书案例：<strong>与其苦口婆心劝开发者优化代码，不如用价差直接让他们"自觉"优化</strong>。这就是 <em>用规则塑造行为，而不是用说教</em>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <blockquote>
+<p>学会用「价格信号」这个视角看世界——<strong>别只看价格本身，看价格背后想引导你做什么。</strong></p>
+</blockquote>
+<p>具体到你：</p>
+<ul>
+<li>看到任何"分时收费/阶梯收费/差异定价"，主动问一句"它想把我引导到哪边？"（比如健身房早鸟价 = 引导你养成早上来的习惯）</li>
+<li>在简历/面试里，<strong>未来如果遇到「动态定价」「价格弹性」「需求曲线」的项目案例</strong>，今天这张卡就是你的现成谈资</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><table>
+<thead>
+<tr>
+<th>词</th>
+<th>人话定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API</strong></td>
+<td>程序之间打电话用的"电话线"。调一次 AI 接口 = 拨一次电话，按通话时长计费</td>
+</tr>
+<tr>
+<td><strong>token</strong></td>
+<td>AI 的"计费单位"，1 个汉字 ≈ 1.5-2 个 token，类似打车按公里算钱</td>
+</tr>
+<tr>
+<td><strong>缓存命中</strong></td>
+<td>系统记住了你之前问过的内容，不用重新算；类似你查过的快递信息，第二次秒出结果</td>
+</tr>
+<tr>
+<td><strong>削峰填谷</strong></td>
+<td>高峰期太挤、低谷期太闲 → 用价格把一部分人挪过去；电网/铁路/景区都在干这事</td>
+</tr>
+</tbody>
+</table>
+<p><em>📍 收录于：科技AI类 #02 | 思维模型：动态定价、价格信号</em></p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

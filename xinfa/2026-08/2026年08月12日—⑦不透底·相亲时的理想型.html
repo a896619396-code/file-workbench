@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-12 · 识暗心法</title>
+<style>
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;--surface:#fff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;--pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --radius:16px;--radius-sm:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-sans);background:radial-gradient(1100px 500px at 85% -5%,rgba(244,150,190,.14),transparent 60%),radial-gradient(900px 420px at -10% 12%,rgba(190,160,235,.12),transparent 55%),linear-gradient(180deg,var(--bg-1),var(--bg-2));background-attachment:fixed;color:var(--ink);font-size:14.5px;line-height:1.78;letter-spacing:.01em;padding:28px 18px 60px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto}
+.head{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.head::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300))}
+.head h1{font-size:22px;font-weight:800;letter-spacing:.015em;line-height:1.4}
+.head .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.14)}
+.badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.case{margin-top:18px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface)}
+.case-head{display:flex;align-items:center;gap:12px;padding:15px 20px;border-bottom:1px solid var(--border)}
+.case-head .num{width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.case-teach .case-head{background:linear-gradient(90deg,var(--pink-050),var(--surface) 70%)}
+.case-teach .num{background:linear-gradient(135deg,var(--pink-500),var(--pink-600))}
+.case-practice .case-head{background:linear-gradient(90deg,var(--purple-100),var(--surface) 70%)}
+.case-practice .num{background:linear-gradient(135deg,#8f66c0,var(--purple-600))}
+.case-type{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink-3);flex:none}
+.case-title{font-size:17px;font-weight:800;flex:1;min-width:0;line-height:1.42;letter-spacing:.01em}
+.bf-badge{font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;flex:none}
+.case-teach .bf-badge{background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.16)}
+.case-practice .bf-badge{background:var(--purple-100);color:var(--purple-700);border:1px solid rgba(122,75,165,.16)}
+.case-body{padding:18px 22px 22px}
+.scene{background:var(--surface-soft);border:1px solid var(--border);border-left:3px solid var(--border-strong);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:16px;font-size:14px;color:#5c4a54;line-height:1.9}
+.scene-label{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:8px}
+.scene-label::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--border-strong)}
+.analysis{border-top:2px solid var(--pink-100);padding-top:14px}
+.analysis-label{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.18em;margin-bottom:14px}
+.analysis-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--pink-100),transparent)}
+.aim-chip{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;font-size:14px;font-weight:800;padding:7px 16px;border-radius:12px;margin-bottom:16px;box-shadow:var(--shadow-xs)}
+.aim-chip .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.22)}
+.block{margin-bottom:16px}
+.block-t{font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.block-t .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--pink-500),var(--pink-300));flex:none}
+.points{list-style:none;counter-reset:pt}
+.points li{counter-increment:pt;position:relative;padding:7px 0 7px 36px;font-size:14px;color:#51404a}
+.points li::before{content:counter(pt);position:absolute;left:0;top:9px;width:23px;height:23px;border-radius:8px;background:var(--pink-100);color:var(--pink-700);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,61,111,.12)}
+.tip-quote{background:linear-gradient(90deg,var(--gold-100),#fdf8ec);border-left:4px solid var(--gold-600);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:12px 16px;font-size:15px;font-weight:700;color:var(--gold-700);line-height:1.65}
+.tip-quote::before{content:"要诀";font-size:10px;font-weight:800;letter-spacing:.16em;display:block;color:var(--gold-600);margin-bottom:3px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:9px}
+.step{background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px}
+.step .step-k{font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.04em;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .step-k .n{width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.step .step-v{font-size:12.5px;color:#5f4c57;line-height:1.6}
+.task-box{background:linear-gradient(135deg,var(--purple-100),#f6f0fb);border:1.5px solid var(--purple-600);border-radius:var(--radius-sm);padding:16px 18px;margin-bottom:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.task-box-t{font-size:13px;font-weight:800;color:var(--purple-700);margin-bottom:10px;letter-spacing:.12em}
+.task-list{list-style:none;counter-reset:tk}
+.task-list li{counter-increment:tk;position:relative;padding:8px 0 8px 44px;font-size:15px;font-weight:600;color:#4a3757}
+.task-list li::before{content:counter(tk);position:absolute;left:0;top:9px;width:27px;height:27px;border-radius:9px;background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-xs)}
+.task-list li strong{color:var(--purple-700);font-weight:800}
+details.answer{margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);background:var(--surface);overflow:hidden}
+details.answer[open]{border-color:var(--pink-300)}
+details.answer summary{cursor:pointer;padding:13px 18px;font-size:15px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);list-style:none}
+details.answer summary::-webkit-details-marker{display:none}
+details.answer summary .arr{width:22px;height:22px;border-radius:7px;background:var(--pink-100);color:var(--pink-700);flex:none;display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .25s ease}
+details.answer[open] summary .arr{transform:rotate(90deg);background:var(--pink-600);color:#fff}
+details.answer summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.answer .answer-body{padding:16px 20px;border-top:1px dashed var(--border-strong)}
+.answer-item{margin-bottom:12px;padding-left:14px;border-left:3px solid var(--pink-100)}
+.answer-item:last-child{margin-bottom:0}
+.answer-item .a-k{font-size:12px;font-weight:800;color:var(--pink-700);margin-bottom:4px;letter-spacing:.06em}
+.answer-item .a-v{font-size:14px;color:#4d3c44;line-height:1.75}
+.answer-item .a-v ul{margin:5px 0 0 19px}
+.answer-item .a-v li{margin:3px 0}
+.review{border-top:2px solid var(--pink-100);padding-top:14px}
+.review .analysis-label{margin-bottom:12px}
+.review table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+.review th{background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;font-weight:700;padding:9px 12px;text-align:left}
+.review td{padding:9px 12px;border-bottom:1px solid var(--border);color:#4d3c44}
+.review tr:nth-child(even) td{background:var(--surface-soft)}
+.review ol{padding-left:20px;font-size:13.5px;color:#51404a}
+.review ol li{margin:4px 0}
+.note{background:var(--blue-100);border:1px solid #cdd9ec;border-radius:var(--radius-sm);padding:12px 16px;font-size:13px;color:#37506b;line-height:1.75;margin-top:14px}
+.foot{max-width:860px;margin:20px auto 0;font-size:11.5px;color:var(--ink-3);text-align:center}
+@media (max-width:640px){.case-body{padding:15px 16px 18px}.case-title{font-size:15.5px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>2026 年 8 月 12 日 · 识暗心法</h1>
+    <div class="meta">
+      <span class="badge">周三 · 本周第?天</span>
+      
+      <span class="badge">教学心法：⑦不透底 / ⑧测试代替信任</span>
+      <span class="badge green">练习考察：①默认预设</span>
+    </div>
+  </div>
+<article class="case case-teach">
+    <div class="case-head"><div class="num">1</div>
+      <div class="case-type">教 学 · 完整分析</div>
+      <div class="case-title">相亲时的&quot;理想型&quot;</div>
+      <span class="bf-badge">考察：⑦不透底</span></div>
+    <div class="case-body">
+    <div class="scene"><span class="scene-label">场 景 背 景</span>周六下午，阿峰去相亲。女方小琳很健谈，聊到一半忽然问：&quot;你对另一半有什么要求？说说你的理想型。&quot;阿峰比较实在，一股脑全说了：&quot;我希望对方性格温柔、工作稳定、最好本地人、家务能分担、工资别比我低太多……&quot;小琳听完笑着说：&quot;你要求挺细的。&quot;之后几次见面，阿峰发现小琳总是有意无意地&quot;迎合&quot;他之前说的每一条：他说喜欢温柔，她就轻声细语；他说希望本地人，她就强调自己家就在隔壁区。阿峰总觉得哪里不对——他列的需求清单，似乎成了对方的&quot;答题卡&quot;。</div>
+    <div class="analysis">
+      <div class="analysis-label">完 整 分 析</div>
+      <div class="aim-chip"><span class="dot"></span>命中心法：⑦不透底</div>
+      <div class="block"><div class="block-t"><span class="bar"></span>心法要点（3条）</div>
+        <ul class="points"><li>真实需求被知道，价格就由对方定了：列了理想型清单，对方照单&quot;表演&quot;</li><li>不透底 ≠ 说谎：说大方向，不说可被逐条对照的细节</li><li>底线一旦暴露，就会被精准卡位：你列的条条框框，成了对方的投其所好</li></ul></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>应用要诀（1句）</div>
+        <div class="tip-quote">底牌是最后一张牌，亮出去就不值钱了。</div></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>详细识别流程（5步）</div>
+        <div class="steps"><div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">对方主动追问你的全部标准，之后言行逐一&quot;对上&quot;</div></div><div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">知道你的标准，才能精准扮演你期待的样子</div></div><div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果先让她说她的理想型，她会不会也列得那么全？</div></div><div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕&quot;先问你的要求&quot;，和被逐条迎合的&quot;巧合&quot;</div></div><div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">下次把回答模糊化（&quot;合眼缘、聊得来就行&quot;），反过来问她怎么看这些事，用行为验证而非清单对照</div></div></div></div>
+    </div></div></article>
+<article class="case case-teach">
+    <div class="case-head"><div class="num">2</div>
+      <div class="case-type">教 学 · 完整分析</div>
+      <div class="case-title">&quot;大客户&quot;的试探</div>
+      <span class="bf-badge">考察：⑧测试代替信任</span></div>
+    <div class="case-body">
+    <div class="scene"><span class="scene-label">场 景 背 景</span>周四上午，阿凯接到一个电话，对方自称某公司采购经理：&quot;我们想采购你们 200 套设备，预算充足，就看你们服务靠不靠谱。&quot;电话里聊了半小时，对方加了他微信，发来一个&quot;采购意向单&quot;，让他&quot;先盖个章回传，走个流程&quot;。阿凯没急着盖章，而是说：&quot;好的，我先让法务和财务过一遍单子，流程上需要你们也传一份营业执照和授权书。&quot;对方说：&quot;我们是大公司，还需要这些？你先把章盖了，合同后面补。&quot;阿凯坚持要授权材料，对方后来再没下文。</div>
+    <div class="analysis">
+      <div class="analysis-label">完 整 分 析</div>
+      <div class="aim-chip"><span class="dot"></span>命中心法：⑧测试代替信任</div>
+      <div class="block"><div class="block-t"><span class="bar"></span>心法要点（3条）</div>
+        <ul class="points"><li>承诺免费，行为付费：200 套大单是嘴上说的，授权材料都不敢给</li><li>小测试要低成本、可验证：要求营业执照和授权书，就是最低成本的测试</li><li>一次通过不算数：真合作要层层验证，先证身份再谈生意</li></ul></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>应用要诀（1句）</div>
+        <div class="tip-quote">嘴上的保证不算数，小测试见真章。</div></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>详细识别流程（5步）</div>
+        <div class="steps"><div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">电话里的大单 + 急着要你&quot;先盖章回传&quot;</div></div><div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">他的&quot;意向单&quot;可能是骗章、套信息，或纯属话术</div></div><div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">正规采购为何不敢亮身份？&quot;大公司&quot;最不怕验证</div></div><div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕&quot;走个流程&quot;&quot;先盖章后面补&quot;，和不愿提供资质的&quot;大客户&quot;</div></div><div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">坚持互验资质再谈；对方回避，果断终止——经不起验证的订单，多半不是真订单</div></div></div></div>
+    </div></div></article>
+<article class="case case-practice">
+    <div class="case-head"><div class="num">3</div>
+      <div class="case-type">实 战 · 先想后看</div>
+      <div class="case-title">深夜的&quot;急事&quot;求助</div>
+      <span class="bf-badge">考察：①默认预设</span></div>
+    <div class="case-body">
+    <div class="scene"><span class="scene-label">场 景 背 景</span>周三晚上十一点半，阿敏刚准备睡下，手机响了。是小学同学小雅，多年没联系，声音很急：&quot;阿敏，我钱包和手机都丢了，人在医院，借我 2000 交押金，我明天就还你！&quot;阿敏一听就急了，刚要转账，忽然想起白天在群里看到小雅发的旅游照片定位在另一座城市。她问：&quot;你在哪个医院？&quot;小雅说：&quot;市一院急诊，赶紧的，护士催我了。&quot;阿敏又看了看她的朋友圈，昨晚的定位明明是&quot;三亚&quot;。她握紧手机，犹豫了。</div>
+    <div class="task-box"><div class="task-box-t">你 的 任 务</div>
+      <ul class="task-list"><li><strong>命中心法</strong>：哪条心法被触发？</li><li><strong>现象识别</strong>：哪些信号反常？</li><li><strong>动机归因</strong>：他到底图什么？</li><li><strong>落地行动</strong>：你会怎么回应？</li></ul></div>
+    <details class="answer"><summary><span class="arr">▶</span>参考答案 <span class="hint">先独立作答，再对照查漏补缺</span></summary>
+      <div class="answer-body">
+        <div class="answer-item"><div class="a-k">命中心法</div><div class="a-v">①默认预设（先把他当对手算，再把他当朋友处）</div></div>
+        <div class="answer-item"><div class="a-k">关键信号</div><div class="a-v"><ul><li>多年未联系的人深夜急借</li><li>&quot;医院交押金&quot;是高频求助剧本</li><li>定位矛盾（朋友圈在三亚，自称在市一院）</li><li>催得越急越不给你核实时间</li></ul></div></div>
+        <div class="answer-item"><div class="a-k">动机归因</div><div class="a-v">可能是账号被盗、诈骗剧本，或确实遇到困难——但&quot;急&quot;和&quot;定位矛盾&quot;都指向一个判断：先验证再帮，不能预设&quot;她说的是真的&quot;</div></div>
+        <div class="answer-item"><div class="a-k">推荐回应</div><div class="a-v">不转钱，先验证——&quot;我先打个电话给你确认下，你别急&quot;；拨打原号码（非微信语音）核实；若对方失联或说辞反复，直接挂断并提醒对方亲友注意账号被盗；即使真是她本人，也要通过视频/语音核实身份后再决定，深夜急借钱 + 无法验证 = 最大的危险信号</div></div>
+      </div></details></div></article>
+</div>
+<div class="foot">识暗心法 v2.0 · 每日练习 · 2026-08-12</div>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-08-05 社会现象 · 泰航拒载22名中国乘客</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">社会现象 · 03 类</span>
+    <div class="date">2026-08-05 周三 · 热点认知卡</div>
+    <h1>泰航拒载22名中国乘客</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>7 月 29 日晚，曼谷素万那普机场 TG674 航班：22 名中国乘客被拒登机，冲突视频里安保人员做出"拉眼角"手势，机场致歉并惩处涉事人员。但事件的起点是粉丝尾随艺人闯入贵宾室、拒不配合查验，航司怕机上混乱才决定拒载。</p>
+<p>背景数据：2026 年 1-7 月赴泰中国游客超 280 万人次，同比增长 14%，泰国是中国游客出境首选目的地之一。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>小区业主群里转发一段监控：保安"动手推人"的画面。所有人都在骂保安暴力，第二天物业放出完整录像——<strong>先有人砸了岗亭</strong>。你看第一段视频时的愤怒，和看完完整录像后的判断，完全不是一回事。<strong>泰航事件就是放大了 100 倍的"只发后半段视频"</strong>——热搜给了你冲突和手势，把"谁先违规"藏在了时间线前面。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><ul>
+<li><strong>心理视角 · 确认偏误</strong>：人脑默认先给结论再挑证据。"拉眼角"这个手势恰好踩中了"外国歧视中国人"的预设答案，于是 280 万游客的大盘、粉丝闯贵宾室的起因，全被一笔带过。<strong>我们不是被视频骗了，是被自己的预设骗了</strong>。</li>
+<li><strong>传播视角 · 情绪优先</strong>：一条 15 秒冲突视频的传播速度，永远快过一份 2000 字声明。机场 8 月 4 日晚道歉时，热搜早已把结论写死。<strong>信息世界里，"先到的版本"就是"默认正确"的版本</strong>。</li>
+<li><strong>数据视角 · 热搜不等于事实</strong>：热搜排名衡量的是"多少人点开+停留+争论"，不是"事件真实性"。一个最容易激怒人的片段，天然比完整复盘更容易上榜。<strong>热度是情绪的函数，不是真相的函数</strong>。</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><ul>
+<li><strong>确认偏误（Confirmation Bias）</strong>——人天然只收集支持自己既有观点的信息，无视反例。<strong>先有了"泰国歧视中国人"的答案，再去找能证明它的证据</strong>。你认定某人小气，就只会记住他 AA 时少出的那 5 块钱，忘了他请过的三顿饭。</li>
+<li><strong>框架效应（Framing Effect）</strong>——同一件事，用不同说法描述，结论完全相反。<strong>问题怎么被"框住"，决定了你怎么回答</strong>。超市说"打九折"你买，说"涨价再打折"你骂——肉没变，框变了。泰航事件框成"航司无理拒载"还是"粉丝扰乱秩序"，舆论两极。</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：热搜榜就是最直观的"脏数据"示范——它只给你"点击率"这一个指标，却让你误以为这是"事实权重"。你做分析师的第一课：<strong>先问数据怎么来的、缺了哪一段，再谈结论</strong>。客户丢给你一个"转化率暴跌"的看板，先查是不是统计口径变了，别急着解释原因。</li>
+<li><span class="kw">对接《认知觉醒》</span>：周岭讲的元认知，就是"看见自己正在被什么牵着走"。刷到爆炸性新闻，第一反应是愤怒还是求证，就是元认知在线的分水岭。<strong>转行期的你，每天接触大量新信息，最容易用"感觉"代替"核实"</strong>——这正是确认偏误的高发地带。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p><span class="lead">今天就做 1 件事</span>：刷到任何让你瞬间愤怒/激动的热搜，先点开"完整时间线"或"官方回应"再看评论。给自己立一条规矩：<strong>情绪越强烈，越要慢半拍</strong>。</p>
+<ul>
+<li>先问一句：视频/截图之前发生了什么？</li>
+<li>再问一句：如果我站的是另一方，这个故事怎么讲？</li>
+<li>最后才决定：我要不要转发、要不要下结论。</li>
+</ul>
+<p><strong>你不是键盘法官，你是自己认知的管理者</strong>。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><ul>
+<li><strong>确认偏误（Confirmation Bias）</strong>——先有结论再找证据，只挑支持自己的信息，自动屏蔽反例。<strong>情绪越强，越要慢半拍</strong>。</li>
+<li><strong>框架效应（Framing Effect）</strong>——同一事实换种说法，就能改变人的判断和选择。<strong>先问"谁框的"，再下结论</strong>。</li>
+<li><strong>拒载（Denied Boarding）</strong>——航司拒绝乘客登机，正规操作应给书面说明与补偿安排。<strong>境外遇拒载，先索书面凭证</strong>。</li>
+</ul>
+<blockquote>
+<p>来源：澎湃新闻《泰航拒载22名中国乘客，安保人员做"拉眼角"动作，泰国机场致歉》（2026-08-05）https://www.thepaper.cn/newsDetail_forward_33718306</p>
+</blockquote></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

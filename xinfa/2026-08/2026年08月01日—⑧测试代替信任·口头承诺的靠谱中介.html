@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-01 · 识暗心法</title>
+<style>
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;--surface:#fff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;--pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --radius:16px;--radius-sm:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-sans);background:radial-gradient(1100px 500px at 85% -5%,rgba(244,150,190,.14),transparent 60%),radial-gradient(900px 420px at -10% 12%,rgba(190,160,235,.12),transparent 55%),linear-gradient(180deg,var(--bg-1),var(--bg-2));background-attachment:fixed;color:var(--ink);font-size:14.5px;line-height:1.78;letter-spacing:.01em;padding:28px 18px 60px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto}
+.head{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.head::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300))}
+.head h1{font-size:22px;font-weight:800;letter-spacing:.015em;line-height:1.4}
+.head .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.14)}
+.badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.case{margin-top:18px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface)}
+.case-head{display:flex;align-items:center;gap:12px;padding:15px 20px;border-bottom:1px solid var(--border)}
+.case-head .num{width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.case-teach .case-head{background:linear-gradient(90deg,var(--pink-050),var(--surface) 70%)}
+.case-teach .num{background:linear-gradient(135deg,var(--pink-500),var(--pink-600))}
+.case-practice .case-head{background:linear-gradient(90deg,var(--purple-100),var(--surface) 70%)}
+.case-practice .num{background:linear-gradient(135deg,#8f66c0,var(--purple-600))}
+.case-type{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink-3);flex:none}
+.case-title{font-size:17px;font-weight:800;flex:1;min-width:0;line-height:1.42;letter-spacing:.01em}
+.bf-badge{font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;flex:none}
+.case-teach .bf-badge{background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.16)}
+.case-practice .bf-badge{background:var(--purple-100);color:var(--purple-700);border:1px solid rgba(122,75,165,.16)}
+.case-body{padding:18px 22px 22px}
+.scene{background:var(--surface-soft);border:1px solid var(--border);border-left:3px solid var(--border-strong);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:16px;font-size:14px;color:#5c4a54;line-height:1.9}
+.scene-label{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:8px}
+.scene-label::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--border-strong)}
+.analysis{border-top:2px solid var(--pink-100);padding-top:14px}
+.analysis-label{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.18em;margin-bottom:14px}
+.analysis-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--pink-100),transparent)}
+.aim-chip{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;font-size:14px;font-weight:800;padding:7px 16px;border-radius:12px;margin-bottom:16px;box-shadow:var(--shadow-xs)}
+.aim-chip .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.22)}
+.block{margin-bottom:16px}
+.block-t{font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.block-t .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--pink-500),var(--pink-300));flex:none}
+.points{list-style:none;counter-reset:pt}
+.points li{counter-increment:pt;position:relative;padding:7px 0 7px 36px;font-size:14px;color:#51404a}
+.points li::before{content:counter(pt);position:absolute;left:0;top:9px;width:23px;height:23px;border-radius:8px;background:var(--pink-100);color:var(--pink-700);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,61,111,.12)}
+.tip-quote{background:linear-gradient(90deg,var(--gold-100),#fdf8ec);border-left:4px solid var(--gold-600);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:12px 16px;font-size:15px;font-weight:700;color:var(--gold-700);line-height:1.65}
+.tip-quote::before{content:"要诀";font-size:10px;font-weight:800;letter-spacing:.16em;display:block;color:var(--gold-600);margin-bottom:3px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:9px}
+.step{background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px}
+.step .step-k{font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.04em;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .step-k .n{width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+.step .step-v{font-size:12.5px;color:#5f4c57;line-height:1.6}
+.task-box{background:linear-gradient(135deg,var(--purple-100),#f6f0fb);border:1.5px solid var(--purple-600);border-radius:var(--radius-sm);padding:16px 18px;margin-bottom:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.task-box-t{font-size:13px;font-weight:800;color:var(--purple-700);margin-bottom:10px;letter-spacing:.12em}
+.task-list{list-style:none;counter-reset:tk}
+.task-list li{counter-increment:tk;position:relative;padding:8px 0 8px 44px;font-size:15px;font-weight:600;color:#4a3757}
+.task-list li::before{content:counter(tk);position:absolute;left:0;top:9px;width:27px;height:27px;border-radius:9px;background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-xs)}
+.task-list li strong{color:var(--purple-700);font-weight:800}
+details.answer{margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);background:var(--surface);overflow:hidden}
+details.answer[open]{border-color:var(--pink-300)}
+details.answer summary{cursor:pointer;padding:13px 18px;font-size:15px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);list-style:none}
+details.answer summary::-webkit-details-marker{display:none}
+details.answer summary .arr{width:22px;height:22px;border-radius:7px;background:var(--pink-100);color:var(--pink-700);flex:none;display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .25s ease}
+details.answer[open] summary .arr{transform:rotate(90deg);background:var(--pink-600);color:#fff}
+details.answer summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.answer .answer-body{padding:16px 20px;border-top:1px dashed var(--border-strong)}
+.answer-item{margin-bottom:12px;padding-left:14px;border-left:3px solid var(--pink-100)}
+.answer-item:last-child{margin-bottom:0}
+.answer-item .a-k{font-size:12px;font-weight:800;color:var(--pink-700);margin-bottom:4px;letter-spacing:.06em}
+.answer-item .a-v{font-size:14px;color:#4d3c44;line-height:1.75}
+.answer-item .a-v ul{margin:5px 0 0 19px}
+.answer-item .a-v li{margin:3px 0}
+.review{border-top:2px solid var(--pink-100);padding-top:14px}
+.review .analysis-label{margin-bottom:12px}
+.review table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+.review th{background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;font-weight:700;padding:9px 12px;text-align:left}
+.review td{padding:9px 12px;border-bottom:1px solid var(--border);color:#4d3c44}
+.review tr:nth-child(even) td{background:var(--surface-soft)}
+.review ol{padding-left:20px;font-size:13.5px;color:#51404a}
+.review ol li{margin:4px 0}
+.note{background:var(--blue-100);border:1px solid #cdd9ec;border-radius:var(--radius-sm);padding:12px 16px;font-size:13px;color:#37506b;line-height:1.75;margin-top:14px}
+.foot{max-width:860px;margin:20px auto 0;font-size:11.5px;color:var(--ink-3);text-align:center}
+@media (max-width:640px){.case-body{padding:15px 16px 18px}.case-title{font-size:15.5px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>2026 年 8 月 1 日 · 识暗心法</h1>
+    <div class="meta">
+      <span class="badge">周六 · 本周第?天</span>
+      
+      <span class="badge">教学心法：⑧测试代替信任 / ①默认预设</span>
+      <span class="badge green">练习考察：⑤零和默认）</span>
+    </div>
+  </div>
+<article class="case case-teach">
+    <div class="case-head"><div class="num">1</div>
+      <div class="case-type">教 学 · 完整分析</div>
+      <div class="case-title">口头承诺的&quot;靠谱中介&quot;</div>
+      <span class="bf-badge">考察：⑧测试代替信任</span></div>
+    <div class="case-body">
+    <div class="scene"><span class="scene-label">场 景 背 景</span>周五晚上七点，阿杰想换租，朋友推荐了一个&quot;特别靠谱&quot;的中介小何。两人加了微信，小何发了三个房源照片，热情地说：&quot;哥你放心，我在这行干了八年，跟房东都是老熟人，这周末肯定帮你搞定。&quot;阿杰问能不能先看看房子的房产证和房东委托书，小何说：&quot;咱俩谁跟谁，明天签合同时一起给你看。&quot;第二天看房时，阿杰又提了一次，小何拍着胸脯：&quot;我都安排好了，你信我就行。&quot;可直到阿杰离开，那些材料也没出现过。</div>
+    <div class="analysis">
+      <div class="analysis-label">完 整 分 析</div>
+      <div class="aim-chip"><span class="dot"></span>命中心法：⑧测试代替信任</div>
+      <div class="block"><div class="block-t"><span class="bar"></span>心法要点（3条）</div>
+        <ul class="points"><li>承诺免费，行为付费：小何说&quot;肯定搞定&quot;，但连最基本的凭证都不肯出示</li><li>小测试要低成本、可验证：要求看房产证/委托书，就是成本最低的信任测试</li><li>一次通过不算数：先在小事上验证，再考虑是否托付大事</li></ul></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>应用要诀（1句）</div>
+        <div class="tip-quote">嘴上的保证不算数，小测试见真章。</div></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>详细识别流程（5步）</div>
+        <div class="steps"><div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">口头承诺满满，但对&quot;看凭证&quot;的要求一拖再拖</div></div><div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">真房源不怕看证，怕看证的往往有猫腻</div></div><div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果材料没问题，出示只是一分钟的事，为何不拿？</div></div><div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕&quot;你信我就行&quot;——把信任当成挡箭牌</div></div><div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">要求先看证再谈，不配合就换人</div></div></div></div>
+    </div></div></article>
+<article class="case case-teach">
+    <div class="case-head"><div class="num">2</div>
+      <div class="case-type">教 学 · 完整分析</div>
+      <div class="case-title">邻居的&quot;顺手帮忙&quot;</div>
+      <span class="bf-badge">考察：①默认预设</span></div>
+    <div class="case-body">
+    <div class="scene"><span class="scene-label">场 景 背 景</span>周日下午，对门张阿姨敲开小刘的门，端着一碗刚炖好的排骨汤：&quot;小刘啊，阿姨看你天天吃外卖，特意给你炖的。&quot;小刘有点意外，还是接下了。张阿姨坐下闲聊了几句，突然说：&quot;对了，我儿子下周要办个转学手续，他爸在外地，我实在忙不过来，你周末能不能帮我跑一趟教育局？&quot;小刘这才反应过来：这碗汤是有&quot;任务&quot;的。他犹豫着没直接答应，张阿姨脸色有点不自然：&quot;就一小会儿的事，你不会不帮阿姨吧？&quot;</div>
+    <div class="analysis">
+      <div class="analysis-label">完 整 分 析</div>
+      <div class="aim-chip"><span class="dot"></span>命中心法：①默认预设</div>
+      <div class="block"><div class="block-t"><span class="bar"></span>心法要点（3条）</div>
+        <ul class="points"><li>预设越天真，被收割越深：先默认对方有所求，再判断这份热情的性质</li><li>立场 ≠ 恶意：张阿姨未必是坏人，但她&quot;送汤&quot;与&quot;求办事&quot;确实相关</li><li>判断的起点是「他图什么」：这碗汤的交易属性，比善意属性更突出</li></ul></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>应用要诀（1句）</div>
+        <div class="tip-quote">先把他当对手算，再把他当朋友处。</div></div>
+      <div class="block"><div class="block-t"><span class="bar"></span>详细识别流程（5步）</div>
+        <div class="steps"><div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">平日无往来的邻居，突然送汤、主动示好</div></div><div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">汤是引子，&quot;跑教育局&quot;才是目的</div></div><div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果她不需要办事，这碗汤还会出现吗？</div></div><div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕&quot;小恩 + 大求&quot;，以及&quot;你不会不帮吧&quot;的道德施压</div></div><div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">谢过汤，明确表示&quot;要看时间安排&quot;，不轻易承诺</div></div></div></div>
+    </div></div></article>
+<article class="case case-practice">
+    <div class="case-head"><div class="num">3</div>
+      <div class="case-type">实 战 · 先想后看</div>
+      <div class="case-title">拼车&quot;油费我出&quot;的提议</div>
+      <span class="bf-badge">考察：⑤零和默认</span></div>
+    <div class="case-body">
+    <div class="scene"><span class="scene-label">场 景 背 景</span>周五傍晚，阿凯加班到七点，在楼下等车时碰到同事老陈。老陈住同一小区，热情地说：&quot;一起走吧，油费我出，你顺路陪我说说话就行。&quot;阿凯刚要上车，老陈补了一句：&quot;不过反正你也顺路，待会绕一下送我去趟我妈家，就多十分钟的事。&quot;阿凯算了下：老陈说的&quot;顺路&quot;，其实是多绕三个路口、多花十五分钟。他站在车门边没动，老陈催他：&quot;愣着干啥？快上车啊，油费都说了不用你出。&quot;</div>
+    <div class="task-box"><div class="task-box-t">你 的 任 务</div>
+      <ul class="task-list"><li><strong>命中心法</strong>：哪条心法被触发？</li><li><strong>现象识别</strong>：哪些信号反常？</li><li><strong>动机归因</strong>：他到底图什么？</li><li><strong>落地行动</strong>：你会怎么回应？</li></ul></div>
+    <details class="answer"><summary><span class="arr">▶</span>参考答案 <span class="hint">先独立作答，再对照查漏补缺</span></summary>
+      <div class="answer-body">
+        <div class="answer-item"><div class="a-k">命中心法</div><div class="a-v">⑤零和默认（分蛋糕前，先看蛋糕多大、分给谁）</div></div>
+        <div class="answer-item"><div class="a-k">关键信号</div><div class="a-v"><ul><li>主动&quot;请客&quot;式提议（先给甜头）</li><li>&quot;油费我出&quot;是表面让利，绕路十五分钟是真实成本</li><li>&quot;就多十分钟&quot;轻描淡写真实代价</li></ul></div></div>
+        <div class="answer-item"><div class="a-k">动机归因</div><div class="a-v">老陈用&quot;免油费&quot;这个微小让利，换阿凯多绕路的时间和便利；表面双赢，实际是让阿凯为他的私事买单</div></div>
+        <div class="answer-item"><div class="a-k">推荐回应</div><div class="a-v">不上车也不撕破脸，笑着说&quot;我先得回趟公司拿东西，你先走吧&quot;；若真要同行，就明说&quot;绕路那部分我赶时间，下次专门去拜访阿姨&quot;</div></div>
+      </div></details></div></article>
+</div>
+<div class="foot">识暗心法 v2.0 · 每日练习 · 2026-08-01</div>
+</body>
+</html>

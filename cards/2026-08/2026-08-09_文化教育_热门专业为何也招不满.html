@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-08-09 文化教育 · 热门专业为何也招不满</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">文化教育 · 07 类</span>
+    <div class="date">2026-08-09 周日 · 热点认知卡</div>
+    <h1>热门专业为何也招不满</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>麦可思 8/8 发布 10 省本科首轮征集志愿统计：会计学未录满 410 次居首，财务管理 398、英语 379、计算机 372 进前三档，数据科学与大数据技术 252 次进前十——<strong>热搜最热的"人工智能"同时是征集大户（207 次）</strong>，但民办 AI 招不满，同济 AI 677 分、武大 AI 674 分仍在涨。</p>
+<blockquote>
+<p>来源：麦可思研究 2026-08-08 <a href="https://www.163.com/dy/article/L3R04MTU05218435.html">https://www.163.com/dy/article/L3R04MTU05218435.html</a> ；中国网 2026-08-09 <a href="https://news.china.com/socialgd/10000169/20260809/49662855_all.html">https://news.china.com/socialgd/10000169/20260809/49662855_all.html</a></p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>前年社区门口第一家奶茶店排队 40 分钟，今年同一条街开了 6 家，家家搞"第二杯半价"还是没人——<strong>不是奶茶没人喝了，是开太多了</strong>。专业同理：会计、英语当年好就业，全国高校扎堆开，现在招生计划比考生意愿还多，进征集（补录）就成了常态。</p>
+<p>你点外卖看"招牌菜"图片选店，吃到嘴里发现是料理包——<strong>名字和图片是"信号"，后厨才是"实力"</strong>。专业同理："人工智能"这四个字，在民办三本和在同济，是两种完全不同的东西，却共用同一个名字。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角 1：数据视角——热度是搜索量，未录满是成交量</h3>
+<p>百度热搜专业前十（电气/AI/计算机/电子信息/通信）与未录满榜单高度重合。<strong>搜索热、报考热、就业热是三个不同数据层</strong>，热搜只测"关注度"，征集志愿测"真实成交"，两者对撞说明：流量不等于需求。</p></div>
+      <div class="view"><h3>视角 2：商业视角——高校像开店，供给端常被忽略</h3>
+<p>财经、外语类开设成本低（不需要实验室），民办院校当年扎堆扩招，供给过剩。AI 同理：民办 AI 招不满，双一流 AI 位次上升——<strong>同一行业内部品牌分化，一个名字，两个市场</strong>。</p></div>
+      <div class="view"><h3>视角 3：教育信号视角——市场正在从"看招牌"转向"看手艺"</h3>
+<p>2024 届 AI 本科毕业生仅 55% 对口就业（低于全国平均 73%），32% 非对口者说"达不到专业工作要求"。专业名是信号，能不能上手是实力，市场最终为后者付钱。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>供需错配（Supply-Demand Mismatch）</h4><ul>
+<li><strong>一句话</strong>：价格和热度不只看需求，还看供给——供给扎堆时，再"热门"的品类也会过剩。</li>
+<li><strong>生活类比</strong>：① 前年第一家奶茶店排队 40 分钟，今年一条街 6 家都在"第二杯半价" ② 菜市场三家卖同一款鱼，前年 35 一斤，今年 18 还砍价 ③ 小区门口 3 家理发店都办年卡，最后两家倒闭一家撑住</li>
+</ul></div>
+      <div class="model"><h4>信号与实力（Signal vs Substance）</h4><ul>
+<li><strong>一句话</strong>：名称、头衔、排名是"信号"，真实能力是"实力"——信号负责把你吸引进门，市场最终按实力付钱。</li>
+<li><strong>生活类比</strong>：① 外卖"招牌菜"图片诱人，吃到嘴是料理包 ② 网红店评分 4.9 排队两小时，本地老店 4.2 分没人排队但更好吃 ③ 同一款洗发水，超市货架 30 元、理发店 128 元，泡沫一样</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：数据科学与大数据技术未录满 252 次，就在榜单前十——"专业名"当不了敲门砖，市场要的是能上手的技能。你正走的"技能市场化"路线（用作品和项目说话）恰好踩中这个趋势，这组数据就是背书。</li>
+<li><span class="kw">《认知觉醒》呼应</span>：周岭讲"元认知"——用数据核对外界共识，而不是被"大家都在学"的群体情绪裹挟。这份榜单就是一次"群体情绪 vs 真实数据"的对撞现场。</li>
+<li><span class="kw">《底层逻辑》呼应</span>：刘润说供需关系决定价格——专业热度本质是要素市场的供需定价，高校扩招（供给端）常被忽略，看懂两端才不会被单一信号骗。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p>本周花 30 分钟做一次"供需核对"：把你正在学或想学的技能方向，去招聘平台搜岗位数，再对比培训班和高校的供给量，用数据决定投入方向——而不是被"别人都转这个"带着走。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">征集志愿</span>：首轮投档没录满的专业，再向考生公开补录一次；"进征集"≈ 首轮没招满。</p></div>
+      <div class="dict"><p><span class="term">对口就业率</span>：毕业生干的工作和所学专业直接相关的人数占比；AI 本科 55% 意味着近一半人没干本行。</p></div>
+      <div class="dict"><p><span class="term">供需错配</span>：供给和需求对不上——专业开太多但学生不够，或需求大但开太少。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

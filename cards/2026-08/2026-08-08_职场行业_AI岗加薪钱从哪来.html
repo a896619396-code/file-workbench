@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-08-08 职场行业 · AI岗加薪钱从哪来</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">职场行业 · 06 类</span>
+    <div class="date">2026-08-08 周六 · 热点认知卡</div>
+    <h1>AI岗加薪钱从哪来</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>证券时报调查：近八成企业为 AI 岗开出更高起薪，但人力总预算没涨——塔尖薪酬翻倍的钱，是从其他岗位"挪"过去的。一名清华 AI 方向应届博士拿 600 万年薪总包，是上一波 AI 热（百万算顶尖）的 6 倍。</p>
+<blockquote>
+<p>来源：证券时报 2026-08-04 <a href="https://new.qq.com/rain/a/20260804A09PXJ00">https://new.qq.com/rain/a/20260804A09PXJ00</a> ；雪球转述 <a href="https://xueqiu.com/2509537588/403578516">https://xueqiu.com/2509537588/403578516</a></p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p><strong>火锅店</strong>：店里每月营收固定，老板给主厨从 8000 涨到 20000——因为主厨改良配方后食材损耗降了三成，省下的钱比涨的工资还多。服务员不涨，因为省不出钱。<strong>这叫"钱给能省钱的人"。</strong></p>
+<p><strong>视频平台</strong>：会员费没涨，但头部剧版权费翻倍，平台把预算全砸向头部、腰部的剧不再采购，你发现"能看的剧变少了"。<strong>这叫"总盘子没变，有人多吃必有人少吃"。</strong></p>
+<p>两个场景都没人哭穷，但都藏着同一句话：<strong>加薪不是印钱，是挪钱。</strong></p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角 1：商业——600 万不是奖金，是对冲算力账单</h3>
+<p>优秀模型科学家能靠架构优化、推理调度降低算力消耗，省下的算力费远超他的工资。<strong>企业买的不是这个人本身，是这个人能替公司省下的几千万机器钱。</strong> 高薪的本质是"省下来的钱的分成"。</p></div>
+      <div class="view"><h3>视角 2：数据——两个数字必须放一起看</h3>
+<p>牛客《2026 春季校园招聘白皮书》："近八成企业给 AI 岗加薪" + 牛客 CEO 说的"人力总预算并未增加"。单独看第一个是喜讯，合起来看才是真相：<strong>同一张岗位表上，一条线在快速抬升，另一条线在被压平</strong>，中间那道缝才是普通人要读的东西。</p></div>
+      <div class="view"><h3>视角 3：人才——企业只买两种人</h3>
+<p>第一种是基座模型科学家（决定模型智能上限，全行业人数极少、不流通，够不着）；第二种是 AI 应用与产品人才（会 AI 编程、能端到端跑通业务闭环，猎头叫"心碎的一人公司"）。<strong>第二种才是大多数人能够得着的那条线。</strong></p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>杠杆定价（Leverage-based Pricing）</h4><ul>
+<li><strong>一句话</strong>：薪资不看学历资历，看"你借助工具能把产出放大几倍"——替代、放大、对冲三问答得上来的岗位被抬升，只答得上第一问的被压平。</li>
+<li><strong>生活类比</strong>：① 同是洗碗工，会用洗碗机的比纯手洗的更容易加薪 ② 同是写手，用 AI 出初稿日更 10 篇的和手写日更 1 篇的，报价差 5 倍 ③ 同是主厨，能省食材的永远比只会做菜的先涨薪</li>
+</ul></div>
+      <div class="model"><h4>存量再分配（Zero-sum Reallocation）</h4><ul>
+<li><strong>一句话</strong>：总预算不变的加薪本质是"从别处挪钱"——有人多吃必有人少吃，先看懂自己在被抬升的线还是被压平的线。</li>
+<li><strong>生活类比</strong>：① 家里伙食费固定，给大厨加钱就只能砍饮料钱 ② 球队工资帽固定，给巨星顶薪，角色球员只能底薪 ③ 平台采购费固定，砸头部剧，腰部剧就没了</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：数据分析正处"能被工具放大"的那条线，但放大不是自动的，得自己搭"AI 工具 + 业务理解"的闭环。对照杠杆三问给现在的自己打分：哪些产出能被 AI 替掉？用上工具能放大几倍？能帮未来的团队省下什么？</li>
+<li><span class="kw">《认知觉醒》呼应</span>：周岭说"认知决定选择"——杠杆定价揭示的是企业付费买的从来不是工时，是"认知产出率"。提升认知不是为懂得更多，是为让每单位时间产出更贵。</li>
+<li><span class="kw">《底层逻辑》呼应</span>：刘润讲"系统 = 要素 × 连接 × 目标"——总预算是系统约束，塔尖翻倍必然伴随他处压平；看懂这张岗位表系统，比盯着单个薪资数字更重要。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p>本周用"杠杆三问"给自己做一次体检，写下 3 条：① 我哪项产出现在能被 AI 直接替掉 ② 用上 AI 后能放大几倍 ③ 这项能力能帮未来的团队省下什么。<strong>找到那件"放大倍数最高"的事，每天拨 30 分钟打磨它</strong>——这才是能被抬升的那条线。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">基座模型科学家</span>：研究大模型底层架构和训练算法的顶尖研究者，决定模型的智能上限，全行业人数极少且不在市场流通。</p></div>
+      <div class="dict"><p><span class="term">年薪总包</span>：年薪加奖金、股票期权一起算的"全部收入包"，谈薪资时真正要看的数，单看月薪会被低估。</p></div>
+      <div class="dict"><p><span class="term">π 型人才</span>：除一门专长外，还在另一个领域有扎实功底、能跨界融合的人（对比只深一门的 T 型），2026 年人才市场最稀缺的画像。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

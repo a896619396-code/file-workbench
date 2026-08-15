@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>识暗心法 · 每日练习 · 2026年08月15日 周六</title>
+<style>
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;
+  --surface:#ffffff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;--pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;
+  --blue-600:#3a6ea5;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --fs-xs:11.5px;--fs-sm:12.5px;--fs-base:14.5px;--fs-md:15.5px;--fs-lg:17px;--fs-xl:20px;--fs-2xl:24px;
+  --lh-tight:1.42;--lh-body:1.78;--lh-loose:1.95;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --shadow-md:0 4px 8px rgba(180,90,120,.09),0 12px 28px rgba(180,90,120,.12);
+  --shadow-lg:0 8px 18px rgba(120,60,90,.12),0 20px 44px rgba(120,60,90,.14);
+  --radius:16px;--radius-sm:10px;--radius-xs:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  background:radial-gradient(1100px 500px at 85% -5%,rgba(244,150,190,.14),transparent 60%),radial-gradient(900px 420px at -10% 12%,rgba(190,160,235,.12),transparent 55%),linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  background-attachment:fixed;
+  color:var(--ink);font-size:var(--fs-base);line-height:var(--lh-body);letter-spacing:.01em;
+  padding-bottom:70px;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+::selection{background:var(--pink-300);color:#fff}
+/* 顶栏 */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,246,249,.85);
+  backdrop-filter:blur(14px) saturate(1.4);
+  -webkit-backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid rgba(226,198,210,.55);
+}
+.topbar-inner{max-width:960px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.brand-logo{
+  width:40px;height:40px;border-radius:12px;flex:none;
+  background:linear-gradient(135deg,var(--pink-500) 0%,var(--pink-600) 55%,var(--purple-600) 100%);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:800;
+  box-shadow:var(--shadow-sm),inset 0 1px 0 rgba(255,255,255,.25);letter-spacing:0;
+}
+.brand-title{font-size:17px;font-weight:800;letter-spacing:.02em;line-height:1.32;color:var(--ink)}
+.brand-sub{font-size:11px;color:var(--ink-3);font-weight:600;letter-spacing:.08em;margin-top:1px}
+/* 主容器 */
+.container{max-width:960px;margin:0 auto;padding:26px 22px 0}
+/* 今日抬头 */
+.day-head{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-sm);margin-bottom:20px;
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;position:relative;overflow:hidden;
+}
+.day-head::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300));opacity:.9;
+}
+.day-title{font-size:var(--fs-2xl);font-weight:800;letter-spacing:.015em;line-height:var(--lh-tight)}
+.day-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-sm);font-weight:700;
+  padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);
+  border:1px solid rgba(212,61,111,.14);
+}
+.day-badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.day-badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.day-meta{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+/* 案例卡片 */
+.case{
+  margin-bottom:22px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface);
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.case:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.case-head{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--border)}
+.case-head .num{
+  width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;letter-spacing:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+}
+.case-teach .case-head{background:linear-gradient(90deg,var(--pink-050),var(--surface) 70%)}
+.case-teach .num{background:linear-gradient(135deg,var(--pink-500),var(--pink-600))}
+.case-practice .case-head{background:linear-gradient(90deg,var(--purple-100),var(--surface) 70%)}
+.case-practice .num{background:linear-gradient(135deg,#8f66c0,var(--purple-600))}
+.case-type{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink-3);flex:none}
+.case-title{font-size:var(--fs-lg);font-weight:800;flex:1;min-width:0;line-height:var(--lh-tight);letter-spacing:.01em}
+.bf-badge{font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;flex:none;letter-spacing:.02em}
+.case-teach .bf-badge{background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.16)}
+.case-practice .bf-badge{background:var(--purple-100);color:var(--purple-700);border:1px solid rgba(122,75,165,.16)}
+.case-body{padding:20px 24px 24px}
+/* 场景背景（非核心，弱化） */
+.scene{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-left:3px solid var(--border-strong);
+  border-radius:var(--radius-sm);padding:15px 17px;margin-bottom:18px;
+  font-size:var(--fs-base);color:#5c4a54;line-height:var(--lh-loose);
+}
+.scene-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:9px;
+}
+.scene-label::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--border-strong)}
+.scene p{margin:0 0 8px}.scene p:last-child{margin-bottom:0}
+/* 教学分析（核心，重点突出） */
+.analysis{border-top:2px solid var(--pink-100);padding-top:16px}
+.analysis-label{
+  display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:var(--pink-700);
+  letter-spacing:.18em;margin-bottom:15px;
+}
+.analysis-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--pink-100),transparent)}
+.aim-chip{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  font-size:14.5px;font-weight:800;padding:8px 17px;border-radius:12px;margin-bottom:18px;
+  box-shadow:var(--shadow-sm);letter-spacing:.02em;
+}
+.aim-chip .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.22)}
+.block{margin-bottom:18px}
+.block-t{
+  font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:9px;display:flex;align-items:center;gap:8px;
+  letter-spacing:.02em;
+}
+.block-t .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--pink-500),var(--pink-300));flex:none}
+.points{list-style:none;counter-reset:pt}
+.points li{
+  counter-increment:pt;position:relative;padding:7px 0 7px 36px;font-size:var(--fs-base);color:#51404a;
+}
+.points li::before{
+  content:counter(pt);position:absolute;left:0;top:9px;width:23px;height:23px;border-radius:8px;
+  background:var(--pink-100);color:var(--pink-700);font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,61,111,.12);
+}
+.points li strong{color:var(--ink);font-weight:800}
+/* 要诀 · 金色引文块 */
+.tip-quote{
+  background:linear-gradient(90deg,var(--gold-100),#fdf8ec);border-left:4px solid var(--gold-600);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:13px 17px;font-size:15.5px;font-weight:700;color:var(--gold-700);line-height:1.65;letter-spacing:.02em;
+}
+.tip-quote::before{content:"要诀";font-size:10px;font-weight:800;letter-spacing:.16em;display:block;color:var(--gold-600);margin-bottom:3px}
+/* 5步流程（网格卡片） */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px}
+.step{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:11px 13px;transition:all .2s ease;
+}
+.step:hover{border-color:var(--pink-300);background:var(--surface-tint);transform:translateY(-1px)}
+.step .step-k{font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.04em;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .step-k .n{
+  width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.step .step-v{font-size:12.5px;color:#5f4c57;line-height:1.6}
+/* 练习任务（紫色系） */
+.task-box{
+  background:linear-gradient(135deg,var(--purple-100),#f6f0fb);border:1.5px solid var(--purple-600);
+  border-radius:var(--radius-sm);padding:17px 19px;margin-bottom:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+.task-box-t{font-size:13px;font-weight:800;color:var(--purple-700);margin-bottom:11px;letter-spacing:.12em}
+.task-list{list-style:none;counter-reset:tk}
+.task-list li{
+  counter-increment:tk;position:relative;padding:8px 0 8px 44px;font-size:15px;font-weight:600;color:#4a3757;
+}
+.task-list li::before{
+  content:counter(tk);position:absolute;left:0;top:9px;width:27px;height:27px;border-radius:9px;
+  background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-xs);
+}
+.task-list li strong{color:var(--purple-700);font-weight:800}
+/* 参考答案折叠（先想后看） */
+details.answer{
+  margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;transition:border-color .2s ease;
+}
+details.answer[open]{border-color:var(--pink-300)}
+details.answer summary{
+  cursor:pointer;padding:14px 19px;font-size:15px;font-weight:800;color:var(--ink);
+  display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);
+  list-style:none;transition:background .2s ease;
+}
+details.answer summary:hover{background:var(--pink-050)}
+details.answer summary::-webkit-details-marker{display:none}
+details.answer summary .arr{
+  width:22px;height:22px;border-radius:7px;background:var(--pink-100);color:var(--pink-700);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+  transition:transform .25s ease,background .2s ease;
+}
+details.answer[open] summary .arr{transform:rotate(90deg);background:var(--pink-600);color:#fff}
+details.answer summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.answer .answer-body{padding:18px 21px;border-top:1px dashed var(--border-strong);background:var(--surface)}
+.answer-item{margin-bottom:14px;padding-left:15px;border-left:3px solid var(--pink-100)}
+.answer-item:last-child{margin-bottom:0}
+.answer-item .a-k{font-size:12px;font-weight:800;color:var(--pink-700);margin-bottom:4px;letter-spacing:.06em}
+.answer-item .a-v{font-size:var(--fs-base);color:#4d3c44;line-height:1.75}
+.answer-item .a-v strong{color:var(--ink)}
+.answer-item .a-v ul{margin:5px 0 0 19px}
+.answer-item .a-v li{margin:3px 0}
+/* 底部 */
+.foot-note{max-width:960px;margin:30px auto 0;padding:0 22px;font-size:12px;color:var(--ink-3);line-height:1.9}
+.foot-note b{color:var(--ink-2)}
+/* 移动端自适应 */
+@media (max-width:680px){
+  .topbar-inner{padding:11px 16px}
+  .day-meta{margin-left:0}
+  .case-body{padding:16px 18px 20px}
+  .case-head{padding:14px 16px}
+  .case-title{font-size:15.5px}
+  .container{padding:20px 14px 0}
+  .day-title{font-size:20px}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">暗</div>
+      <div>
+        <div class="brand-title">识暗心法</div>
+        <div class="brand-sub">v2.0 · 每日3案例 · 2教1练</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 今日抬头卡片 -->
+  <div class="day-head">
+    <div>
+      <div class="day-title">2026年8月15日 · 周六</div>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="day-badge">本周第 6 天</span>
+        <span class="day-badge purple">📖 教学：⑧ 测试代替信任 · ① 默认预设</span>
+        <span class="day-badge green">✏️ 练习：④ 信息不对称（综合）</span>
+      </div>
+    </div>
+    <div class="day-meta">
+      <span class="day-badge green">💡 学了就练，练了就会</span>
+    </div>
+  </div>
+
+  <!-- 案例① 教学（粉色系） -->
+  <div class="case case-teach">
+    <div class="case-head">
+      <span class="num">①</span>
+      <span class="case-type">教学案例</span>
+      <span class="case-title">「自己人」三个字最便宜，一件小事见真章</span>
+      <span class="bf-badge">⑧ 测试代替信任</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>新同事小郑入职两周，逢人就称兄道弟。周三下午茶时间，小郑端着一杯奶茶放到你桌上，说：「哥，咱俩一个组，以后就是自己人，你有事尽管吩咐。」你想起来前几天他说过自己有个朋友开打印店，而你正好需要印一批资料，就托他：「那帮我问问你朋友，A4 双面印 500 份多少钱？」小郑拍着胸脯说：「一句话的事，我今晚就给你问。」</p>
+        <p>可三天过去没动静，你问他，他说「朋友出差了」；又过三天，你追问，他改口「我帮你找别家吧」。你心里明白：他嘴上说得多热络，一件芝麻大的小事都办不利索，那「自己人」三个字，不过是最便宜的人情话。你决定不再托他任何事，反而留心观察他接下来说话办事的分寸。</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <div class="aim-chip"><span class="dot"></span>命中心法：⑧ 测试代替信任</div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点（3条）</div>
+          <ul class="points">
+            <li><strong>承诺免费，行为付费</strong>：小郑的「自己人」「一句话的事」全是零成本口头承诺；你托的小事——问个打印报价——就是最便宜的行为测试，他三天推三天，行为已经给出答案。</li>
+            <li><strong>小测试要低成本、无恶意、可验证</strong>：托问报价不涉及核心利益、不伤他面子，而且结果可验证（你随时能自己查到行情），是合格的小测试；正是这件小事，暴露了他「热络在外、敷衍在内」的底色。</li>
+            <li><strong>一次通过不算数，关键场景多测几次</strong>：一件小事没办成，虽不能盖棺定论，但足以降级信任；若日后还要合作，就要在更多具体场景里让他兑现，而不是听他说「自己人」。</li>
+          </ul>
+        </div>
+        <div class="tip-quote">嘴上的保证不算数，小测试见真章。</div>
+        <div class="block" style="margin-top:18px">
+          <div class="block-t"><span class="bar"></span>5步识别流程</div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-k"><span class="n">1</span>现象识别</div>
+              <div class="step-v">对方高频使用「自己人」「有事尽管吩咐」等情感承诺，你顺手托了一件小事试探。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">2</span>动机归因</div>
+              <div class="step-v">他为什么把关系话说这么满？低成本拉近关系，为日后开口求助、借力做铺垫。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">3</span>反推逻辑</div>
+              <div class="step-v">如果承诺是真的，一件问价的小事为何一周都办不完？说明承诺成本对他为零，兑现对他却太贵。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">4</span>提防要点</div>
+              <div class="step-v">警惕「交情先行、办事后置」的套路，以及「包在我身上」之后石沉大海的拖延。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">5</span>落地行动</div>
+              <div class="step-v">小事测试不过关就降级信任；再合作先设小场景验证，兑现一次升级一次，不因「兄弟」二字放行大事。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例② 教学（粉色系） -->
+  <div class="case case-teach">
+    <div class="case-head">
+      <span class="num">②</span>
+      <span class="case-type">教学案例</span>
+      <span class="case-title">评优前主动帮你改方案，他的「帮」里有什么？</span>
+      <span class="bf-badge">① 默认预设</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>周一上午，你把项目方案初稿发到组里征求意见。下午，平时和你交集不多的同事老周主动私信你：「方案我看了，写得真不错，有几个地方我帮你润色了一下，你直接拿去用。」你点开文档，确实改得更顺了，结尾还加了一段漂亮的总结。你有点感动——老周平时话不多，这次却主动出力。</p>
+        <p>第二天晨会，组长宣布季度评优开始。老周在会上「随口」提起：「上周那版方案我帮忙把过关，数据部分我核过。」组长点点头，记了一笔。你这才咂摸出味道：他帮你改方案是真的，但「帮」的方式和时机，恰好让他出现在功劳簿上——他甚至特意在你没注意的数据页加了批注，那不是热心，那是留痕。</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <div class="aim-chip"><span class="dot"></span>命中心法：① 默认预设</div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点（3条）</div>
+          <ul class="points">
+            <li><strong>预设越天真，被收割越深</strong>：若你天真地以为「老周人好、乐于助人」，就会忽略他改稿的动机；先假设他有立场——评优在即，帮忙既是示好也是记功——再按证据修正，才能看清这次「帮忙」的完整图景。</li>
+            <li><strong>立场 ≠ 恶意</strong>：老周帮忙不一定是坏心，但他是为自己利益行动——评优加分、留下署名痕迹，这是常态不是人品问题；你要据此调整预期，而不是平白欠一份「人情债」。</li>
+            <li><strong>判断的起点是「他图什么」</strong>：从「他为什么主动帮你」入手——你们平时无交集，评优节点前突然出力，时间点本身就是答案。</li>
+          </ul>
+        </div>
+        <div class="tip-quote">先把他当对手算，再把他当朋友处。</div>
+        <div class="block" style="margin-top:18px">
+          <div class="block-t"><span class="bar"></span>5步识别流程</div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-k"><span class="n">1</span>现象识别</div>
+              <div class="step-v">平时无交集的同事在评优节点前，主动帮你改方案、夸你能力强。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">2</span>动机归因</div>
+              <div class="step-v">他图什么？评优在即，改稿让他「参与」了你的成果，为功劳归属埋下伏笔。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">3</span>反推逻辑</div>
+              <div class="step-v">如果评优不在下周，他还会主动帮你润色吗？他的热情与评优节点高度重合，说明热情跟着利益走。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">4</span>提防要点</div>
+              <div class="step-v">警惕「无偿帮忙」突然发生在利益节点前，以及帮忙后刻意在公开场合「提及参与」。</div>
+            </div>
+            <div class="step">
+              <div class="step-k"><span class="n">5</span>落地行动</div>
+              <div class="step-v">接受帮助时明确归属：「谢谢把关，主体还是我做的，有争议的地方我再改」；评优材料里注明各人贡献，先算清楚再谈人情。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例③ 实战练习（紫色系） -->
+  <div class="case case-practice">
+    <div class="case-head">
+      <span class="num">③</span>
+      <span class="case-type">实战练习 · 综合</span>
+      <span class="case-title">同一台手术，两家医院报价差一倍</span>
+      <span class="bf-badge">④ 信息不对称</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>周三晚上，你陪妈妈在医院做完体检，医生说胆囊结石建议手术，并推荐了本院普外科，说「小手术，两万左右」。你在走廊遇到多年没见的老同学，他正好是另一家三甲医院的医生。闲聊时你把手术的事说了，老同学压低声音提醒你：「这个手术我们院也能做，走医保后自费不到一万，用的耗材和术式跟你们那边不太一样。你多问两句，别只看总价。」</p>
+        <p>你愣住了：同一台手术，两家医院报价差一倍。你回想医生刚才说得很快，没提耗材品牌，没提医保报销比例，只轻描淡写一句「两万左右」。你开始琢磨：这个「两万」里，有多少是必要费用，有多少是还没来得及问清楚的部分？</p>
+      </div>
+      <div class="task-box">
+        <div class="task-box-t">🧠 你的任务 · 4 步引导</div>
+        <ul class="task-list">
+          <li><strong>命中心法</strong>：这个场景命中了哪条心法？为什么？</li>
+          <li><strong>现象识别</strong>：涉及资源分配/反常信号的关键点有哪些？</li>
+          <li><strong>动机归因</strong>：各方各自得到了什么？你以为的公平和实际一致吗？</li>
+          <li><strong>落地行动</strong>：下次遇到类似情况应该怎么问/怎么做？</li>
+        </ul>
+      </div>
+      <details class="answer">
+        <summary>
+          <span class="arr">▶</span>
+          参考答案
+          <span class="hint">先思考再点开</span>
+        </summary>
+        <div class="answer-body">
+          <div class="answer-item">
+            <div class="a-k">命中心法：④ 信息不对称</div>
+            <div class="a-v">医疗费用信息高度专业：医生掌握术式、耗材、医保政策的完整信息，而你只听到一句「两万左右」。你的「我以为」（小手术、价格固定）可能只是对方没展开的部分——同一手术不同医院差价一倍，正是「信息差即价格差」的典型场景。</div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">现象识别</div>
+            <div class="a-v">关键点：<ul>
+              <li>① 医生只说总价「两万左右」，未提耗材品牌、术式差异、医保报销比例；</li>
+              <li>② 报价说得快、带过细节，没有给你留提问和确认的空间；</li>
+              <li>③ 两个信息源（本院医生 vs 老同学）给出相差一倍的报价，信号成串出现；</li>
+              <li>④ 场景涉及「花多少钱、怎么花」的资源分配，而你此前没有任何对照信息。</li>
+            </ul></div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">动机归因</div>
+            <div class="a-v">本院医生推荐本院手术并给出报价：医院获得手术收入，医生个人也与科室绩效相关；老同学没有利益关联，才会压低声音提醒你「多问两句」。你以为「两万是行情价」，实际可能只是「这家医院的报价」——二者并不一致，真正的公平需要你掌握信息后再判断。</div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">落地行动</div>
+            <div class="a-v"><ul>
+              <li>① 问清三个数字：总费用、医保报销比例、自费部分，并要求列出耗材品牌与术式；</li>
+              <li>② 拿同一诊断到另一家医院挂门诊咨询，拿第二份方案对照；</li>
+              <li>③ 关键决定前，把「我以为」换成「我确认过」——查医院官网、医保目录，或找懂行的第三方；</li>
+              <li>④ 不急着交押金、办住院，先补信息再表态，给犹豫留出时间。</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 底部提示 -->
+  <div class="foot-note">
+    <b>💡 识暗心法 · 每日一练</b> — 今天学习了 <b>⑧ 测试代替信任</b>（用一件小事试探「自己人」的成色）和 <b>① 默认预设</b>（评优前主动帮改方案，先想他图什么），练习了 <b>④ 信息不对称</b>（综合：同一手术两家医院报价差一倍）。<br>
+    明天（周日）是周复盘日，回顾本周六天的练习，不做新案例。<br>
+    坚持每日练习，识人先识心。
+  </div>
+</div>
+
+</body>
+</html>

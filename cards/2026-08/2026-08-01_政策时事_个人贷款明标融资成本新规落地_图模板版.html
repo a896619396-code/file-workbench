@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>热点思维导图 · 2026-08-01 · 个人贷款明标融资成本新规落地（图模板版）</title>
+<style>
+  /* === 与热点知识卡同色系 === */
+  :root {
+    --paper: #faf7f4;
+    --card: #ffffff;
+    --line: #ece5e0;
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;
+    --ink: #4a4440;
+    --ink-soft: #8b837c;
+    --ink-mute: #b0a8a1;
+    --brand: #a0495e;
+    --brand-soft: #f3e4e9;
+    --rose-soft: #fcf7f5;
+    --amber: #e2cdb8;
+    --amber-soft: #fbf6ef;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    padding: 28px 16px 56px;
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; }
+
+  /* ========== 页头 ========== */
+  .head {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px;
+    padding: 0 4px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .head .meta {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.5px;
+  }
+  .title {
+    font-size: 20px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    margin: 6px 0 2px;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ========== 卡片外框 ========== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 32px 28px 36px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+    margin-top: 22px;
+  }
+
+  /* ========== 思维导图主体 ========== */
+  .mindmap {
+    display: flex;
+    align-items: stretch;
+    gap: 56px;
+    padding: 8px 0;
+  }
+
+  /* === 根节点（左侧标题） === */
+  .root-col {
+    flex: 0 0 220px;
+    display: flex;
+  }
+  .root-card {
+    margin: auto 0;
+    width: 100%;
+    background: var(--brand);
+    color: #fff;
+    text-align: center;
+    padding: 26px 22px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 22px rgba(160, 73, 94, 0.18);
+    position: relative;
+  }
+  /* 根节点 → 分支 的水平连线 */
+  .root-card::after {
+    content: "";
+    position: absolute;
+    right: -56px;
+    top: 50%;
+    width: 56px;
+    height: 2px;
+    background: var(--brand);
+  }
+
+  /* === 五个分支（右侧） === */
+  .branches {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .branch {
+    display: flex;
+    align-items: stretch;
+    padding: 12px 0;
+    border-top: 1px dashed var(--line);
+  }
+  .branch:first-child { border-top: none; }
+
+  /* 分支左侧小标签 */
+  .branch-label {
+    flex: 0 0 96px;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 13.5px;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 6px;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    position: relative;
+    align-self: center;
+    min-height: 44px;
+  }
+  /* label → 左侧的水平连线 */
+  .branch-label::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: var(--brand);
+  }
+
+  /* 分支右侧内容卡 */
+  .branch-body {
+    flex: 1;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: #45312f;
+  }
+
+  /* === 三级子项（仅层次分支） === */
+  .sub-list { display: flex; flex-direction: column; gap: 10px; }
+  .sub-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .sub-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .sub-tag {
+    flex-shrink: 0;
+    background: var(--rose-soft);
+    color: var(--brand);
+    font-weight: 700;
+    font-size: 12.5px;
+    padding: 4px 11px;
+    border-radius: 7px;
+    border: 1px solid var(--brand-soft);
+    white-space: nowrap;
+  }
+  .sub-text { flex: 1; font-size: 14.5px; }
+
+  /* === 页脚 === */
+  .foot {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== 打印 ===== */
+  @media print {
+    body { background: #fff; padding: 0; }
+    .card { box-shadow: none; border: none; }
+    .mindmap { page-break-inside: avoid; }
+  }
+
+  /* ===== 移动端 ===== */
+  @media (max-width: 720px) {
+    .mindmap {
+      flex-direction: column;
+      gap: 14px;
+    }
+    .root-card { margin: 0; }
+    .root-card::after {
+      right: 50%;
+      top: auto;
+      bottom: -14px;
+      width: 2px;
+      height: 14px;
+    }
+    .branch { flex-direction: column; gap: 8px; }
+    .branch-label { margin-right: 0; align-self: flex-start; }
+    .branch-label::before { display: none; }
+    .sub-item { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <span class="badge">思维导图 · 图模板版</span>
+    <span class="meta">2026-08-01 · 政策时事 · 热点认知卡</span>
+  </div>
+  <div class="title">2026年08月01日—个人贷款明标融资成本新规落地</div>
+  <div class="sub">按图模板整理 · 5 个二级节点精简版</div>
+
+  <div class="card">
+    <div class="mindmap">
+
+      <!-- ===== 左侧：根节点 ===== -->
+      <aside class="root-col">
+        <div class="root-card">
+          2026年08月01日<br>个人贷款明标融资<br>成本新规落地
+        </div>
+      </aside>
+
+      <!-- ===== 右侧：5 个分支 ===== -->
+      <main class="branches">
+
+        <!-- 1. 发生时间 -->
+        <div class="branch">
+          <div class="branch-label">发生时间</div>
+          <div class="branch-body">2026年8月1日《个人贷款业务明示综合融资成本规定》正式实施</div>
+        </div>
+
+        <!-- 2. 事件 -->
+        <div class="branch">
+          <div class="branch-label">事件</div>
+          <div class="branch-body">金融监管总局联合央行发布新规，要求明示个人贷款综合融资成本</div>
+        </div>
+
+        <!-- 3. 事件具体事项 -->
+        <div class="branch">
+          <div class="branch-label">事件具体事项</div>
+          <div class="branch-body">所有个人贷款（房贷除外）的利息、服务费、担保费等全部折算为统一年化，写入《成本明示表》，线下签字、线上强制阅读</div>
+        </div>
+
+        <!-- 4. 层次（含 3 个三级子项） -->
+        <div class="branch">
+          <div class="branch-label">层次</div>
+          <div class="branch-body">
+            <div class="sub-list">
+              <div class="sub-item">
+                <span class="sub-tag">行业角度</span>
+                <span class="sub-text">助贷平台「化整为零」分账套路被堵死，民营银行砍掉超100家助贷合作</span>
+              </div>
+              <div class="sub-item">
+                <span class="sub-tag">数据角度</span>
+                <span class="sub-text">实际年化利率比宣传高5-10个百分点，新规以统一「年化口径」消除信息差</span>
+              </div>
+              <div class="sub-item">
+                <span class="sub-tag">社会视角</span>
+                <span class="sub-text">花呗、白条等消费分期年化一目了然，冲动消费被自动踩刹车</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. 补充 -->
+        <div class="branch">
+          <div class="branch-label">补充</div>
+          <div class="branch-body">重点打击「日息万三」「月息0.8%」等模糊报价话术</div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="foot">本思维导图根据 2026-08-01《个人贷款业务明示综合融资成本规定》热点认知卡整理 · 图模板版</div>
+</div>
+</body>
+</html>

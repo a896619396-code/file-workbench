@@ -1,7 +1,7 @@
 {
  "title": "文件工作台",
  "subtitle": "识暗心法 · 沉锋录·热点 · 热点知识卡 —— 点开即读",
- "generatedAt": "2026-08-19T19:24:24.561Z",
+ "generatedAt": "2026-08-19T19:25:07.794Z",
  "libraries": [
   {
    "id": "xinfa",
@@ -143,6 +143,12 @@
     {
      "name": "8月",
      "items": [
+      {
+       "file": "hot/8月/2026年08月20日—OpenAI被Anthropic反超AI商业化拐点.html",
+       "date": "2026-08-20",
+       "tags": [],
+       "title": "OpenAI被Anthropic反超AI商业化拐点"
+      },
       {
        "file": "hot/8月/2026年08月19日—小米Q2出货暴跌26.5%存储涨价成本双杀.html",
        "date": "2026-08-19",

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-08-22 职场行业 · AI没裁员只是不再招新人</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">职场行业 · 06 类</span>
+    <div class="date">2026-08-22 周六 · 热点认知卡</div>
+    <h1>AI没裁员，只是不再招新人</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>斯坦福数字经济实验室 8 月 12 日更新研究：美国 22-25 岁年轻人在高 AI 暴露职业的就业，比同龄低暴露人群少约 19%（一年前为 15%），缺口主要来自"招新人变少"，而非裁员变多；有经验员工几乎无此缺口。</p>
+<blockquote>
+<p>来源：Stanford Digital Economy Lab <a href="https://digitaleconomy.stanford.edu/news/canariesaug26">https://digitaleconomy.stanford.edu/news/canariesaug26</a> ；GCN 报道 <a href="https://gcn.com/ai-hiring-gap-workers-ages-widens/20887">https://gcn.com/ai-hiring-gap-workers-ages-widens/20887</a></p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p>楼下的老字号包子铺：生意变差，老板不会辞掉干了十年的老师傅，而是悄悄不再招新学徒——等老师傅退休，铺子自然就缩小了。AI 对职场的冲击也是这个节奏：台上没有裁员新闻，台下新人已经进不来了。</p>
+<p>水库的入水口：上游来水变细，水面不会立刻下降，看着一切正常；可等库存的水慢慢用完，旱情才真正显现。入口收缩是慢变量，比一眼可见的裁员难察觉得多，也难补救得多。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角 1：数据——同一职业，冰火两重天</h3>
+<p>不是"岗位消失"，是"岗位换人"：22-25 岁软件开发者自 2022 年末峰值下降约 20%，41-49 岁同期却增长 14%。同一个职位名称，年轻人的就业在缩、资深者的在涨——岗位还在，只是不再给新人留位子。</p></div>
+      <div class="view"><h3>视角 2：知识——新人最值钱的，恰是 AI 最便宜的</h3>
+<p>研究把知识分成两类：编码化知识（能写进教科书、文档、SOP 的标准化知识）和隐性知识（靠实践、师徒、碰壁攒下的经验直觉）。大模型最擅长复制前者——而这正是刚毕业者唯一能卖的东西。于是 AI 替代的不是"岗位"，是"新人的知识红利"。</p></div>
+      <div class="view"><h3>视角 3：社会——看不见的失业最危险</h3>
+<p>没有裁员新闻、没有抗议游行，只有招聘名额逐年悄悄变少。研究提醒：一旦入口层的断层积累几年，等市场发现"这代年轻人断档"时，补课成本已高得惊人。慢变量的可怕之处，就是它发生时毫无声音。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>入口收缩（Pipeline Shrinkage）</h4><ul>
+<li><strong>一句话</strong>：冲击最先作用在"新进入者"而不是"存量"上——最狠的一刀砍在门口，不在屋里。</li>
+<li><strong>生活类比</strong>：① 餐厅生意变差先不招新学徒，老师傅照旧 ② 小区车位紧张先停发新业主卡，老业主不受影响 ③ 地铁限流时挤不上车的是后到的人，已上车的毫无感觉</li>
+</ul></div>
+      <div class="model"><h4>编码化 vs 隐性知识（Codified vs Tacit Knowledge）</h4><ul>
+<li><strong>一句话</strong>：能写成文档的知识最容易被机器复制，靠经验沉淀的知识最抗打。</li>
+<li><strong>生活类比</strong>：① 菜谱人人能抄，火候只有老师傅手里有 ② 说明书教会你开机，排障靠的是修过一百次的直觉 ③ 网课能教会你公式，客户现场怎么应变教不了</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：数据岗的"教材技能"（语法、模型原理、工具操作）正是编码化知识，AI 复制成本极低；真正的护城河是把数据翻译成业务决策的隐性判断力——多练"在真实脏数据里拍板"，而不是背知识点。</li>
+<li><span class="kw">《认知觉醒》呼应</span>：周岭讲"认知越清晰，行动越坚定"——看清"入口在收缩"这个慢变量，才能提前把自己挪到安全的职业出口，而不是等 30 岁才发现自己站在被收缩的那一侧。</li>
+<li><span class="kw">《底层逻辑》呼应</span>：刘润说"普通人改变结果，优秀的人改变原因"——别只盯"裁员新闻"这个结果信号，要看"招聘入口"这个原因层的变化，原因变了，结果只是时间问题。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p>今天花 30 分钟做一次"知识体检"：在纸上分两栏，列出你正在学的东西里，哪些属于"能被写进教程的"（编码化），哪些属于"必须实战才有的"（隐性），各写至少 3 条。然后从下周起，把学习时间的 20% 从第一栏挪到第二栏——练一个真实小项目、跟一次完整业务流程，都比多刷一章教程更抗 AI。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">编码化知识</span> <span class="en">(Codified Knowledge)</span>：能写成教材、文档、操作手册的标准化知识，AI 复制它的成本最低。类比菜谱——人人可抄。</p></div>
+      <div class="dict"><p><span class="term">隐性知识</span> <span class="en">(Tacit Knowledge)</span>：靠实践、师徒、反复碰壁攒下的经验直觉，说不清道不明，AI 短期学不会。类比老师傅的火候。</p></div>
+      <div class="dict"><p><span class="term">AI 暴露度</span> <span class="en">(AI Exposure)</span>：一个职业的工作内容有多大比例可被 AI 直接替代的度量，越高越危险。类比"这份工作里能被机器代劳的工序占比"。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

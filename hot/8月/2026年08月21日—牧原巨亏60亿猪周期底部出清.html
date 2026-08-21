@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉锋录·热点判断 2026-08-21 牧原巨亏60亿猪周期底部出清</title>
+<style>
+  :root{
+    --cinnabar:#9e1f1f;      /* 朱砂主色 */
+    --cinnabar-dark:#7a1414;
+    --cinnabar-deep:#5a0e0e;
+    --paper:#f5efe4;         /* 米白纸色 */
+    --paper-dark:#efe5d4;
+    --ink:#2b2320;           /* 墨色 */
+    --ink-light:#5c4f47;
+    --gold:#c9a227;         /* 鎏金点缀 */
+    --line:#d8c9ae;
+    --badge-bg:#fff8ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  .page{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+  /* ===== 报头 ===== */
+  .masthead{
+    border:3px double var(--cinnabar);
+    border-radius:6px;
+    padding:22px 26px 18px;
+    margin-bottom:30px;
+    background:linear-gradient(180deg,#fffdf7 0%,var(--paper) 100%);
+    position:relative;
+  }
+  .masthead::before{
+    content:"沉锋录 · 热点判断";
+    position:absolute;top:-13px;left:24px;
+    background:var(--cinnabar);color:#fff;
+    padding:2px 14px;font-size:13px;letter-spacing:3px;
+    font-family:"Microsoft YaHei",sans-serif;border-radius:3px;
+  }
+  .masthead h1{
+    font-size:25px;color:var(--cinnabar-dark);
+    text-align:center;letter-spacing:2px;margin-bottom:6px;
+  }
+  .masthead .meta{
+    text-align:center;color:var(--ink-light);font-size:13.5px;
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .masthead .meta b{color:var(--cinnabar);}
+  .theme-line{
+    margin-top:14px;text-align:center;font-size:16.5px;color:var(--cinnabar-dark);
+    background:var(--paper-dark);padding:10px 14px;border-radius:4px;
+    border-left:4px solid var(--cinnabar);
+  }
+  /* ===== 章节标题 ===== */
+  h2.sec{
+    display:flex;align-items:center;gap:10px;
+    font-size:20px;color:#fff;background:var(--cinnabar);
+    padding:9px 16px;border-radius:4px;margin:38px 0 18px;
+    letter-spacing:2px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  h2.sec .no{
+    background:#fff;color:var(--cinnabar);width:26px;height:26px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;
+  }
+  h3{
+    font-size:17px;color:var(--cinnabar-dark);margin:22px 0 10px;
+    padding-left:10px;border-left:4px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 事实背景 ===== */
+  .facts{list-style:none;}
+  .facts li{
+    background:var(--paper-dark);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+    border:1px solid var(--line);position:relative;padding-left:46px;
+  }
+  .facts li::before{
+    content:attr(data-n);
+    position:absolute;left:12px;top:12px;
+    background:var(--cinnabar);color:#fff;width:24px;height:24px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  .num{color:var(--cinnabar);font-weight:700;font-size:1.12em;}
+  .num.big{color:var(--cinnabar);font-weight:800;font-size:1.35em;}
+  /* ===== 判断问句 ===== */
+  .question{
+    background:var(--cinnabar-deep);color:#fff;
+    border-radius:8px;padding:20px 22px;margin:12px 0;
+    font-size:16.5px;line-height:1.9;
+    border-left:6px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 结论 ===== */
+  .conclusion{
+    background:#1a0d0d;color:#fff;
+    border-radius:8px;padding:22px 24px;margin:14px 0 8px;
+    border:2px solid var(--cinnabar);
+    font-size:17.5px;line-height:1.9;font-weight:700;
+    position:relative;
+  }
+  .conclusion::before{
+    content:"◆ 结论 ◆";display:block;text-align:center;
+    color:var(--gold);font-size:14px;letter-spacing:6px;margin-bottom:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 判断依据 ===== */
+  .basis{list-style:none;}
+  .basis li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:12px 15px;margin-bottom:11px;
+  }
+  .badge{
+    display:inline-block;color:#fff;font-size:12.5px;
+    padding:2px 10px;border-radius:12px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;letter-spacing:1px;vertical-align:2px;
+  }
+  .b-reverse{background:#b3272d;}   /* 反常识识别 - 红 */
+  .b-motive{background:#7a5ab8;}    /* 动机拆解 - 紫 */
+  .b-switch{background:#2e7d8f;}    /* 议题偷换 - 青 */
+  .b-victim{background:#c97b1a;}    /* 受害范围 - 橙 */
+  .b-tier{background:#5a8f3c;}      /* 分层定价 - 绿 */
+  .b-mathe{background:#8f3c6d;}     /* 马太效应 - 品红 */
+  /* ===== 拆解现象 ===== */
+  .pheno{list-style:none;counter-reset:p;}
+  .pheno li{
+    counter-increment:p;
+    background:var(--paper-dark);border-left:4px solid var(--gold);
+    padding:11px 15px;margin-bottom:10px;border-radius:0 6px 6px 0;
+  }
+  .pheno li::before{
+    content:"现象" counter(p);
+    background:var(--gold);color:#fff;font-size:12px;
+    padding:1px 8px;border-radius:3px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 归因根源 ===== */
+  .cause{list-style:none;}
+  .cause li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+  }
+  .cause .lvl{
+    display:inline-block;background:var(--cinnabar);color:#fff;
+    font-size:12.5px;padding:2px 10px;border-radius:3px;margin-bottom:5px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .cause .lvl.s{background:#b3272d;}
+  .cause .lvl.m{background:#7a5ab8;}
+  .cause .lvl.d{background:#2e7d8f;}
+  /* ===== 反推逻辑 ===== */
+  .viewbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .view{
+    background:var(--paper-dark);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;
+  }
+  .view h4{
+    color:var(--cinnabar-dark);font-size:15px;margin-bottom:7px;
+    font-family:"Microsoft YaHei",sans-serif;
+    display:flex;align-items:center;gap:6px;
+  }
+  .view .gain{color:#2d6a2d;font-weight:700;}
+  .view .cost{color:var(--cinnabar);font-weight:700;}
+  .view p{font-size:14px;color:var(--ink);}
+  /* ===== 落地启示 ===== */
+  .lesson{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;margin-bottom:11px;
+    border-left:5px solid var(--cinnabar);
+  }
+  .lesson h4{color:var(--cinnabar-dark);font-size:15px;margin-bottom:6px;font-family:"Microsoft YaHei",sans-serif;}
+  /* ===== 素材来源 ===== */
+  table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--badge-bg);}
+  th{
+    background:var(--cinnabar);color:#fff;padding:9px 12px;
+    text-align:left;font-size:14px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  td{border:1px solid var(--line);padding:9px 12px;font-size:13.5px;vertical-align:top;}
+  tr:nth-child(even) td{background:var(--paper-dark);}
+  /* ===== 页脚 ===== */
+  .footer{
+    margin-top:40px;text-align:center;color:var(--ink-light);
+    font-size:12.5px;border-top:2px solid var(--line);padding-top:16px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist{
+    background:var(--paper-dark);border:1px solid var(--line);border-radius:6px;
+    padding:14px 18px;font-size:13.5px;color:var(--ink-light);margin-top:14px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist b{color:var(--cinnabar);}
+  @media(max-width:640px){
+    .viewbox{grid-template-columns:1fr;}
+    .page{padding:24px 14px 60px;}
+    .masthead h1{font-size:20px;}
+    .theme-line{font-size:14.5px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;}
+    .conclusion{background:#1a0d0d;-webkit-print-color-adjust:exact;}
+    h2.sec{background:var(--cinnabar);-webkit-print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <h1>牧原巨亏 60 亿 · 猪周期底部的"越亏越稳"</h1>
+    <div class="meta">
+      <span>日期：<b>2026-08-21 星期五</b></span>
+      <span>ISO 周：<b>W34</b></span>
+      <span>归档：<b>2026-08-21 13:45</b></span>
+      <span>判题人：<b>热点判断脚本</b></span>
+    </div>
+    <div class="theme-line">全行业最惨（20 家猪企全部预亏 155 亿）与市场最热（猪价 8 连涨、期货 +14%）同时出现——周期底部，账面亏损 vs 现金成本的分裂里藏着反转信号</div>
+  </header>
+
+  <!-- 第一部分 -->
+  <h2 class="sec"><span class="no">一</span>题目 · 事实背景</h2>
+  <ul class="facts">
+    <li data-n="1"><b>牧原股份</b>（002714.SZ）8 月 20 日晚发布 2026 年半年报：营收 <span class="num big">594.10 亿元</span>（同比 <span class="num">-22.30%</span>），归母净利润 <span class="num big">-60.78 亿元</span>，上年同期盈利 105.3 亿元、同比由盈转亏；Q2 单季亏损 <span class="num">48.63 亿元</span>，较 Q1（-12.15 亿元）环比增亏超 <span class="num">300%</span>。</li>
+    <li data-n="2">巨亏同时成本逆势创新低：6 月完全成本 <span class="num">11.7 元/公斤</span>、7 月进一步降至 <span class="num">11.5 元/公斤</span>，优秀场线已低于 <span class="num">10.5 元/公斤</span>；而行业自繁自养平均成本 <span class="num">12.6 元/公斤</span>——牧原超额领先 <span class="num">1.1 元/公斤</span>，且当前猪价已覆盖其现金成本线（折旧等非现金成本占比 10% 以上）。</li>
+    <li data-n="3">全行业集体深亏：<b>20 家</b>上市猪企 2026 上半年<b>全部预亏</b>、合计约 <span class="num big">155 亿元</span>（新希望 -16~18 亿、天邦 -15~16 亿）；行业已连续亏损 <span class="num">3 个季度</span>、现金流亏损超 <span class="num">5 个月</span>，累计亏损程度超过 2023 年周期、创历史新高（长江证券）。</li>
+    <li data-n="4">产能调控逼近红线：二季度末全国能繁母猪存栏 <span class="num">3780 万头</span>（同比 <span class="num">-6.5%</span>），距 5 月新修订方案设定的 <span class="num big">3750 万头</span>正常保有量仅差 <span class="num">0.8%</span>；牧原能繁母猪从 2024 年末 351.2 万头减至 2026 年 6 月末 <span class="num">311.3 万头</span>（一年半去化近 40 万头）。</li>
+    <li data-n="5">猪价却现<b>"8 连涨"</b>：8 月 14 日全国外三元均价回升至 <span class="num">10.86~10.93 元/公斤</span>（同比仍 -21.8%），期货主力合约从 10600 元/吨攀升至 <span class="num">12130 元/吨</span>（+14%）；而上半年均价仅 <span class="num">10.39 元/公斤</span>、4 月 13 日一度跌至 <span class="num">8.59 元/公斤</span>创近八年新低，7 公斤仔猪均价同比暴跌 <span class="num">56%</span> 跌破母猪场成本线。</li>
+  </ul>
+
+  <h3>🎯 判断问句</h3>
+  <div class="question">
+    在 20 家猪企全部预亏、行业现金流亏损创历史新高的"至暗时刻"，为何牧原亏损 60.78 亿却成本降至 11.5 元/公斤、管理层还逆势增持 5 亿元？猪价 8 连涨是周期反转的黎明，还是"越亏越扛"的深坑？作为数据分析师，应如何拆解"价格反弹"与"账面巨亏"的背离？
+  </div>
+
+  <!-- 第二部分 -->
+  <h2 class="sec"><span class="no">二</span>标准答案</h2>
+  <div class="conclusion">
+    牧原 60.78 亿巨亏是"底部出清的勋章"而非崩塌信号：7 月完全成本 11.5 元/公斤已低于行业 1.1 元、现金成本已被猪价覆盖，账面亏损主因是非现金折旧；能繁母猪距 3750 万头调控红线仅差 0.8%，行业出清近尾声——龙头正以亏损质量换取下一轮周期定价权，反转方向确定、时点不可测。
+  </div>
+
+  <h3>🔑 关键判断依据</h3>
+  <ul class="basis">
+    <li><span class="badge b-reverse">反常识识别</span>行业最惨（20 家全部预亏、现金流亏损创历史新高）与市场最热（猪价 8 连涨、期货 +14%）同时出现——市场定价锚已从"当期亏损"切换到"产能出清进度"，周期股在基本面最差时见底、预期先行，这正是"别人恐惧我贪婪"的教科书形态。</li>
+    <li><span class="badge b-motive">动机 4 层拆解</span>表层是"降本增效熬过寒冬"；中层是以成本曲线优势（11.5 vs 行业 12.6）在亏损期反向拉开差距、出栏不减反增打消耗战；深层是在政策去产能窗口以"亏损换份额"，赌的是行业出清后集中度红利与下一轮周期的定价权——5 亿元增持是管理层用真金白银背书这一判断。</li>
+    <li><span class="badge b-switch">议题偷换</span>市场热议"8 连涨=周期反转"实为偷换——本轮反弹是标肥价差走扩、二次育肥与压栏带来的供给端结构性修复，非需求实质回暖（头均仍亏 209 元）；"价格反弹"≠"盈利反转"，把月度价格波动当成周期拐点是用短期噪音替代长期信号。</li>
+    <li><span class="badge b-victim">受害范围异常</span>亏损代价并非均匀分摊——成本高于 12 元/公斤的中小场与散户首当其冲（仔猪价 -56% 显示补栏意愿冰点、淘汰母猪屠宰量同比 +120%），20 家猪企预亏 155 亿只是冰山一角；本轮出清由高成本群体承担，其退出恰恰是龙头未来盈利的来源，受害者的消亡即赢家的红利。</li>
+    <li><span class="badge b-tier">分层定价</span><span class="badge b-mathe">马太效应</span>猪价"行业共同承受、成本各自分化"——牧原 11.5 vs 行业 12.6 的成本分层决定谁先出局；全国前 20 强猪企市占率已达 <b>36%</b>、年出栏 500 头以上规模化比重超 <b>72%</b>（十年前不到一半），亏损期是行业集中度提升最快的窗口，周期底部天然奖励成本曲线最左侧玩家。</li>
+  </ul>
+
+  <!-- 第三部分 -->
+  <h2 class="sec"><span class="no">三</span>详细分析流程</h2>
+
+  <h3>1️⃣ 拆解现象</h3>
+  <ul class="pheno">
+    <li>猪价 8 连涨但行业仍深亏：8 月 14 日外三元均价 10.86~10.93 元/公斤、期货主力 +14%，但行业自繁自养头均亏损仍有 <b>209 元</b>——反弹由标肥价差走扩（175kg 大猪 vs 标猪价差 0.96 元/斤）驱动，是前期压栏释放后的供给结构性紧缺，不是需求端反转。</li>
+    <li>牧原账面巨亏 60.78 亿 vs 现金成本已被覆盖：折旧摊销等非现金成本占比 10% 以上、现金成本略高于 10 元/公斤，当前猪价（10.8~10.9）已越过现金成本线——会计利润为负、经营现金流接近平衡，"亏损的质量"比亏损本身更关键。</li>
+    <li>政策与龙头合力去产能：能繁母猪正常保有量目标从 3950 万头（2025.6）两度下调至 3750 万头（2026.5 新方案），牧原自身一年半去化近 40 万头——"国家队定红线 + 龙头率先瘦身"，行业出清从被动亏损转向主动调控。</li>
+    <li>量增价跌的囚徒困境：14 家上市猪企上半年合计出栏超 8500 万头、与去年同期持平（牧原 +0.58%、正邦 +56%），出栏不减、收入大减——亏损期谁先减产谁先出局，头部企业选择用现金流硬扛换份额。</li>
+    <li>第二曲线对冲主业亏损：牧原屠宰生猪 1723.4 万头（+50.98%）、屠宰肉食营收 220.61 亿元（+14.04%）延续盈利，越南合作猪场投产、海外营收 4080.63 万元；330 万套智能装备、日产生 20 亿条数据构建养猪大模型——周期股向下游与数据要确定性。</li>
+  </ul>
+
+  <h3>2️⃣ 归因根源</h3>
+  <ul class="cause">
+    <li><span class="lvl s">表层 · 反常识识别</span><br>上半年均价 10.39 元/公斤 vs 行业完全成本 12 元/公斤以上，猪价击穿成本线直接吞噬利润；叠加前期高体重压栏集中释放与集团出栏计划增量 6%，量增价跌形成"越卖越亏"的直接触发。</li>
+    <li><span class="lvl m">中层 · 动机 4 层拆解</span><br>头部企业以"成本领先 + 出栏不减"打消耗战——牧原 11.5 元成本在 209 元/头亏损下每日失血速度远慢于 12.6 元成本的中小场；政策端 3750 万头红线与淘汰母猪屠宰 +120% 共振，加速高成本产能出清，头部借势完成份额与心智双重卡位。</li>
+    <li><span class="lvl d">深层 · 马太效应 / 周期本质</span><br>生猪养殖从"散户主导"走向"资本密集型 + 政策调控"新常态，猪周期被熨平拉长（涨短跌长、低谷期拉长），成本曲线最左侧 + 全产业链 + 数据智能（20 亿条/日）的企业才能穿越；这轮周期远超从业者预期（高曈语），本质是行业定价权向头部与数据能力迁移的历史性洗牌。</li>
+  </ul>
+
+  <h3>3️⃣ 反推逻辑（收益 vs 成本）</h3>
+  <div class="viewbox">
+    <div class="view">
+      <h4>👤 用户 / 散户养殖户</h4>
+      <p><span class="gain">收益</span>：压栏与二次育肥赌反弹的价差收益（标肥价差 0.96 元/斤）。<br><span class="cost">成本</span>：现金流持续失血（自繁自养头均 -209 元）、补栏仔猪全面亏损，退出即沉没成本归零——散户在底部"死扛"的概率远高于头部。</p>
+    </div>
+    <div class="view">
+      <h4>🏰 生态主（牧原股份）</h4>
+      <p><span class="gain">收益</span>：成本领先带来的出清期份额提升、屠宰第二曲线盈利对冲、政策顺风 + 增持背书，反转后弹性最大。<br><span class="cost">成本</span>：日均亏损 3000 万+ 的现金消耗、能繁去化 40 万头的产能牺牲，以及反转时点不可测的财务压力。</p>
+    </div>
+    <div class="view">
+      <h4>⚠️ 受害者（高成本猪企与中小散户）</h4>
+      <p><span class="gain">收益</span>：猪价反弹少亏一点、扛到反转的可能。<br><span class="cost">成本</span>：持续亏损被逐个出清（山东某散户 2000 头母猪减至 100 头），成为行业集中度提升（前 20 强 36%）的代价——本轮周期的"伤亡名单"由成本曲线右侧填写。</p>
+    </div>
+    <div class="view">
+      <h4>🏛️ 监管（农业农村部等）</h4>
+      <p><span class="gain">收益</span>：产能调控见效（能繁距红线 0.8%）、供给与物价可控（猪肉 CPI 权重）、规模化占比 72% 的产业升级。<br><span class="cost">成本</span>：调控目标与实际出清节奏的博弈、中央储备收储的财政成本，以及"既要产能出清、又要防止价格失控"的两难。</p>
+    </div>
+  </div>
+
+  <h3>4️⃣ 落地启示（数据分析师 + HR 迁移）</h3>
+  <div class="lesson">
+    <h4>📊 亏损质量分析法（会计利润 vs 经营现金流）</h4>
+    牧原账面亏 60.78 亿，但拆开看折旧等非现金成本占 10%+、现金成本已被猪价覆盖——判断企业/部门健康度不能只看利润表数字，要追问"亏损里多少是非现金项、经营现金流是否为正"。正如 HR 看业务团队：区分"扩张投入期的账面亏损"（假性衰退，如新业务孵化）与"现金流断裂的真性衰退"（拖欠货款、回款恶化），裁员决策的刀要落在后者而非前者。
+  </div>
+  <div class="lesson">
+    <h4>📊 成本曲线分层定位（单元经济模型）</h4>
+    猪价行业共同承受、成本各自分化（牧原 11.5 vs 行业 12.6，超额领先 1.1 元/公斤）——同质化行业里活下来的永远是成本曲线最左侧玩家。迁移到 HR：评估公司竞争力先看其"单位经济"在行业成本曲线的位置；评估个人职业安全性同理——你在人才市场上是"11.5 元成本的好手"还是"12.6 元的一般选手"，决定了周期来临时你是出清者还是幸存者。
+  </div>
+  <div class="lesson">
+    <h4>📊 周期位置判断（领先指标 vs 滞后指标）</h4>
+    这轮底部信号不是猪价本身（滞后指标），而是仔猪价同比 -56%、能繁母猪距红线 0.8%、现金流亏损创历史新高（领先指标）——周期拐点要盯先行数据。迁移到 HR：判断行业/公司是否见底，看招聘需求、离职率、预算冻结、订单/询盘等领先信号，而非裁员公告、亏损财报等滞后信号；求职择业时，在领先指标转好、滞后指标仍差（如猪价连涨、猪企仍预亏）的窗口入场，是风险收益比最优的时机。
+  </div>
+
+  <!-- 素材来源 -->
+  <h2 class="sec"><span class="no">附</span>素材来源与数据引用</h2>
+  <table>
+    <tr><th style="width:55%">数据点</th><th>来源</th></tr>
+    <tr><td>牧原 H1 营收 594.10 亿 -22.3%、归母净利 -60.78 亿、Q2 -48.63 亿（环比增亏超 300%）</td><td>证券时报、每经网、第一财经（2026-08-20/21）</td></tr>
+    <tr><td>完全成本 6 月 11.7 → 7 月 11.5 元/公斤、优秀场线 &lt;10.5、现金成本覆盖</td><td>每经网、中证网（2026-08-20/21）</td></tr>
+    <tr><td>行业成本 12.6 元/公斤、牧原超额领先 1.1 元、2H26/1Q27 均价预判</td><td>中金研报（2026-08-20）</td></tr>
+    <tr><td>20 家猪企全部预亏合计约 155 亿、头均亏 209 元、现金流亏损超 5 个月创历史新高</td><td>新浪财经、长江证券研报（2026-08-16/18）</td></tr>
+    <tr><td>能繁母猪 3780 万头（-6.5%）、距 3750 万头红线 0.8%、7 月去化提速</td><td>界面新闻、国家统计局（2026-08-18/21）</td></tr>
+    <tr><td>牧原能繁 351.2 万 → 311.3 万头、董监高增持 5 亿元</td><td>新浪财经、中证网（2026-08-21）</td></tr>
+    <tr><td>猪价 8 连涨 10.86~10.93 元/公斤、期货 10600→12130 元/吨 +14%、4 月低点 8.59 元/公斤</td><td>新浪财经、中国养猪网、中华网（2026-08-14~17）</td></tr>
+    <tr><td>仔猪价同比 -56%、淘汰母猪屠宰 +120%、前 20 强市占率 36%、规模化 72%</td><td>界面新闻、腾讯新闻（2026-08-18/21）</td></tr>
+    <tr><td>屠宰 1723.4 万头 +50.98%、屠宰肉食 220.61 亿 +14.04%、越南投产、330 万套智能装备</td><td>中证网（2026-08-21）</td></tr>
+    <tr><td>股价 8/21 收 39.08 元（-1.86%）、市值约 2240~2300 亿元</td><td>腾讯行情、第一财经（2026-08-21）</td></tr>
+    <tr><td>关联叙事：长鑫科技市值登顶（存储周期顶部戴成长桂冠）</td><td>沉锋录历史期次（08-14）</td></tr>
+  </table>
+
+  <div class="checklist">
+    <b>生成质量自检</b>：✔ 标题（日期+星期） ✔ 元信息（主题/归档/W34/判题人） ✔ 事实背景 5 条含数字 ✔ 判断问句 ~100 字（反常识+追问+数据技能） ✔ 结论加粗斩钉截铁 ✔ 判断依据 5 条覆盖 6 框架 ✔ 拆解 5 条 / 归因 3 层 / 反推 4 视角 / 启示 3 条 ✔ 数据可溯源
+  </div>
+
+  <div class="footer">
+    本文由沉锋录·热点判断脚本自动生成 · 素材来源：联网搜索（WorkBuddy WebSearch）<br>
+    训练框架：反常识识别 · 动机 N 层拆解 · 议题偷换 · 受害范围异常 · 分层定价 · 马太效应
+  </div>
+</div>
+</body>
+</html>

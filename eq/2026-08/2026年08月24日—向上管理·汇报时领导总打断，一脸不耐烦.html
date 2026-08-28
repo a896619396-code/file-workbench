@@ -30,6 +30,17 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:15.
 .card .ct.k{color:var(--gold)}
 .scene{border-left:5px solid var(--primary)}
 .scene p{color:var(--ink);line-height:1.95}
+.wrong{background:var(--red-soft);border:1px solid #f3cdc8;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.wrong .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.wrong ul{list-style:none}
+.wrong li{position:relative;padding:5px 0 5px 22px;font-size:13.5px;color:#6e3f38;line-height:1.75}
+.wrong li::before{content:"✕";position:absolute;left:0;top:5px;color:var(--red);font-weight:900;font-size:13px}
+.talk-lib{background:linear-gradient(160deg,#fff7ee,#fffdf8);border:1px solid #f0dfc0;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.talk-lib .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.talk-lib ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.talk-lib li{font-size:13.5px;color:#5c4b31;line-height:1.75;padding-left:16px;position:relative}
+.talk-lib li::before{content:"❝";position:absolute;left:0;top:-1px;color:var(--gold);font-weight:900}
+.talk-lib li b{color:#7a5510}
 .analysis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
 .a-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 14px;box-shadow:var(--shadow)}
 .a-title{font-size:12px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:6px}
@@ -55,6 +66,7 @@ tr:nth-child(even) td{background:#fdfaf8}
 .action .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
 .action p{font-size:14px;color:#5c4b31;font-weight:600}
 .quote{background:linear-gradient(135deg,#fff,#fdf0f5);border:1px solid #f3d5e2;border-radius:var(--radius);padding:20px 24px;margin:20px 0;text-align:center;box-shadow:var(--shadow)}
+.quote .qtag{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
 .quote p{font-size:19px;font-weight:800;color:var(--primary-deep);line-height:1.8}
 .quote small{display:block;margin-top:8px;font-size:12px;color:var(--ink-faint);letter-spacing:2px}
 .foot{text-align:center;color:var(--ink-faint);font-size:12px;margin-top:26px;line-height:2}
@@ -78,6 +90,12 @@ tr:nth-child(even) td{background:#fdfaf8}
   <div class="card scene">
     <div class="ct">📌 情景再现</div>
     <p>每周例会，你准备了一肚子内容，刚讲两句就被领导打断：「说重点」「这个我知道了」「你到底想说什么？」你越讲越慌，讲完领导只说了句「嗯，知道了」，你感觉自己的汇报毫无价值。</p>
+  </div>
+
+  
+  <div class="wrong">
+    <div class="t">✕ 常见错误反应 · 先避开这些坑</div>
+    <ul><li>从头铺垫背景——领导没耐心听</li><li>一口气讲 10 分钟——信息过载</li><li>被打断就慌、语无伦次——显得不专业</li><li>汇报完不记录反馈——下次同样踩坑</li></ul>
   </div>
 
   <div class="card">
@@ -122,6 +140,12 @@ tr:nth-child(even) td{background:#fdfaf8}
       </div>
     </div></div>
 
+  
+  <div class="talk-lib">
+    <div class="t">🗣 话术库 · 直接照着说</div>
+    <ul><li>结论先行：「跟您同步三件事：A 已完成、B 有风险、C 需要您决策。」</li><li>只讲请求：「B 的风险是接口方排期推迟，可能导致晚 2 天，需要您帮忙催一下。」</li><li>控制时长：「三件事说完了，您看哪件需要我展开？」</li><li>自省：「他打断我说『这个我知道了』——下次直接跳到他不知道的部分。」</li></ul>
+  </div>
+
   <table>
     <tr><th class="do">✅ 要做</th><th class="dont">❌ 不要做</th></tr>
     <tr><td class="do-t">第一句说结论</td><td class="dont-t">从头到尾铺垫背景</td></tr><tr><td class="do-t">汇报控制在 3 分钟内</td><td class="dont-t">一口气讲 10 分钟</td></tr><tr><td class="do-t">把细节留到领导追问</td><td class="dont-t">领导没问也展开细节</td></tr><tr><td class="do-t">观察被打断位置，下次调整</td><td class="dont-t">被打断就慌，语无伦次</td></tr>
@@ -133,6 +157,7 @@ tr:nth-child(even) td{background:#fdfaf8}
   </div>
 
   <div class="quote">
+    <div class="qtag">✨ 今日金句</div>
     <p>“领导的时间越贵，你的汇报越要值钱。”</p>
     <small>职场高情商修炼 · 每日一课 · 2026-08-24</small>
   </div>

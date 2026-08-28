@@ -30,6 +30,17 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:15.
 .card .ct.k{color:var(--gold)}
 .scene{border-left:5px solid var(--primary)}
 .scene p{color:var(--ink);line-height:1.95}
+.wrong{background:var(--red-soft);border:1px solid #f3cdc8;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.wrong .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.wrong ul{list-style:none}
+.wrong li{position:relative;padding:5px 0 5px 22px;font-size:13.5px;color:#6e3f38;line-height:1.75}
+.wrong li::before{content:"✕";position:absolute;left:0;top:5px;color:var(--red);font-weight:900;font-size:13px}
+.talk-lib{background:linear-gradient(160deg,#fff7ee,#fffdf8);border:1px solid #f0dfc0;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.talk-lib .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.talk-lib ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.talk-lib li{font-size:13.5px;color:#5c4b31;line-height:1.75;padding-left:16px;position:relative}
+.talk-lib li::before{content:"❝";position:absolute;left:0;top:-1px;color:var(--gold);font-weight:900}
+.talk-lib li b{color:#7a5510}
 .analysis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
 .a-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 14px;box-shadow:var(--shadow)}
 .a-title{font-size:12px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:6px}
@@ -55,6 +66,7 @@ tr:nth-child(even) td{background:#fdfaf8}
 .action .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
 .action p{font-size:14px;color:#5c4b31;font-weight:600}
 .quote{background:linear-gradient(135deg,#fff,#fdf0f5);border:1px solid #f3d5e2;border-radius:var(--radius);padding:20px 24px;margin:20px 0;text-align:center;box-shadow:var(--shadow)}
+.quote .qtag{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
 .quote p{font-size:19px;font-weight:800;color:var(--primary-deep);line-height:1.8}
 .quote small{display:block;margin-top:8px;font-size:12px;color:var(--ink-faint);letter-spacing:2px}
 .foot{text-align:center;color:var(--ink-faint);font-size:12px;margin-top:26px;line-height:2}
@@ -78,6 +90,12 @@ tr:nth-child(even) td{background:#fdfaf8}
   <div class="card scene">
     <div class="ct">📌 情景再现</div>
     <p>周五下班前，领导把三份需求发给你：「这三件都很重要，下周都要有进展。」你心里清楚，按现有工作量，三件全做必然每件都做不精。直接说「做不过来」怕显得没能力，全接下又怕全搞砸。</p>
+  </div>
+
+  
+  <div class="wrong">
+    <div class="t">✕ 常见错误反应 · 先避开这些坑</div>
+    <ul><li>全接下硬扛——每件都做不精，最后全搞砸</li><li>一口回绝「我做不过来」——让领导下不来台</li><li>默默自己排序闷头做——做错优先级，白忙一场</li><li>抱怨「这哪是人干的活」——显得没担当</li></ul>
   </div>
 
   <div class="card">
@@ -122,6 +140,12 @@ tr:nth-child(even) td{background:#fdfaf8}
       </div>
     </div></div>
 
+  
+  <div class="talk-lib">
+    <div class="t">🗣 话术库 · 直接照着说</div>
+    <ul><li>接任务：「好的，三件我都接。为了保质保量，想跟您确认下优先级，哪件最优先？」</li><li>排序后：「我先全力做 A，B 每天跟进，C 我这边要延到 X 号，您看行吗？」</li><li>报风险：「三件都本周交付的话，A、B 质量都会打折扣，建议 A 精做、B 保底、C 延后，您拍板。」</li><li>确认收尾：「那我就按 A→B→C 推进，有进展随时同步您。」</li></ul>
+  </div>
+
   <table>
     <tr><th class="do">✅ 要做</th><th class="dont">❌ 不要做</th></tr>
     <tr><td class="do-t">先接任务，再谈优先级</td><td class="dont-t">一口回绝「我做不过来」</td></tr><tr><td class="do-t">让领导做排序决策</td><td class="dont-t">默默全接，最后全搞砸</td></tr><tr><td class="do-t">提前讲清资源冲突的后果</td><td class="dont-t">抱怨「这哪是人干的活」</td></tr><tr><td class="do-t">确认完再走，留个书面记录</td><td class="dont-t">以为领导记得你的辛苦，他不记得</td></tr>
@@ -133,6 +157,7 @@ tr:nth-child(even) td{background:#fdfaf8}
   </div>
 
   <div class="quote">
+    <div class="qtag">✨ 今日金句</div>
     <p>“会暴露风险的人，领导才敢把更大的事交给他。”</p>
     <small>职场高情商修炼 · 每日一课 · 2026-08-10</small>
   </div>

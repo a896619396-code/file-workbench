@@ -30,6 +30,17 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:15.
 .card .ct.k{color:var(--gold)}
 .scene{border-left:5px solid var(--primary)}
 .scene p{color:var(--ink);line-height:1.95}
+.wrong{background:var(--red-soft);border:1px solid #f3cdc8;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.wrong .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.wrong ul{list-style:none}
+.wrong li{position:relative;padding:5px 0 5px 22px;font-size:13.5px;color:#6e3f38;line-height:1.75}
+.wrong li::before{content:"✕";position:absolute;left:0;top:5px;color:var(--red);font-weight:900;font-size:13px}
+.talk-lib{background:linear-gradient(160deg,#fff7ee,#fffdf8);border:1px solid #f0dfc0;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.talk-lib .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.talk-lib ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.talk-lib li{font-size:13.5px;color:#5c4b31;line-height:1.75;padding-left:16px;position:relative}
+.talk-lib li::before{content:"❝";position:absolute;left:0;top:-1px;color:var(--gold);font-weight:900}
+.talk-lib li b{color:#7a5510}
 .analysis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
 .a-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 14px;box-shadow:var(--shadow)}
 .a-title{font-size:12px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:6px}
@@ -55,6 +66,7 @@ tr:nth-child(even) td{background:#fdfaf8}
 .action .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
 .action p{font-size:14px;color:#5c4b31;font-weight:600}
 .quote{background:linear-gradient(135deg,#fff,#fdf0f5);border:1px solid #f3d5e2;border-radius:var(--radius);padding:20px 24px;margin:20px 0;text-align:center;box-shadow:var(--shadow)}
+.quote .qtag{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
 .quote p{font-size:19px;font-weight:800;color:var(--primary-deep);line-height:1.8}
 .quote small{display:block;margin-top:8px;font-size:12px;color:var(--ink-faint);letter-spacing:2px}
 .foot{text-align:center;color:var(--ink-faint);font-size:12px;margin-top:26px;line-height:2}
@@ -78,6 +90,12 @@ tr:nth-child(even) td{background:#fdfaf8}
   <div class="card scene">
     <div class="ct">📌 情景再现</div>
     <p>你找设计部要一张发布会主视觉图，对方说「排期排到下个月了」。你找技术部提需求，对方说「优先级不高」。每个部门都有自己的道理，你的项目却卡在原地，老板还在催你。</p>
+  </div>
+
+  
+  <div class="wrong">
+    <div class="t">✕ 常见错误反应 · 先避开这些坑</div>
+    <ul><li>上来就「这是你们该做的」——激化矛盾</li><li>一句话需求让对方猜——必然返工</li><li>只靠微信口头沟通——没留痕</li><li>一言不合就告状——结下梁子</li></ul>
   </div>
 
   <div class="card">
@@ -122,6 +140,12 @@ tr:nth-child(even) td{background:#fdfaf8}
       </div>
     </div></div>
 
+  
+  <div class="talk-lib">
+    <div class="t">🗣 话术库 · 直接照着说</div>
+    <ul><li>找利益点：「设计部怕返工，那我把需求写到一次到位。」</li><li>共同目标：「这个图用在发布会主视觉上，老板会直接看，做好了你们也露脸。」</li><li>降成本：「我把参考图、尺寸、文案都打包发你了，直接套模板，大概半小时？」</li><li>正式化：「这个需求已推了 3 周，影响上线时间 X，需要领导帮忙协调下优先级。」</li></ul>
+  </div>
+
   <table>
     <tr><th class="do">✅ 要做</th><th class="dont">❌ 不要做</th></tr>
     <tr><td class="do-t">先找利益交集再谈需求</td><td class="dont-t">上来就「这是你们该做的」</td></tr><tr><td class="do-t">把需求翻译成共同目标</td><td class="dont-t">一句话需求让对方猜</td></tr><tr><td class="do-t">降低对方的配合成本</td><td class="dont-t">只靠微信口头沟通</td></tr><tr><td class="do-t">正式流程留痕，借力前先给足机会</td><td class="dont-t">一言不合就告状</td></tr>
@@ -133,6 +157,7 @@ tr:nth-child(even) td{background:#fdfaf8}
   </div>
 
   <div class="quote">
+    <div class="qtag">✨ 今日金句</div>
     <p>“别人帮你，是因为帮你有好处或成本低，不是因为应该。”</p>
     <small>职场高情商修炼 · 每日一课 · 2026-08-05</small>
   </div>

@@ -30,6 +30,17 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:15.
 .card .ct.k{color:var(--gold)}
 .scene{border-left:5px solid var(--primary)}
 .scene p{color:var(--ink);line-height:1.95}
+.wrong{background:var(--red-soft);border:1px solid #f3cdc8;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.wrong .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.wrong ul{list-style:none}
+.wrong li{position:relative;padding:5px 0 5px 22px;font-size:13.5px;color:#6e3f38;line-height:1.75}
+.wrong li::before{content:"✕";position:absolute;left:0;top:5px;color:var(--red);font-weight:900;font-size:13px}
+.talk-lib{background:linear-gradient(160deg,#fff7ee,#fffdf8);border:1px solid #f0dfc0;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.talk-lib .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.talk-lib ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.talk-lib li{font-size:13.5px;color:#5c4b31;line-height:1.75;padding-left:16px;position:relative}
+.talk-lib li::before{content:"❝";position:absolute;left:0;top:-1px;color:var(--gold);font-weight:900}
+.talk-lib li b{color:#7a5510}
 .analysis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
 .a-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 14px;box-shadow:var(--shadow)}
 .a-title{font-size:12px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:6px}
@@ -55,6 +66,7 @@ tr:nth-child(even) td{background:#fdfaf8}
 .action .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
 .action p{font-size:14px;color:#5c4b31;font-weight:600}
 .quote{background:linear-gradient(135deg,#fff,#fdf0f5);border:1px solid #f3d5e2;border-radius:var(--radius);padding:20px 24px;margin:20px 0;text-align:center;box-shadow:var(--shadow)}
+.quote .qtag{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
 .quote p{font-size:19px;font-weight:800;color:var(--primary-deep);line-height:1.8}
 .quote small{display:block;margin-top:8px;font-size:12px;color:var(--ink-faint);letter-spacing:2px}
 .foot{text-align:center;color:var(--ink-faint);font-size:12px;margin-top:26px;line-height:2}
@@ -78,6 +90,12 @@ tr:nth-child(even) td{background:#fdfaf8}
   <div class="card scene">
     <div class="ct">📌 情景再现</div>
     <p>同事小周找你借三千：「哥，月底手头紧，下个月发工资就还你。」你俩平时关系不错，但你知道公司里借钱十有八九要不回来。拒绝怕伤感情，借了怕打水漂，你纠结到失眠。</p>
+  </div>
+
+  
+  <div class="wrong">
+    <div class="t">✕ 常见错误反应 · 先避开这些坑</div>
+    <ul><li>不好意思拒绝硬着头皮借——大概率打水漂</li><li>借了不好意思催——自己吃亏</li><li>大额借款不打借条——风险无限</li><li>借钱给刚认识的人——人财两空</li></ul>
   </div>
 
   <div class="card">
@@ -122,6 +140,12 @@ tr:nth-child(even) td{background:#fdfaf8}
       </div>
     </div></div>
 
+  
+  <div class="talk-lib">
+    <div class="t">🗣 话术库 · 直接照着说</div>
+    <ul><li>缓一缓：「这周我手头也紧，我看看哈，明天给你信。」</li><li>定规则：「行，我匀你两千，下个月 10 号前还我哈，我也要周转。转账备注我写借款，免得忘了。」</li><li>规矩婉拒：「说实话，我给自己定了规矩，不跟同事有金钱往来，怕伤了关系，这次真帮不上，不好意思。」</li><li>到期跟进：「小周，上次那笔说好 10 号，今天 12 号了，方便的话这两天转我下？」</li></ul>
+  </div>
+
   <table>
     <tr><th class="do">✅ 要做</th><th class="dont">❌ 不要做</th></tr>
     <tr><td class="do-t">不当场答应，留思考时间</td><td class="dont-t">不好意思拒绝硬着头皮借</td></tr><tr><td class="do-t">借就定好金额还期方式</td><td class="dont-t">借了不好意思催</td></tr><tr><td class="do-t">不想借用规则婉拒</td><td class="dont-t">大额借款不打借条</td></tr><tr><td class="do-t">到期温和跟进</td><td class="dont-t">借钱给刚认识的人</td></tr>
@@ -133,6 +157,7 @@ tr:nth-child(even) td{background:#fdfaf8}
   </div>
 
   <div class="quote">
+    <div class="qtag">✨ 今日金句</div>
     <p>“敢谈钱的关系，才是干净的关系。”</p>
     <small>职场高情商修炼 · 每日一课 · 2026-08-21</small>
   </div>

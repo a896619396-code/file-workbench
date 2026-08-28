@@ -30,6 +30,17 @@ body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:15.
 .card .ct.k{color:var(--gold)}
 .scene{border-left:5px solid var(--primary)}
 .scene p{color:var(--ink);line-height:1.95}
+.wrong{background:var(--red-soft);border:1px solid #f3cdc8;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.wrong .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.wrong ul{list-style:none}
+.wrong li{position:relative;padding:5px 0 5px 22px;font-size:13.5px;color:#6e3f38;line-height:1.75}
+.wrong li::before{content:"✕";position:absolute;left:0;top:5px;color:var(--red);font-weight:900;font-size:13px}
+.talk-lib{background:linear-gradient(160deg,#fff7ee,#fffdf8);border:1px solid #f0dfc0;border-radius:var(--radius-sm);padding:16px 18px;margin:14px 0}
+.talk-lib .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.talk-lib ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.talk-lib li{font-size:13.5px;color:#5c4b31;line-height:1.75;padding-left:16px;position:relative}
+.talk-lib li::before{content:"❝";position:absolute;left:0;top:-1px;color:var(--gold);font-weight:900}
+.talk-lib li b{color:#7a5510}
 .analysis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
 .a-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 14px;box-shadow:var(--shadow)}
 .a-title{font-size:12px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:6px}
@@ -55,6 +66,7 @@ tr:nth-child(even) td{background:#fdfaf8}
 .action .t{font-size:12.5px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
 .action p{font-size:14px;color:#5c4b31;font-weight:600}
 .quote{background:linear-gradient(135deg,#fff,#fdf0f5);border:1px solid #f3d5e2;border-radius:var(--radius);padding:20px 24px;margin:20px 0;text-align:center;box-shadow:var(--shadow)}
+.quote .qtag{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:8px}
 .quote p{font-size:19px;font-weight:800;color:var(--primary-deep);line-height:1.8}
 .quote small{display:block;margin-top:8px;font-size:12px;color:var(--ink-faint);letter-spacing:2px}
 .foot{text-align:center;color:var(--ink-faint);font-size:12px;margin-top:26px;line-height:2}
@@ -78,6 +90,12 @@ tr:nth-child(even) td{background:#fdfaf8}
   <div class="card scene">
     <div class="ct">📌 情景再现</div>
     <p>需求评审会上，你说「这块需要运营提供数据」，运营说「数据要技术从库里拉」，技术说「运营没提需求，我们不知道要什么」，市场说「这跟我们没关系」。开了两个小时，什么问题都没解决，会议纪要把你写成了「负责人」。</p>
+  </div>
+
+  
+  <div class="wrong">
+    <div class="t">✕ 常见错误反应 · 先避开这些坑</div>
+    <ul><li>跟着一起踢皮球——会议无果</li><li>自己默默把活全揽了——被当工具人</li><li>抱怨「开会都是浪费时间」——负面情绪</li><li>散会没纪要——白开一场</li></ul>
   </div>
 
   <div class="card">
@@ -122,6 +140,12 @@ tr:nth-child(even) td{background:#fdfaf8}
       </div>
     </div></div>
 
+  
+  <div class="talk-lib">
+    <div class="t">🗣 话术库 · 直接照着说</div>
+    <ul><li>定目标：「各位，今天目标就一个：把数据链路打通，产出 3 个明确结论，散会前人人认领。」</li><li>翻译行动：「技术说需要需求单，运营说可以提——那运营今天下班前发技术，技术明天回复排期，行吗？」</li><li>定人定时：「好，数据提供：运营小刘，周三前；链路实现：技术小周，周五前回复。我整理纪要发大家。」</li><li>会后跟进：「各位，周三了，运营的需求单麻烦 @小刘 同步下进展？」</li></ul>
+  </div>
+
   <table>
     <tr><th class="do">✅ 要做</th><th class="dont">❌ 不要做</th></tr>
     <tr><td class="do-t">开场锁定会议目标</td><td class="dont-t">跟着大家一起踢皮球</td></tr><tr><td class="do-t">把皮球翻译成具体行动</td><td class="dont-t">会议开完没纪要</td></tr><tr><td class="do-t">当场定人定时定结论</td><td class="dont-t">自己默默把活全揽了</td></tr><tr><td class="do-t">会后发纪要并跟进</td><td class="dont-t">抱怨「开会都是浪费时间」</td></tr>
@@ -133,6 +157,7 @@ tr:nth-child(even) td{background:#fdfaf8}
   </div>
 
   <div class="quote">
+    <div class="qtag">✨ 今日金句</div>
     <p>“谁让会议出结果，谁就是会议的主人。”</p>
     <small>职场高情商修炼 · 每日一课 · 2026-08-12</small>
   </div>

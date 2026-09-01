@@ -1870,6 +1870,14 @@ function fetchHTML(url){
   });
 }
 /* HTML 正文解析：提取标题 + 小节结构 */
+var TITLE_CLS_RE=/(^|[-_\s])(t|ct|title|label|type|head|badge|theme|topic|block-t|scene-label|analysis-label|case-title|case-type|section-title|talk-lib|answer)([-_\s]|$)/i;
+function isTitleEl(el){
+  var cls=(typeof el.className==='string')?el.className:(el.getAttribute&&el.getAttribute('class'))||'';
+  if(!cls) return false;
+  if(!TITLE_CLS_RE.test(cls)) return false;
+  var len=(el.textContent||'').replace(/\s+/g,' ').trim().length;
+  return len>0 && len<=60; /* 标题文本须短，避免把整段正文误当标题 */
+}
 function parseArticle(html){
   var doc;
   try{
@@ -1886,28 +1894,48 @@ function parseArticle(html){
   }
   var sections=[];
   var cur=null;
+  var pushCur=function(){
+    if(cur && cur.text && cur.text.trim().length>=4){ sections.push(cur); }
+    cur=null;
+  };
   var walk=function(node){
     Array.prototype.forEach.call(node.childNodes,function(child){
-      if(child.nodeType===1){
-        var tag=child.tagName.toLowerCase();
-        if(tag==='h2'||tag==='h3'||tag==='h4'||tag==='h5'){
-          var txt=child.textContent.trim().replace(/^[^\u4e00-\u9fa5a-zA-Z0-9]+/,'');
-          if(txt){
-            cur={tag:tag,title:txt,text:''};
-            sections.push(cur);
-          }
-        }else if(tag==='p'||tag==='li'||tag==='blockquote'){
-          var t2=child.textContent.trim();
-          if(t2 && cur){ cur.text+=(cur.text?'\n':'')+t2; }
-          else if(t2 && !cur){ cur={tag:'p',title:'正文',text:t2}; sections.push(cur); }
-        }else if(tag==='script'||tag==='style'||tag==='nav'||tag==='header'||tag==='footer'){ return; }
-        else if(child.childNodes && child.childNodes.length){ walk(child); }
+      if(child.nodeType===3){ /* 裸文本节点：归入当前小节 */
+        var t3=child.textContent.replace(/\s+/g,' ').trim();
+        if(t3){
+          if(!cur){ cur={tag:'p',title:'正文',text:''}; }
+          cur.text+=(cur.text?'\n':'')+t3;
+        }
+        return;
       }
+      if(child.nodeType!==1) return;
+      var tag=child.tagName.toLowerCase();
+      if(tag==='script'||tag==='style'||tag==='nav'||tag==='header'||tag==='footer') return;
+      if(tag==='h2'||tag==='h3'||tag==='h4'||tag==='h5'){
+        var txt=child.textContent.replace(/\s+/g,' ').trim().replace(/^[^\u4e00-\u9fa5a-zA-Z0-9]+/,'');
+        if(txt){ pushCur(); cur={tag:tag,title:txt,text:''}; }
+        return; /* 标题内部 span 不再递归，避免重复识别 */
+      }
+      if(tag==='p'||tag==='li'||tag==='blockquote'){
+        var t2=child.textContent.replace(/\s+/g,' ').trim();
+        if(t2){
+          if(!cur){ cur={tag:'p',title:'正文',text:''}; }
+          cur.text+=(cur.text?'\n':'')+t2;
+        }
+        return;
+      }
+      if(tag==='div'||tag==='span'||tag==='section'||tag==='article'){
+        if(isTitleEl(child)){
+          var tt=child.textContent.replace(/\s+/g,' ').trim().replace(/^[^\u4e00-\u9fa5a-zA-Z0-9]+/,'');
+          if(tt){ pushCur(); cur={tag:tag,title:tt,text:''}; }
+        }
+      }
+      if(child.childNodes && child.childNodes.length){ walk(child); }
     });
   };
   walk(body);
-  var clean=sections.filter(function(s){ return s.text && s.text.length>=8; });
-  return {title:title,sections:clean,plainText:clean.map(function(s){return s.title+'\n'+s.text;}).join('\n\n')};
+  pushCur();
+  return {title:title,sections:sections,plainText:sections.map(function(s){return s.title+'\n'+s.text;}).join('\n\n')};
 }
 /* 生成卡片：回顾卡 + 要点卡 */
 function keyOf(libId,file,kind,idx){
@@ -1931,7 +1959,7 @@ function makeReviewCard(lib,item,art){
     src:item.file, srcKind:'review', srcLib:lib.id, srcDate:item.date||''
   };
 }
-var POINT_KEYWORDS=['认知模型','行动启示','实操步骤','多视角','多角度','真实案例','关键','心法','方法','思考','今日小词典','金句','观点'];
+var POINT_KEYWORDS=['认知模型','行动启示','实操步骤','多视角','多角度','真实案例','关键','心法','方法','思考','今日小词典','金句','观点','核心法则','情景再现','四维分析','逐步拆解','话术库','应用要诀','识别流程','参考答案','结论','判断问句','事实背景','反常识','现象识别','动机归因','提防要点','落地行动','场景背景','完整分析','定律','模型','践行','清单','练习'];
 function makePointCards(lib,item,art){
   var cards=[];
   var used={};
@@ -1942,7 +1970,7 @@ function makePointCards(lib,item,art){
       if(t.indexOf(POINT_KEYWORDS[i])>-1){ hit=true; break; }
     }
     if(!hit) return;
-    var key=t;
+    var key=t+'#'+idx; /* 允许同名小节（多案例）各生成一张卡 */
     if(used[key]) return;
     used[key]=1;
     var text=s.text;
@@ -1954,7 +1982,7 @@ function makePointCards(lib,item,art){
       id:'s'+Math.random().toString(36).slice(2,8),
       group:lib.name, topic:'要点·'+item.title.slice(0,16), cat:item.tags&&item.tags[0]?item.tags[0]:'资料',
       tags:tags,
-      front:'《'+item.title+'》的「'+t+'」讲了什么？',
+      front:'《'+item.title+'》的「'+t.slice(0,24)+'」讲了什么？',
       back:t+'：\n'+text, notes:'来源：'+lib.name+' ｜ '+(item.date||''),
       reps:0,streak:0,interval:0,due:null,lapses:0,history:[],mastered:{1:false,2:false,3:false,4:false},
       sample:false,createdAt:Date.now(),updatedAt:Date.now(),fileName:'',
@@ -2083,11 +2111,17 @@ function startAiQuiz(id){
 function parseAiQuizJSON(txt){
   try{
     var m=txt.match(/\{[\s\S]*\}/);
-    if(m) return JSON.parse(m[0]);
+    if(m){
+      var obj=JSON.parse(m[0]);
+      if(obj && Array.isArray(obj.questions)) return obj;
+    }
   }catch(e){}
   try{
     var m2=txt.match(/\[[\s\S]*\]/);
-    if(m2){ var arr=JSON.parse(m2[0]); return {questions:arr}; }
+    if(m2){
+      var arr=JSON.parse(m2[0]);
+      if(Array.isArray(arr)) return {questions:arr};
+    }
   }catch(e){}
   return null;
 }

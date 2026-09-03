@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉锋录·热点判断 2026-09-02 燧原科技IPO大肉签未盈利定价狂欢</title>
+<style>
+  :root{
+    --cinnabar:#9e1f1f;      /* 朱砂主色 */
+    --cinnabar-dark:#7a1414;
+    --cinnabar-deep:#5a0e0e;
+    --paper:#f5efe4;         /* 米白纸色 */
+    --paper-dark:#efe5d4;
+    --ink:#2b2320;           /* 墨色 */
+    --ink-light:#5c4f47;
+    --gold:#c9a227;         /* 鎏金点缀 */
+    --line:#d8c9ae;
+    --badge-bg:#fff8ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  .page{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+  /* ===== 报头 ===== */
+  .masthead{
+    border:3px double var(--cinnabar);
+    border-radius:6px;
+    padding:22px 26px 18px;
+    margin-bottom:30px;
+    background:linear-gradient(180deg,#fffdf7 0%,var(--paper) 100%);
+    position:relative;
+  }
+  .masthead::before{
+    content:"沉锋录 · 热点判断";
+    position:absolute;top:-13px;left:24px;
+    background:var(--cinnabar);color:#fff;
+    padding:2px 14px;font-size:13px;letter-spacing:3px;
+    font-family:"Microsoft YaHei",sans-serif;border-radius:3px;
+  }
+  .masthead h1{
+    font-size:25px;color:var(--cinnabar-dark);
+    text-align:center;letter-spacing:2px;margin-bottom:6px;
+  }
+  .masthead .meta{
+    text-align:center;color:var(--ink-light);font-size:13.5px;
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .masthead .meta b{color:var(--cinnabar);}
+  .theme-line{
+    margin-top:14px;text-align:center;font-size:16.5px;color:var(--cinnabar-dark);
+    background:var(--paper-dark);padding:10px 14px;border-radius:4px;
+    border-left:4px solid var(--cinnabar);
+  }
+  /* ===== 章节标题 ===== */
+  h2.sec{
+    display:flex;align-items:center;gap:10px;
+    font-size:20px;color:#fff;background:var(--cinnabar);
+    padding:9px 16px;border-radius:4px;margin:38px 0 18px;
+    letter-spacing:2px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  h2.sec .no{
+    background:#fff;color:var(--cinnabar);width:26px;height:26px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;
+  }
+  h3{
+    font-size:17px;color:var(--cinnabar-dark);margin:22px 0 10px;
+    padding-left:10px;border-left:4px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 事实背景 ===== */
+  .facts{list-style:none;}
+  .facts li{
+    background:var(--paper-dark);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+    border:1px solid var(--line);position:relative;padding-left:46px;
+  }
+  .facts li::before{
+    content:attr(data-n);
+    position:absolute;left:12px;top:12px;
+    background:var(--cinnabar);color:#fff;width:24px;height:24px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  .num{color:var(--cinnabar);font-weight:700;font-size:1.12em;}
+  .num.big{color:var(--cinnabar);font-weight:800;font-size:1.35em;}
+  /* ===== 判断问句 ===== */
+  .question{
+    background:var(--cinnabar-deep);color:#fff;
+    border-radius:8px;padding:20px 22px;margin:12px 0;
+    font-size:16.5px;line-height:1.9;
+    border-left:6px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 结论 ===== */
+  .conclusion{
+    background:#1a0d0d;color:#fff;
+    border-radius:8px;padding:22px 24px;margin:14px 0 8px;
+    border:2px solid var(--cinnabar);
+    font-size:17.5px;line-height:1.9;font-weight:700;
+    position:relative;
+  }
+  .conclusion::before{
+    content:"◆ 结论 ◆";display:block;text-align:center;
+    color:var(--gold);font-size:14px;letter-spacing:6px;margin-bottom:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 判断依据 ===== */
+  .basis{list-style:none;}
+  .basis li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:12px 15px;margin-bottom:11px;
+  }
+  .badge{
+    display:inline-block;color:#fff;font-size:12.5px;
+    padding:2px 10px;border-radius:12px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;letter-spacing:1px;vertical-align:2px;
+  }
+  .b-reverse{background:#b3272d;}   /* 反常识识别 - 红 */
+  .b-motive{background:#7a5ab8;}    /* 动机拆解 - 紫 */
+  .b-switch{background:#2e7d8f;}    /* 议题偷换 - 青 */
+  .b-victim{background:#c97b1a;}    /* 受害范围 - 橙 */
+  .b-tier{background:#5a8f3c;}      /* 分层定价 - 绿 */
+  .b-mathe{background:#8f3c6d;}     /* 马太效应 - 品红 */
+  /* ===== 拆解现象 ===== */
+  .pheno{list-style:none;counter-reset:p;}
+  .pheno li{
+    counter-increment:p;
+    background:var(--paper-dark);border-left:4px solid var(--gold);
+    padding:11px 15px;margin-bottom:10px;border-radius:0 6px 6px 0;
+  }
+  .pheno li::before{
+    content:"现象" counter(p);
+    background:var(--gold);color:#fff;font-size:12px;
+    padding:1px 8px;border-radius:3px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 归因根源 ===== */
+  .cause{list-style:none;}
+  .cause li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+  }
+  .cause .lvl{
+    display:inline-block;background:var(--cinnabar);color:#fff;
+    font-size:12.5px;padding:2px 10px;border-radius:3px;margin-bottom:5px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .cause .lvl.s{background:#b3272d;}
+  .cause .lvl.m{background:#7a5ab8;}
+  .cause .lvl.d{background:#2e7d8f;}
+  /* ===== 反推逻辑 ===== */
+  .viewbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .view{
+    background:var(--paper-dark);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;
+  }
+  .view h4{
+    color:var(--cinnabar-dark);font-size:15px;margin-bottom:7px;
+    font-family:"Microsoft YaHei",sans-serif;
+    display:flex;align-items:center;gap:6px;
+  }
+  .view .gain{color:#2d6a2d;font-weight:700;}
+  .view .cost{color:var(--cinnabar);font-weight:700;}
+  .view p{font-size:14px;color:var(--ink);}
+  /* ===== 落地启示 ===== */
+  .lesson{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;margin-bottom:11px;
+    border-left:5px solid var(--cinnabar);
+  }
+  .lesson h4{color:var(--cinnabar-dark);font-size:15px;margin-bottom:6px;font-family:"Microsoft YaHei",sans-serif;}
+  /* ===== 素材来源 ===== */
+  table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--badge-bg);}
+  th{
+    background:var(--cinnabar);color:#fff;padding:9px 12px;
+    text-align:left;font-size:14px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  td{border:1px solid var(--line);padding:9px 12px;font-size:13.5px;vertical-align:top;}
+  tr:nth-child(even) td{background:var(--paper-dark);}
+  /* ===== 页脚 ===== */
+  .footer{
+    margin-top:40px;text-align:center;color:var(--ink-light);
+    font-size:12.5px;border-top:2px solid var(--line);padding-top:16px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist{
+    background:var(--paper-dark);border:1px solid var(--line);border-radius:6px;
+    padding:14px 18px;font-size:13.5px;color:var(--ink-light);margin-top:14px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist b{color:var(--cinnabar);}
+  @media(max-width:640px){
+    .viewbox{grid-template-columns:1fr;}
+    .page{padding:24px 14px 60px;}
+    .masthead h1{font-size:20px;}
+    .theme-line{font-size:14.5px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;}
+    .conclusion{background:#1a0d0d;-webkit-print-color-adjust:exact;}
+    h2.sec{background:var(--cinnabar);-webkit-print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <h1>燧原科技 IPO：最肥"大肉签"的未盈利定价狂欢</h1>
+    <div class="meta">
+      <span>日期：<b>2026-09-02 星期三</b></span>
+      <span>ISO 周：<b>W36</b></span>
+      <span>归档：<b>2026-09-02 02:10</b></span>
+      <span>判题人：<b>热点判断脚本</b></span>
+    </div>
+    <div class="theme-line">打新狂欢 2648.93 倍申购 vs 累计亏损超 43 亿 · 股东=客户=买家 的循环定价</div>
+  </header>
+
+  <!-- 第一部分 -->
+  <h2 class="sec"><span class="no">一</span>题目 · 事实背景</h2>
+  <ul class="facts">
+    <li data-n="1">2026 年 9 月 2 日，国产云端 AI 芯片企业 <b>燧原科技</b>（688801.SH）开启网上网下申购，发行价 <span class="num big">142.18 元/股</span>，发行 <span class="num">4303.5 万股</span>（占发行后总股本 <span class="num">10%</span>），预计募资 <span class="num">61.19 亿元</span>，上市市值约 <span class="num big">611.87 亿元</span>，中一签（500 股）需缴款 <span class="num">7.11 万元</span>。</li>
+    <li data-n="2">公司<b>尚未盈利</b>，本次发行选用<b>市销率（PS）估值</b>，对应 2025 年摊薄后静态市销率 <span class="num big">61.80 倍</span>；询价阶段报价区间 <span class="num">14.36—159.32 元/股</span>（上下限相差约 <span class="num">11 倍</span>），网下整体申购倍数高达 <span class="num big">2648.93 倍</span>。</li>
+    <li data-n="3">财务画像：2023—2025 年营收 <span class="num">3.01 亿 / 7.22 亿 / 9.90 亿元</span>，三年复合增长 <span class="num">81.32%</span>；但归母净利润分别为 <span class="num">-16.65 亿 / -15.10 亿 / -11.64 亿元</span>，三年累计亏损<b>超 43 亿元</b>；2023 年研发费用率一度高达 <span class="num big">408.01%</span>，三年累计研发投入 <span class="num">36.76 亿元</span>，是同期累计营收的 <span class="num">1.83 倍</span>。</li>
+    <li data-n="4">循环绑定：<b>腾讯</b>及其一致行动人持股 <span class="num">20.258%</span>（第一大股东），同时是<b>第一大客户</b>——对腾讯销售收入占比从 2022 年 <span class="num">8.53%</span> 升至 2025 年 <span class="num big">83.79%</span>（均为关联交易）；战配中腾讯旗下上海启善再认购 <span class="num">2.48 亿元</span>（174.71 万股），锁定 <span class="num">36 个月</span>。</li>
+    <li data-n="5">产业资本站队：战配 <span class="num">20%</span> 被腾讯、小米、兆易创新、中兴通讯、通富微电、上海华虹、上海仪电及社保/养老基金瓜分，限售 <span class="num">12—36 个月</span>；此前<b>摩尔线程</b>首日涨 <span class="num">425.46%</span>、<b>沐曦股份</b>开盘涨 <span class="num">692.95%</span>，市场以"大肉签"预期定价。</li>
+  </ul>
+
+  <h3>🎯 判断问句</h3>
+  <div class="question">
+    市场将燧原科技奉为"今年最肥大肉签"、网下 2648.93 倍超额申购，为何一家成立 8 年累计亏损超 43 亿、83.79% 收入来自最大股东腾讯的未盈利公司，仍能以 61.8 倍市销率发行？这是国产算力估值重塑的起点，还是"股东=客户=买家"循环定价的幻觉？作为数据分析师，应如何拆解关联交易收入与真实市场需求的边界？
+  </div>
+
+  <!-- 第二部分 -->
+  <h2 class="sec"><span class="no">二</span>标准答案</h2>
+  <div class="conclusion">
+    燧原科技 611.87 亿定价是"国产替代叙事 + 腾讯循环绑定 + 打新制度红利"三重合谋的产物：61.8 倍市销率遮住未盈利本质，83.79% 关联收入撑起的高增长是单一股东订单的镜像。上市溢价可期，价值回归必然，最终买单的是二级市场接盘者。
+  </div>
+
+  <h3>🔑 关键判断依据</h3>
+  <ul class="basis">
+    <li><span class="badge b-reverse">反常识识别</span>市场定价锚是"打新收益 + 国产替代想象"（参照摩尔 +425%、沐曦 +693%），基本面锚却是"三年亏 43 亿 + 客户集中 83.79%"——两组锚完全错位，61.8 倍 PS 的"便宜"是与同业亏损公司的 PS 相比，而非与盈利能力相比，定价锚被偷换。</li>
+    <li><span class="badge b-motive">动机 4 层拆解</span>腾讯表层=战略股东支持国产算力；中层=产业协同，把燧原变成自身算力供应链的定制产能（AVAP 模式、预付款）；深层=资本与生态双收——账面浮盈约 126.45 亿元、E 轮 175 亿估值至上市 611.87 亿增值约 3.5 倍，同时锁死算力供应安全。</li>
+    <li><span class="badge b-switch">议题偷换</span>叙事把"研发投入大所以亏损"包装成长期投资，"市销率低于同业"包装成估值便宜，"国产替代"宏大叙事替代了单位经济模型检验——亏损公司的低 PS 不等于低估值，费用化研发也不等于护城河。</li>
+    <li><span class="badge b-victim">受害范围异常</span>风险不只在打新者——中签散户 7.11 万元/签承担破发与阴跌风险；二级市场长期持有者为 61.8 倍 PS 透支的未来买单；若腾讯 AI 资本开支下调，83.79% 收入断崖直接击穿全部估值锚，受害链条从单一公司扩散至国产算力板块整体。</li>
+    <li><span class="badge b-tier">分层定价</span><span class="badge b-mathe">马太效应</span>战配产业资本 12—36 个月锁定、网下机构 2648 倍申购、网上散户抢签——不同客群按锁定期与风险暴露分层定价；而 2028 年字节/阿里/腾讯 AI 资本支出将占中国近 50%，订单向头部互联网生态集中，能绑定巨头的芯片公司与生态外厂商在融资与订单上呈马太分化。</li>
+  </ul>
+
+  <!-- 第三部分 -->
+  <h2 class="sec"><span class="no">三</span>详细分析流程</h2>
+
+  <h3>1️⃣ 拆解现象</h3>
+  <ul class="pheno">
+    <li>打新狂欢形成共识：发行价 142.18 元、中一签缴款 7.11 万元仍被称"最肥大肉签"，因为摩尔线程首日 +425.46%、沐曦开盘 +692.95% 提供了暴涨参照系，打新者买入的是"制度红利 + 稀缺标的"而非公司现金流。</li>
+    <li>定价机制露出分歧：询价区间 14.36—159.32 元（相差约 11 倍）说明机构对 612 亿市值分歧极大，最终定价 142.18 元贴近区间上限——高价由"最乐观的边际报价"决定，而非共识定价。</li>
+    <li>财务高速但巨亏：2026H1 营收 11.2 亿元（+279.08%）已超 2025 全年，预计 2026 前三季度营收 23—30 亿元（+325.78%~455.36%）；但归母净利三年累计亏超 43 亿，研发费用率 2023 年高达 408.01%——增长曲线与亏损曲线同步陡峭。</li>
+    <li>循环绑定层层加码：腾讯持股 20.26% → 2025 年贡献收入 83.79%（关联交易）→ 战配再投 2.48 亿锁 36 个月，客户、股东、买家三重身份合一；2022 年占比仅 8.53%，依赖度三年膨胀近 10 倍。</li>
+    <li>四小龙全员资本化：摩尔线程、沐曦、壁仞、燧原相继登陆资本市场，沐曦 2026H1 扭亏 6.12 亿（但含 8.87 亿公允价值收益、扣非仍亏约 4900 万）——"会师"为真，但除寒武纪/海光外普遍未实现经营盈利，上市只是融资起点而非价值验证。</li>
+  </ul>
+
+  <h3>2️⃣ 归因根源</h3>
+  <ul class="cause">
+    <li><span class="lvl s">表层 · 反常识识别</span><br>科创板未盈利企业可用 PS 定价、首日无涨跌幅限制的制度红利 + 前两家"四小龙"首日暴涨的示范效应，点燃打新与询价热情，稀缺性叙事把报价抬向区间上限。</li>
+    <li><span class="lvl m">中层 · 动机 4 层拆解</span><br>腾讯"股东 + 客户 + 战配买家"三重身份的激励结构——作为股东希望估值高（126 亿浮盈），作为客户维持高订单能支撑上市估值（83.79% 关联收入），两个动机自洽共振，形成"订单养估值、估值反馈订单"的闭环。</li>
+    <li><span class="lvl d">深层 · 马太效应</span><br>国产算力"卡脖子"背景下，能出大单的买家只剩头部互联网平台（字节/阿里/腾讯 2028 年占中国 AI 资本支出近 50%），芯片公司只有绑定巨头才能规模化；燧原以 DSA 全自主路线换取生态独立，代价是用 83.79% 客户集中度换订单——这是"卡位"成本，也是系统性脆弱性的来源。</li>
+  </ul>
+
+  <h3>3️⃣ 反推逻辑（收益 vs 成本）</h3>
+  <div class="viewbox">
+    <div class="view">
+      <h4>👤 用户 / 打新投资者</h4>
+      <p><span class="gain">收益</span>：打新制度红利与稀缺溢价（参照摩尔 +425%、沐曦 +693%），中签即有浮盈想象空间。<br><span class="cost">成本</span>：中一签 7.11 万元，若首日冲高回落或长期阴跌，为 61.8 倍 PS 透支的 3—5 年增长买单。</p>
+    </div>
+    <div class="view">
+      <h4>🏰 生态主（腾讯）</h4>
+      <p><span class="gain">收益</span>：约 126.45 亿元账面浮盈、E 轮 175 亿到上市 611.87 亿约 3.5 倍增值，外加算力供应链定制权与生态绑定。<br><span class="cost">成本</span>：若 AI 资本开支放缓或燧原掉队，投资与供应双受损，且关联交易定价公允性（预付款安排、售价低于第三方）持续面临监管问询。</p>
+    </div>
+    <div class="view">
+      <h4>⚠️ 受害者（二级接盘者 / 生态外芯片厂商）</h4>
+      <p><span class="gain">收益</span>：接盘者可能获得短期投机回报。<br><span class="cost">成本</span>：接盘者长期消化 61.8 倍 PS 的估值回归；生态外厂商被马太效应挤出头部订单，融资与订单双重承压。</p>
+    </div>
+    <div class="view">
+      <h4>🏛️ 监管（上交所 + 证监会）</h4>
+      <p><span class="gain">收益</span>：打通国产硬科技融资通道、推动算力产业链资本化集结。<br><span class="cost">成本</span>："股东=客户"循环定价可能扭曲市场价格信号，需以两轮问询（预付款、关联交易占比、定价公允性）持续校正，防止一级定价泡沫向二级市场传导。</p>
+    </div>
+  </div>
+
+  <h3>4️⃣ 落地启示（数据分析师 + HR 迁移）</h3>
+  <div class="lesson">
+    <h4>📊 收入质量审计：关联销售占比是第一性指标（收入质量拆解模型）</h4>
+    本期核心教训是"高增长≠高质量"——燧原 2026H1 营收 +279.08% 亮眼，但若剥离关联方腾讯（83.79%），增长的真实性与可持续性大打折扣。数据分析师做任何营收分析，先算<b>关联收入占比 + 非关联客户增速 + 客户结构变化</b>三个指标；正如 HR 评估员工绩效不能只看结果分，要看"协作产出占比"——区分个人真实贡献与团队/平台红利，拆解 O2O（Organization to One）依赖度，才能识别"平台型高分"还是"能力型高分"。
+  </div>
+  <div class="lesson">
+    <h4>📊 指标选择即叙事：警惕估值方法被选择性披露（PS vs PE vs PEG 对照）</h4>
+    未盈利公司用 PS、盈利公司用 PE、成长股用 PEG——同一家公司换个指标就换了个故事。燧原以"61.8 倍 PS 低于同业"自证便宜，恰恰回避了"PE 无穷大、单位经济模型未验证"的事实。数据分析师汇报时必须<b>同时呈现多指标 + 指标选择的理由</b>，主动暴露不友好数字；正如 HR 做薪酬分析，不能只报"涨幅对标分位"，要同步展示人效、薪酬占营收比、带宽渗透率，防止"只讲对自己有利的口径"。
+  </div>
+  <div class="lesson">
+    <h4>📊 客户集中度风险建模（CR5 / HHI 集中度指数）</h4>
+    燧原前五名客户应收账款占比 <b>95.16%</b>、单一客户 83.79%，这种集中度下的"稳定大单"实为最脆弱的收入结构——一个采购策略变化即可击穿估值。数据分析师对任何 B2B 业务都要建<b>客户集中度监控（CR1/CR5/HHI）+ 大客户流失情景模拟（-20%/-50% 收入压力测试）</b>；正如 HR 做关键人才盘点，识别"单点依赖"岗位（核心系统负责人、唯一懂某业务的员工），用<b>关键人依赖指数 + 继任者覆盖率</b>预警，否则一个人的离开就是业务的 83.79%。
+  </div>
+
+  <!-- 素材来源 -->
+  <h2 class="sec"><span class="no">附</span>素材来源与数据引用</h2>
+  <table>
+    <tr><th style="width:55%">数据点</th><th>来源</th></tr>
+    <tr><td>发行价 142.18 元、发行 4303.5 万股、募资 61.19 亿、市值 611.87 亿、中一签 7.11 万</td><td>中国证券报（2026-08-31）、上海证券报（2026-08-31）、腾讯新闻（2026-09-01）</td></tr>
+    <tr><td>询价区间 14.36—159.32 元、网下申购倍数 2648.93 倍、337 家网下投资者</td><td>上海证券报（2026-08-31）</td></tr>
+    <tr><td>2023—2025 营收 3.01/7.22/9.90 亿、三年复合 81.32%、累计亏损超 43 亿</td><td>腾讯新闻、第一财经、招股意向书（2026-08）</td></tr>
+    <tr><td>研发费用率 408.01%、累计研发 36.76 亿（同期营收 1.83 倍）</td><td>腾讯新闻（2026-09-01）</td></tr>
+    <tr><td>2026H1 营收 11.2 亿（+279.08%）、预计前三季度 23—30 亿</td><td>上海证券报、腾讯新闻（2026-09-01）</td></tr>
+    <tr><td>腾讯持股 20.258%、对腾讯收入占比 8.53%→83.79%、战配 2.48 亿锁 36 个月</td><td>上海证券报、腾讯新闻、海报新闻（2026-09-01）</td></tr>
+    <tr><td>战配 20% 阵容（小米/兆易/中兴/华虹/社保等）、限售 12—36 个月</td><td>上海证券报（2026-08-31）</td></tr>
+    <tr><td>摩尔线程首日 +425.46%、沐曦开盘 +692.95%</td><td>腾讯新闻（2026-09-01）</td></tr>
+    <tr><td>沐曦 2026H1 扭亏 6.12 亿（含 8.87 亿公允价值收益、扣非仍亏约 4900 万）</td><td>Pandaily（2026-09）、Studio Global AI（2026-09）</td></tr>
+    <tr><td>2028 年字节/阿里/腾讯 AI 资本支出占中国近 50%</td><td>BERNSTEIN 预测（招股书引用，2026-08）</td></tr>
+    <tr><td>关联叙事：宇树 219 倍 PE 发行（08-10）、长鑫登顶市值王座（08-14）、长江存储周期顶点递表（08-22）</td><td>沉锋录历史期次（08-10/08-14/08-22）</td></tr>
+  </table>
+
+  <div class="checklist">
+    <b>生成质量自检</b>：✔ 标题（日期+星期） ✔ 元信息（主题/归档/W36/判题人） ✔ 事实背景 5 条含数字 ✔ 判断问句 ~110 字（反常识+追问+数据技能） ✔ 结论加粗斩钉截铁 ✔ 判断依据 5 条覆盖 6 框架 ✔ 拆解 5 条 / 归因 3 层 / 反推 4 视角 / 启示 3 条 ✔ 数据可溯源
+  </div>
+
+  <div class="footer">
+    本文由沉锋录·热点判断脚本自动生成 · 素材来源：Deepseek 联网搜索（内置 WebSearch 兜底，redfox 积分暂不可用）<br>
+    训练框架：反常识识别 · 动机 N 层拆解 · 议题偷换 · 受害范围异常 · 分层定价 · 马太效应
+  </div>
+</div>
+</body>
+</html>

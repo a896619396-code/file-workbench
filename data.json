@@ -1,7 +1,7 @@
 {
  "title": "文件工作台",
  "subtitle": "识暗心法 · 沉锋录·热点 · 热点知识卡 —— 点开即读",
- "generatedAt": "2026-09-04T16:08:25.400Z",
+ "generatedAt": "2026-09-04T16:09:16.584Z",
  "libraries": [
   {
    "id": "xinfa",
@@ -238,6 +238,12 @@
     {
      "name": "9月",
      "items": [
+      {
+       "file": "hot/9月/2026年09月05日—英伟达129亿收编HuggingFace开源入口.html",
+       "date": "2026-09-05",
+       "tags": [],
+       "title": "英伟达129亿收编HuggingFace开源入口"
+      },
       {
        "file": "hot/9月/2026年09月04日—博通AI收入翻三倍反跌软件兑现狂欢.html",
        "date": "2026-09-04",

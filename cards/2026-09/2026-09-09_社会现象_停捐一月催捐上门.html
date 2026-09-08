@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-09-09 社会现象 · 停捐一月催捐上门</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">社会现象 · 03 类</span>
+    <div class="date">2026-09-09 周三 · 热点认知卡</div>
+    <h1>月捐四年无人问，停捐一月催上门</h1>
+    <div class="sub">损失厌恶 + 峰终定律 | 认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>单亲妈妈刘女士月捐联合国儿童基金会近四年，从未收到过机构一次反馈电话；8 月因生意不景气停捐，9 月 3 日即被来电追问原因，她答"没钱了"，电话那头传来一声嗤笑。9 月 7 日事件登上微博热搜（阅读超 3600 万），评论区大量网友晒出同款"停捐即被催"遭遇，联合国儿童基金会随后致歉。</p>
+<blockquote>
+<p>来源：环球网（宁波晚报）<a href="https://www.toutiao.com/article/7682961139366216230/">https://www.toutiao.com/article/7682961139366216230/</a> ；闪电新闻/广州广播电视台 <a href="https://www.toutiao.com/article/7683051105588118066/">https://www.toutiao.com/article/7683051105588118066/</a></p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p><strong>理发店充值卡</strong>：办卡时店员端茶倒水，之后每次到店都爱答不理；一旦你卡里没钱了、或者几个月没去，热情的电话立刻打来："姐，最近怎么不来了，店里上新活动了。" 热情的对象从来不是你，是你的余额。</p>
+<p><strong>视频会员自动续费</strong>：续着的时候从没人关心你看得开不开心；哪天你关了自动续费，挽留弹窗、短信优惠马上到位。它们不是在你消失那天才想起你，而是"你还在付钱"这件事，平时根本不在运营清单上。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角 1：组织运营——把捐赠人当"流水"而非"人"</h3>
+<p>公益机构普遍设"月捐留存率"指标（每月还在捐的人数比例），配套的挽留动作只在流失那一刻触发：电话、短信、赠品齐上。而"感谢一次老捐赠人"不在 KPI（关键绩效指标）里，做了不涨分，于是四年零触达。评论区有网友称自己被机构设了捐款 KPI、捐满额度送小礼物，一天接到四五个催捐电话——运营逻辑已和电话销售无异。</p></div>
+      <div class="view"><h3>视角 2：心理——失去的痛，比得到的快乐重约两倍</h3>
+<p>对机构而言，一个每月稳定捐几百元的"沉默捐赠人"是被默认拥有的资产；资产一旦流失，"损失"即刻被感知，挽留动作秒级启动。而对刘女士而言，四年付出换不来一次"你的钱帮到了谁"的反馈，结尾还被嗤笑——善意成了单向资金输送，情感账户瞬间归零。双方对同一段关系的感知完全错位。</p></div>
+      <div class="view"><h3>视角 3：社会——同款刷屏，说明是机制问题不是个案</h3>
+<p>热搜评论区涌现大量同款经历（韩红基金会等机构亦被点名），说明"重拉新、轻维护"是行业通病。更深一层是反馈缺失：捐款人看不见钱去了哪、帮了谁，情感得不到回响。公益本是双向信任，一旦变成报表上的数字，消耗的是全社会参与公益的热情——这次被嘲笑的不是一个人，是整个行业的公信力。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>损失厌恶（Loss Aversion）</h4><ul>
+<li><strong>一句话</strong>：人对"失去"的敏感度约为"得到"的两倍，所以组织平时看不见存量价值，一遇流失却如临大敌——四年无维护、停捐即挽留，正是同一种心理的两面。</li>
+<li><strong>生活类比</strong>：① 健身卡一天不去就心疼钱，办卡时却毫不犹豫 ② 手机套餐偷偷涨 5 块能被你发现，送 5 块流量从没人记得 ③ 股票亏 1000 元记一整年，赚 1000 元三天就忘</li>
+</ul></div>
+      <div class="model"><h4>峰终定律（Peak-End Rule）</h4><ul>
+<li><strong>一句话</strong>：人对一段体验的记忆，几乎只由"最高峰时刻"和"结尾"决定，过程多长多平淡都会被忽略——四年善意，被结尾一声"扑哧"整体改写。</li>
+<li><strong>生活类比</strong>：① 火锅店排队两小时，结账送碗冰粉，你评五星 ② 旅行一路顺利，最后丢手机，回忆全是糟心 ③ 追剧前面 30 集精彩，大结局烂尾，你说"整部都烂"</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：做用户/会员留存分析时记住——流失率只是症状，触点才是病因。只盯着"谁流失了"做召回，是损失厌恶驱动的补救；真正该问的是"为什么四年没有一个正向触点"。分析的意义在平时埋下的反馈节点，不在流失那一天的挽留电话。</li>
+<li><span class="kw">《认知觉醒》呼应</span>：周岭反复强调反馈是坚持的燃料——没有反馈的努力难以持续，就像刘女士四年得不到一次"钱帮到了谁"。学习同理：别只埋头输入，要主动给自己造反馈闭环（测试、输出、复盘），否则热情迟早被耗尽。</li>
+<li><span class="kw">《底层逻辑》呼应</span>：刘润讲制度设计要看"激励相容"——好的机制让个人利益与集体目标一致。机构把捐赠人当钱袋子而非伙伴，是激励设计一开始就偏了：考核拉新与留存，却不考核感谢与透明，行为自然跟着指标走偏。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p class="lead">给身边"长期默默付出的人"补一次主动反馈，今天做</p>
+        <p>找出一个你长期受益却从未表达过的人或组织（一位老师、一个开源工具的作者、一直在帮你撑着的家人），发一条具体的消息：说明"你做的哪件事帮到了我、具体怎么帮的"。训练的是把"存量关系"当资产维护的习惯——别等对方"停捐"才想起人家。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">月捐</span> <span class="en">(Monthly Giving)</span>：每月自动扣款的小额定期捐赠，公益机构最看重的"稳定现金流"来源。类比视频会员按月续费。</p></div>
+      <div class="dict"><p><span class="term">捐赠人管理</span> <span class="en">(Donor Stewardship)</span>：机构对捐款人的长期经营：定期反馈善款去向、表达感谢、建立信任。类比理发店维护老客，而不是只等充值。</p></div>
+      <div class="dict"><p><span class="term">穷困抗辩权</span> <span class="en">(Hardship Defense)</span>：法律术语。民法典第 666 条规定，赠与人经济状况显著恶化、影响正常生活的，可不再履行赠与义务——捐不捐、停不停捐，本就是捐款人的合法权利。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

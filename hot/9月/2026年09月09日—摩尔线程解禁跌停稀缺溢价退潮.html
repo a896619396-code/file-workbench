@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉锋录·热点判断 2026-09-09 摩尔线程解禁跌停稀缺溢价退潮</title>
+<style>
+  :root{
+    --cinnabar:#9e1f1f;      /* 朱砂主色 */
+    --cinnabar-dark:#7a1414;
+    --cinnabar-deep:#5a0e0e;
+    --paper:#f5efe4;         /* 米白纸色 */
+    --paper-dark:#efe5d4;
+    --ink:#2b2320;           /* 墨色 */
+    --ink-light:#5c4f47;
+    --gold:#c9a227;         /* 鎏金点缀 */
+    --line:#d8c9ae;
+    --badge-bg:#fff8ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  .page{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+  /* ===== 报头 ===== */
+  .masthead{
+    border:3px double var(--cinnabar);
+    border-radius:6px;
+    padding:22px 26px 18px;
+    margin-bottom:30px;
+    background:linear-gradient(180deg,#fffdf7 0%,var(--paper) 100%);
+    position:relative;
+  }
+  .masthead::before{
+    content:"沉锋录 · 热点判断";
+    position:absolute;top:-13px;left:24px;
+    background:var(--cinnabar);color:#fff;
+    padding:2px 14px;font-size:13px;letter-spacing:3px;
+    font-family:"Microsoft YaHei",sans-serif;border-radius:3px;
+  }
+  .masthead h1{
+    font-size:25px;color:var(--cinnabar-dark);
+    text-align:center;letter-spacing:2px;margin-bottom:6px;
+  }
+  .masthead .meta{
+    text-align:center;color:var(--ink-light);font-size:13.5px;
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .masthead .meta b{color:var(--cinnabar);}
+  .theme-line{
+    margin-top:14px;text-align:center;font-size:16.5px;color:var(--cinnabar-dark);
+    background:var(--paper-dark);padding:10px 14px;border-radius:4px;
+    border-left:4px solid var(--cinnabar);
+  }
+  /* ===== 章节标题 ===== */
+  h2.sec{
+    display:flex;align-items:center;gap:10px;
+    font-size:20px;color:#fff;background:var(--cinnabar);
+    padding:9px 16px;border-radius:4px;margin:38px 0 18px;
+    letter-spacing:2px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  h2.sec .no{
+    background:#fff;color:var(--cinnabar);width:26px;height:26px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;
+  }
+  h3{
+    font-size:17px;color:var(--cinnabar-dark);margin:22px 0 10px;
+    padding-left:10px;border-left:4px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 事实背景 ===== */
+  .facts{list-style:none;}
+  .facts li{
+    background:var(--paper-dark);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+    border:1px solid var(--line);position:relative;padding-left:46px;
+  }
+  .facts li::before{
+    content:attr(data-n);
+    position:absolute;left:12px;top:12px;
+    background:var(--cinnabar);color:#fff;width:24px;height:24px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  .num{color:var(--cinnabar);font-weight:700;font-size:1.12em;}
+  .num.big{color:var(--cinnabar);font-weight:800;font-size:1.35em;}
+  /* ===== 判断问句 ===== */
+  .question{
+    background:var(--cinnabar-deep);color:#fff;
+    border-radius:8px;padding:20px 22px;margin:12px 0;
+    font-size:16.5px;line-height:1.9;
+    border-left:6px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 结论 ===== */
+  .conclusion{
+    background:#1a0d0d;color:#fff;
+    border-radius:8px;padding:22px 24px;margin:14px 0 8px;
+    border:2px solid var(--cinnabar);
+    font-size:17.5px;line-height:1.9;font-weight:700;
+    position:relative;
+  }
+  .conclusion::before{
+    content:"◆ 结论 ◆";display:block;text-align:center;
+    color:var(--gold);font-size:14px;letter-spacing:6px;margin-bottom:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 判断依据 ===== */
+  .basis{list-style:none;}
+  .basis li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:12px 15px;margin-bottom:11px;
+  }
+  .badge{
+    display:inline-block;color:#fff;font-size:12.5px;
+    padding:2px 10px;border-radius:12px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;letter-spacing:1px;vertical-align:2px;
+  }
+  .b-reverse{background:#b3272d;}   /* 反常识识别 - 红 */
+  .b-motive{background:#7a5ab8;}    /* 动机拆解 - 紫 */
+  .b-switch{background:#2e7d8f;}    /* 议题偷换 - 青 */
+  .b-victim{background:#c97b1a;}    /* 受害范围 - 橙 */
+  .b-tier{background:#5a8f3c;}      /* 分层定价 - 绿 */
+  .b-mathe{background:#8f3c6d;}     /* 马太效应 - 品红 */
+  /* ===== 拆解现象 ===== */
+  .pheno{list-style:none;counter-reset:p;}
+  .pheno li{
+    counter-increment:p;
+    background:var(--paper-dark);border-left:4px solid var(--gold);
+    padding:11px 15px;margin-bottom:10px;border-radius:0 6px 6px 0;
+  }
+  .pheno li::before{
+    content:"现象" counter(p);
+    background:var(--gold);color:#fff;font-size:12px;
+    padding:1px 8px;border-radius:3px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 归因根源 ===== */
+  .cause{list-style:none;}
+  .cause li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+  }
+  .cause .lvl{
+    display:inline-block;background:var(--cinnabar);color:#fff;
+    font-size:12.5px;padding:2px 10px;border-radius:3px;margin-bottom:5px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .cause .lvl.s{background:#b3272d;}
+  .cause .lvl.m{background:#7a5ab8;}
+  .cause .lvl.d{background:#2e7d8f;}
+  /* ===== 反推逻辑 ===== */
+  .viewbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .view{
+    background:var(--paper-dark);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;
+  }
+  .view h4{
+    color:var(--cinnabar-dark);font-size:15px;margin-bottom:7px;
+    font-family:"Microsoft YaHei",sans-serif;
+    display:flex;align-items:center;gap:6px;
+  }
+  .view .gain{color:#2d6a2d;font-weight:700;}
+  .view .cost{color:var(--cinnabar);font-weight:700;}
+  .view p{font-size:14px;color:var(--ink);}
+  /* ===== 落地启示 ===== */
+  .lesson{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;margin-bottom:11px;
+    border-left:5px solid var(--cinnabar);
+  }
+  .lesson h4{color:var(--cinnabar-dark);font-size:15px;margin-bottom:6px;font-family:"Microsoft YaHei",sans-serif;}
+  /* ===== 素材来源 ===== */
+  table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--badge-bg);}
+  th{
+    background:var(--cinnabar);color:#fff;padding:9px 12px;
+    text-align:left;font-size:14px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  td{border:1px solid var(--line);padding:9px 12px;font-size:13.5px;vertical-align:top;}
+  tr:nth-child(even) td{background:var(--paper-dark);}
+  /* ===== 页脚 ===== */
+  .footer{
+    margin-top:40px;text-align:center;color:var(--ink-light);
+    font-size:12.5px;border-top:2px solid var(--line);padding-top:16px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist{
+    background:var(--paper-dark);border:1px solid var(--line);border-radius:6px;
+    padding:14px 18px;font-size:13.5px;color:var(--ink-light);margin-top:14px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist b{color:var(--cinnabar);}
+  @media(max-width:640px){
+    .viewbox{grid-template-columns:1fr;}
+    .page{padding:24px 14px 60px;}
+    .masthead h1{font-size:20px;}
+    .theme-line{font-size:14.5px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;}
+    .conclusion{background:#1a0d0d;-webkit-print-color-adjust:exact;}
+    h2.sec{background:var(--cinnabar);-webkit-print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <h1>摩尔线程解禁日 20cm 跌停 · 稀缺性溢价退潮</h1>
+    <div class="meta">
+      <span>日期：<b>2026-09-09 星期三</b></span>
+      <span>ISO 周：<b>W37</b></span>
+      <span>归档：<b>2026-09-09 00:35</b></span>
+      <span>判题人：<b>热点判断脚本</b></span>
+    </div>
+    <div class="theme-line">基本面最陡峭向上（H1 营收 +147%）与股价最猛烈向下（9 个月 -55.9%）同时发生——"国产 GPU 第一股"的稀缺叙事，正在被自己的产业繁荣拆解</div>
+  </header>
+
+  <!-- 第一部分 -->
+  <h2 class="sec"><span class="no">一</span>题目 · 事实背景</h2>
+  <ul class="facts">
+    <li data-n="1"><b>2026-09-07（周一）</b>，"国产 GPU 第一股"<b>摩尔线程（688795.SH）</b>上市 9 个月来首次触及 <span class="num big">20% 跌停</span>：开盘约 4 分钟即封死，收报 <span class="num">415.49 元/股</span>创上市新低，总市值跌破 2000 亿至 <span class="num">1953 亿元</span>，单日蒸发约 <span class="num">488 亿元</span>；9/8 续跌，盘中 <span class="num">371.17 元</span>再创新低，收 400.11 元（-3.70%）。</li>
+    <li data-n="2">直接导火索是解禁：当日 <span class="num">2577.451 万股</span>首发网下配售限售股（占总股本 <span class="num">5.48%</span>、按前收价计解禁市值约 <span class="num">133.86 亿元</span>）上市流通，流通盘由 3022.55 万股一次性扩容 <span class="num">85.27%</span> 至约 5600 万股——但解禁后流通股仍仅占总股本 <span class="num">11.91%</span>。</li>
+    <li data-n="3">时间线构成强烈反差：发行价 <span class="num">114.28 元</span>（募资 <span class="num">80 亿元</span>、有效申购倍数超 <span class="num">4100 倍</span>、中签率仅 <span class="num">0.036%</span>、申购户数超 482 万）→ 首日收 <span class="num">600.50 元（+425.46%）</span> → 2025-12-11 盘中冲高 <span class="num big">941.08 元</span>（市值约 <span class="num">4423 亿元</span>）→ 如今 415.49 元，较最高点回撤 <span class="num big">55.9%</span>、市值缩水约 <span class="num">2470 亿元</span>，却仍是发行价的 <span class="num">3.63 倍</span>。</li>
+    <li data-n="4">9/7 龙虎榜显示前五大卖出席位<b>全部为机构专用</b>，合计卖出 <span class="num">14.62 亿元</span>（约 351.79 万股），当日成交 34.67 亿元、约为平时数倍；以发行价计，这批获配机构即便跌停出货浮盈仍达 <span class="num big">+263%</span>。同日板块共振：沐曦盘中跌超 11%、天数智芯跌 11.42%，唯<b>寒武纪逆势收涨 1.9%</b>。</li>
+    <li data-n="5">基本面与股价明显背离：公司回应"生产经营持续向好"——2026H1 营收 <span class="num big">17.36 亿元（+147.42%）</span>、已超 2025 全年（<span class="num">15.06 亿元</span>），毛利率升至 <span class="num">56.95%</span>、归母净亏损收窄 <span class="num">95.73%</span>；但 2025 年全年仍亏 <span class="num">10.01 亿元</span>、经营现金流为负，按 2025 营收计跌停后市销率仍约 <span class="num">130 倍</span>（按 H1 年化约 <span class="num">56 倍</span>），而同期寒武纪 H1 归母净利已达 <span class="num">23.11 亿元</span>（+122.61%）。</li>
+  </ul>
+
+  <h3>🎯 判断问句</h3>
+  <div class="question">
+    营收翻倍、亏损收窄 96%、公司称"经营向好"，为何解禁日仍遭 20cm 跌停封死？当"国产 GPU 第一股"的稀缺故事被寒武纪盈利、沐曦转正拆解成"多强对打"，130 倍市销率定价的究竟是产业还是泡沫？作为数据分析师，应如何拆解这场"公司向上、股价向下"的背离？
+  </div>
+
+  <!-- 第二部分 -->
+  <h2 class="sec"><span class="no">二</span>标准答案</h2>
+  <div class="conclusion">
+    跌停不是经营事故，是稀缺性溢价的退潮：解禁只是扳机，定价锚已从"唯一中国英伟达"切向"多强淘汰赛"。130 倍市销率撑不起未盈利，机构在 3.6 倍浮盈处集体出逃即是答案——产业向上与股价向下，各归各账。
+  </div>
+
+  <h3>🔑 关键判断依据</h3>
+  <ul class="basis">
+    <li><span class="badge b-reverse">反常识识别</span>基本面最陡峭向上（H1 营收 +147.42% 超去年全年、亏损收窄 95.73%）与股价最猛烈向下（20cm 跌停、9 个月回撤 55.9%）同时发生——市场已不为"增速"定价，而是为"稀缺性消失 + 估值消化"定价；"公司向好"与"股价高估"本就是两个问题。</li>
+    <li><span class="badge b-motive">动机 4 层拆解</span>表层是公司口径"解禁日请理性看待，经营持续向好"；中层是网下 A 类机构 9 个月锁定期届满，以 114.28 元成本在 415 元（+263%）处落袋，龙虎榜前五卖出清一色机构专用、合计 14.62 亿元是明牌；深层是科创板"小流通盘 + 机构配售 + 限售期"制度构造出上市后二次定价窗口，稀缺溢价最终由二级市场承接；再深层是国产 GPU 从"一个故事"变"五个故事"，资本转而等待淘汰赛胜者。</li>
+    <li><span class="badge b-switch">议题偷换</span>把"发行时约 122 倍 PS、靠稀缺性叙事定价"包装成"国产替代成长股"，再用营收 +147% 的产业数据回应股价质疑——营收增长与股东回报之间隔着"未盈利 + 现金流失血 + 130 倍 PS"的断层，属典型的叙事与定价错位。</li>
+    <li><span class="badge b-victim">受害范围异常</span>第一层是高位追涨的散户（较 941.08 元高点回撤 55.9%，且总股本约 88% 仍限售，2026-12 战略配售解禁悬而未决）；第二层是"国产替代信仰"被板块性透支——同日沐曦 -9.67%、天数智芯 -11.42% 跟跌；第三层是打新生态本身：482 万户、0.036% 中签率抢来的"稀缺"，客观上为机构出货提供了流动性。</li>
+    <li><span class="badge b-tier">分层定价</span><span class="badge b-mathe">马太效应</span>同一只股票在四个成本层形成损益镜像——发行 114.28 元（机构 +263%）/ 首日 600.50 元 / 高点 941.08 元（接盘者 -55.9%）/ 解禁 415.49 元；马太效应则体现在资源向"先证明能赚钱的人"集中：寒武纪 6659 亿市值（H1 净利 23.11 亿）与摩尔线程 1953 亿（仍亏损）的分化，宣告国产 GPU 估值从"雨露均沾"转向"胜者通吃"。</li>
+  </ul>
+
+  <!-- 第三部分 -->
+  <h2 class="sec"><span class="no">三</span>详细分析流程</h2>
+
+  <h3>1️⃣ 拆解现象</h3>
+  <ul class="pheno">
+    <li><b>一解禁就跌停</b>：9/7 开盘约 4 分钟封死 20cm 跌停，收 415.49 元创新低、市值单日蒸发 488 亿跌破 2000 亿——解禁前流通股仅占总股本 6.43%，筹码供给一次性放大 85.27%，供需失衡被极小流通盘放大成股价崩塌。</li>
+    <li><b>机构明牌出货</b>：龙虎榜前五卖出全为机构专用席位、合计 14.62 亿元；机构成本仅 114.28 元，跌停价出货仍浮盈 263%（约 9 个月年化收益超 100%）——"惨案"是机构端的丰收日，散户端却把放量下跌当"错杀抄底"机会（当日成交 34.67 亿元、约为平时数倍）。</li>
+    <li><b>"公司向好"与"股价崩塌"并存</b>：H1 营收 17.36 亿（+147.42%）超去年全年、毛利率升至 56.95%、归母亏损收窄 95.73%——产业数据真实改善，但改变不了 2025 年亏 10.01 亿、经营现金流为负、公司曾指引最早 2027 年才盈利的现实：增长质量（现金流）与增长速度（营收）是两把不同的尺子。</li>
+    <li><b>板块性共振</b>：摩尔跌停带崩国产 GPU 赛道，沐曦盘中跌超 11%、天数智芯跌 11.42%，唯寒武纪逆势收涨 1.9%——同日分化说明资金并非抛弃国产算力，而是开始"用脚投票"、优先选择已用利润自证的龙头。</li>
+    <li><b>定价逻辑切换</b>：多家媒体（虎嗅/妙投等）判断，下跌深层原因是国产 GPU 从"唯一稀缺故事"进入"多强排位赛"——沐曦 2026 二季度单季扣非 +5400 万元逼近主业盈利、寒武纪 H1 净利 23.11 亿、燧原携高增长冲击资本市场，"独苗"变"群雄"，稀缺性溢价被产业自身繁荣拆解，估值锚从"前景溢价"转向"业绩验证"。</li>
+  </ul>
+
+  <h3>2️⃣ 归因根源</h3>
+  <ul class="cause">
+    <li><span class="lvl s">表层 · 受害范围异常</span><br>限售股解禁的供给冲击——2577.45 万股（占总股本 5.48%）解禁令流通盘扩容 85.27%，在流通股占比仅 11.91% 的脆弱结构下，边际供给急剧放大叠加机构集中出货（单日 14.62 亿），形成踩踏式跌停。</li>
+    <li><span class="lvl m">中层 · 动机 4 层 / 分层定价</span><br>新股发行制度与机构理性行为——科创板允许未盈利企业上市 + 网下配售机构设 9 个月锁定期，构造出"机构低价拿货 → 二级爆炒抬轿 → 解禁套现"的固定剧本；发行时约 122 倍 PS 已把多年增长一次性定价，机构在 3.6 倍处离场是必然选择，接盘者是被 0.036% 中签率与"国产第一股"光环吸引的二级市场。</li>
+    <li><span class="lvl d">深层 · 马太效应 / 议题偷换</span><br>国产替代叙事从"独苗溢价"走向"赢家通吃"——路透估算中国 AI 半导体市场规模约 900 亿美元、英伟达仍占约 55% 份额，国产替代是真需求；但当寒武纪盈利、沐曦将跨门槛、多家同台竞技，"买整个赛道"的稀缺性逻辑失效，资本开始要求"证明你是能活下来的两三个"，估值从赛道 β 转向个股 α。</li>
+  </ul>
+
+  <h3>3️⃣ 反推逻辑（收益 vs 成本）</h3>
+  <div class="viewbox">
+    <div class="view">
+      <h4>👤 用户 / 二级市场投资者（散户）</h4>
+      <p><span class="gain">收益</span>：若国产替代兑现，早期布局者可分享赛道成长。<br><span class="cost">成本</span>：在 130 倍 PS、未盈利处接盘，9 个月最高浮亏 55.9%，且约 88% 股本未流通意味着后续解禁（2026-12 战略配售等）仍将反复抽血，信息与筹码结构天然不对称。</p>
+    </div>
+    <div class="view">
+      <h4>🏰 生态主（摩尔线程）</h4>
+      <p><span class="gain">收益</span>：上市 9 个月募资 80 亿 + 市值背书 + 正在筹备赴港上市，融资通道畅通；"花港"架构年内上市、S5000 万卡集群已服务超大规模模型训练。<br><span class="cost">成本</span>：股价 9 个月 -55.9% 侵蚀品牌与员工期权信心，未盈利 + 经营现金流出使每一步扩张都依赖资本市场输血，信任透支将抬高融资成本。</p>
+    </div>
+    <div class="view">
+      <h4>⚠️ 受害者（高位接盘者与打新生态）</h4>
+      <p><span class="gain">收益</span>：（机构端）114.28 元成本 9 个月 +263%。<br><span class="cost">成本</span>：（散户端）自高点 -55.9%；482 万户申购者以 0.036% 中签率参与了一场为机构出货提供流动性的游戏，"国产替代信仰"被透支后同类新股稀缺溢价将整体打折。</p>
+    </div>
+    <div class="view">
+      <h4>🏛️ 监管（上交所 / 证监会）</h4>
+      <p><span class="gain">收益</span>：科创板为未盈利硬科技打通融资通道——摩尔线程 2022 年以来累计研发投入近 59 亿元、2026H1 研发 7.69 亿（+38.16%），"投早投小投硬科技"导向落地见效。<br><span class="cost">成本</span>：需直面"小流通盘爆炒 → 解禁踩踏"的次新定价失序，以及高 PS 未盈利发行对散户博弈公平性的持续拷问。</p>
+    </div>
+  </div>
+
+  <h3>4️⃣ 落地启示（数据分析师 + HR 迁移）</h3>
+  <div class="lesson">
+    <h4>📊 把"公司好"与"股票好"分开看（增长质量校验：现金流/应收/毛利率三把尺）</h4>
+    摩尔线程营收 +147% 看似亮眼，但未盈利 + 经营现金流出 + 130 倍 PS 说明增长尚未转化为造血能力。数据分析师分析任何高增长标的，第一课是拆"增速的含金量"：经营现金流/净利润、应收账款周转、收入确认方式。正如 HR 看候选人履历不能只看"业绩增长"，要追问离职原因、业绩可验证性、资源与能力归属——把"账面增长"和"可验证能力"拆开，是同一套反欺诈思维。
+  </div>
+  <div class="lesson">
+    <h4>📊 监测稀缺性衰减（供需双侧指标：流通盘占比 + 同业上市家数）</h4>
+    摩尔跌停的本质是"稀缺溢价"被供给打破——解禁令流通盘 +85.27%、同赛道上市公司从 1 家变多家。数据分析师可构建"稀缺度指标"预判溢价风险：流通股/总股本、可对标公司数量、行业准入门槛变化。正如 HR 评估岗位稀缺性，既要看市场同岗候选人供给量，也要看企业内部可替代性——当"独苗"变"白菜"，议价权必然转移，报价与留人策略都要重估。
+  </div>
+  <div class="lesson">
+    <h4>📊 筹码结构决定博弈结局（成本分层分析：谁在低价、谁在出货、对手盘是谁）</h4>
+    同一只股票四个成本层损益镜像（机构 114 元 vs 高点接盘 941 元），说明交易本质是成本不对称博弈。数据分析师面对任何标的或决策，先问"谁的成本低、谁在卖、对手盘是谁"——用股东持仓成本分布、解禁日历、龙虎榜席位拆解筹码结构。正如 HR 处理裁员/调薪时，先分清"低成本老员工"与"高价新招"，同一政策在不同成本群体身上的损益完全不同——先分层、再施策。
+  </div>
+
+  <!-- 素材来源 -->
+  <h2 class="sec"><span class="no">附</span>素材来源与数据引用</h2>
+  <table>
+    <tr><th style="width:55%">数据点</th><th>来源</th></tr>
+    <tr><td>9/7 首次 20cm 跌停、收 415.48 元创新低、市值 1953 亿、单日蒸发约 488 亿</td><td>21世纪经济报道 via 腾讯新闻（2026-09-07）</td></tr>
+    <tr><td>9/8 盘中 371.17 元续创新低、收 400.11 元（-3.70%）、市值 1880.63 亿</td><td>A 股行情（新浪财经数据，2026-09-08）</td></tr>
+    <tr><td>发行价 114.28 元、募资 80 亿、首日 +425.46% 收 600.50 元、高点 941.08 元、回撤 55.9%</td><td>新浪财经（2026-09-07）、百度百科（2025-12）</td></tr>
+    <tr><td>网上 482 万户、申购倍数超 4100 倍、中签率 0.036%</td><td>新浪财经（2026-09-07）</td></tr>
+    <tr><td>解禁 2577.451 万股（5.48%、约 133.86 亿）、流通盘扩容 85.27%、仍仅占 11.91%</td><td>界面新闻 via 中国经济网（2026-09-08）</td></tr>
+    <tr><td>龙虎榜机构五席卖出 14.62 亿/351.79 万股、成交 34.67 亿</td><td>界面新闻 via 中国经济网（2026-09-08）</td></tr>
+    <tr><td>2026H1 营收 17.36 亿（+147.42%）、毛利率 56.95%、研发 7.69 亿、亏损收窄 95.73%</td><td>摩尔线程 2026 半年报 / 新浪财经（2026-09-07）</td></tr>
+    <tr><td>2025 全年营收 15.06 亿（+243.37%）、归母净亏 10.01 亿</td><td>摩尔线程 2025 年报（2026-02-27 披露）</td></tr>
+    <tr><td>跌停后市销率约 130 倍（2025 口径）/约 56 倍（H1 年化口径）</td><td>21世纪经济报道 via 腾讯新闻（2026-09-07）</td></tr>
+    <tr><td>沐曦 -9.67%/单季扣非 +5400 万、天数智芯 -11.42%、寒武纪逆势 +1.9%、H1 净利 23.11 亿</td><td>虎嗅/妙投（2026-09-07）、中华网转载（2026-09-08）</td></tr>
+    <tr><td>中国 AI 半导体市场约 900 亿美元、英伟达约占 55%</td><td>路透 Breakingviews（转引自中华网，2026-09-08）</td></tr>
+    <tr><td>关联叙事：燧原 IPO 期以"摩尔 +425%"为打新参照</td><td>沉锋录历史期次（2026-09-02）</td></tr>
+  </table>
+
+  <div class="checklist">
+    <b>生成质量自检</b>：✔ 标题（日期+星期） ✔ 元信息（主题/归档/W37/判题人） ✔ 事实背景 5 条含数字 ✔ 判断问句 ~100 字（反常识+追问+数据技能） ✔ 结论加粗斩钉截铁 ✔ 判断依据 5 条覆盖 6 框架 ✔ 拆解 5 条 / 归因 3 层 / 反推 4 视角 / 启示 3 条 ✔ 数据可溯源
+  </div>
+
+  <div class="footer">
+    本文由沉锋录·热点判断脚本自动生成 · 素材来源：Deepseek 联网搜索（内置 WebSearch 兜底）<br>
+    训练框架：反常识识别 · 动机 N 层拆解 · 议题偷换 · 受害范围异常 · 分层定价 · 马太效应
+  </div>
+</div>
+</body>
+</html>

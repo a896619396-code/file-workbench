@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年09月09日—⑦不透底·⑧测试代替信任·①默认预设</title>
+<style>
+/* ============================================================
+   识暗心法 v2.0 · 设计系统 v2.1（每日卡片版）
+   浅粉色调 · 教学案例粉色系 / 实战练习紫色系
+   ============================================================ */
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;
+  --surface:#ffffff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;
+  --pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;
+  --blue-600:#3a6ea5;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --fs-xs:11.5px;--fs-sm:12.5px;--fs-base:14.5px;--fs-md:15.5px;--fs-lg:17px;
+  --fs-xl:20px;--fs-2xl:24px;
+  --lh-tight:1.42;--lh-body:1.78;--lh-loose:1.95;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --shadow-md:0 4px 8px rgba(180,90,120,.09),0 12px 28px rgba(180,90,120,.12);
+  --radius:16px;--radius-sm:10px;--radius-xs:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  background:
+    radial-gradient(1100px 500px at 85% -5%, rgba(244,150,190,.14), transparent 60%),
+    radial-gradient(900px 420px at -10% 12%, rgba(190,160,235,.12), transparent 55%),
+    linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  background-attachment:fixed;
+  color:var(--ink);
+  font-size:var(--fs-base);
+  line-height:var(--lh-body);
+  letter-spacing:.01em;
+  padding-bottom:70px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--pink-300);color:#fff}
+.container{max-width:960px;margin:0 auto;padding:26px 22px 0}
+/* ---------- 今日抬头 ---------- */
+.day-head{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-sm);margin-bottom:20px;
+  position:relative;overflow:hidden;
+}
+.day-head::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300));
+  opacity:.9;
+}
+.day-head-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.day-title{font-size:var(--fs-2xl);font-weight:800;letter-spacing:.015em;line-height:var(--lh-tight)}
+.day-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-sm);font-weight:700;
+  padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);
+  border:1px solid rgba(212,61,111,.14);
+}
+.day-badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.day-badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.day-meta{margin-top:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.xf-chip{
+  display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;
+  padding:6px 13px;border-radius:10px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  box-shadow:var(--shadow-xs);
+}
+.xf-chip.ghost{background:var(--surface-soft);color:var(--ink-2);border:1px solid var(--border-strong);box-shadow:none}
+/* ---------- 案例卡片 ---------- */
+.case{
+  margin-bottom:22px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface);
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.case:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.case-head{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--border)}
+.case-head .num{
+  width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;letter-spacing:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+}
+.case-teach .case-head{background:linear-gradient(90deg,var(--pink-050),var(--surface) 70%)}
+.case-teach .num{background:linear-gradient(135deg,var(--pink-500),var(--pink-600))}
+.case-practice .case-head{background:linear-gradient(90deg,var(--purple-100),var(--surface) 70%)}
+.case-practice .num{background:linear-gradient(135deg,#8f66c0,var(--purple-600))}
+.case-type{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink-3);flex:none}
+.case-title{font-size:var(--fs-lg);font-weight:800;flex:1;min-width:0;line-height:var(--lh-tight);letter-spacing:.01em}
+.bf-badge{font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;flex:none;letter-spacing:.02em}
+.case-teach .bf-badge{background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.16)}
+.case-practice .bf-badge{background:var(--purple-100);color:var(--purple-700);border:1px solid rgba(122,75,165,.16)}
+.case-body{padding:20px 24px 24px}
+/* 场景背景 */
+.scene{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-left:3px solid var(--border-strong);
+  border-radius:var(--radius-sm);padding:15px 17px;margin-bottom:18px;
+  font-size:var(--fs-base);color:#5c4a54;line-height:var(--lh-loose);
+}
+.scene-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:9px;
+}
+.scene-label::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--border-strong)}
+.scene p{margin:0 0 8px}
+.scene p:last-child{margin-bottom:0}
+.scene em{font-style:normal;background:var(--gold-100);color:var(--gold-700);padding:0 4px;border-radius:4px;font-weight:600}
+/* 教学分析 */
+.analysis{border-top:2px solid var(--pink-100);padding-top:16px}
+.analysis-label{
+  display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:var(--pink-700);
+  letter-spacing:.18em;margin-bottom:15px;
+}
+.analysis-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--pink-100),transparent)}
+.aim-chip{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  font-size:14.5px;font-weight:800;padding:8px 17px;border-radius:12px;margin-bottom:18px;
+  box-shadow:var(--shadow-sm);letter-spacing:.02em;
+}
+.aim-chip .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.22)}
+.block{margin-bottom:18px}
+.block-t{
+  font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:9px;display:flex;align-items:center;gap:8px;
+  letter-spacing:.02em;
+}
+.block-t .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--pink-500),var(--pink-300));flex:none}
+.points{list-style:none;counter-reset:pt}
+.points li{
+  counter-increment:pt;position:relative;padding:7px 0 7px 36px;font-size:var(--fs-base);color:#51404a;
+}
+.points li::before{
+  content:counter(pt);position:absolute;left:0;top:9px;width:23px;height:23px;border-radius:8px;
+  background:var(--pink-100);color:var(--pink-700);font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,61,111,.12);
+}
+.points li strong{color:var(--ink);font-weight:800}
+.tip-quote{
+  background:linear-gradient(90deg,var(--gold-100),#fdf8ec);border-left:4px solid var(--gold-600);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:13px 17px;font-size:15.5px;font-weight:700;color:var(--gold-700);line-height:1.65;letter-spacing:.02em;
+}
+.tip-quote::before{content:"要诀";font-size:10px;font-weight:800;letter-spacing:.16em;display:block;color:var(--gold-600);margin-bottom:3px}
+/* 5步流程 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px}
+.step{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:11px 13px;transition:all .2s ease;
+}
+.step:hover{border-color:var(--pink-300);background:var(--surface-tint);transform:translateY(-1px)}
+.step .step-k{font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.04em;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .step-k .n{
+  width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.step .step-v{font-size:12.5px;color:#5f4c57;line-height:1.6}
+/* 练习任务 */
+.task-box{
+  background:linear-gradient(135deg,var(--purple-100),#f6f0fb);border:1.5px solid var(--purple-600);
+  border-radius:var(--radius-sm);padding:17px 19px;margin-bottom:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+.task-box-t{font-size:13px;font-weight:800;color:var(--purple-700);margin-bottom:11px;letter-spacing:.12em}
+.task-list{list-style:none;counter-reset:tk}
+.task-list li{
+  counter-increment:tk;position:relative;padding:8px 0 8px 44px;font-size:15px;font-weight:600;color:#4a3757;
+}
+.task-list li::before{
+  content:counter(tk);position:absolute;left:0;top:9px;width:27px;height:27px;border-radius:9px;
+  background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-xs);
+}
+.task-list li strong{color:var(--purple-700);font-weight:800}
+/* 参考答案折叠 */
+details.answer{
+  margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;transition:border-color .2s ease;
+}
+details.answer[open]{border-color:var(--pink-300)}
+details.answer summary{
+  cursor:pointer;padding:14px 19px;font-size:15px;font-weight:800;color:var(--ink);
+  display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);
+  list-style:none;transition:background .2s ease;
+}
+details.answer summary:hover{background:var(--pink-050)}
+details.answer summary::-webkit-details-marker{display:none}
+details.answer summary .arr{
+  width:22px;height:22px;border-radius:7px;background:var(--purple-100);color:var(--purple-700);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+  transition:transform .25s ease,background .2s ease;
+}
+details.answer[open] summary .arr{transform:rotate(90deg);background:var(--purple-600);color:#fff}
+details.answer summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.answer .answer-body{padding:18px 21px;border-top:1px dashed var(--border-strong);background:var(--surface)}
+.answer-item{margin-bottom:14px;padding-left:15px;border-left:3px solid var(--purple-100)}
+.answer-item:last-child{margin-bottom:0}
+.answer-item .a-k{font-size:12px;font-weight:800;color:var(--purple-700);margin-bottom:4px;letter-spacing:.06em}
+.answer-item .a-v{font-size:var(--fs-base);color:#4d3c44;line-height:1.75}
+.answer-item .a-v strong{color:var(--ink)}
+.answer-item .a-v ul{margin:5px 0 0 19px}
+.answer-item .a-v li{margin:3px 0}
+/* 页脚 */
+.foot{text-align:center;font-size:12px;color:var(--ink-3);padding:10px 0 0;letter-spacing:.06em}
+.foot b{color:var(--pink-600)}
+/* 移动端 */
+@media (max-width:640px){
+  .container{padding:18px 13px 0}
+  .day-head{padding:18px 17px}
+  .day-title{font-size:20px}
+  .case-head{flex-wrap:wrap;padding:14px 17px}
+  .case-body{padding:16px 15px 19px}
+  .scene{padding:13px 14px}
+  .day-title{font-size:var(--fs-xl)}
+  .task-list li{font-size:14px;padding-left:40px}
+  details.answer .answer-body{padding:15px 15px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ============ 今日抬头 ============ -->
+  <header class="day-head">
+    <div class="day-head-top">
+      <h1 class="day-title">2026年09月09日</h1>
+      <span class="day-badge">星期三</span>
+      <span class="day-badge green">本周第 3 天</span>
+    </div>
+    <div class="day-meta">
+      <span class="day-badge">📖 教学心法</span>
+      <span class="xf-chip">⑦ 不透底</span>
+      <span class="xf-chip">⑧ 测试代替信任</span>
+      <span class="day-badge purple">✍ 考察心法</span>
+      <span class="xf-chip ghost">① 默认预设（实战练习）</span>
+    </div>
+  </header>
+
+  <!-- ============ 案例① 教学 · ⑦不透底 ============ -->
+  <section class="case case-teach">
+    <div class="case-head">
+      <div class="num">①</div>
+      <span class="case-type">教学案例</span>
+      <h2 class="case-title">一副眼镜 1379 元，就因你多说了两句话</h2>
+      <span class="bf-badge">⑦ 不透底</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>周三晚上七点半，你加班到眼冒金星，摘下眼镜揉眼时，"啪"的一声——右边镜腿从铰链处断了。这副眼镜配了两年，明天还得靠它盯一天屏幕，你只好走进公司楼下那家"明视眼镜"。店里冷清，导购小宋二十出头，热情地迎上来："哥配眼镜呀？先坐，我给您验个光。"</p>
+        <p>验完光，他边擦仪器边跟你闲聊："您平时用眼多吗？"你叹了口气："多啊，<em>天天对着电脑，下班还刷手机</em>。""那就得重视了，"小宋立刻从柜台里抽出一块镜片，"防蓝光加抗疲劳，这款原价 2680，今天会员日打 <em>1980</em>。像您这用眼强度，普通镜片真顶不住。"你心里一紧："有便宜点的吗？"他利落地又抽出一片："普通防蓝光 <em>480</em>。不过您这强度，回头眼睛发酸，可别怪我没提前提醒。"</p>
+        <p>你被他说得有点动摇，想着配都配了，别亏待自己，嘴上一松："<em>总共别超 1500 就行。</em>"小宋眼睛一亮，转身拿了副镜架往你脸上一比："这款 899，轻钛的，衬您脸型。480 的片配这款架，一共 1379，没超您预算！今天定的话，验光费 60 也给您免了。"</p>
+        <p>你掏出手机付了款，拎着眼镜回家，越想越不对劲，上网一查：同品牌同系列镜片，电商活动价六百出头；那副"轻钛"镜架，另一家店挂 399。你花 1379 配的这副眼镜，溢价近一倍——而你原本只是想换副能用的。</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <div class="aim-chip"><span class="dot"></span>命中心法 · ⑦ 不透底</div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点</div>
+          <ul class="points">
+            <li><strong>真实需求被知道，价格就由对方定。</strong>你一句"天天对着电脑、下班刷手机"，等于告诉他你对镜片有刚需、还舍得为"护眼"掏钱——他的报价锚点才敢直接拉到 2680 再"降到"1980。换个人说"随便配副能用的"，他连提都不会提这款。</li>
+            <li><strong>底线一旦暴露，就会被精准卡位。</strong>"别超 1500"一出口，你的支付上限就成了他的配货额度：镜片利润薄，他就把利润高的镜架塞进来凑单，1379 刚好卡在你给的框里，还让你觉得"没超预算 = 占了便宜"。</li>
+            <li><strong>不透底 ≠ 说谎，是只说必要信息。</strong>你完全可以说"先看看款式""正常配一副就行"。交易不欠他一份"用眼强度 + 支付预算"的说明书——少说一句，主动权就多留一分。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">底牌是最后一张牌，亮出去就不值钱了。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>应用要诀</div>
+          <p style="color:#51404a">整场对话你只犯两个错，却把底牌交了个干净：一是暴露了需求强度（我刚需、我心疼眼睛），二是报了预算上限（1500 以内）。小宋的整套话术——先用 2680 抬锚、再以 1980"优惠"制造划算感、最后用 899 镜架填满你给的额度——全是围绕这两句话设计的。对策很简单：需求只说"正常用"，预算打死不报，让他先把明细报价列出来；真要花钱，把"镜片品牌 + 系列 + 折射率、镜架型号"抄在纸上，出门问第二家店——那时你手里拿的才是自己的底牌，而不是他给你的报价单。</p>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>五步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">销售主动打听两件事——使用习惯（"用眼多吗"）与消费边界（"预算多少"），这两问挖的正是你的需求强度与支付底线。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">他问这些是为了"帮你配合适的"还是"给你定个更高的价"？看提成结构就知道：1980 镜片和 899 镜架，利润远高于 480 和普通架。</div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果你只答"正常用、先看款式"，他还会主推 2680 那款吗？同一张嘴，会说出完全不同的另一套方案。</div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕"先共情你的痛点再报价"的组合技，以及"今天定免验光费"式的时间压力——催你急，是怕你出门比价。</div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">说需求不说强度、给区间不给上限；让店员把品牌型号写进单据，出门比完价再回来定，让底牌留在自己手里。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 案例② 教学 · ⑧测试代替信任 ============ -->
+  <section class="case case-teach">
+    <div class="case-head">
+      <div class="num">②</div>
+      <span class="case-type">教学案例</span>
+      <h2 class="case-title">"你的事就是我的事"，和那个被退回的快递</h2>
+      <span class="bf-badge">⑧ 测试代替信任</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>九月的晚上，游泳馆的水温刚好。你办了张季卡，每周二四去游两千米，总在深水区碰见一个四五十岁的大哥。他游得慢悠悠的，上来就搭话："小伙子自由泳游得不错，练过啊？"几次下来你们熟络了，他姓魏，在附近做建材生意，自称"<em>这片儿我都熟，游泳馆老板是我哥们儿，以后有事儿说话</em>"。</p>
+        <p>上周三你出水时，他拍着你的肩膀又补了一句："别跟我见外啊，<em>你的事就是我的事</em>。"你笑着没接话，却把这句话记在了心里。</p>
+        <p>这周四下午，你接到通知，周五要去广州出差两天。偏偏周五下午有个快递到家——你在网上买的挂烫机，家里没人收，放驿站超三天会被退回。你想起魏哥那句话，晚上给他发了条微信："魏哥，明天下午有个快递到我家，我出差不在，能麻烦您帮我收一下吗？我周日回来取。"消息发出去不到一分钟，他秒回："<em>放心，放我这儿，咱俩谁跟谁。</em>"你道了谢，安心睡下。</p>
+        <p>周五下午三点，快递小哥的电话准时打来："您家没人啊，放驿站还是改天派？"你一愣——你忘了把魏哥的电话留给快递员，也忘了告诉他大概几点到。你赶紧给魏哥连发两条微信，都没回。傍晚六点，他才回话："啊？今天到？我以为你说的是下周五呢。再说我下午去仓库了，不在家。"你看了眼物流信息：<em>派送失败，已退回</em>。</p>
+        <p>周日你回来，挂烫机没到。之后你照常去游泳，魏哥照常热情："哎，那快递后来收到没？下次有事儿提前说啊。"你看着他的笑脸，忽然咂摸出那句话的分量——"你的事就是我的事"，说出口的时候多轻巧，做起来的时候就有多重。</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <div class="aim-chip"><span class="dot"></span>命中心法 · ⑧ 测试代替信任</div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点</div>
+          <ul class="points">
+            <li><strong>承诺免费，行为付费：看他怎么做，不听他怎么说。</strong>魏哥的"有事说话""你的事就是我的事"成本为零——他不为这句话付任何代价，却换来了你的人情与好感。这句话值不值钱，只有"需要他付出时他做不做"能检验。</li>
+            <li><strong>小测试要低成本、无恶意、可验证。</strong>托收快递是近乎完美的测试：你损失可控（退回重寄），结果一目了然（到底接到没有），过程无恶意。测试的目的不是抓他错，而是在你没风险时看清他承诺的成色。</li>
+            <li><strong>一次通过不算数，关键场景多测几次。</strong>这次他没接住，已足够你把预期降级；就算下次他接住了，也只说明小事靠谱——距离"可以把大事托付"，还差好几次不同场景的验证。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">嘴上的保证不算数，小测试见真章。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>应用要诀</div>
+          <p style="color:#51404a">公平地说，这次你也有一半责任：托事只说了"明天下午有快递"，没把魏哥电话留给快递员、也没说清大概几点——测试设计得不够严谨，给了他"记错时间"的模糊空间。但这恰恰是最好的一课：<strong>把信息给全、把时间说死、让他没有借口可找，再看对方表现</strong>——若信息齐全他依然健忘、拖延、临时有事，那才是真的不上心，而不是"你没说清楚"。魏哥的问题不在于这次忘了，而在于他对所有熟人都说"有事说话"，却从没准备为这句话付出一丁点精力。认清这一点，就把他放回"泳池里聊得来的熟人"的位置：客气、热络，但不托事、不交底、不深交——这不叫冷漠，叫把信任花在经得起测试的人身上。</p>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>五步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">对方把承诺说得毫无成本——"有事说话""包在我身上""你的事就是我的事"，且对谁都这么说时。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">他这样表态，图的是"人缘好、讲义气"的社交形象，还是真准备为你付出精力？要知道，表个态对他几乎零成本。</div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果这些只是社交客套，当我真的开口要他兑现时，他会怎么应对？——健忘、拖延、临时有事，三件套。</div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕"答应时越爽快、执行时越敷衍"的落差；留意他连你交代的细节都记不住、从不主动确认。</div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">把小事做成可验证的测试：信息给全、时间说死，看他接不接得住；接住了再逐步升级，接不住就降级信任，别把大事托给口头情义。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 案例③ 实战练习 · ①默认预设 ============ -->
+  <section class="case case-practice">
+    <div class="case-head">
+      <div class="num">③</div>
+      <span class="case-type">实战练习</span>
+      <h2 class="case-title">认识才一周，她已经在挑婚礼场地了</h2>
+      <span class="bf-badge">① 默认预设</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>上周日晚上，表姐把姑娘小蕾的微信推给你："这姑娘是我同事的表妹，27，在私立幼儿园当老师，人踏实，你们先聊聊。"你加了好友，她很快通过，主动开场："听说你是做开发的呀，我表哥也是搞电脑的……"气氛意外地顺畅。</p>
+        <p>周三晚上你们第一次见面，约在商场负一层的咖啡店，聊了两个多小时。她讲带中班的趣事，你讲赶项目加班的日常，笑声不断。分别时她主动说："下次我请你吃饭。"接下来几天，她每天早晚准时发消息：早上"今天也要元气满满哦"，晚上问你吃没吃、累不累，<em>嘘寒问暖从不间断</em>。</p>
+        <p>周日她订了一家新开的椰子鸡。饭桌上，她忽然收起玩笑，认真地看着你："<em>我爸妈想周末请你来家里吃个饭</em>，他们想见见你。""我闺蜜们看了你照片，都说你看着靠谱。""对了，<em>五一那会儿办婚礼天气最好</em>，我表姐说到时候给我当伴娘。""要是以后成了，就在我爸妈那个小区再买套小的，互相有个照应——你公积金够吗？"你的筷子悬在半空：认识才一周，她已经在排婚礼档期了。</p>
+        <p>晚上她发来消息："今天好开心呀，<em>我们好合拍对不对？</em>"你盯着屏幕，心里那点暖意里，混着一丝说不上来的不对劲。她条件不错、性格开朗、对你热情——可这一切，是不是有点太快了？</p>
+      </div>
+      <div class="task-box">
+        <div class="task-box-t">你的任务 · 先自己想，再看参考答案</div>
+        <ul class="task-list">
+          <li><strong>命中心法：</strong>这个场景最贴近哪条心法？它的一句话要诀是什么？</li>
+          <li><strong>现象识别：</strong>把"好得反常"的细节列出来——至少找出 3 处让你觉得不对劲的地方。</li>
+          <li><strong>动机归因：</strong>她（以及她背后的家人）可能"图"什么？列出至少 2 种可能，并说说各自该怎么验证。</li>
+          <li><strong>落地行动：</strong>接下来两周，你会具体做哪几件事？写 3 件你马上能做的。</li>
+        </ul>
+      </div>
+      <details class="answer">
+        <summary>
+          <span class="arr">▶</span>
+          参考答案
+          <span class="hint">先想再看 · 点击展开</span>
+        </summary>
+        <div class="answer-body">
+          <div class="answer-item">
+            <div class="a-k">1 · 命中心法</div>
+            <div class="a-v">命中 <strong>① 默认预设</strong>。要诀：<strong>先把他当对手算，再把他当朋友处。</strong>心法提醒你：当对方主动示好、承诺、把节奏推得飞快时，先假设她有自己的立场和算盘（想尽快定下来），再根据证据修正——而不是默认"她这么喜欢我，肯定是因为我优秀、我们真的合拍"。预设越天真，被推着走越深。</div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">2 · 现象识别（好得反常的细节）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>时间线严重压缩：</strong>认识 7 天就安排见父母、聊婚期和买房——正常关系的节奏以"月"为单位推进，她在以"天"为单位冲刺。</li>
+                <li><strong>信息单向推进：</strong>话题全是"我们结婚后如何如何"，却几乎没认真问过"你对婚姻的打算、你近期的人生规划"——她要的是"一个结果"，还是"你这个人"？</li>
+                <li><strong>示好密度过高：</strong>早晚安从不间断、闺蜜集体"看过你照片说靠谱"——她在快速制造亲密感和你的亏欠感，让你不好意思喊停。</li>
+                <li><strong>把决定包装成既定事实：</strong>"五一办婚礼""在爸妈小区买房"用的是陈述句，不是商量句——她在替你做决定，而不是询问你的意愿。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">3 · 动机归因（可能的图谋与验证）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>可能一：年龄与家庭压力。</strong>27 岁在婚恋市场有"黄金线"焦虑，父母催婚紧，"找个条件合适、踏实的人尽快定下来"是她的刚需——她要的是婚姻本身，你恰好符合条件。验证：放慢节奏，看她尊不尊重你的"慢"。</li>
+                <li><strong>可能二：你符合她的"框架"。</strong>本地、工作稳定、性格温和——换一个同样符合条件的人，她也会用同样的速度推进。验证：观察她对"你这个人"的兴趣细节，是关心你的爱好、困扰、成长，还是只关心"房子、公积金、能不能结婚"。</li>
+                <li><strong>可能三（别忽略）：她就是热情直爽的性格。</strong>但即便如此，真正认真对待一段关系的人，也愿意尊重对方需要的节奏。验证：明确提出"想先相处两三个月"，看她接不接受——这是最硬的试金石。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">4 · 落地行动（马上能做）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>守节奏：</strong>真诚地告诉她："我对你印象很好，但我想先相处两三个月，彼此熟悉了再谈见家长和婚期。"她若尊重，关系可以继续；她若焦虑施压、拿"我爸妈都准备好了"催你，本身就是答案。</li>
+                <li><strong>增场景：</strong>把约会从"两人晚餐"扩展到多场景——约朋友一起爬山、打球、短途游，看她如何与你的朋友、陌生人、服务人员相处，观察言行是否一致。</li>
+                <li><strong>做验证：</strong>从表姐、她口中提到的同事闺蜜等渠道，侧面了解她的上一段感情与家庭情况——她说的，和别人说的一致吗？</li>
+                <li><strong>守住底：</strong>见父母可以，但房子、公积金、婚期这些大事，在关系稳定前不轻易承诺——不因"气氛到了"就点头，你的节奏你做主。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer class="foot">
+    识暗心法 v2.0 · 每日学习卡 · <b>2026.09.09 周三</b><br>
+    教 ⑦不透底 · ⑧测试代替信任 ｜ 练 ①默认预设
+  </footer>
+</div>
+</body>
+</html>

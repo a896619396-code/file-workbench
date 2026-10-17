@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉锋录·热点判断 2026-09-17 宁德时代业绩创新高股价一年新低</title>
+<style>
+  :root{
+    --cinnabar:#9e1f1f;      /* 朱砂主色 */
+    --cinnabar-dark:#7a1414;
+    --cinnabar-deep:#5a0e0e;
+    --paper:#f5efe4;         /* 米白纸色 */
+    --paper-dark:#efe5d4;
+    --ink:#2b2320;           /* 墨色 */
+    --ink-light:#5c4f47;
+    --gold:#c9a227;         /* 鎏金点缀 */
+    --line:#d8c9ae;
+    --badge-bg:#fff8ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  .page{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+  /* ===== 报头 ===== */
+  .masthead{
+    border:3px double var(--cinnabar);
+    border-radius:6px;
+    padding:22px 26px 18px;
+    margin-bottom:30px;
+    background:linear-gradient(180deg,#fffdf7 0%,var(--paper) 100%);
+    position:relative;
+  }
+  .masthead::before{
+    content:"沉锋录 · 热点判断";
+    position:absolute;top:-13px;left:24px;
+    background:var(--cinnabar);color:#fff;
+    padding:2px 14px;font-size:13px;letter-spacing:3px;
+    font-family:"Microsoft YaHei",sans-serif;border-radius:3px;
+  }
+  .masthead h1{
+    font-size:25px;color:var(--cinnabar-dark);
+    text-align:center;letter-spacing:2px;margin-bottom:6px;
+  }
+  .masthead .meta{
+    text-align:center;color:var(--ink-light);font-size:13.5px;
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .masthead .meta b{color:var(--cinnabar);}
+  .theme-line{
+    margin-top:14px;text-align:center;font-size:16.5px;color:var(--cinnabar-dark);
+    background:var(--paper-dark);padding:10px 14px;border-radius:4px;
+    border-left:4px solid var(--cinnabar);
+  }
+  /* ===== 章节标题 ===== */
+  h2.sec{
+    display:flex;align-items:center;gap:10px;
+    font-size:20px;color:#fff;background:var(--cinnabar);
+    padding:9px 16px;border-radius:4px;margin:38px 0 18px;
+    letter-spacing:2px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  h2.sec .no{
+    background:#fff;color:var(--cinnabar);width:26px;height:26px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;
+  }
+  h3{
+    font-size:17px;color:var(--cinnabar-dark);margin:22px 0 10px;
+    padding-left:10px;border-left:4px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 事实背景 ===== */
+  .facts{list-style:none;}
+  .facts li{
+    background:var(--paper-dark);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+    border:1px solid var(--line);position:relative;padding-left:46px;
+  }
+  .facts li::before{
+    content:attr(data-n);
+    position:absolute;left:12px;top:12px;
+    background:var(--cinnabar);color:#fff;width:24px;height:24px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  .num{color:var(--cinnabar);font-weight:700;font-size:1.12em;}
+  .num.big{color:var(--cinnabar);font-weight:800;font-size:1.35em;}
+  /* ===== 判断问句 ===== */
+  .question{
+    background:var(--cinnabar-deep);color:#fff;
+    border-radius:8px;padding:20px 22px;margin:12px 0;
+    font-size:16.5px;line-height:1.9;
+    border-left:6px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 结论 ===== */
+  .conclusion{
+    background:#1a0d0d;color:#fff;
+    border-radius:8px;padding:22px 24px;margin:14px 0 8px;
+    border:2px solid var(--cinnabar);
+    font-size:17.5px;line-height:1.9;font-weight:700;
+    position:relative;
+  }
+  .conclusion::before{
+    content:"◆ 结论 ◆";display:block;text-align:center;
+    color:var(--gold);font-size:14px;letter-spacing:6px;margin-bottom:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 判断依据 ===== */
+  .basis{list-style:none;}
+  .basis li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:12px 15px;margin-bottom:11px;
+  }
+  .badge{
+    display:inline-block;color:#fff;font-size:12.5px;
+    padding:2px 10px;border-radius:12px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;letter-spacing:1px;vertical-align:2px;
+  }
+  .b-reverse{background:#b3272d;}   /* 反常识识别 - 红 */
+  .b-motive{background:#7a5ab8;}    /* 动机拆解 - 紫 */
+  .b-switch{background:#2e7d8f;}    /* 议题偷换 - 青 */
+  .b-victim{background:#c97b1a;}    /* 受害范围 - 橙 */
+  .b-tier{background:#5a8f3c;}      /* 分层定价 - 绿 */
+  .b-mathe{background:#8f3c6d;}     /* 马太效应 - 品红 */
+  /* ===== 拆解现象 ===== */
+  .pheno{list-style:none;counter-reset:p;}
+  .pheno li{
+    counter-increment:p;
+    background:var(--paper-dark);border-left:4px solid var(--gold);
+    padding:11px 15px;margin-bottom:10px;border-radius:0 6px 6px 0;
+  }
+  .pheno li::before{
+    content:"现象" counter(p);
+    background:var(--gold);color:#fff;font-size:12px;
+    padding:1px 8px;border-radius:3px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 归因根源 ===== */
+  .cause{list-style:none;}
+  .cause li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+  }
+  .cause .lvl{
+    display:inline-block;background:var(--cinnabar);color:#fff;
+    font-size:12.5px;padding:2px 10px;border-radius:3px;margin-bottom:5px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .cause .lvl.s{background:#b3272d;}
+  .cause .lvl.m{background:#7a5ab8;}
+  .cause .lvl.d{background:#2e7d8f;}
+  /* ===== 反推逻辑 ===== */
+  .viewbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .view{
+    background:var(--paper-dark);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;
+  }
+  .view h4{
+    color:var(--cinnabar-dark);font-size:15px;margin-bottom:7px;
+    font-family:"Microsoft YaHei",sans-serif;
+    display:flex;align-items:center;gap:6px;
+  }
+  .view .gain{color:#2d6a2d;font-weight:700;}
+  .view .cost{color:var(--cinnabar);font-weight:700;}
+  .view p{font-size:14px;color:var(--ink);}
+  /* ===== 落地启示 ===== */
+  .lesson{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;margin-bottom:11px;
+    border-left:5px solid var(--cinnabar);
+  }
+  .lesson h4{color:var(--cinnabar-dark);font-size:15px;margin-bottom:6px;font-family:"Microsoft YaHei",sans-serif;}
+  /* ===== 素材来源 ===== */
+  table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--badge-bg);}
+  th{
+    background:var(--cinnabar);color:#fff;padding:9px 12px;
+    text-align:left;font-size:14px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  td{border:1px solid var(--line);padding:9px 12px;font-size:13.5px;vertical-align:top;}
+  tr:nth-child(even) td{background:var(--paper-dark);}
+  /* ===== 页脚 ===== */
+  .footer{
+    margin-top:40px;text-align:center;color:var(--ink-light);
+    font-size:12.5px;border-top:2px solid var(--line);padding-top:16px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist{
+    background:var(--paper-dark);border:1px solid var(--line);border-radius:6px;
+    padding:14px 18px;font-size:13.5px;color:var(--ink-light);margin-top:14px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist b{color:var(--cinnabar);}
+  @media(max-width:640px){
+    .viewbox{grid-template-columns:1fr;}
+    .page{padding:24px 14px 60px;}
+    .masthead h1{font-size:20px;}
+    .theme-line{font-size:14.5px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;}
+    .conclusion{background:#1a0d0d;-webkit-print-color-adjust:exact;}
+    h2.sec{background:var(--cinnabar);-webkit-print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <h1>宁德时代 · 业绩创纪录 vs 股价一年新低</h1>
+    <div class="meta">
+      <span>日期：<b>2026-09-17 星期四</b></span>
+      <span>ISO 周：<b>W38</b></span>
+      <span>归档：<b>2026-09-17 17:35</b></span>
+      <span>判题人：<b>热点判断脚本</b></span>
+    </div>
+    <div class="theme-line">客户集体"去宁德化"不是因为宁德变弱，恰恰因为它太强——<span class="num">23.93%</span> 的毛利率就是车企 <span class="num">9.4%</span> 毛利率的另一面</div>
+  </header>
+
+  <!-- 第一部分 -->
+  <h2 class="sec"><span class="no">一</span>题目 · 事实背景</h2>
+  <ul class="facts">
+    <li data-n="1">宁德时代 2026 年中报：营收 <span class="num big">2769.17 亿</span>元（<span class="num">+54.80%</span>）、归母净利润 <span class="num big">432.84 亿</span>元（<span class="num">+41.98%</span>），日均约 <span class="num">2.4 亿</span>元；动力电池收入 <span class="num">1921.25 亿</span>元、储能收入 <span class="num">532.61 亿</span>元（<span class="num">+87.54%</span>）。同期 A 股+港股 <span class="num">15 家</span>主流上市车企归母净利润<b>总和仅 210.48 亿元</b>，不及宁德一家的一半。</li>
+    <li data-n="2">股价却反向崩塌：<b>9 月 15 日</b> A 股单日大跌 <span class="num">6.16%</span>、单日市值蒸发约 <span class="num">914 亿</span>元；<b>9 月 16 日</b>盘中最低 <span class="num">299 元</span>失守 300 元关口，收 <span class="num">305.48 元</span>（<span class="num">-3.44%</span>）创年内新低，H 股收 <span class="num">501 港元</span>（<span class="num">-2.91%</span>）。较 5 月高点 <span class="num">468.75 元</span>最大回撤超 <span class="num big">32%</span>（H 股较高点 792.548 港元回撤 <span class="num">38%</span>），A+H 总市值 <b>4 个月蒸发约 7000 亿元</b>。</li>
+    <li data-n="3">份额数据却反证"流失叙事"不成立：<b>8 月</b>国内动力电池装车 <span class="num">79.0GWh</span>（<span class="num">+26.3%</span>），宁德 <span class="num">32.54GWh/41.45%</span>（环比仅 <span class="num">-0.89pct</span>）；<b>1-8 月累计 218.2GWh/44.7%</b>，同比<b>还提升 1.99 个百分点</b>；国内乘用车装车份额 <span class="num">46.7%</span>（<span class="num">+5.6pct</span>）、三元锂全球市占率 <span class="num">75.2%</span>、全球装车份额逼近 <span class="num">40%</span>。</li>
+    <li data-n="4">车企动作密集落地：理想 <b>9 月 4 日</b>公告出资 <span class="num">26.5 亿</span>元增资欣旺达动力、持股 <span class="num">11.17%</span> 成第二大股东，新一代 L8 <b>全系切换欣旺达电芯、宁德彻底退出</b>，<b>9 月 7 日</b>起 MEGA 锁单用户切换自研 5C 三元电池；小米澎程 N70/N90 <b>弃用宁德</b>、改用龙甲电池（中创新航+欣旺达）；问界 M6 纯电版搭载国轩磷酸铁锂；小鹏将中创新航升为<b>第一大</b>电池供应商。第三方估算理想+小米合计约占宁德国内装机量 <span class="num">13.6%</span>。</li>
+    <li data-n="5">政策与利润差双向挤压：<b>9 月 1 日</b>起锂离子蓄电池按 <span class="num">2%</span> 征收消费税（结束十余年免征期），<b>2027 年 9 月 1 日</b>升至 <span class="num">4%</span>，60kWh 单车电池成本增加约 <span class="num">438 元</span>、4% 时翻倍至 <span class="num">876 元</span>；但<b>自产自用可规避或抵扣</b>，钠电/固态电池阶段性免税至 <b>2028 年底</b>。宁德动力电池毛利率降至 <span class="num">20.63%</span>（<span class="num">-1.78pct</span>）、整体 <span class="num">23.93%</span>（<span class="num">-1.09pct</span>）vs 理想汽车 Q2 汽车毛利率仅 <span class="num">9.4%</span>（同比 <span class="num">-10pct</span>）。</li>
+  </ul>
+
+  <h3>🎯 判断问句</h3>
+  <div class="question">
+    龙头净利 <span class="num">432.84 亿</span>（<span class="num">+41.98%</span>）、累计份额同比<b>还升 1.99pct</b>，股价却 4 个月蒸发 <span class="num">7000 亿</span>——为何基本面最强时估值最惨？"去宁德化"是份额流失，还是议价权被提前定价？作为数据分析师，你该用哪张表把"份额"与"定价权"分开算？
+  </div>
+
+  <!-- 第二部分 -->
+  <h2 class="sec"><span class="no">二</span>标准答案</h2>
+  <div class="conclusion">
+    市场定价的不是份额，而是议价权：宁德累计份额 44.7%、同比还升 1.99pct，但拆解它的动力恰恰来自它自己——净利 432.84 亿等于 15 家主流车企总和的 2 倍。垄断利润率越高，被拆解得越快，估值锚从成长股切向制造股不可逆。
+  </div>
+
+  <h3>🔑 关键判断依据</h3>
+  <ul class="basis">
+    <li><span class="badge b-reverse">反常识识别</span>定价锚错位——用"份额流失"解释股价根本解释不通（份额在涨），真正被定价的是"份额的可维持性/议价权"。业绩创新高（净利 +41.98%）与股价创一年新低（-32%）并存，说明定价函数里"定价权"权重远高于"当期利润"，市场在为垄断的<b>可持续性</b>而非垄断的<b>现状</b>付钱。</li>
+    <li><span class="badge b-motive">动机 4 层拆解</span>表层＝供应链安全与多供降本（小米官方话术："分散单一供应商依赖带来的潜在风险""缩短用户提车周期"）；中层＝夺回利润分配权与零部件定义权，从"买电池包"升级为"定电芯标准、自有 Pack 与 BMS"；深层＝整车厂在产业成熟期完成垂直整合，把电池从"外购黑箱"变成"自研资产"，将价值链利润从上游挪回自己表内。</li>
+    <li><span class="badge b-switch">议题偷换</span>把"总量增长"偷换为"龙头受益"——8 月行业装车 +26.3%，宁德份额却环比 -0.89pct；把"份额被稀释"说成"需求没减弱、只是份额再分配"；把"自产自用可规避消费税"说成"政策对行业中性"。最典型的一处：宁德称消费税"影响不太大"、高盛测算最坏情景盈利下行仅 2%-13%，但市场并不买账。</li>
+    <li><span class="badge b-victim">受害范围异常</span>直接受害者是宁德股东（4 个月 7000 亿），但真正的代价承担者是<b>二线电池厂</b>——欣旺达/中创新航拿到订单却让出定价权，被车企股权绑定（理想 26.5 亿换欣旺达动力 11.17%）沦为"附庸产能"。扩散链条：二线毛利被提前锁死 → 上游材料商议价权同步下降 → 全链利润加速向整车厂集中，而车企自研降本的风险最终可能由消费者以一致性折损承担。</li>
+    <li><span class="badge b-tier">分层定价</span><span class="badge b-mathe">马太效应</span>宁德被挤到"高端利基"——问界 M9、尊界、小米 SU7/YU7 主力仍保留宁德，走量与增程车型分流给二线，这是教科书式的分层定价；而马太效应在此<b>反转</b>：赢家通吃变成"赢家被系统性稀释"，龙头的高毛利本身成为客户培育替代者的补贴。</li>
+  </ul>
+
+  <!-- 第三部分 -->
+  <h2 class="sec"><span class="no">三</span>详细分析流程</h2>
+
+  <h3>1️⃣ 拆解现象</h3>
+  <ul class="pheno">
+    <li><b>业绩与股价的极端背离</b>：净利 <span class="num">432.84 亿</span>（+41.98%）、日均赚 2.4 亿 vs 股价 4 个月 <span class="num">-32%</span>、市值蒸发 7000 亿——背离不是市场犯错，是定价变量被换了一个：从"利润增速"换成"议价权存续"。</li>
+    <li><b>份额数据不支持"流失叙事"</b>：1-8 月累计 <span class="num">44.7%</span>（同比 +1.99pct）、国内乘用车 <span class="num">46.7%</span>（+5.6pct）、三元 <span class="num">75.2%</span>——总量份额仍在涨，跌的是"份额的确定性"。</li>
+    <li><b>"点状流失"被当作趋势定价</b>：理想+小米合计约占宁德国内装机 <span class="num">13.6%</span>，且集中在 L8、澎程等具体车型——用 13.6% 的样本推出"份额天花板"，是叙事定价而非数据定价。</li>
+    <li><b>利润倒挂是真实驱动</b>：宁德一家净利 <span class="num">432.84 亿</span> &gt; 15 家主流车企合计 <span class="num">210.48 亿</span>；电池占整车成本 <span class="num">30%-40%</span>；理想 Q2 汽车毛利率仅 <span class="num">9.4%</span>——车企不是"逃离"，是"反抗"。</li>
+    <li><b>政策为自研加了杠杆</b>：消费税 <span class="num">2%</span>（2027 年升至 4%）但<b>自产自用可抵扣</b>，钠电/固态免税至 <b>2028 年底</b>——政策人为拉大了"外购"与"自研"的成本差，直接加速垂直整合。</li>
+    <li><b>同板块内部分化</b>：9 月 16 日宁德跌超 5% 的同时，欣旺达涨超 <span class="num">13%</span>、国轩高科/孚能科技/鹏辉能源集体跟涨——资金在定价"份额再分配"，而不是"需求萎缩"。</li>
+  </ul>
+
+  <h3>2️⃣ 归因根源</h3>
+  <ul class="cause">
+    <li><span class="lvl s">表层 · 反常识识别</span><br>消费税 9 月 1 日正式落地叠加"车企换供"传闻发酵，触发 9 月 15 日单日 <span class="num">-6.16%</span> 的技术性踩踏，9 月 16 日惯性失守 300 元关口。</li>
+    <li><span class="lvl m">中层 · 议题偷换 / 动机 N 层拆解</span><br>车企把"采购权力再分配"包装成"供应链安全与技术多元化"，市场把"<span class="num">13.6%</span> 的点状流失"外推为"份额天花板"，两方共同完成了定价锚从"份额叙事"到"议价权叙事"的迁移。</li>
+    <li><span class="lvl d">深层 · 马太效应反转</span><br>动力电池从卖方市场转入买方市场（8 月行业 +26.3%，但 TOP15 中 <span class="num">9 家</span>份额环比下滑，产能扩张快于需求增速），垄断者的高毛利在产业成熟期转化为客户的成本负担，客户必然主动培育替代者——这是产业生命周期的必然，不是宁德做错了什么。</li>
+  </ul>
+
+  <h3>3️⃣ 反推逻辑（收益 vs 成本）</h3>
+  <div class="viewbox">
+    <div class="view">
+      <h4>👤 用户 / 整车厂</h4>
+      <p><span class="gain">收益</span>：压低电池包采购价、拿回电芯定义权与 BMS 主导权、以自产自用规避消费税。<br><span class="cost">成本</span>：自研与合资投入（理想 26.5 亿）、多供体系管理复杂度、产能爬坡与一致性风险，以及放弃宁德的技术领先性。</p>
+    </div>
+    <div class="view">
+      <h4>🏰 生态主（宁德时代）</h4>
+      <p><span class="gain">收益</span>：全球份额逼近 40%、储能收入 532.61 亿（+87.54%）、海外与商用车基本盘稳固、高端车型仍保留。<br><span class="cost">成本</span>：国内定价权被稀释、估值锚从成长股切换到制造股（PE 系统性重估）、4 个月 7000 亿市值蒸发。</p>
+    </div>
+    <div class="view">
+      <h4>⚠️ 受害者（二线电池厂）</h4>
+      <p><span class="gain">收益</span>：拿到头部车企订单与战略资本（理想 26.5 亿增资欣旺达动力）。<br><span class="cost">成本</span>：被股权绑定为"附庸产能"（理想持股 11.17%）、电芯规格与报价由车企主导、毛利率在签约时就被锁死。</p>
+    </div>
+    <div class="view">
+      <h4>🏛️ 监管（财政部 / 税务总局 / 工信部）</h4>
+      <p><span class="gain">收益</span>：开辟消费税源（2%→4%）、以免税窗口引导钠电与固态等下一代技术、扶持多元供应链降低单点依赖。<br><span class="cost">成本</span>：可能削弱龙头研发投入能力、损失部分产业链效率，且税负最终可能转嫁给消费者。</p>
+    </div>
+  </div>
+
+  <h3>4️⃣ 落地启示（数据分析师 + HR 迁移）</h3>
+  <div class="lesson">
+    <h4>📊 利润池对账（Profit-Pool Mapping）</h4>
+    不要孤立看一家公司的财报，要把产业链上下游的利润放进同一张表。宁德 <span class="num">432.84 亿</span> vs 15 家主流车企合计 <span class="num">210.48 亿</span>——上游拿走 2 倍，这才是"去宁德化"的真实驱动力。正如 HR 测算中台/共享服务中心成本占业务部门利润的比重：一旦某中台成本超过业务部门利润的一半，"业务自建、去中台化"的动议就会立刻出现——与车企拆电池供应商完全同构。
+  </div>
+  <div class="lesson">
+    <h4>📊 份额与定价权分离（Share vs Pricing Power Decomposition）</h4>
+    把"存量份额"和"可维持性"拆成两个指标。宁德份额 <span class="num">44.7%</span>（+1.99pct）没跌、股价却跌 <span class="num">32%</span>，市场定价的是后者。<span class="num">13.6%</span> 的点状流失被外推成天花板，是典型的小样本外推陷阱，必须做乐观/中性/悲观三情景的份额路径分析。正如 HR 看整体流失率 5% 似乎健康，但若流失集中发生在核心高绩效岗位，就必须改算"关键岗位流失率"，别被总量指标安慰。
+  </div>
+  <div class="lesson">
+    <h4>📊 税负归宿三问（Tax Incidence Analysis）</h4>
+    任何成本或政策变化都要问三句——总额多少？能否转嫁？最终谁承担？消费税 2% 对应单车成本 <span class="num">+438 元</span>（4% 时 <span class="num">+876 元</span>），宁德说"影响不太大"、高盛算最坏 <span class="num">-13%</span>，分歧全部集中在"能否转嫁"这一环。正如 HR 面对社保基数或公积金政策调整，公司口径永远是"影响可控"，真正要算的是能否通过调薪结构转嫁、以及成本最终落在员工到手收入还是公司总成本上。
+  </div>
+
+  <!-- 素材来源 -->
+  <h2 class="sec"><span class="no">附</span>素材来源与数据引用</h2>
+  <table>
+    <tr><th style="width:55%">数据点</th><th>来源</th></tr>
+    <tr><td>宁德 H1 营收 2769.17 亿（+54.80%）、净利 432.84 亿（+41.98%）、动力电池收入 1921.25 亿、储能 532.61 亿（+87.54%）</td><td>界面新闻《从买电芯到定电芯》（2026-09-16）</td></tr>
+    <tr><td>15 家主流上市车企归母净利合计 210.48 亿，不及宁德一半</td><td>新浪新闻（2026-09-17）</td></tr>
+    <tr><td>9/15 A 股 -6.16%、单日蒸发约 914 亿；9/16 盘中 299 元、收 305.48（-3.44%）、H 股 501 港元（-2.91%）</td><td>财中社（2026-09-16）</td></tr>
+    <tr><td>4 个月 A+H 市值蒸发约 7000 亿；A 股较 5 月高点回撤超 32%、H 股回撤 38%</td><td>新浪财经（2026-09-17）</td></tr>
+    <tr><td>8 月装车 79.0GWh（+26.3%）、宁德 32.54GWh/41.45%（环比 -0.89pct）、1-8 月 218.2GWh/44.7%（同比 +1.99pct）</td><td>中国汽车动力电池产业创新联盟 / 交银国际月报（2026-09-16）</td></tr>
+    <tr><td>国内乘用车装车份额 46.7%（+5.6pct）、三元装车份额 75.2%、全球份额逼近 40%</td><td>界面新闻（2026-09-16）</td></tr>
+    <tr><td>理想 26.5 亿增资欣旺达动力、持股 11.17% 成第二大股东</td><td>新浪财经（2026-09-04）</td></tr>
+    <tr><td>理想 L8 全系欣旺达电芯、宁德退出；MEGA 9/7 起切换自研 5C；小米龙甲（中创新航+欣旺达）；问界 M6 用国轩磷酸铁锂；小鹏中创新航升第一</td><td>央广网（2026-09-16）</td></tr>
+    <tr><td>理想+小米合计约占宁德国内装机量 13.6%（第三方估算）</td><td>新浪财经（2026-09-16）</td></tr>
+    <tr><td>消费税 9/1 起 2%、2027/9/1 升至 4%；60kWh 单车 +438 元→876 元；自产自用可抵扣；钠电/固态免税至 2028 年底</td><td>财中社、新浪新闻（2026-09-16/17）</td></tr>
+    <tr><td>宁德动力电池毛利率 20.63%（-1.78pct）、整体 23.93%（-1.09pct）；理想 Q2 汽车毛利率 9.4%（-10pct）</td><td>央广网（2026-09-16）</td></tr>
+    <tr><td>高盛测算最坏情景盈利下行 2%-13%；宁德业绩会称消费税"影响不太大"</td><td>新浪财经（2026-09-16）</td></tr>
+    <tr><td>9/16 欣旺达涨超 13%、国轩高科/孚能科技/鹏辉能源跟涨</td><td>央广网（2026-09-16）</td></tr>
+    <tr><td>关联叙事：苹果签无上限 NAND 长约、存储议价权易主</td><td>沉锋录历史期次（09-10）</td></tr>
+    <tr><td>关联叙事：小米 Q2 出货暴跌 26.5%、存储涨价成本双杀</td><td>沉锋录历史期次（08-19）</td></tr>
+  </table>
+
+  <div class="checklist">
+    <b>生成质量自检</b>：✔ 标题（日期+星期） ✔ 元信息（主题/归档/W38/判题人） ✔ 事实背景 5 条含数字 ✔ 判断问句 ~100 字（反常识+追问+数据技能） ✔ 结论加粗斩钉截铁 ✔ 判断依据 5 条覆盖 6 框架 ✔ 拆解 6 条 / 归因 3 层 / 反推 4 视角 / 启示 3 条 ✔ 数据可溯源
+  </div>
+
+  <div class="footer">
+    本文由沉锋录·热点判断脚本自动生成 · 素材来源：Deepseek 联网搜索（红狐 hub）+ 内置联网搜索兜底<br>
+    训练框架：反常识识别 · 动机 N 层拆解 · 议题偷换 · 受害范围异常 · 分层定价 · 马太效应
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-09-29 政策时事 · 利润涨15.7%六成靠一个行业</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">政策时事 · 08 类</span>
+    <div class="date">2026-09-29 周二 · 热点认知卡</div>
+    <h1>利润涨 15.7%，六成靠一个行业</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>9 月 28 日同一天两件事：国务院常务会议部署「加大宏观政策逆周期调节力度、推出增量政策」；国家统计局公布 1—8 月规模以上工业企业利润同比涨 <strong>15.7%</strong>，但其中 <strong>62%</strong> 的增长由电子一个行业贡献。</p>
+<blockquote>
+<p>来源：国家统计局 <a href="https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html">https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html</a> ；统计局解读 <a href="https://www.stats.gov.cn/sj/zxfbhjd/202609/t20260928_1965426.html">https://www.stats.gov.cn/sj/zxfbhjd/202609/t20260928_1965426.html</a> ；国常会报道 <a href="https://finance.sina.cn/tech/2026-09-29/detail-initmzhm9331900.d.html">https://finance.sina.cn/tech/2026-09-29/detail-initmzhm9331900.d.html</a></p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <div class="analogy">
+        <p><strong>家宴账单</strong>：这个月家里请客花了 2000 块，比上月多 800。你一查明细才发现，多出来的全是那道龙虾，其余每一道菜反而比上月便宜了。看总账会得出"什么都涨价了"，看明细才知道只有一道菜在涨。</p>
+        <p><strong>追剧开分</strong>：一部剧开分 8.5，追进去才发现高分全压在一个配角的戏上，另外三条线一路往下掉。总分是四个故事加权出来的，评分好看不等于每一集都好看。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+      <div class="view"><h3>视角 1：数据——总量是加权出来的，不是每处都在变好</h3>
+<p>15.7% 是一个把几十个行业揉在一起的加权数。拆开看：电子行业利润涨 1.1 倍，贡献了全部增长的 62.0%；高技术制造业涨 54.7%；原材料制造业涨 47.3%（化工 51.0%、有色 82.9%）。但另一侧，汽车 −16.0%、黑色金属冶炼 −62.4%、非金属矿物 −46.7%，电力热力燃气水一个大门类整体 −12.0%。同一个 15.7%，里面同时装着涨 1 倍和跌 6 成的行业。</p></div>
+      <div class="view"><h3>视角 2：商业——利润的两种来源，含金量不一样</h3>
+<p>原材料行业这轮高增长，主要靠国际原油和有色金属价格上行（涨价型利润，靠外部价格）；电子行业靠 AI 算力、新能源汽车、物联网带来的真实需求扩张（需求型利润，靠新场景）。前者价格一回落利润就回落，后者才对应产能和技术升级。同样是利润增长，一种是在吃行情，一种是在换引擎。</p></div>
+      <div class="view"><h3>视角 3：政策——决策层看的是分布，不是均值</h3>
+<p>总量数据亮眼的同一天，国常会仍在要求"加大逆周期调节力度""推出一批务实管用的增量政策""增加科技创新和技术改造、支农支小再贷款额度""研究出台稳定房地产市场、促进就业增收等政策措施"。原因不难理解：政策要照顾的是分布在尾部的那批行业和人群，而不是被电子一个行业抬起来的平均值。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+      <div class="model"><h4>基数效应（Base Effect）</h4><ul>
+<li><strong>一句话</strong>：同比是"和去年同期比"，去年那期数字越高，今年同样的绝对量算出来增速就越低，反之亦然。</li>
+<li><strong>生活类比</strong>：① 去年这时候连着下了半个月暴雨，今年同期"降雨少了七成"不代表今年旱 ② 上个月一次囤了整箱米，这个月只补一袋，不代表饭量变小 ③ 体重这个月只涨 1 斤，因为上个月已经涨了 10 斤</li>
+</ul>
+<blockquote><p>本次数据里的例子：1—8 月累计利润涨 15.7%，但 8 月单月只涨 4.2%，统计局说明是<strong>受去年同期较高基数影响</strong>；同月毛利润实际增长 7.5%，比上月还加快 1.9 个百分点。</p></blockquote></div>
+      <div class="model"><h4>贡献度集中（Contribution Concentration）</h4><ul>
+<li><strong>一句话</strong>：总量的增长可以只由极少数环节撑起，增速好看不等于普遍变好，关键要看"是谁贡献了增长"。</li>
+<li><strong>生活类比</strong>：① 一桌账单多出 800 块只因一道龙虾，其余菜其实在降价 ② 一个班平均分涨 5 分，涨幅全来自前 3 名，其余 40 人在退步 ③ 一场演唱会票房破纪录，其实只有一个歌手在卖票</li>
+</ul>
+<blockquote><p>对照看：电子一个行业对全部规上工业利润增长的贡献率是 <strong>62.0%</strong>。也就是说，去掉这一个行业，剩下所有行业加起来的利润增长会从两位数掉到很低的水平。</p></blockquote></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：这份数据是教科书级的"平均数陷阱"现场。做分析时报告一个总量同比是最省事也最容易误导的写法，专业做法是再拆两层：分组贡献度（Top 2 分组占了多少增长）和负增长分组计数（有多少个分组在往下走）。以后自己写报告，先在结论页加一行"结构说明"。</li>
+<li><span class="kw">《认知觉醒》呼应</span>：周岭讲元认知是"跳出自己看自己的思考过程"。套到数据上，元认知就是问自己一句"我现在看的是原始分布，还是一个被加权平均过的结论"。多数认知翻车不是算错，是停在了平均数上。</li>
+<li><span class="kw">《底层逻辑》呼应</span>：刘润反复讲"看系统不看单点"。15.7% 是一个点，行业贡献度结构才是那个系统；同样，8 月末应收账款同比涨 9.0%、产成品存货涨 11.0%，这两个数也在提示利润数字背后的账期与库存压力。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p class="lead">给每个"增长 X%"的数字，加三步检查</p>
+        <p>下次看到任何总量增速，先别急着下结论：① 找到口径——是同比还是环比、是不是可比口径（可比口径＝把企业增减和统计范围变化调整掉，让两个时期公平对比）；② 找出贡献度前 2 名，看它们占了总增长的百分之多少；③ 数一数有多少个分组是负增长。</p>
+        <blockquote><p>这三步加起来不到 5 分钟，能把"经济很好/很差"这类空判断，换成一句能站得住的结构判断。做数据分析的核心竞争力，从来不是取数快，而是知道一个数字哪里会骗人。</p></blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+      <div class="dict"><p><span class="term">可比口径</span> <span class="en">(Comparable Basis)</span>：统计时把企业增减、统计范围变化调整掉，让两个时期能公平对比。类比比赛换了队员仍按同一规则计分，否则数字会因"参赛队伍变了"而失真。</p></div>
+      <div class="dict"><p><span class="term">贡献率</span> <span class="en">(Contribution Rate)</span>：某一部分的增长占了整体增长的百分之多少——不是它自己涨了多少，而是"总增长里有多少是它带出来的"。贡献率 62% 意味着整体增长的大头来自这一块。</p></div>
+      <div class="dict"><p><span class="term">逆周期调节</span> <span class="en">(Counter-cyclical Adjustment)</span>：经济偏冷时政策多给一点力、偏热时收一点力，用政策方向抵消经济波动方向。类比空调根据室温自动加减功率，目标是室温稳，而不是功率稳。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

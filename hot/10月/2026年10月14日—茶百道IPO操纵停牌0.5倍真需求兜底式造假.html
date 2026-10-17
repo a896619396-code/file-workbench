@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉锋录·热点判断 2026-10-14 茶百道IPO操纵停牌0.5倍真需求兜底式造假</title>
+<style>
+  :root{
+    --cinnabar:#9e1f1f;      /* 朱砂主色 */
+    --cinnabar-dark:#7a1414;
+    --cinnabar-deep:#5a0e0e;
+    --paper:#f5efe4;         /* 米白纸色 */
+    --paper-dark:#efe5d4;
+    --ink:#2b2320;           /* 墨色 */
+    --ink-light:#5c4f47;
+    --gold:#c9a227;         /* 鎏金点缀 */
+    --line:#d8c9ae;
+    --badge-bg:#fff8ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  .page{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+  /* ===== 报头 ===== */
+  .masthead{
+    border:3px double var(--cinnabar);
+    border-radius:6px;
+    padding:22px 26px 18px;
+    margin-bottom:30px;
+    background:linear-gradient(180deg,#fffdf7 0%,var(--paper) 100%);
+    position:relative;
+  }
+  .masthead::before{
+    content:"沉锋录 · 热点判断";
+    position:absolute;top:-13px;left:24px;
+    background:var(--cinnabar);color:#fff;
+    padding:2px 14px;font-size:13px;letter-spacing:3px;
+    font-family:"Microsoft YaHei",sans-serif;border-radius:3px;
+  }
+  .masthead h1{
+    font-size:25px;color:var(--cinnabar-dark);
+    text-align:center;letter-spacing:2px;margin-bottom:6px;
+  }
+  .masthead .meta{
+    text-align:center;color:var(--ink-light);font-size:13.5px;
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .masthead .meta b{color:var(--cinnabar);}
+  .theme-line{
+    margin-top:14px;text-align:center;font-size:16.5px;color:var(--cinnabar-dark);
+    background:var(--paper-dark);padding:10px 14px;border-radius:4px;
+    border-left:4px solid var(--cinnabar);
+  }
+  /* ===== 章节标题 ===== */
+  h2.sec{
+    display:flex;align-items:center;gap:10px;
+    font-size:20px;color:#fff;background:var(--cinnabar);
+    padding:9px 16px;border-radius:4px;margin:38px 0 18px;
+    letter-spacing:2px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  h2.sec .no{
+    background:#fff;color:var(--cinnabar);width:26px;height:26px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;
+  }
+  h3{
+    font-size:17px;color:var(--cinnabar-dark);margin:22px 0 10px;
+    padding-left:10px;border-left:4px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 事实背景 ===== */
+  .facts{list-style:none;}
+  .facts li{
+    background:var(--paper-dark);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+    border:1px solid var(--line);position:relative;padding-left:46px;
+  }
+  .facts li::before{
+    content:attr(data-n);
+    position:absolute;left:12px;top:12px;
+    background:var(--cinnabar);color:#fff;width:24px;height:24px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  .num{color:var(--cinnabar);font-weight:700;font-size:1.12em;}
+  .num.big{color:var(--cinnabar);font-weight:800;font-size:1.35em;}
+  /* ===== 判断问句 ===== */
+  .question{
+    background:var(--cinnabar-deep);color:#fff;
+    border-radius:8px;padding:20px 22px;margin:12px 0;
+    font-size:16.5px;line-height:1.9;
+    border-left:6px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 结论 ===== */
+  .conclusion{
+    background:#1a0d0d;color:#fff;
+    border-radius:8px;padding:22px 24px;margin:14px 0 8px;
+    border:2px solid var(--cinnabar);
+    font-size:17.5px;line-height:1.9;font-weight:700;
+    position:relative;
+  }
+  .conclusion::before{
+    content:"◆ 结论 ◆";display:block;text-align:center;
+    color:var(--gold);font-size:14px;letter-spacing:6px;margin-bottom:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 判断依据 ===== */
+  .basis{list-style:none;}
+  .basis li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:12px 15px;margin-bottom:11px;
+  }
+  .badge{
+    display:inline-block;color:#fff;font-size:12.5px;
+    padding:2px 10px;border-radius:12px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;letter-spacing:1px;vertical-align:2px;
+  }
+  .b-reverse{background:#b3272d;}   /* 反常识识别 - 红 */
+  .b-motive{background:#7a5ab8;}    /* 动机拆解 - 紫 */
+  .b-switch{background:#2e7d8f;}    /* 议题偷换 - 青 */
+  .b-victim{background:#c97b1a;}    /* 受害范围 - 橙 */
+  .b-tier{background:#5a8f3c;}      /* 分层定价 - 绿 */
+  .b-mathe{background:#8f3c6d;}     /* 马太效应 - 品红 */
+  /* ===== 拆解现象 ===== */
+  .pheno{list-style:none;counter-reset:p;}
+  .pheno li{
+    counter-increment:p;
+    background:var(--paper-dark);border-left:4px solid var(--gold);
+    padding:11px 15px;margin-bottom:10px;border-radius:0 6px 6px 0;
+  }
+  .pheno li::before{
+    content:"现象" counter(p);
+    background:var(--gold);color:#fff;font-size:12px;
+    padding:1px 8px;border-radius:3px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 归因根源 ===== */
+  .cause{list-style:none;}
+  .cause li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+  }
+  .cause .lvl{
+    display:inline-block;background:var(--cinnabar);color:#fff;
+    font-size:12.5px;padding:2px 10px;border-radius:3px;margin-bottom:5px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .cause .lvl.s{background:#b3272d;}
+  .cause .lvl.m{background:#7a5ab8;}
+  .cause .lvl.d{background:#2e7d8f;}
+  /* ===== 反推逻辑 ===== */
+  .viewbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .view{
+    background:var(--paper-dark);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;
+  }
+  .view h4{
+    color:var(--cinnabar-dark);font-size:15px;margin-bottom:7px;
+    font-family:"Microsoft YaHei",sans-serif;
+    display:flex;align-items:center;gap:6px;
+  }
+  .view .gain{color:#2d6a2d;font-weight:700;}
+  .view .cost{color:var(--cinnabar);font-weight:700;}
+  .view p{font-size:14px;color:var(--ink);}
+  /* ===== 落地启示 ===== */
+  .lesson{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;margin-bottom:11px;
+    border-left:5px solid var(--cinnabar);
+  }
+  .lesson h4{color:var(--cinnabar-dark);font-size:15px;margin-bottom:6px;font-family:"Microsoft YaHei",sans-serif;}
+  /* ===== 素材来源 ===== */
+  table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--badge-bg);}
+  th{
+    background:var(--cinnabar);color:#fff;padding:9px 12px;
+    text-align:left;font-size:14px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  td{border:1px solid var(--line);padding:9px 12px;font-size:13.5px;vertical-align:top;}
+  tr:nth-child(even) td{background:var(--paper-dark);}
+  /* ===== 页脚 ===== */
+  .footer{
+    margin-top:40px;text-align:center;color:var(--ink-light);
+    font-size:12.5px;border-top:2px solid var(--line);padding-top:16px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist{
+    background:var(--paper-dark);border:1px solid var(--line);border-radius:6px;
+    padding:14px 18px;font-size:13.5px;color:var(--ink-light);margin-top:14px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist b{color:var(--cinnabar);}
+  @media(max-width:640px){
+    .viewbox{grid-template-columns:1fr;}
+    .page{padding:24px 14px 60px;}
+    .masthead h1{font-size:20px;}
+    .theme-line{font-size:14.5px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;}
+    .conclusion{background:#1a0d0d;-webkit-print-color-adjust:exact;}
+    h2.sec{background:var(--cinnabar);-webkit-print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <h1>茶百道因两年前的 IPO 被摘牌</h1>
+    <div class="meta">
+      <span>日期：<b>2026-10-14 星期三</b></span>
+      <span>ISO 周：<b>W42</b></span>
+      <span>归档：<b>2026-10-14 17:45</b></span>
+      <span>判题人：<b>热点判断脚本</b></span>
+    </div>
+    <div class="theme-line">一家经营还在增长的公司被勒令停牌，原因不是它现在做错了什么，而是两年前那场「连散户都没卖完」的 IPO 卖得太假</div>
+  </header>
+
+  <!-- 第一部分 -->
+  <h2 class="sec"><span class="no">一</span>题目 · 事实背景</h2>
+  <ul class="facts">
+    <li data-n="1"><b>2026-10-13</b> 早间，<b>茶百道（02555.HK）</b>公告称，依据《证券及期货（在证券市场上市）规则》第 <span class="num">8(1)</span> 条，联交所应香港证监会指令，自上午 <span class="num">9 时</span>正起停止其股份买卖；当日下午证监会披露原因——高度关注茶百道<b>首次公开招股可能曾被人为操纵，意图就股份需求营造非真实的表象</b>。停牌前一交易日（10-12）收 <span class="num">4.035 港元</span>，市值约 <span class="num">59.62 亿港元</span>，较 2024 年 4 月 <span class="num">17.5 港元</span>的发行价跌去 <span class="num big">76.94%</span>，市值蒸发近 <span class="num">200 亿港元</span>。</li>
+    <li data-n="2">证监会同步对两个涉嫌 IPO 欺诈的集团采取行动。第一个集团由<b>孙然（女，嘉实国际投资持牌代表）及 8 家离岸公司</b>组成，涉嫌操纵<b>茶百道与拨康视云</b>两单 IPO，证监会向 <span class="num">6 家经纪行</span>（中金香港证券、招银国际、富途证券国际（香港）、海通国际、嘉实国际投资、华盛资本）发出限制通知书，冻结上限 <span class="num big">4,379,463,215 港元（43.79 亿）</span>，为<b>证监会历来同类案件最高限制金额</b>；第二个集团由<b>刘浩然（男）及两家香港注册公司</b>组成，涉嫌<b>天聚地合</b> IPO 欺诈，向 <span class="num">29 家经纪行</span>发出限制通知，上限 <span class="num">285,030,265 港元（2.85 亿）</span>。合计 <span class="num">31 家</span>券商、<span class="num">12 个</span>个人及公司实体、逾 <span class="num">46.6 亿港元</span>资产被限制，为历来同类案件规模最大。</li>
+    <li data-n="3">涉嫌的操纵机制是<b>募资款回流</b>：证监会称，部分 IPO 所得款项可能已根据<b>上市公司与该等集团之间未有披露的协议</b>，被转离有关公司，作<b>所谓「金融产品投资」</b>之用；该等协议可能促使 IPO 所得款项<b>暗中回流至主要 IPO 承配人或其关连人士</b>。所涉各方日后可能被饬令透过<b>复还程序</b>向受影响投资者赔偿。证监会通篇用「可能」，并强调收到限制通知书的经纪行<b>并非调查对象</b>、其运营与其他客户不受影响。</li>
+    <li data-n="4">茶百道当年的配售结构「处处是伏笔」：2024-04-23 上市，全球发售约 <span class="num">1.478 亿股</span>，募资总额约 <span class="num">25.86 亿港元</span>（净额 <span class="num">24.63 亿港元</span>），<b>中金公司独家保荐兼独家整体协调人</b>；香港公开发售仅收到 <span class="num">4593 份</span>有效申请、认购倍数 <span class="num big">0.50 倍</span>（散户认购金额连公开发售份额的一半都未覆盖），未获认购的 <span class="num">744.08 万股</span>回拨至国际发售，公开发售占比由 <span class="num">10%</span> 缩至 <span class="num">4.96%</span>；国际发售认购 <span class="num">1.11 倍</span>「账面足额」，但 <span class="num">122 名承配人</span>中前 <span class="num">5</span> 大合计占国际发售 <span class="num">52.11%</span>、前 <span class="num">10</span> 大占 <span class="num">86.75%</span>、最大单一承配人一家拿走 <span class="num">15.9%</span>——港股 IPO 前 10 大承配人占比通常在 <span class="num">50%—60%</span>，茶百道仅前 5 名就越过这条线；且全程<b>未引入任何基石投资者</b>。上市首日收 <span class="num">12.80 港元</span>、跌 <span class="num">26.86%</span>。</li>
+    <li data-n="5">被停牌的公司经营并未恶化：2026 年上半年收入 <span class="num">26.55 亿元（+6.2%）</span>、净利润 <span class="num">3.36 亿元（+3.2%）</span>、全球门店 <span class="num">8863 家（+4.7%）</span>，但毛利率由 <span class="num">32.6%</span> 降至 <span class="num">30.04%</span>（<span class="num">-2.56 个百分点</span>）；截至 2026 年 6 月底上市所得款<b>已剩余 7.07 亿港元</b>，其中品牌打造及推广、自营咖啡品牌与门店网络、营运资金三项<b>已于 2026 年前用完</b>；公司原定 <span class="num">10-30</span> 召开临时股东会审议派发每股 <span class="num">0.15 元</span>中期股息（合计约 <span class="num">2.22 亿元</span>，相当于上半年归母利润的 <span class="num">65.9%</span>），议程节奏已被打乱。</li>
+  </ul>
+
+  <h3>🎯 判断问句</h3>
+  <div class="question">
+    操纵不都是先拉高再出货吗——茶百道股价从上市首日跌到停牌、两年半跌去 <b>77%</b>，究竟「操纵」了什么？当公开发售只有 <b>0.50 倍</b>、连散户那部分都没卖完时，「认购不足」与「需求造假」为何能同时成立？作为数据分析师，你会怎样拆开「认购倍数」这个数字，看清它的分子谁填的、分母怎么来的？
+  </div>
+
+  <!-- 第二部分 -->
+  <h2 class="sec"><span class="no">二</span>标准答案</h2>
+  <div class="conclusion">
+    茶百道被摘牌不是因为经营坏了，而是因为两年前那场 IPO 卖得太假：0.50 倍的真实需求与 1.11 倍的账面之间，差着一笔绕道「金融产品」回流给承配人的募资款。这是兜底型操纵——不拉高出货，只保发行成功，代价由按 17.5 港元买入、跌去 77% 却连卖都卖不掉的股东承担。买来的需求，终要用股价偿还。
+  </div>
+
+  <h3>🔑 关键判断依据</h3>
+  <ul class="basis">
+    <li><span class="badge b-reverse">反常识识别</span>市场对「操纵」的默认画像是先拉高再出货，但茶百道从上市首日跌 <b>26.86%</b> 一路跌到停牌、两年半跌去 <b>76.94%</b>——<b>上涨型操纵的痕迹留在价格里，兜底型操纵的痕迹留在配售名单里</b>。这类操纵的目的不是赚差价而是「保发行」：IPO 遇冷、面临发行失败时，发行人与承销商找来关联资金，用关联账户、代持主体把卖不掉的股票接下来，做出「国际发售足额认购」的账面；这些筹码本就不是长期投资，上市后择机卖出，股价因此一路承压——<b>股价从头跌到尾不是操纵失败的症状，而是这种操纵的必然结果。</b></li>
+    <li><span class="badge b-motive">动机 4 层拆解</span>表层是「确保发行成功」；中层是承销费、保荐人品牌信誉与后续再融资通道（发行失败三者全失）；深层是实控人王霄锟、刘洧宏夫妇合计 <b>82.73%</b> 的持股价值与减持通道——按 17.5 港元计公司市值约 <b>258.6 亿港元</b>，停牌前只剩 <b>59.62 亿</b>；最深一层是<b>整条链条的共同利益</b>：发行人、保荐人、账簿管理人、承配人、资金掮客，每一环都从「发出去」获益、从「发不出去」受损，而核查承配人真实身份与资金来源的义务<b>恰恰落在链条内部</b>——核查者与被核查者同在承销体系之中。</li>
+    <li><span class="badge b-switch">议题偷换</span>三处偷换。一是把「募资款回流给承配人」包装成中性的「<b>投资金融产品</b>」——买理财在法律上中性，但用募资款给买方融资不是；招股书对募集资金用途的承诺（<b>51%</b> 强化供应链、<b>12%</b> 品牌推广等）在香港《主板上市规则》下<b>具有法律约束力</b>，同一笔钱在两个账本里叫两个名字。二是把「<b>认购倍数</b>」等同于「需求」——公开发售 <b>0.50 倍</b>是真实需求的上限，国际发售 <b>1.11 倍</b>是被 <b>744.08 万股回拨</b>撑大分母后的账面，<b>两个数字都不是需求</b>。三是把「<b>43.79 亿账户资产限制上限</b>」读成「茶百道损失 43.79 亿」——前者是冻结额度，且高于茶百道与拨康视云两单募资总额（约 <b>32 亿港元</b>）近四成，恰恰说明查出的两单可能不是全部。</li>
+    <li><span class="badge b-victim">受害范围异常</span>证监会 2025 年 3 月的咨询文件自己承认——<b>停牌的目的是防止潜在投资者成为受害人，但停牌的代价由已经持股的股东承担</b>。茶百道公众持股仅 <b>15.31%</b>（对应市值约 <b>9.1 亿港元</b>），其余由实控人夫妇持有 <b>82.73%</b>；跌了 <b>76.94%</b> 的散户在停牌后连卖都卖不掉，而按第 9 条公司只能向证监会申述、<b>不能自行决定复牌</b>，调查结束也不自动复牌，证监会还可选择<b>附加条件准许复牌或直接取消上市地位</b>。更微妙的是「复还程序」的赔偿对象是「受影响投资者」——IPO 时按 <b>17.5 港元</b>认购的散户与二级市场按 <b>4.035 港元</b>买入的股东，成本差 <b>4.3 倍</b>，谁能赔、赔多少，取决于如何定义「受影响」。风险还外溢到同行：10-14 古茗盘中一度跌 <b>11.49%</b>、沪上阿姨与奈雪的茶双双跌超 <b>2%</b>。</li>
+    <li><span class="badge b-tier">分层定价</span><span class="badge b-mathe">马太效应</span><b>认购倍数本身就是一级市场的资源分配器</b>——同期上市的蜜雪冰城融资申购 <b>5324 倍</b>、冻资 <b>1.84 万亿港元</b>（超越快手 <b>1.26 万亿</b>的纪录），而茶百道 <b>0.50 倍</b>；新茶饮五家对发行价的偏离从蜜雪 <b>+44.7%</b>、古茗 <b>+174.7%</b> 一路到茶百道 <b>-67.6%</b>、奈雪的茶 <b>-95.8%</b>。2026 年前三季港股 <b>116 宗</b> IPO、集资突破 <b>3880 亿港元</b>（创历来首九个月最高，全年有望逼近 <b>5000 亿</b>），但<b>「能发出去」与「发得出去」的分化在扩大</b>——倍数高的公司拿到钱与声誉，倍数低的公司转向「买需求」。<b>门槛越高的市场，越会催生绕过门槛的服务。</b></li>
+  </ul>
+
+  <!-- 第三部分 -->
+  <h2 class="sec"><span class="no">三</span>详细分析流程</h2>
+
+  <h3>1️⃣ 拆解现象</h3>
+  <ul class="pheno">
+    <li><b>一场「没人买」的 IPO 照样募到 25.86 亿</b>：香港公开发售仅 <b>4593 份</b>有效申请、<b>0.50 倍</b>认购，散户认购金额连公开发售份额的一半都未覆盖；孖展资金总计 <b>8505 万港元</b>、孖展认购倍数仅 <b>0.33 倍</b>。<b>公开市场给出的需求信号是「卖不出去」，但 25.86 亿港元照募不误。</b></li>
+    <li><b>回拨把「不足」洗成「足额」</b>：未获认购的 <b>744.08 万股</b>回拨至国际发售，公开发售占比由 <b>10%</b> 缩至 <b>4.96%</b>，国际发售因此「恰好」以 <b>1.11 倍</b>勉强足额。<b>同一个动作既消化了卖不掉的货，又制造了「机构认可」的账面——而回拨本身也把国际发售的分母做大了，1.11 倍这个数字的含金量要打问号。</b></li>
+    <li><b>筹码高度集中是第一个可见指纹</b>：<b>122 名</b>承配人中前 <b>5</b> 大占国际发售 <b>52.11%</b>、前 <b>10</b> 大占 <b>86.75%</b>、最大单一 <b>15.9%</b>，而港股 IPO 前 10 大承配人占比通常在 <b>50%—60%</b>；全程<b>零基石投资者</b>——基石意味着按发行价认购、锁定 <b>6 个月</b>、名字写进招股书。<b>不锁的比锁的更可疑：既然有更灵活的资金可以帮忙认购，又何必找基石锁半年、还要在招股书里把名字列出来。</b></li>
+    <li><b>资金闭环的路线图</b>：募资款以「金融产品投资」名义转出上市公司 → 经未披露协议流向涉案集团 → 暗中回流至主要承配人或其关连人士。<b>结果是「别人认购你股票的钱」，有一部分本来就是你的。</b></li>
+    <li><b>这不是个案，而是可复制的商业模式</b>：同一集团涉嫌<b>茶百道 + 拨康视云</b>两单；拨康视云 2025-07-03 上市、<b>2026-09-10</b> 停牌（香港公开发售超额认购仅 <b>78.78 倍</b>，同期新股可达数千倍）；天聚地合 2024-06-28 上市、<b>2025-04-01</b> 起停牌至今。从上市到监管行动最长间隔 <b>2.5 年</b>，而 <b>43.79 亿</b>的冻结上限高于两单募资总额近四成。2026 年的监管序列是逐步升级的：3 月证监会与廉政公署联合「导火线」行动搜查 <b>14</b> 处地点、拘捕 <b>8</b> 人（涉泄露配售机密与内幕交易获利约 <b>3.15 亿港元</b>）→ 7-30 向富途发出 <b>1.25 亿</b>限制通知 → 8 月 ZD Group 超 <b>20 亿港元</b>资金冻结 → 9-10 拨康视云停牌 → 10-12 上市规则修订咨询总结 → 10-13 茶百道停牌。</li>
+  </ul>
+
+  <h3>2️⃣ 归因根源</h3>
+  <ul class="cause">
+    <li><span class="lvl s">表层 · 反常识识别</span><br><b>发行定价撑不起基本面</b>。茶百道 2024 年上市时对应市值约 <b>258.6 亿港元</b>，而行业正陷入「规模内卷」——沪上阿姨 2024 年单店日均 GMV <b>-12.1%</b>、同店 GMV <b>-10.6%</b>、单店年收入减少近 <b>20 万元</b>；加盟商到手率从「日流水 1 万实收 8000」降到 <b>6000</b> 左右。<b>当估值高于基本面、公开市场又不买，发行人只剩两条路：降价发行，或买需求。</b></li>
+    <li><span class="lvl m">中层 · 议题偷换 / 动机拆解</span><br><b>国际配售是一个不披露买方身份的窗口</b>。承配人以专业与机构投资者为主，但具体是谁、背后是谁，招股书不披露；保荐人虽有义务核查承配人真实身份与资金来源、确保公众持股量充足且股份不落入关连人士手中，但<b>核查者与被核查的链条同在承销体系内部</b>。于是「簿记建档出来的倍数好看」成了唯一被考核的结果——<b>只要倍数好看，IPO 就算「成了」；至于这些钱从哪来、和发行人有没有私下协议，招股书里不会写。</b></li>
+    <li><span class="lvl d">深层 · 马太效应 / 分层定价</span><br><b>一级市场的需求是稀缺品，稀缺品必然被定价，也必然被伪造。</b> 2026 年前三季港股 <b>116 宗</b> IPO、集资突破 <b>3880 亿港元</b>创历来首九个月最高、仍有约 <b>590—600 宗</b>申请排队，但资金只会向少数项目集中（蜜雪 <b>5324 倍</b> vs 茶百道 <b>0.50 倍</b>）。<b>当一个市场的融资能力高度分层，「凑人头」就从个别违规变成一种有价格的标准化服务</b>——上游是发行人或承销商（需要确保发行成功），中游是持牌机构与资本玩家（提供牌照、资金与配售通道），下游是散户与高净值资金（承担最终接盘风险）。</li>
+  </ul>
+
+  <h3>3️⃣ 反推逻辑（收益 vs 成本）</h3>
+  <div class="viewbox">
+    <div class="view">
+      <h4>👤 用户 / 打新散户与二级市场股东</h4>
+      <p><span class="gain">收益</span>：公开发售 <b>0.50 倍</b>意味着申购就能足额拿到，以及停牌前 <b>4.035 港元</b>的「便宜」估值与每股 <b>0.15 元</b>中期股息的预期。<br><span class="cost">成本</span>：上市首日即亏 <b>26.86%</b>、两年半累计跌 <b>76.94%</b>，停牌后<b>连卖出通道都被冻结</b>，复牌不由公司决定、调查结束也不自动复牌，维权路径漫长且成本高昂。</p>
+    </div>
+    <div class="view">
+      <h4>🏰 生态主（发行人 + 保荐人 + 账簿管理人）</h4>
+      <p><span class="gain">收益</span>：<b>25.86 亿港元</b>募资到手、发行成功带来的品牌信誉与后续再融资通道（中金独家保荐兼独家整体协调人；花旗在挂牌前不到三周被调整为不再承担整体协调人监管职责）。<br><span class="cost">成本</span>：调查一旦坐实，可能涉及<b>招股文件是否真实、募集资金用途是否准确披露</b>，面临民事索赔、监管处分乃至刑事责任，而「可能由个别人员在董事会或管理层不知情的情况下促成」的辩解，需要以内部管理失职为代价。</p>
+    </div>
+    <div class="view">
+      <h4>⚠️ 受害者（被冻结资产的资金方与承配人）</h4>
+      <p><span class="gain">收益</span>：承配人按发行价拿到筹码、资金方获得通道与费用，账面一度浮盈。<br><span class="cost">成本</span>：<b>43.79 亿 + 2.85 亿</b>账户资产被限制处置、<b>31 家</b>券商被牵连、<b>122 名</b>承配人中若被认定属关联账户则面临冻结，且被点名者（如嘉实国际投资）即使只是「持牌代表的任职关系」也已承受声誉代价——<b>监管明确收到通知书的经纪行并非调查对象，但市场不会这样读。</b></p>
+    </div>
+    <div class="view">
+      <h4>🏛️ 监管（香港证监会 + 联交所）</h4>
+      <p><span class="gain">收益</span>：保住「需求信号可信」这一融资市场的地基（认购真实性关系到投资者能否信任新股发行中的需求与定价信号），并与 10-12 刚发布的上市规则修订咨询总结形成组合拳。<br><span class="cost">成本</span>：<b>停牌的代价直接落在现有股东头上</b>——证监会自己在 2025 年 3 月咨询文件中承认需在「防止潜在投资者受害」与「已持股股东承担代价」之间权衡，而停牌时间越长，对市场声誉的损耗越可能超过对造假的威慑。</p>
+    </div>
+  </div>
+
+  <h3>4️⃣ 落地启示（数据分析师 + HR 迁移）</h3>
+  <div class="lesson">
+    <h4>📊 需求的三口径分层审计（Demand Decomposition）</h4>
+    同一份配售结果公告里躺着三个「需求」——<b>0.50 倍</b>（真实散户需求的上限）、<b>1.11 倍</b>（被 744.08 万股回拨撑大分母后的账面）、<b>95.04%</b>（回拨后的份额结构），<b>三个都不是需求</b>。拿到任何倍数型指标，先问三件事：分子谁填的、分母怎么来的、有没有一个中间环节把分母做大了。正如 HR 看招聘漏斗，「简历投递量」＝公开发售倍数（最易被渠道灌水）、「面试通过率」＝回拨后的账面、「offer 接受率」＝真实需求；三层口径必须分列，并单列「渠道代投 / 猎头批量推」的比例——<b>这正是「凑人头」的 HR 版</b>。
+  </div>
+  <div class="lesson">
+    <h4>📊 配售名单式核查（Concentration Check / 受益人穿透）</h4>
+    前 5 大占 <b>52.11%</b>、前 10 大占 <b>86.75%</b>、最大单一 <b>15.9%</b>，对比行业常规前 10 大 <b>50%—60%</b>——<b>集中度异常是造假最先露出的指纹</b>，比任何财务指标都早。做法是给任何「多方参与」的结构补一张集中度表，超过基准线就穿透受益人。正如 HR 看录用来源，如果某岗位前 2 个渠道占 <b>80%</b> 以上（全部来自同一家猎头或同一个内推人），就要追问是不是同一批人在自我循环；培训签到率 <b>100%</b> 而实际出勤率低，就是「<b>122 名承配人里只有少数是真的</b>」。
+  </div>
+  <div class="lesson">
+    <h4>📊 回流路径识别（Round-Trip Detection）</h4>
+    本案的关键不是「买理财」本身，而是<b>募资款走了一圈又回到买方手里</b>。三问：钱从哪来 / 是否回流到买方 / 回流走的是哪个科目。正如 HR 场景——签约奖金先发、再以「培训费 / 设备费」名义收回；外包报价里包含返给用人部门的部分；候选人的「上一份工作薪资」恰好由本公司前员工开的公司支付——<b>凡是「付出去的钱又绕回来」，需求就是被制造的。</b>
+  </div>
+
+  <!-- 素材来源 -->
+  <h2 class="sec"><span class="no">附</span>素材来源与数据引用</h2>
+  <table>
+    <tr><th style="width:55%">数据点</th><th>来源</th></tr>
+    <tr><td>香港证监会 10-13 新闻稿全文：第 8(1) 条停牌、两个可疑集团、募资款回流机制、复还程序</td><td>香港证监会（2026-10-13）/ 澎湃新闻（2026-10-13）</td></tr>
+    <tr><td>限制通知书金额 4,379,463,215 港元与 285,030,265 港元、孙然及 8 家离岸公司名单、6 家与 29 家经纪行名单</td><td>澎湃新闻（2026-10-13）/ 腾讯新闻（2026-10-13）</td></tr>
+    <tr><td>31 家券商、12 个个人及公司、逾 46.6 亿港元合计为历来同类案件规模最大</td><td>证券时报 / 中国经济网（2026-10-14）</td></tr>
+    <tr><td>孙然为嘉实国际投资持牌代表（第 1、4、9 类受规管活动）、嘉实国际亦在被限制之列</td><td>中国经济网（2026-10-14）/ 今日头条·证券时报（2026-10-13）</td></tr>
+    <tr><td>茶百道 2024-04-23 上市、发行价 17.5 港元、募资 25.86 亿（净额 24.63 亿）、中金独家保荐兼独家整体协调人</td><td>腾讯新闻（2026-10-13）/ 中国经济网（2026-10-14）</td></tr>
+    <tr><td>香港公开发售 4593 份有效申请、0.50 倍、744.08 万股回拨、占比 10%→4.96%、孖展 8505 万港元 / 0.33 倍</td><td>凤凰网《风暴眼》经网易（2026-10-14）/ 财中社（2026-10-14）</td></tr>
+    <tr><td>122 名承配人、前 5 大 52.11%、前 10 大 86.75%、最大单一 15.9%、行业常规前 10 大 50%—60%、零基石投资者</td><td>凤凰网《风暴眼》经网易（2026-10-14）</td></tr>
+    <tr><td>上市首日收 12.80 港元（-26.86%）、停牌前 4.035 港元、市值 59.62 亿、跌 76.94%、蒸发近 200 亿</td><td>中国新闻网（2026-10-13）/ 中国证券报（2026-10-13）</td></tr>
+    <tr><td>2026 上半年收入 26.55 亿（+6.2%）、净利润 3.36 亿（+3.2%）、毛利率 30.04%（-2.56pct）、门店 8863 家（+4.7%）</td><td>中国经济网（2026-10-14）/ 济南时报（2026-10-14）</td></tr>
+    <tr><td>上市所得款剩余 7.07 亿港元、募资用途 51%/20%/12%/5%/2%/10% 分配、三项已于 2026 年前用完</td><td>中国经济网（2026-10-14）</td></tr>
+    <tr><td>公众持股 15.31%（约 9.1 亿港元）、实控人夫妇 82.7258%、10-30 临时股东会与每股 0.15 元中期股息（约 2.22 亿元、占归母利润 65.9%）</td><td>搜狐网（2026-10-14）</td></tr>
+    <tr><td>第 9 条复牌程序、证监会可选择附加条件准许复牌或取消上市地位、2025 年 3 月咨询文件关于停牌代价的表述</td><td>搜狐网（2026-10-14）</td></tr>
+    <tr><td>拨康视云 2025-07-03 上市、2026-09-10 停牌、公开发售超额认购仅 78.78 倍、募资约 6.12 亿港元</td><td>证券时报 / 腾讯新闻（2026-10-13）</td></tr>
+    <tr><td>天聚地合 2024-06-28 上市、2025-04-01 起停牌至今</td><td>今日头条·证券时报（2026-10-13）</td></tr>
+    <tr><td>「兜底式操纵」/「包销型操纵」机制解释、43.79 亿高于两单募资总额近四成</td><td>凤凰网《风暴眼》经网易（2026-10-14）</td></tr>
+    <tr><td>2026 监管序列：3 月「导火线」行动搜查 14 处、拘捕 8 人、获利约 3.15 亿港元；7-30 富途 1.25 亿；8 月 ZD Group 超 20 亿冻结</td><td>凤凰网《风暴眼》经网易（2026-10-14）</td></tr>
+    <tr><td>证监会 1-30 通函关注上市文件缺失与保荐人失当、10-12 上市规则修订咨询总结、保荐人核查承配人身份与资金来源义务</td><td>和讯股票（2026-10-13）</td></tr>
+    <tr><td>2026 前三季港股 116 宗 IPO、集资突破 3880 亿港元创历来首九个月最高、全年有望逼近 5000 亿、590—600 宗申请排队</td><td>毕马威《中国内地及香港 IPO 市场 2026 年第三季度回顾》经香港商报（2026-10-06）/ 经济日报</td></tr>
+    <tr><td>蜜雪冰城融资申购 5324 倍、认购 1.84 万亿港元、超越快手 1.26 万亿纪录</td><td>财中社经网易（2026-10-14）</td></tr>
+    <tr><td>新茶饮五家对发行价偏离：蜜雪 +44.7%、古茗 +174.7%、沪上阿姨 -34.6%、茶百道 -67.6%、奈雪的茶 -95.8%</td><td>腾讯证券《BUG》栏目（2026-04-01）</td></tr>
+    <tr><td>10-14 古茗盘中一度跌 11.49%（报 21.16 港元 -8.64%）、沪上阿姨与奈雪的茶跌超 2%、蜜雪由涨转跌</td><td>财中社经网易（2026-10-14）</td></tr>
+    <tr><td>沪上阿姨 2024 年单店日均 GMV -12.1%、同店 GMV -10.6%、单店年收入减少近 20 万元、加盟商到手率下降</td><td>腾讯证券《BUG》栏目（2026-04-01）</td></tr>
+    <tr><td>关联叙事：博通向 Anthropic 放贷 420 亿美元买自家芯片（卖方融资同构）</td><td>沉锋录历史期次（10-13）</td></tr>
+    <tr><td>关联叙事：OpenAI 收入口径重置、三星利润暴增股价反跌</td><td>沉锋录历史期次（10-09 / 10-12）</td></tr>
+  </table>
+
+  <div class="checklist">
+    <b>生成质量自检</b>：✔ 标题（日期+星期） ✔ 元信息（主题/归档/W42/判题人） ✔ 事实背景 5 条含数字 ✔ 判断问句 ~110 字（反常识+追问+数据技能） ✔ 结论加粗斩钉截铁 ✔ 判断依据 5 条覆盖 6 框架 ✔ 拆解 5 条 / 归因 3 层 / 反推 4 视角 / 启示 3 条 ✔ 数据可溯源
+  </div>
+
+  <div class="footer">
+    本文由沉锋录·热点判断脚本自动生成 · 素材来源：Deepseek 联网搜索（红狐 hub）<br>
+    训练框架：反常识识别 · 动机 N 层拆解 · 议题偷换 · 受害范围异常 · 分层定价 · 马太效应
+  </div>
+</div>
+</body>
+</html>

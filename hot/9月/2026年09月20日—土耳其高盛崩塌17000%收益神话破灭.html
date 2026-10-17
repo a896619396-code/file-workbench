@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉锋录·热点判断 2026-09-20 土耳其高盛崩塌17000%收益神话破灭</title>
+<style>
+  :root{
+    --cinnabar:#9e1f1f;      /* 朱砂主色 */
+    --cinnabar-dark:#7a1414;
+    --cinnabar-deep:#5a0e0e;
+    --paper:#f5efe4;         /* 米白纸色 */
+    --paper-dark:#efe5d4;
+    --ink:#2b2320;           /* 墨色 */
+    --ink-light:#5c4f47;
+    --gold:#c9a227;         /* 鎏金点缀 */
+    --line:#d8c9ae;
+    --badge-bg:#fff8ec;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  .page{max-width:860px;margin:0 auto;padding:40px 28px 80px;}
+  /* ===== 报头 ===== */
+  .masthead{
+    border:3px double var(--cinnabar);
+    border-radius:6px;
+    padding:22px 26px 18px;
+    margin-bottom:30px;
+    background:linear-gradient(180deg,#fffdf7 0%,var(--paper) 100%);
+    position:relative;
+  }
+  .masthead::before{
+    content:"沉锋录 · 热点判断";
+    position:absolute;top:-13px;left:24px;
+    background:var(--cinnabar);color:#fff;
+    padding:2px 14px;font-size:13px;letter-spacing:3px;
+    font-family:"Microsoft YaHei",sans-serif;border-radius:3px;
+  }
+  .masthead h1{
+    font-size:25px;color:var(--cinnabar-dark);
+    text-align:center;letter-spacing:2px;margin-bottom:6px;
+  }
+  .masthead .meta{
+    text-align:center;color:var(--ink-light);font-size:13.5px;
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .masthead .meta b{color:var(--cinnabar);}
+  .theme-line{
+    margin-top:14px;text-align:center;font-size:16.5px;color:var(--cinnabar-dark);
+    background:var(--paper-dark);padding:10px 14px;border-radius:4px;
+    border-left:4px solid var(--cinnabar);
+  }
+  /* ===== 章节标题 ===== */
+  h2.sec{
+    display:flex;align-items:center;gap:10px;
+    font-size:20px;color:#fff;background:var(--cinnabar);
+    padding:9px 16px;border-radius:4px;margin:38px 0 18px;
+    letter-spacing:2px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  h2.sec .no{
+    background:#fff;color:var(--cinnabar);width:26px;height:26px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;
+  }
+  h3{
+    font-size:17px;color:var(--cinnabar-dark);margin:22px 0 10px;
+    padding-left:10px;border-left:4px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 事实背景 ===== */
+  .facts{list-style:none;}
+  .facts li{
+    background:var(--paper-dark);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+    border:1px solid var(--line);position:relative;padding-left:46px;
+  }
+  .facts li::before{
+    content:attr(data-n);
+    position:absolute;left:12px;top:12px;
+    background:var(--cinnabar);color:#fff;width:24px;height:24px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  .num{color:var(--cinnabar);font-weight:700;font-size:1.12em;}
+  .num.big{color:var(--cinnabar);font-weight:800;font-size:1.35em;}
+  /* ===== 判断问句 ===== */
+  .question{
+    background:var(--cinnabar-deep);color:#fff;
+    border-radius:8px;padding:20px 22px;margin:12px 0;
+    font-size:16.5px;line-height:1.9;
+    border-left:6px solid var(--gold);
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 结论 ===== */
+  .conclusion{
+    background:#1a0d0d;color:#fff;
+    border-radius:8px;padding:22px 24px;margin:14px 0 8px;
+    border:2px solid var(--cinnabar);
+    font-size:17.5px;line-height:1.9;font-weight:700;
+    position:relative;
+  }
+  .conclusion::before{
+    content:"◆ 结论 ◆";display:block;text-align:center;
+    color:var(--gold);font-size:14px;letter-spacing:6px;margin-bottom:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 判断依据 ===== */
+  .basis{list-style:none;}
+  .basis li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:12px 15px;margin-bottom:11px;
+  }
+  .badge{
+    display:inline-block;color:#fff;font-size:12.5px;
+    padding:2px 10px;border-radius:12px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;letter-spacing:1px;vertical-align:2px;
+  }
+  .b-reverse{background:#b3272d;}   /* 反常识识别 - 红 */
+  .b-motive{background:#7a5ab8;}    /* 动机拆解 - 紫 */
+  .b-switch{background:#2e7d8f;}    /* 议题偷换 - 青 */
+  .b-victim{background:#c97b1a;}    /* 受害范围 - 橙 */
+  .b-tier{background:#5a8f3c;}      /* 分层定价 - 绿 */
+  .b-mathe{background:#8f3c6d;}     /* 马太效应 - 品红 */
+  /* ===== 拆解现象 ===== */
+  .pheno{list-style:none;counter-reset:p;}
+  .pheno li{
+    counter-increment:p;
+    background:var(--paper-dark);border-left:4px solid var(--gold);
+    padding:11px 15px;margin-bottom:10px;border-radius:0 6px 6px 0;
+  }
+  .pheno li::before{
+    content:"现象" counter(p);
+    background:var(--gold);color:#fff;font-size:12px;
+    padding:1px 8px;border-radius:3px;margin-right:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  /* ===== 归因根源 ===== */
+  .cause{list-style:none;}
+  .cause li{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:13px 16px;margin-bottom:11px;
+  }
+  .cause .lvl{
+    display:inline-block;background:var(--cinnabar);color:#fff;
+    font-size:12.5px;padding:2px 10px;border-radius:3px;margin-bottom:5px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .cause .lvl.s{background:#b3272d;}
+  .cause .lvl.m{background:#7a5ab8;}
+  .cause .lvl.d{background:#2e7d8f;}
+  /* ===== 反推逻辑 ===== */
+  .viewbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .view{
+    background:var(--paper-dark);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;
+  }
+  .view h4{
+    color:var(--cinnabar-dark);font-size:15px;margin-bottom:7px;
+    font-family:"Microsoft YaHei",sans-serif;
+    display:flex;align-items:center;gap:6px;
+  }
+  .view .gain{color:#2d6a2d;font-weight:700;}
+  .view .cost{color:var(--cinnabar);font-weight:700;}
+  .view p{font-size:14px;color:var(--ink);}
+  /* ===== 落地启示 ===== */
+  .lesson{
+    background:var(--badge-bg);border:1px solid var(--line);
+    border-radius:6px;padding:14px 16px;margin-bottom:11px;
+    border-left:5px solid var(--cinnabar);
+  }
+  .lesson h4{color:var(--cinnabar-dark);font-size:15px;margin-bottom:6px;font-family:"Microsoft YaHei",sans-serif;}
+  /* ===== 素材来源 ===== */
+  table{width:100%;border-collapse:collapse;margin-top:10px;background:var(--badge-bg);}
+  th{
+    background:var(--cinnabar);color:#fff;padding:9px 12px;
+    text-align:left;font-size:14px;font-family:"Microsoft YaHei",sans-serif;
+  }
+  td{border:1px solid var(--line);padding:9px 12px;font-size:13.5px;vertical-align:top;}
+  tr:nth-child(even) td{background:var(--paper-dark);}
+  /* ===== 页脚 ===== */
+  .footer{
+    margin-top:40px;text-align:center;color:var(--ink-light);
+    font-size:12.5px;border-top:2px solid var(--line);padding-top:16px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist{
+    background:var(--paper-dark);border:1px solid var(--line);border-radius:6px;
+    padding:14px 18px;font-size:13.5px;color:var(--ink-light);margin-top:14px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .checklist b{color:var(--cinnabar);}
+  @media(max-width:640px){
+    .viewbox{grid-template-columns:1fr;}
+    .page{padding:24px 14px 60px;}
+    .masthead h1{font-size:20px;}
+    .theme-line{font-size:14.5px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;}
+    .conclusion{background:#1a0d0d;-webkit-print-color-adjust:exact;}
+    h2.sec{background:var(--cinnabar);-webkit-print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <h1>土耳其 Tera 集团 17000% 回报神话破灭</h1>
+    <div class="meta">
+      <span>日期：<b>2026-09-20 星期日</b></span>
+      <span>ISO 周：<b>W38</b></span>
+      <span>归档：<b>2026-09-20 03:15</b></span>
+      <span>判题人：<b>热点判断脚本</b></span>
+    </div>
+    <div class="theme-line">自我交易如何被定价成投资能力——它不需要被调查揭穿，一条持仓比例条款就够了</div>
+  </header>
+
+  <!-- 第一部分 -->
+  <h2 class="sec"><span class="no">一</span>题目 · 事实背景</h2>
+  <ul class="facts">
+    <li data-n="1">曾立志成为<b>「土耳其高盛」</b>的 <b>Tera 集团</b>及其资管部门 <b>Tera Portföy</b> 轰然崩塌：旗舰基金自 <span class="num">2025 年初</span>以来回报率一度超过 <span class="num big">17000%</span>，相关股票 2025 年涨幅高达 <span class="num">2000%</span>（有媒体曾报道飙升 <span class="num">40000%</span>）。土耳其司法部长将其定性为<b>「类庞氏骗局」</b>，约 <span class="num">680 亿里拉（约 140 亿美元）</span>资金被迫清算，创始人兼董事长 <b>Emre Tezmen</b> 等多名高管被拘留、禁止出境。</li>
+    <li data-n="2">土耳其资本市场委员会（<b>SPK</b>）于 <span class="num">9 月 17—18 日</span>下令清算 <b>Tera、Pusula、Hedef、Atlas、A1、Pardus、Bulls</b> 七家资管公司旗下 <span class="num">131 只基金</span>，涉及资产约 <span class="num big">183 亿美元（8900 亿里拉）</span>、投资者约 <span class="num">35 万人</span>（另口径超 <span class="num">50 万</span>）；冻结资产中约 <span class="num">60%</span> 为股票，而现金与政府证券仅占净值 <span class="num big">6%（约 480 亿里拉）</span>，却对应约 <span class="num">350 亿里拉</span>未偿回购义务。Tera 一家占冻结资产 <span class="num">64% 以上</span>，含超过 <span class="num">2000 亿里拉</span>股票持仓。</li>
+    <li data-n="3">戳破泡沫的不是调查，而是一条<b>持仓比例技术条款</b>：SPK 于 <span class="num">8 月 28 日</span>收紧基金监管规则——标的自有流通股低于 <span class="num">25%</span> 时，单只基金最多持有其流通股的 <span class="num big">8%</span>（25%–50% 降至 <span class="num">6%</span>、50%–75% 降至 <span class="num">4%</span>、75% 以上降至 <span class="num">2%</span>），关联基金合并计算，单项重大资产配置原则上不超组合 <span class="num">20%</span>。该规则出台背景是 <b>MSCI</b> 警告：若不改变，土耳其可能被剔除出新兴市场股票基准指数。</li>
+    <li data-n="4">结构内核是<b>自我交易</b>：基金将数十亿里拉投入一个由关联公司组成的紧密圈子并通过杠杆放大，重仓标的正是母公司 Tera、Tera 子公司、以及 Tera 旗下券商协助上市的公司。监管文件显示，<span class="num">2023 年该基金一度把 99% 的资产投在母公司 Tera Yatırım 的股票上</span>。</li>
+    <li data-n="5">崩盘以挤兑方式传导：<span class="num">9 月 15 日</span> Pusula Portföy 公告部分基金无法满足赎回请求、构成违约；<span class="num">9 月 16 日</span> BIST 100 盘中跌 <span class="num big">7.5%</span> 触发全市场熔断、收跌 <span class="num">5.54%</span> 报 <span class="num">13122.58</span> 点，银行指数跌 <span class="num">7.7%</span>、全股指每 <span class="num">6 家</span>公司就有 <span class="num">1 家</span>跌停，单日净赎回 <span class="num">550 亿里拉（约 11.3 亿美元）</span>，自 8 月底以来投资者已从 Pusula 撤出约 <span class="num">1290 亿里拉（27 亿美元）</span>；央行 <span class="num">9 月 17 日</span>开出 <span class="num">3000 亿里拉</span>一周回购拍卖（前一日仅 <span class="num">10 亿里拉</span>），SPK 把融资保证金维持比例从 <span class="num">35%</span> 下调至 <span class="num">20%</span>，主权财富基金入场吸收蓝筹抛压。</li>
+  </ul>
+
+  <h3>🎯 判断问句</h3>
+  <div class="question">
+    一支基金两年回报 <b>17000%</b>、公开文件显示 <b>99%</b> 的仓位押在母公司股票上，为何整个市场把它读成投资能力而不是风险信号？当戳破它的不是调查而是一条「单只基金最多持有流通股 8%」的技术条款时，监管、同行与创始人的集体沉默说明了什么？作为数据分析师，你该如何审计一个没有分母的收益率？
+  </div>
+
+  <!-- 第二部分 -->
+  <h2 class="sec"><span class="no">二</span>标准答案</h2>
+  <div class="conclusion">
+    17000% 不是投资能力，是一个被藏起分母的数字——基金 99% 押注母公司，收益来自自我交易而非选股。它不需要被调查揭穿，一条持仓比例条款就足以拆解：所有人都知道结构，只是没人动手。
+  </div>
+
+  <h3>🔑 关键判断依据</h3>
+  <ul class="basis">
+    <li><span class="badge b-reverse">反常识识别</span>市场把「17000% 回报」读成能力证明，而它本身就是风险信号——收益的分母是 <span class="num">99% 的单一关联方持仓加杠杆</span>，分子越大越证明结构不可持续。定价锚错位在于：投资者买的是被展示的「回报率」这一个指标，而决定回报能否兑现的<b>集中度、流动性、杠杆率</b>三个变量从未被展示。同一条新闻里「140 亿美元清算」与「17000% 回报」是同一件事的两端。</li>
+    <li><span class="badge b-motive">动机 4 层拆解</span>表层是为投资者创造超额收益（创始人公开话术「我赚钱、投资者也赚钱，国家损失了什么」）；中层是用夸张业绩吸引新资金持续流入，以新钱维持净值与赎回；深层是<b>把基金变成母公司的市值管理工具</b>——基金买入推高母公司股价，母公司股价又反过来美化基金净值，创始人的「投资技术总设计师」人设与集团估值同步膨胀；再深一层是与足球俱乐部签约、吹嘘与财政部长「私交」等政治与品牌资本变现。</li>
+    <li><span class="badge b-switch">议题偷换</span>三处偷换同时进行——① 把「自我交易推高的账面收益」偷换成「投资能力」；② 崩塌后创始人把「结构必然失败」偷换成<b>「臭名昭著的恶意势力投机攻击」</b>（把内因外化为敌人）；③ 官方把「监管在 MSCI 警告后才出手」偷换成<b>「临时且可控、集中于少数资管公司」</b>（把制度性失职降级为个案流动性问题）。三处偷换的共同功能是：把可归因于决策的责任，改写成不可归因于任何人的意外。</li>
+    <li><span class="badge b-victim">受害范围异常</span>受害者范围由「是否传染到指数」而非「多少人受损」界定——<span class="num">35 万投资者</span>（另口径超 50 万）的钱被冻结、要等 <span class="num">3 个月</span>清算且至今不知剩多少，而监管同期做的四件事（<span class="num">3000 亿里拉</span>回购放水、保证金 <span class="num">35%→20%</span>、主权基金买蓝筹、指派两大行清算）<b>没有一件是为这 35 万人设计的，全部为防止抛售传染蓝筹</b>。财长「不存在系统性风险」的真实含义是：系统性风险的定义里不包括这 35 万人。连带受害者还有刚签下赞助协议的贝西克塔斯俱乐部（股价一周跌 <span class="num">1/3</span>、欧联杯紧急撤下 Tera 标志）。</li>
+    <li><span class="badge b-tier">分层定价</span><span class="badge b-mathe">马太效应</span>此处的马太效应是<b>反向</b>的——业绩越夸张→吸金越快→杠杆越重→崩得越快，头部集中度本身成为崩塌的放大器（Tera 一家占冻结资产 <span class="num">64%</span>）。同时形成<b>残酷的时间分层</b>：2025 年初进场的早期投资者是收割者，2026 年 8 月新规后进场的零售资金是接盘者，同一个「17000%」对两批人含义完全相反。</li>
+  </ul>
+
+  <!-- 第三部分 -->
+  <h2 class="sec"><span class="no">三</span>详细分析流程</h2>
+
+  <h3>1️⃣ 拆解现象</h3>
+  <ul class="pheno">
+    <li>回报率的来源结构：基金把数十亿里拉投向关联公司圈子并加杠杆，重仓母公司、子公司与自家券商保荐上市的公司；<b>2023 年文件显示一度 <span class="num">99%</span> 资产押在母公司 Tera Yatırım 一只股票上</b>——收益不由标的基本面产生，而由「自己买入」这个动作产生。</li>
+    <li>触发点是一条技术条款而非执法行动：SPK 8/28 新规只设置持仓比例上限（流通股 &lt;25% 时上限 <span class="num">8%</span>），<b>未指控任何机构欺诈</b>；但持仓一旦被迫压降，缺乏买盘的股票立刻失去价格，<span class="num">19 天</span>内整个结构崩塌。</li>
+    <li>流动性错配的量化：资产端 <span class="num">60%</span> 是流动性差的股票，负债端是可随时赎回的开放式基金；现金加政府证券仅占净值 <span class="num">6%（480 亿里拉）</span>，对应 <span class="num">350 亿里拉</span>未偿回购义务，缓冲垫覆盖率约 <span class="num big">1.37 倍</span>——赎回速度一旦超过变现速度，违约是算术必然。</li>
+    <li>挤兑的自我强化：9/16 单日净赎回 <span class="num">550 亿里拉</span>（Pusula <span class="num">96 亿</span>、Tera Portföy <span class="num">320 亿</span>），两家资管当日无法兑付即构成违约，违约公告又触发更多赎回，BIST 100 盘中 <span class="num">-7.5%</span> 触发熔断，形成「抛售→净值跌→赎回→再抛售」的闭环。</li>
+    <li>沉默的行业共识：崩盘前伊斯坦布尔基金经理圈存在潜规则<b>「绝不在公开场合谈论 Tera」</b>；金融犯罪监管机构 Masak 前副主席称这是<b>「监管失职」</b>，而他本人曾因投诉 Tera 两次被拘留；MSCI 早已就所有权结构不透明发出警告。<b>知情者众、发声者零</b>——这是崩塌真正的前置条件。</li>
+  </ul>
+
+  <h3>2️⃣ 归因根源</h3>
+  <ul class="cause">
+    <li><span class="lvl s">表层 · 议题偷换</span><br>监管规则变更触发被动抛售，流动性压力经赎回传导放大。表面看是「一次合规动作意外引发市场事故」——这个叙事把规则变更包装成外生冲击，掩盖了规则变更只是<b>暴露</b>而非<b>制造</b>了脆弱性。</li>
+    <li><span class="lvl m">中层 · 动机 N 层拆解 + 反常识识别</span><br>基金商业模式建立在自我交易闭环上——用新资金推高关联股票、以账面净值吸引更多资金，<b>业绩指标本身是获客工具而非经营结果</b>。因此它天然依赖持续增量资金；一旦资金增速转负（8 月底起累计流出约 <span class="num">1287 亿里拉</span>），违约就必然发生。</li>
+    <li><span class="lvl d">深层 · 马太效应 + 受害范围异常</span><br>在一个集中度高、流通盘小、透明度低的股票生态里，<b>「最亮的业绩」必然出现在「最差流动性」的标的上</b>——只有缺乏买盘的资产才能被少量资金推动出指数级涨幅。这种生态把定价权交给叙事、把风险留给最后进场的人；而监管的介入时点由国际指数机构（MSCI）的剔除警告决定，而非由本国投资者的损失决定——<b>风险处置的触发权握在外部</b>，这是新兴市场最结构性的脆弱点。</li>
+  </ul>
+
+  <h3>3️⃣ 反推逻辑（收益 vs 成本）</h3>
+  <div class="viewbox">
+    <div class="view">
+      <h4>👤 用户 / 35 万基金投资者</h4>
+      <p><span class="gain">收益</span>：早期进场者确实拿到纸面甚至已兑现的高回报，开放式基金的低门槛让零售第一次「买得起」高收益。<br><span class="cost">成本</span>：多数人拿到的是<b>无法赎回的账面数字</b>，清算要等 3 个月、回收率未知，储蓄在信息完全不对称下被定价。</p>
+    </div>
+    <div class="view">
+      <h4>🏰 生态主（Tera 集团及创始人）</h4>
+      <p><span class="gain">收益</span>：两年内从默默无闻的券商变成土耳其最大资管机构之一，收购科技与网络安全公司、新增银行/保理/地产公司，签下贝西克塔斯球衣赞助，个人品牌与政治资本同步兑现。<br><span class="cost">成本</span>：<b>创始人及多名高管被拘留、禁止出境、面临刑事指控，集团估值与信誉归零</b>——收益在前端兑现、成本在后端集中。</p>
+    </div>
+    <div class="view">
+      <h4>⚠️ 受害者（贝西克塔斯俱乐部、关联上市公司股东）</h4>
+      <p><span class="gain">收益</span>：赞助收入与股价上涨（关联股票 2025 年涨 <span class="num">2000%</span>）。<br><span class="cost">成本</span>：俱乐部股价一周跌 <span class="num">1/3</span>、欧联杯紧急撤下 Tera 标志；关联上市公司股东持有的股票被锁在跌停板上无法卖出——<b>他们的损失与自身经营毫无关系，纯粹因「与 Tera 的关联」被定价</b>。</p>
+    </div>
+    <div class="view">
+      <h4>🏛️ 监管（SPK / 央行 / 财政部）</h4>
+      <p><span class="gain">收益</span>：通过 3000 亿里拉回购、保证金 35%→20%、主权基金买蓝筹成功阻断向蓝筹股的传染，保住了指数与「不存在系统性风险」的官方叙事。<br><span class="cost">成本</span>：<b>在 MSCI 警告后才行动、出手时点滞后，且救助工具全部指向市场而非投资者</b>，前监管官员公开指控「监管失职」，制度信誉被计入 MSCI 剔除风险。</p>
+    </div>
+  </div>
+
+  <h3>4️⃣ 落地启示（数据分析师 + HR 迁移）</h3>
+  <div class="lesson">
+    <h4>📊 收益率分母审计（Denominator Audit）</h4>
+    17000% 之所以能骗过所有人，是因为它只展示分子。审计任何「超额」指标，三问必须同时回答——<b>分母是什么（多少本金、多少风险敞口）？集中度多高（单一标的占比）？有没有第三方估值（还是自我记账）？</b>本案例三个答案分别是「99% 单一关联方持仓」「极高」「无」。正如 HR 看「离职率下降 30%」不能只看百分比：分母是全员还是某个部门？是主动离职还是含被动优化？<b>分母一换，同一个数字可以从「改善」变成「恶化」</b>——先锁分母，再谈结论。
+  </div>
+  <div class="lesson">
+    <h4>📊 自我交易识别（Related-Party Circularity Test）</h4>
+    检测方法是画资金流向图，看<b>起点与终点是否重合</b>——基金的钱买母公司股票、母公司股价撑起基金净值，与 09-11 英伟达「融资给客户买自己芯片」、09-13「同一笔钱在买方记流出、在卖方记收入」是同一种结构。HR 迁移：看到「内部推荐人才留存率 95%」，先问<b>推荐人是否就是绩效评价人</b>——若评价者与被评价者同源，这个数字是自我确认，不是经营结果。
+  </div>
+  <div class="lesson">
+    <h4>📊 流动性错配计时（Liquidity Mismatch Clock）</h4>
+    把资产端变现速度与负债端赎回速度放进同一张表——现金加国债仅覆盖净值 <span class="num">6%</span> 却对应 <span class="num">350 亿里拉</span>回购义务，覆盖率 <span class="num">1.37 倍</span>，违约只是时间问题。<b>任何承诺「随时可兑付」的机构，都要拿流动资产 ÷ 短期可赎回负债</b>，比值低于 2 倍即定时炸弹。HR 迁移：招聘对外承诺「通过即入职」（负债端随时兑付）vs 实际编制与审批产能（资产端变现慢），<b>承诺弹性大于交付弹性时违约必然发生</b>——招聘的「流动性覆盖率」就是可用编制 ÷ 已发 offer 数。
+  </div>
+
+  <!-- 素材来源 -->
+  <h2 class="sec"><span class="no">附</span>素材来源与数据引用</h2>
+  <table>
+    <tr><th style="width:55%">数据点</th><th>来源</th></tr>
+    <tr><td>Tera 旗舰基金 17000% 回报、司法部定性「类庞氏骗局」、约 140 亿美元清算</td><td>新浪财经（2026-09-19）</td></tr>
+    <tr><td>Tera 相关股票 2025 年涨 2000%、媒体曾报道飙升 40000%</td><td>今日头条（2026-09-19）</td></tr>
+    <tr><td>创始人 Emre Tezmen 及多名高管被拘留、禁止出境；Pusula 董事长被发布拘留令</td><td>格隆汇（2026-09-20）</td></tr>
+    <tr><td>7 家资管公司 131 只基金清算、约 183 亿美元、约 35 万投资者</td><td>Crypto Briefing（2026-09-18）</td></tr>
+    <tr><td>冻结资产约 60% 为股票、现金与政府证券仅占 6%（约 480 亿里拉）、未偿回购约 350 亿里拉、Tera 占 64% 以上</td><td>IntelliNews（2026-09-18）</td></tr>
+    <tr><td>SPK 8/28 新规：流通股 &lt;25% 上限 8%、关联基金合并计算、单一资产不超组合 20%</td><td>上海证券报（2026-09-17）</td></tr>
+    <tr><td>MSCI 警告若不改变或把土耳其剔除出新兴市场股票基准</td><td>今日头条（2026-09-19）</td></tr>
+    <tr><td>2023 年该基金一度将 99% 资产投于母公司 Tera Yatırım</td><td>新浪财经（2026-09-19）</td></tr>
+    <tr><td>9/15 Pusula Portföy 部分基金赎回违约公告</td><td>Hürriyet Daily News（2026-09-18）</td></tr>
+    <tr><td>BIST 100 盘中 -7.5%、收跌 5.54% 报 13122.58、银行指数 -7.7%、每 6 家 1 家跌停</td><td>新华财经（2026-09-17）</td></tr>
+    <tr><td>单日净赎回 550 亿里拉（约 11.3 亿美元），Pusula 96 亿 / Tera Portföy 320 亿</td><td>上海证券报（2026-09-17）</td></tr>
+    <tr><td>8 月底以来 Pusula 基金撤出约 1290 亿里拉（27 亿美元）</td><td>上海证券报（2026-09-17）</td></tr>
+    <tr><td>央行 9/17 开出 3000 亿里拉一周回购拍卖（前一日 10 亿里拉）</td><td>Hürriyet Daily News（2026-09-18）</td></tr>
+    <tr><td>SPK 临时将融资保证金维持比例 35%→20%（有效期至 10/2）</td><td>Hürriyet Daily News（2026-09-18）</td></tr>
+    <tr><td>主权财富基金 TVF 经 Ziraat Portföy 入场吸收 BIST-30 抛压</td><td>IntelliNews（2026-09-18）</td></tr>
+    <tr><td>指派 İşbank 与 Ziraat 主导清算、3 个月内变现并向投资者分配</td><td>Crypto Briefing（2026-09-18）</td></tr>
+    <tr><td>贝西克塔斯股价一周跌 1/3、欧联杯比赛撤下 Tera 标志</td><td>今日头条（2026-09-19）</td></tr>
+    <tr><td>基金经理圈潜规则「绝不在公开场合谈论 Tera」、Masak 前副主席称「监管失职」</td><td>今日头条（2026-09-19）</td></tr>
+    <tr><td>财长希姆谢克「已隔离问题区域、不存在系统性风险」</td><td>Hürriyet Daily News（2026-09-18）</td></tr>
+    <tr><td>创始人原话「我赚钱、投资者赚钱，国家损失了什么」；崩塌后称遭「恶意势力投机攻击」</td><td>新浪财经（2026-09-19）</td></tr>
+    <tr><td>关联叙事：循环融资（英伟达 5000 亿平台）、同一笔钱的会计镜像</td><td>沉锋录历史期次（08-11 / 09-13）</td></tr>
+  </table>
+
+  <div class="checklist">
+    <b>生成质量自检</b>：✔ 标题（日期+星期） ✔ 元信息（主题/归档/W38/判题人） ✔ 事实背景 5 条含数字 ✔ 判断问句 ~105 字（反常识+追问+数据技能） ✔ 结论加粗斩钉截铁 ✔ 判断依据 5 条覆盖 6 框架 ✔ 拆解 5 条 / 归因 3 层 / 反推 4 视角 / 启示 3 条 ✔ 数据可溯源
+  </div>
+
+  <div class="footer">
+    本文由沉锋录·热点判断脚本自动生成 · 素材来源：Deepseek 联网搜索（红狐 hub）+ 内置联网搜索兜底<br>
+    训练框架：反常识识别 · 动机 N 层拆解 · 议题偷换 · 受害范围异常 · 分层定价 · 马太效应
+  </div>
+</div>
+</body>
+</html>

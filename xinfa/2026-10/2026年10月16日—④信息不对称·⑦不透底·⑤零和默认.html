@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年10月16日—④信息不对称·⑦不透底·⑤零和默认</title>
+<style>
+/* ============================================================
+   识暗心法 v2.0 · 设计系统 v2.1（每日卡片版）
+   浅粉色调 · 教学案例粉色系 / 实战练习紫色系
+   ============================================================ */
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;
+  --surface:#ffffff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;
+  --pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;
+  --blue-600:#3a6ea5;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --fs-xs:11.5px;--fs-sm:12.5px;--fs-base:14.5px;--fs-md:15.5px;--fs-lg:17px;
+  --fs-xl:20px;--fs-2xl:24px;
+  --lh-tight:1.42;--lh-body:1.78;--lh-loose:1.95;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --shadow-md:0 4px 8px rgba(180,90,120,.09),0 12px 28px rgba(180,90,120,.12);
+  --radius:16px;--radius-sm:10px;--radius-xs:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  background:
+    radial-gradient(1100px 500px at 85% -5%, rgba(244,150,190,.14), transparent 60%),
+    radial-gradient(900px 420px at -10% 12%, rgba(190,160,235,.12), transparent 55%),
+    linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  background-attachment:fixed;
+  color:var(--ink);
+  font-size:var(--fs-base);
+  line-height:var(--lh-body);
+  letter-spacing:.01em;
+  padding-bottom:70px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--pink-300);color:#fff}
+.container{max-width:960px;margin:0 auto;padding:26px 22px 0}
+/* ---------- 今日抬头 ---------- */
+.day-head{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-sm);margin-bottom:20px;
+  position:relative;overflow:hidden;
+}
+.day-head::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300));
+  opacity:.9;
+}
+.day-head-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.day-title{font-size:var(--fs-2xl);font-weight:800;letter-spacing:.015em;line-height:var(--lh-tight)}
+.day-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-sm);font-weight:700;
+  padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);
+  border:1px solid rgba(212,61,111,.14);
+}
+.day-badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.day-badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.day-meta{margin-top:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.xf-chip{
+  display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;
+  padding:6px 13px;border-radius:10px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  box-shadow:var(--shadow-xs);
+}
+.xf-chip.ghost{background:var(--surface-soft);color:var(--ink-2);border:1px solid var(--border-strong);box-shadow:none}
+/* ---------- 案例卡片 ---------- */
+.case{
+  margin-bottom:22px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface);
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.case:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.case-head{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--border)}
+.case-head .num{
+  width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;letter-spacing:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+}
+.case-teach .case-head{background:linear-gradient(90deg,var(--pink-050),var(--surface) 70%)}
+.case-teach .num{background:linear-gradient(135deg,var(--pink-500),var(--pink-600))}
+.case-practice .case-head{background:linear-gradient(90deg,var(--purple-100),var(--surface) 70%)}
+.case-practice .num{background:linear-gradient(135deg,#8f66c0,var(--purple-600))}
+.case-type{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink-3);flex:none}
+.case-title{font-size:var(--fs-lg);font-weight:800;flex:1;min-width:0;line-height:var(--lh-tight);letter-spacing:.01em}
+.bf-badge{font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;flex:none;letter-spacing:.02em}
+.case-teach .bf-badge{background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.16)}
+.case-practice .bf-badge{background:var(--purple-100);color:var(--purple-700);border:1px solid rgba(122,75,165,.16)}
+.case-body{padding:20px 24px 24px}
+/* 场景背景 */
+.scene{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-left:3px solid var(--border-strong);
+  border-radius:var(--radius-sm);padding:15px 17px;margin-bottom:18px;
+  font-size:var(--fs-base);color:#5c4a54;line-height:var(--lh-loose);
+}
+.scene-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:9px;
+}
+.scene-label::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--border-strong)}
+.scene p{margin:0 0 8px}
+.scene p:last-child{margin-bottom:0}
+.scene em{font-style:normal;background:var(--gold-100);color:var(--gold-700);padding:0 4px;border-radius:4px;font-weight:600}
+/* 教学分析 */
+.analysis{border-top:2px solid var(--pink-100);padding-top:16px}
+.analysis-label{
+  display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:var(--pink-700);
+  letter-spacing:.18em;margin-bottom:15px;
+}
+.analysis-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--pink-100),transparent)}
+.aim-chip{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  font-size:14.5px;font-weight:800;padding:8px 17px;border-radius:12px;margin-bottom:18px;
+  box-shadow:var(--shadow-sm);letter-spacing:.02em;
+}
+.aim-chip .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.22)}
+.block{margin-bottom:18px}
+.block-t{
+  font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:9px;display:flex;align-items:center;gap:8px;
+  letter-spacing:.02em;
+}
+.block-t .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--pink-500),var(--pink-300));flex:none}
+.points{list-style:none;counter-reset:pt}
+.points li{
+  counter-increment:pt;position:relative;padding:7px 0 7px 36px;font-size:var(--fs-base);color:#51404a;
+}
+.points li::before{
+  content:counter(pt);position:absolute;left:0;top:9px;width:23px;height:23px;border-radius:8px;
+  background:var(--pink-100);color:var(--pink-700);font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,61,111,.12);
+}
+.points li strong{color:var(--ink);font-weight:800}
+.tip-quote{
+  background:linear-gradient(90deg,var(--gold-100),#fdf8ec);border-left:4px solid var(--gold-600);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:13px 17px;font-size:15.5px;font-weight:700;color:var(--gold-700);line-height:1.65;letter-spacing:.02em;
+}
+.tip-quote::before{content:"要诀";font-size:10px;font-weight:800;letter-spacing:.16em;display:block;color:var(--gold-600);margin-bottom:3px}
+/* 5步流程 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px}
+.step{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:11px 13px;transition:all .2s ease;
+}
+.step:hover{border-color:var(--pink-300);background:var(--surface-tint);transform:translateY(-1px)}
+.step .step-k{font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.04em;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .step-k .n{
+  width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.step .step-v{font-size:12.5px;color:#5f4c57;line-height:1.6}
+.step .step-v strong{color:var(--pink-700);font-weight:800}
+/* 练习任务 */
+.task-box{
+  background:linear-gradient(135deg,var(--purple-100),#f6f0fb);border:1.5px solid var(--purple-600);
+  border-radius:var(--radius-sm);padding:17px 19px;margin-bottom:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+.task-box-t{font-size:13px;font-weight:800;color:var(--purple-700);margin-bottom:11px;letter-spacing:.12em}
+.task-list{list-style:none;counter-reset:tk}
+.task-list li{
+  counter-increment:tk;position:relative;padding:8px 0 8px 44px;font-size:15px;font-weight:600;color:#4a3757;
+}
+.task-list li::before{
+  content:counter(tk);position:absolute;left:0;top:9px;width:27px;height:27px;border-radius:9px;
+  background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-xs);
+}
+.task-list li strong{color:var(--purple-700);font-weight:800}
+/* 参考答案折叠 */
+details.answer{
+  margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;transition:border-color .2s ease;
+}
+details.answer[open]{border-color:var(--pink-300)}
+details.answer summary{
+  cursor:pointer;padding:14px 19px;font-size:15px;font-weight:800;color:var(--ink);
+  display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);
+  list-style:none;transition:background .2s ease;
+}
+details.answer summary:hover{background:var(--pink-050)}
+details.answer summary::-webkit-details-marker{display:none}
+details.answer summary .arr{
+  width:22px;height:22px;border-radius:7px;background:var(--pink-100);color:var(--pink-700);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+  transition:transform .25s ease,background .2s ease;
+}
+details.answer[open] summary .arr{transform:rotate(90deg);background:var(--pink-600);color:#fff}
+details.answer summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.answer .answer-body{padding:18px 21px;border-top:1px dashed var(--border-strong);background:var(--surface)}
+.answer-item{margin-bottom:14px;padding-left:15px;border-left:3px solid var(--pink-100)}
+.answer-item:last-child{margin-bottom:0}
+.answer-item .a-k{font-size:12px;font-weight:800;color:var(--pink-700);margin-bottom:4px;letter-spacing:.06em}
+.answer-item .a-v{font-size:var(--fs-base);color:#4d3c44;line-height:1.75}
+.answer-item .a-v strong{color:var(--ink)}
+.answer-item .a-v ul{margin:5px 0 0 19px}
+.answer-item .a-v li{margin:3px 0}
+/* 页脚 */
+.foot{text-align:center;font-size:12px;color:var(--ink-3);padding:10px 0 0;letter-spacing:.06em}
+.foot b{color:var(--pink-600)}
+/* 移动端 */
+@media (max-width:640px){
+  .container{padding:18px 13px 0}
+  .day-head{padding:18px 17px}
+  .day-title{font-size:20px}
+  .case-head{flex-wrap:wrap;padding:14px 17px}
+  .case-body{padding:16px 17px 20px}
+  .steps{grid-template-columns:1fr 1fr}
+  .case-title{flex-basis:100%;order:3}
+}
+@media (max-width:400px){
+  .steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============ 今日抬头 ============ -->
+  <div class="day-head">
+    <div class="day-head-top">
+      <div class="day-title">识暗心法 · 每日三案</div>
+      <span class="day-badge">2026年10月16日 · 星期五</span>
+      <span class="day-badge green">本周第 5 天</span>
+    </div>
+    <div class="day-meta">
+      <span class="xf-chip">教学 ① ④ 信息不对称</span>
+      <span class="xf-chip">教学 ② ⑦ 不透底</span>
+      <span class="xf-chip ghost">练习 ③ ⑤ 零和默认</span>
+    </div>
+  </div>
+
+  <!-- ============ 案例① 教学 · ④ 信息不对称 ============ -->
+  <div class="case case-teach">
+    <div class="case-head">
+      <span class="num">①</span>
+      <span class="case-type">教学案例</span>
+      <span class="case-title">「免费提速」——电话里没有一句假话</span>
+      <span class="bf-badge">④ 信息不对称</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>十月十号下午三点多，小岑接到一个电话，手机屏幕显示的来电名是「宽带服务专员」。他后来才知道，那是一个本地代理商的座机，只是把显示名设成了这样。</p>
+        <p>对方的语气很客气：「先生您好，我们看到您是五年的老用户了，现在有个老用户回馈活动——免费给您把宽带从 100M 升到 500M，月费不变，另外再送您一个 IPTV 电视盒子，免费上门安装。您看什么时候方便？」</p>
+        <p>小岑问了一句：「要收费吗？」</p>
+        <p>「不收，一分钱都不收，就是回馈老用户。」对方说，「我这边给您操作一下，您会收到一条短信验证码，念给我就行。」</p>
+        <p>小岑收到短信，扫了一眼就念了验证码——那条短信一共四行，他当时只看见了「验证码」三个字。对方说：「好了，明天上午师傅上门给您装盒子。」</p>
+        <p>第二天上午师傅来了，装盒子、换光猫，收了一百块「光猫押金」，说退网的时候退。小岑没多想，扫码付了。</p>
+        <p>十一月中旬账单出来，小岑发现比原来多了三十块。他打官方客服问，客服说：「您这个月开通了『500M 提速包』，三十元一个月。」</p>
+        <p>小岑说：「不是说免费吗？」</p>
+        <p>客服说：「您的基础套餐月费确实没有变，是 129 元。提速包是另外一项业务，单独计费的。」</p>
+        <p>小岑想取消。客服说：「您这项业务有 24 个月的合约期，现在取消要付违约金，按剩余月份服务费的 30% 算，大概四百多。另外您原来的 100M 套餐已经下架了，取消提速包之后，宽带会降到 50M。」</p>
+        <p>挂了电话，小岑才翻出那条短信，从头到尾读了一遍。最后一行写着：「500M 提速包 30 元/月，合约期 24 个月，到期自动续订。」</p>
+        <p>他还发现，那个「免费」的 IPTV 盒子，盒子本身确实不要钱，但每月要收 15 元「高清服务费」，账单上叫「增值业务费」——所以他每个月实际多付的是 45 元，一年 540。</p>
+        <p>晚上他在小区群里问了一句，三个人回了：一个说「我也接过，我直接挂了」；一个说「我办了，后来多扣了半年我才发现」；还有一个说「他们说的免费，是免安装费」。</p>
+        <p><em>电话里没有一句假话。「月费不变」是真的，「免费」指的是安装和盒子，「回馈老用户」也确实算回馈——只是那份回馈的价签，写在他没读完的那条短信里。</em></p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <span class="aim-chip"><span class="dot"></span>命中心法：④ 信息不对称</span>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点（3 条）</div>
+          <ul class="points">
+            <li><strong>信息差就是权力差：他把信息切成两半，说给你听的那半是「免费」，没说的那半才是价格。</strong>注意这个案子里最要紧的一点——<strong>他一句假话都没说。</strong>「月费不变」指的是基础套餐不变；「免费」指的是安装和盒子；「送您一个盒子」也没说错。他做的事只有一件：<strong>把「对你有利的信息」放在电话里讲，把「对你有约束的信息」放在短信里、合同里、自动续订条款里。</strong>④ 的第 3 条说「对方主动提供的信息，天然带有他的目的」，这里的目的不是骗你，是<strong>让你在信息不完整的状态下点头</strong>。所以判据很简单：<strong>一个承诺，如果它的限制条件只出现在你没看的那份文件里，那么这份承诺的真实价格，就写在那些限制条件里。</strong></li>
+            <li><strong>「我以为」是最贵的词。本案里小岑有四个「我以为」。</strong>① 以为来电是官方——其实只是一个显示名做了设置的代理商；② 以为「免费」是整体免费——其实只有安装和盒子免；③ 以为随时能退——其实有 24 个月合约和违约金；④ 以为升了级是赚了——其实原套餐已下架，退回去只能降到 50M。<strong>这四个「我以为」，每一个都能在三十秒内确认：查一下官方 App、把短信读完、问一句「有没有合约期、怎么取消」、问一句「原来的套餐还在不在」。</strong>④ 的第 2 条说「每个关键决定前，确认信息源」——本案的信息源有三个层次（代理商的话 / 短信条款 / 官方客服），<strong>而最权威的那个层次，是他最不想让你现在去问的。</strong></li>
+            <li><strong>「您报一下验证码就行」是 ④ 里最典型的一个动作：把「签字」包装成「走流程」。</strong>验证码在电信业务里就是你的电子签名——它确认的是<strong>那份条款</strong>，不是他那句「免费」。所以这句话的真正作用是：<strong>用一个听起来很轻的动作（念六个数字），让你跳过最重的一步（读条款）。</strong>同一类手法还有很多：「您不用管，我这边帮您操作」「系统里就点一下，不影响的」「纸质单子就不用签了，电子版一样的」。④ 的第 4 条提防要点是「警惕只给结论不给依据、拒绝你查证的人」，而这一类的共同特征就是——<strong>结论给得很快，依据藏得很深，并且用一个动作（念码、点确认、扫码）把「查证」这个步骤从流程里删掉了。</strong></li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">信息差即权力差，先补信息再表态。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>5 步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">做决定前，列出「我真正掌握的事实」和「我以为是的事实」。本案：<strong>事实</strong>——五年老用户、100M 宽带、129 元月费、接了电话、念了验证码、付了 100 元押金。<strong>我以为</strong>——来电是官方、免费、随时能退、升级是纯赚。<strong>两栏一比，空白全在第二栏。</strong>这里有一个几乎万能的操作：<strong>凡是听到「您不用看/我帮您操作/就点一下」，就把它当成一个红灯</strong>——因为这句话唯一的功能，就是让你跳过查证。另外养成一个小习惯：<strong>验证码、确认键、扫码支付，这三个动作出现时，先花三十秒把屏幕上的字读完。</strong>三十秒换一年 540 块，是划算的。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">对方提供的信息里，哪些是他想让我知道的？<strong>想让你知道的</strong>：「老用户」「回馈」「免费」「送盒子」「月费不变」——这五个词有一个共同点，全是<strong>不需要核实的情绪词</strong>，听完只会产生一种感觉（我占便宜了）。<strong>不想让你知道的</strong>：30 元/月、24 个月、自动续订、原套餐下架、15 元高清服务费。<strong>一个很实用的判断方法：把他说的每句话标上「对我有利」还是「对他有利」。如果他说出口的每一句都恰好对你有利，那他一定把某些话留在了后面。</strong>这不是恶意，这是销售话术的基本结构——<strong>所有的话术都遵守同一个顺序：先说你爱听的，等你点头之后，条款才开始生效。</strong></div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果我知道了他没说的那部分，结论会变吗？<strong>会，而且是完全反过来。</strong>如果小岑在电话里就知道「30 元/月 × 24 个月 + 违约金 + 原套餐下架」，他会说「那我不办」。所以这件事的关键变量根本不在他听到的那半，在他没听到的那半。<strong>反推时只问一句就够：如果这份「免费」的东西真的有期限和代价，那它会在什么地方写出来？</strong>答案通常有三处——短信里、App 的「我的业务」里、以及客服的口径里。<strong>去看这三处，比在电话里跟对方争十句都有用。</strong>补充一个更有用的反推：<strong>对方为什么用电话，而不是用短信或 App 通知？</strong>因为电话没有记录、无法回看、你事后也无法举证「他当时不是这么说的」——<strong>渠道的选择本身，就是信息设计的一部分。</strong></div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕只给结论不给依据、拒绝你查证的人。本案提炼三条通用规则：<strong>① 一切电话里、上门来的「免费」，先问三句——收不收费、有没有期限、怎么取消。</strong>这三句能筛掉绝大多数套路，因为对方的答案要么支支吾吾，要么答非所问；<strong>② 验证码就是签字，念出验证码之前，先把短信从头读到尾。</strong>记住：验证码确认的是条款，不是他那句话；<strong>③ 拿不到书面条款就不表态。</strong>可以说「我考虑一下，明天答复你」，这句话没有任何风险，而且对方越急，越说明有时间差可利用。<strong>还有一条隐藏的判据：凡是「免费」的东西，都要问一句「那你们靠什么赚钱？」</strong>答不上来或者答得很含糊的，钱一定在你没看的那部分里。</div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">第二信息源验证，或直接找第三方确认。<strong>① 挂掉电话，走官方渠道核实</strong>——官方 App、官方客服、营业厅，问一句「有没有这个活动」；<strong>② 要文字</strong>——「麻烦把活动条款用短信发我，我看完再答复」，愿意发的通常问题不大，不愿意发的答案已经给了；<strong>③ 把口头承诺变成对方的书面确认</strong>——微信或短信问：「你刚才说的免费，是基础套餐不变，还是提速包本身也不收费？」这句话问出去，要么对方改口，要么你留了证；<strong>④ 已经办理的，逐项对账</strong>——把账单上的每一项（提速包、增值业务费、押金）单独查一遍，能退的退，不能退的记下合约到期日设个提醒；<strong>⑤ 保留通话记录与短信原文</strong>，涉及金额较大的可以向运营商投诉渠道或监管平台反映；<strong>⑥ 记住那句万能话术：</strong>「我不在电话里做决定，麻烦你把条款发给我，我看完再说。」<strong>这句话对保险、宽带、信用卡分期、免费体检、上门检测，全部有效。</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 案例② 教学 · ⑦ 不透底 ============ -->
+  <div class="case case-teach">
+    <div class="case-head">
+      <span class="num">②</span>
+      <span class="case-type">教学案例</span>
+      <span class="case-title">「你什么时候要证」——报名表上的七个小问题</span>
+      <span class="bf-badge">⑦ 不透底</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>十月十二号，小岑开始找驾校。他在本地论坛抄了三家的电话，第一家叫「宏运驾校」，离他家骑车十分钟。</p>
+        <p>接电话的是个女老师，声音很热情：「同学你好，是想学 C1 还是 C2 呀？」小岑说 C1。对方接着问：「那你什么时候想拿证？」</p>
+        <p>小岑没多想，老实答了：「想赶在年底前拿到，明年打算买辆车。」</p>
+        <p>电话那头立刻接上：「那你得报 VIP 快班，6800。普通班现在报名的排到下个月了，你这个时间赶不上。VIP 是一人一车，随到随学，两个月包你拿证。」</p>
+        <p>小岑问：「普通班多少钱？多久能拿？」</p>
+        <p>「普通班 4800，」对方顿了一下，「但快的话三个月，慢的话半年，看排期。你要赶时间就得报 VIP，多两千块买个时间，值。」</p>
+        <p>小岑说再看看，挂了电话，又打了另外两家。第二家说普通班 4200，「三个月差不多，现在报名的人不多」；第三家说 4500，也是三个月左右。</p>
+        <p>他决定去第二家看看。到了报名点，招生老师拿出一张《学员信息登记表》，一边递笔一边跟他聊天：「你平时周末有空还是工作日有空？」「以前摸过车吗？」「是自己一个人学，还是家里人也一起？」「你住哪一片？我们训练场在城北，你过来远不远？」</p>
+        <p>小岑一条条答了：只有周末有空、没摸过车、就自己一个人学、家在城南，过来要四十分钟。</p>
+        <p>老师看了看表，说：「你这个情况，周末班更合适。周末班 5800，因为周末人多车少，得给你单独排。」</p>
+        <p>小岑愣了一下：「电话里不是说 4200 吗？」</p>
+        <p>「4200 是工作日班的价，」老师说，「你只有周末有空嘛。而且你没基础，得多练几次，我们这有十个课时的补练包，1200，可以先报上。」</p>
+        <p>最后小岑交了 5800，没买补练包。填表的时候，他随口问了旁边一个正在填的男生：「你交多少？」男生说：「4800。」小岑问：「你报的什么班？」男生说：「周末班啊。」</p>
+        <p>他后来又在学员群里问了几个人：有人 4200，有人 4800，有人 5500，也有人 6800。<strong>同一个周末班，差了 2600 块。</strong></p>
+        <p><em>他复盘的时候发现，那天真正要紧的问题只有一个——「你什么时候想拿证」。他答完之后，后面每一个问题其实都不需要再问了：价格已经定了。</em></p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <span class="aim-chip"><span class="dot"></span>命中心法：⑦ 不透底</span>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点（3 条）</div>
+          <ul class="points">
+            <li><strong>底线一旦暴露，就会被精准卡位——而「底线」不一定是钱。</strong>小岑从头到尾没有说过自己的预算，他说的是一句听起来完全无害的话：「想赶在年底前拿到，明年打算买辆车。」<strong>但这句话在报价的人耳朵里，翻译出来是：「这个人有硬性时间点，而且这件事对他有后续价值（要买车），所以他不太可能因为贵两千就放弃。」</strong>于是报价直接从 4800 跳到 6800。<strong>这就是 ⑦ 最常被忽略的一点：你的时间、你的不方便、你有多不能等、你的替代方案少不少——全都是底牌。</strong>预算只是其中最明显的一张，也是最容易防的一张。</li>
+            <li><strong>真实需求被知道，价格就由对方定了。同一个事实，在你这儿是「情况」，在他那儿是「品类」。</strong>「只有周末有空」是一个客观事实；但在报价单上，它变成了一个加价品类（周末班 +1600）。「没摸过车」也是客观事实；它变成了另一个加价品类（补练包 +1200）。<strong>注意这里没有一句假话——周末确实人多车少，没基础确实要多练。</strong>问题在于：<strong>当对方掌握了你所有的「不方便」，他就可以把每一个不方便都单独标价，而这些价格你无从比较，因为每个人报的都不一样。</strong>同一个周末班有人 4200、有人 4800、有人 5800——<strong>价格不是固定的，是按人算的；而「按人算」的依据，就是你交出去的那些信息。</strong></li>
+            <li><strong>不透底 ≠ 说谎，是只说必要信息、守住关键信息，以及——换一个顺序。</strong>小岑完全可以同样礼貌、同样真实地表达：「先了解一下，时间还没定」「我看看班型和价格」。这两句话没有一句是假话，但它<strong>不传递任何紧迫度</strong>。⑦ 的第 5 条说「给区间不给底价，说目标不说底线」，这里可以再补一条更实用的：<strong>先问价，再说需求；先比较，再暴露紧迫度。</strong>顺序才是关键——<strong>一旦顺序倒了（先说需求，后问价），后面所有的价格都是「为你定制」的价格，而你连还价的参照物都没有。</strong>反过来，如果你先问完三家的价、心里有了区间，再去谈需求，那么你说的每一句「我不方便」，都只是要解决的问题，而不是要付的账单。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">底牌是最后一张牌，亮出去就不值钱了。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>5 步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">对方打听你的预算、底价、真实想法、时间底线时。本案的识别点有两个层次：<strong>明的一层</strong>是那句「你什么时候想拿证」——它字面问的是时间，实际问的是「你有多不能等」；<strong>暗的一层</strong>是那张《学员信息登记表》——「周末还是工作日」「摸过车吗」「几个人学」「住哪一片」这四栏，单看每一栏都是服务信息，合起来就是一张画像：<strong>时间少、经验少、没有同伴（不容易横向比较）、距离远（换一家成本高）。</strong>这里有一个非常好用的识别动作：<strong>把对方问过你的问题全部抄下来，然后问自己一句——这些问题里，有几个是真正在为我服务的？</strong>如果答案是零，那它们服务的对象就很清楚了。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">他问这些是为了更好地「帮你」，还是更好地「定价」？<strong>区分方法很实用：看他问完之后，给出的选项是更便宜了，还是更贵了。</strong>本案四个问题对应的全是加价项——「只有周末有空」→ 周末班 5800；「没摸过车」→ 补练包 1200；「一个人学」→ 没有团报价；「住城南」→ 不会轻易换驾校。<strong>四个答案，四个价格标签，一个折扣都没有。</strong>另外注意那句「普通班排到下个月了」——这一句的作用不是陈述排期，而是<strong>把「便宜的那个选项」从菜单上划掉</strong>（这个手法在 10 月 15 日的宠物急诊案例里也出现过：让你以为只有一条路）。<strong>当一个人一边问你问题、一边收窄你的选择，他问问题的目的就已经写在答案里了。</strong></div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">他知道我的底线之后，最优策略会是什么？<strong>报他能报的最高价，并且不给我比较的理由。</strong>所以他不会说「周末班贵，你也可以考虑工作日班」——他会说「你只有周末有空嘛」。<strong>反推练习很直接：如果我当时说「不急，明年再说」，报价会变成多少？</strong>大概率回到 4200 甚至更低。想清楚这个差额，就知道自己刚才那句话值多少钱。<strong>还有一个更狠的反推：如果我一开始就说「我打听过，另一家周末班 4800」——他还会报 5800 吗？</strong>不会。<strong>这说明价格里有一大块是「你不知道别人的价」——而 ⑦ 要守住的，恰恰就是这块信息。</strong></div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕「交心式套话」——先自曝其短，引你交底。本案的变体是<strong>「闲聊式采集」</strong>：招生老师一边递笔一边聊天，语气完全不像在报价；他还先说了自己驾校的短板（普通班要排队），让你觉得这人挺实在，于是你也实在。<strong>三条实操：① 先问价，后说需求。</strong>把「我想了解一下」放在最前面，把「我急着要」放在最后面；<strong>② 被问「什么时候要」时，答「还没定，先了解一下」。</strong>这不是撒谎，是事实——你确实还没定；<strong>③ 记住一个推论：同一班型不同价格，说明价格是可以谈的。</strong>而谈判的筹码，就是你还没有交出去的那部分信息。<strong>反过来说，如果你已经把时间底线、经验水平、家庭情况全说了，你就没有筹码了，只剩接受或不接受。</strong></div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">给区间不给底价，说目标不说底线。<strong>① 用「我想了解一下」代替「我急着要」</strong>——前者不传递任何紧迫度；<strong>② 拿别人家的价当锚</strong>：「另一家周末班 4800，你这边能不能做？」你不需要说谎，只需要让对方知道你手里有第二个选项；<strong>③ 要求把班型、课时、总价、额外费用写进报名单</strong>，凡是口头说的「包过」「随到随学」，一律要求写下来；<strong>④ 不在第一家交钱</strong>，至少问三家、把价格记在本子上，再决定；<strong>⑤ 已经报名的，去群里对一下价格</strong>——如果同班型差价明显，可以拿这个去谈补课时或退差价；<strong>⑥ 通用原则：先问价，再谈需求；先比较，再亮时间。</strong>这条原则对驾校、装修、婚庆、搬家、摄影、维修全都成立——<strong>凡是「按人报价」的行业，报价单上最先写上去的，永远是你的处境。</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 案例③ 实战练习 · ⑤ 零和默认 ============ -->
+  <div class="case case-practice">
+    <div class="case-head">
+      <span class="num">③</span>
+      <span class="case-type">实战练习</span>
+      <span class="case-title">「当初说好 AA 的」——那个每月多出来的一百八</span>
+      <span class="bf-badge">⑤ 零和默认</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>小岑和室友阿俊合租一套两居室，在城东，月租 3200，两人各出 1600。当初看房的时候说得很清楚：「房租对半，水电燃气按人头平摊。」两个人在租房合同上签了字，这个默契维持了两年。</p>
+        <p>阿俊是自由职业，在家做直播，作息和小岑完全相反——白天基本都在家，晚上剪素材到凌晨两三点，卧室门关着，空调也开着。小岑在公司上班，早八点出门，晚上七点多回来，十一点前就睡。</p>
+        <p>今年夏天特别热。七月账单出来的时候，电费 486 元，燃气 62，水费 55，加起来 603，平摊每人 301。小岑记得去年同月电费是一百八左右。</p>
+        <p>八月更热，电费 560。他自己算了一下：白天不在家，晚上回来开两三个小时空调就睡，一个月最多用一百多度；阿俊那边，空调基本二十四小时开着，还有一台台式机和两台显示器。</p>
+        <p>他试着提了一次。那天晚上两人在客厅，小岑说：「阿俊，这两个月电费有点高，要不咱们分开算一下？」</p>
+        <p>阿俊放下手机：「当初不是说好 AA 吗？我在家是因为我在家做事，又不是白住。你总不能因为我在家就多算我钱吧，那也太计较了。再说你不在家的时候，空调又不是我给你开的。」</p>
+        <p>小岑说：「我不是那个意思，就是觉得差得有点多。」</p>
+        <p>「差得多也是电费贵啊，又不是我多用了。」阿俊说，「你要是觉得不公平，那你也可以搬走啊。」</p>
+        <p>话说到这儿，小岑就没再往下说。</p>
+        <p>九月阿俊接了个大单，作息更乱，有时候通宵。九月电费 520。十月降温，电费降到 210，阿俊主动说了一句：「这个月便宜，咱们就还是老规矩吧。」</p>
+        <p>小岑后来算了一笔账：五月到九月五个月，两个人一共交了 2610 的电费，其中他能确认自己用的不超过 500 块。多出来的一千多，是他替阿俊付的。而这两年多里，他一次也没提过「那我少出点」。</p>
+        <p><em>他不是舍不得这一千块。他是想不明白一件事：那句「当初说好 AA 的」，明明是他俩一起说的，为什么现在变成了只有他必须遵守的规矩。</em></p>
+      </div>
+      <div class="task-box">
+        <div class="task-box-t">你的任务 · 4 个引导问题</div>
+        <ul class="task-list">
+          <li><strong>命中心法：</strong>这个场景最对应八条心法中的哪一条？「按人头平摊」听起来是最公平的规则，但它默认了一个什么前提？当这个前提不成立的时候，「公平的规则」会变成什么？</li>
+          <li><strong>现象识别：</strong>请把这两个人在「公共支出」这件事上的付出和得到逐条列出来——钱、使用量、时段、便利、说话的分量。注意别只算电费，还要算「谁的生活因为对方而被打扰」「谁在讨论规则时更有底气」。</li>
+          <li><strong>动机归因：</strong>阿俊说的三句话——「当初不是说好 AA 吗」「你总不能因为我在家就多算我钱吧」「那你也可以搬走啊」——分别在做什么？他为什么在十月电费降到 210 的时候，主动提「还是老规矩」？如果「AA 最公平」这句话真的只是公平，为什么提出它、维护它的人，恰好永远是使用多的那一方？</li>
+          <li><strong>落地行动：</strong>如果小岑想「把规则改过来，又不至于把关系搞僵」，他可以怎么说、怎么做？请给出至少三条具体动作，包括：怎么把「AA」拆成可计算的分摊方式、怎么应对「那你也可以搬走啊」这句话、如果谈不成还有什么退路。</li>
+        </ul>
+      </div>
+      <details class="answer">
+        <summary>
+          <span class="arr">▶</span>查看参考答案
+          <span class="hint">先自己思考，再看答案</span>
+        </summary>
+        <div class="answer-body">
+          <div class="answer-item">
+            <div class="a-k">① 命中心法</div>
+            <div class="a-v">对应 <strong>⑤ 零和默认</strong>。<br>
+              「按人头平摊」默认了一个前提：<strong>每个人的消耗差不多。</strong>这个前提在两个人都在外面上班的时候成立；一旦一方在家时间大幅增加，前提就崩了。而规则没有跟着变，于是它就从「公平」变成了「单向补贴」。<br>
+              ⑤ 的定义说得很清楚：<strong>默认在资源有限的博弈里，对方的赢可能意味着你的输——先按零和假设算账，再判断是否共赢。</strong>电费就是一笔有限的资源（每月固定一笔钱）：在「平摊」规则下，<strong>一方多用一度电，另一方就多付半度的钱</strong>。这是数学上的零和，不是道德上的计较。<br>
+              关键句：<strong>「公平」不是一个规则的名字，而是规则和现实匹配时的状态。规则没变、现实变了，规则就不再公平。</strong><br>
+              所以阿俊说「当初说好 AA」，说的是<strong>规则</strong>；小岑感受到的，是<strong>规则已经不匹配现实</strong>。两个人从头到尾说的不是同一件事——这也是这场对话谈不下去的真正原因。<br>
+              <strong>心法要点第 2 条：他说「双赢」，你要确认赢在哪里、谁多谁少。</strong>本案里，「AA」对使用多的一方是赢，对使用少的一方是输，而它被包装成了一个中立的词。</div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">② 现象识别（各方得失清单）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>小岑：</strong>付出——房租 1600、每月水电燃气 200~300、通勤时间、以及一整套作息上的迁就（关门、戴耳机、十一点关灯、不在客厅开外放）。得到——一间房、基本居住条件、两年没吵过架的室友关系。<strong>关键一项：他多付的那部分钱，换回来的不是服务，是「不计较」这个名声。</strong></li>
+                <li><strong>阿俊：</strong>付出——房租 1600、同样的每月 200~300。得到——一间房 + <strong>一个几乎全天候的空调使用权</strong>（五个月少付约一千多）+ <strong>白天完全不被打扰的工作环境</strong> + <strong>讨论规则时的主动权</strong>（因为规则是他提的，也是他占理的）。</li>
+                <li><strong>共同盲点一：分母错了。</strong>「按人头平摊」的分母是「人」，可电费的分母是「用电量」。<strong>分母选错，账就不平——而选分母这个动作本身，就是 ⑤ 要盯住的地方。</strong></li>
+                <li><strong>共同盲点二：「我在家做事」被当成了正当性证明。</strong>但在分摊电费这件事上，「你为什么在家」不重要，「你用了多少」才重要。<strong>动机不能替代计量</strong>——这是所有「AA 争议」里最核心的一句话。</li>
+                <li><strong>共同盲点三：小岑的隐性付出从来没进过账。</strong>作息迁就、让出客厅、十一点关灯、关门戴耳机——这些「不出钱但让出便利」的付出，最容易在分摊讨论里被完全忽略，<strong>因为它没有账单。</strong>记住：<strong>没有账单的付出，在谈判里默认等于零。</strong></li>
+                <li><strong>双方真正的分歧不在钱，在「谁定义公平」。</strong>阿俊认为「规则一致就是公平」，小岑认为「结果相当才是公平」。<strong>两个定义都成立，但只有一个能落到纸上算。</strong>所以解决方向不是争论哪个定义对，而是把讨论从定义搬到算式。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">③ 动机归因</div>
+            <div class="a-v">
+              <strong>「当初不是说好 AA 吗」——把讨论从「规则合不合理」拉回「你有没有守约」。</strong>这句话的作用是：只要你继续争，你就是那个「不守约的人」。<strong>注意它回避了真正的问题</strong>——当初的 AA 是建立在「两人消耗相当」的前提上，而这个前提是被阿俊自己的生活方式改变的。<strong>用一句成立的话（说好了 AA）去封住一个不成立的前提（消耗相当），这就是这句话的全部功能。</strong><br><br>
+              <strong>「你总不能因为我在家就多算我钱吧，那也太计较了」——先替你给行为贴上标签。</strong>「计较」这两个字的作用是<strong>让你在开口之前先付一次心理成本</strong>：你会开始想「我是不是真的太小心眼了」，而不是想「这个分摊方式是否合理」。<strong>这和 10 月 15 日那个「你怎么这么自私」是同一手法：把「方案是否合理」替换成「你人品如何」。</strong>一旦讨论变成人品评判，你就输在了起跑线上。<br><br>
+              <strong>「那你也可以搬走啊」——把选择变成二选一：忍受，或者承担全部搬迁成本。</strong>这句话不是真的建议，是威胁的礼貌版本。它的目的是<strong>让「重新谈规则」这个中间选项看起来不存在</strong>。注意它的巧妙之处：它把「改规则」和「撕破脸」绑在了一起，让你觉得只要提这件事，就是关系破裂的开始。<br><br>
+              <strong>十月电费降到 210 时主动说「还是老规矩」——这一句最能说明问题。</strong>如果「AA」真的是公平原则，那它在电费高的时候也应该成立、也应该被坚持；<strong>只在便宜的时候强调，说明它不是原则，是「对自己有利时的默认选项」。</strong><br><br>
+              <strong>最后回答那个问题：「为什么提出它、维护它的人，恰好永远是使用多的那一方？」</strong><br>
+              因为<strong>一个规则对谁有利，谁就会为它辩护</strong>。这不是恶意，是立场。<strong>而 ⑤ 的价值就在于：当有人用「公平」「大家都这样」「当初说好的」来包装一个规则时，你不必反驳他的动机，只需要算一遍——这个规则下，谁的账是正的，谁的账是负的。</strong>账算清楚，规则该怎么改，就不用争了。</div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">④ 落地行动</div>
+            <div class="a-v">
+              <strong>第一步：先把「AA」翻译成一个可计算的方案，再谈感受。</strong>不要从「你不公平」开始，从「我们换一种算法」开始。两个可选方案：<br>
+              <ul>
+                <li><strong>方案 A（推荐）：基础费平摊 + 用量费按实际分。</strong>水费、燃气费、宽带这类和人数强相关的继续对半；电费拆开——公共区域（客厅、厨房、卫生间）对半，各自房间按分表或按比例。没有分表可以装一个（几十块钱），或者先按在家时段估一个固定比例（比如 6:4），<strong>写下来，用三个月再看合不合理</strong>。</li>
+                <li><strong>方案 B（更简单）：设基准额度。</strong>每人每月认一个基准度数（比如 150 度），超出部分谁用谁付；夏天可以单独约定「空调另计」。<strong>它的好处是：不用装表，也不用互相盯着，超了就自然分开了。</strong></li>
+              </ul>
+              <strong>第二步：把话说成「我」，而不是「你」。</strong>可以说：「阿俊，我想跟你商量个算法。前几个月电费太高，我一个人出三百有点吃力——我不是说你用得多，是我白天基本不在家，按人头算对我来说确实不太合适。我写了个方案，你看看行不行？」<br>
+              <strong>这个结构值得记：说自己的困难（不评判对方）→ 承认对方也有付出 → 给出一个具体方案 → 请对方看方案。</strong>全程没有一句「你占了便宜」，但你要说的意思全在里面。<strong>而且因为是「方案」而不是「指责」，对方拒绝的成本变高了——拒绝一个具体方案，比反驳一句抱怨难得多。</strong><br><br>
+              <strong>第三步：应对「那你也可以搬走啊」。</strong>这句话的杀伤力来自「你不敢搬」。正确的应对不是生气，是<strong>把它放回桌面上算</strong>：「搬是要花钱的，我算过，押金加搬家加重新找房，两千多。我现在说的是先改算法；如果谈不成我再考虑搬，这是两件事。」<br>
+              <strong>把威胁换算成成本，威胁就变成一个可讨论的选项。</strong>同时你也要清楚：<strong>这句话本身就是一个信息——对方宁可让你搬走，也不愿意改规则。</strong>那你就知道这件事在他那儿的权重了，接下来的选择也就有了依据。<br><br>
+              <strong>第四步：给自己留退路。</strong>① <strong>留档</strong>——把每月的账单截图、分摊转账记录（备注写清「X 月水电燃气分摊」）存好，谈不拢时你有依据；② <strong>了解行情</strong>——查一下同小区同户型的租金和合租方式，<strong>心里有一个「搬走要花多少钱」的数字，你谈判时的底气完全不同</strong>；③ <strong>让步换规则</strong>——可以提出「从这个月开始按新算法，前面的不追溯」。<strong>把历史账让掉、换规则的改变，通常比纠缠历史更容易谈成</strong>，而且你真正想要的本来就是以后的公平，不是过去那一千块。<br><br>
+              <strong>第五步：记住那个通用提问。</strong>以后再遇到「大家都这样」「当初说好的」「这最公平」这类话，先问三句：<strong>① 这个规则对谁有利？② 它默认了什么前提？③ 那个前提现在还成立吗？</strong>三个问题问完，你就知道该不该接受这个「公平」——<strong>而不是被「那也太计较了」这句话替你决定。</strong></div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="foot">识暗心法 v2.0 · <b>2026年10月16日</b> · 每日三案（2 教 1 练）</div>
+
+</div>
+</body>
+</html>

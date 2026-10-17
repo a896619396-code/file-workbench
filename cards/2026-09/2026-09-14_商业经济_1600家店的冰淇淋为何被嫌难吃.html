@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-09-14 商业经济 · 1600家店的冰淇淋为何被嫌难吃</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">商业经济 · 01 类</span>
+    <div class="date">2026-09-14 周一 · 热点认知卡</div>
+    <h1>1600家店的冰淇淋为何被嫌难吃</h1>
+    <div class="sub">认知升级 · 每日一卡 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>9 月 12 日罗永浩发微博说野人先生冰淇淋"考虑到价格，甚至可以说难吃"，两天内话题冲到微博热搜第 2。这个品牌 2024 年 4 月才开放加盟，如今门店超 1600 家、加盟占比八成以上，直营店只剩 7 家。</p>
+<blockquote>
+<p>来源：搜狐·星河商业观察 <a href="https://www.sohu.com/a/1075796098_120321309">https://www.sohu.com/a/1075796098_120321309</a> ；百度百科·野人先生 <a href="https://baike.baidu.com/item/%E9%87%8E%E4%BA%BA%E5%85%88%E7%94%9F/66195337">https://baike.baidu.com/item/野人先生/66195337</a></p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <p><strong>办酒席：</strong>家里请 10 个人吃饭，妈妈能记住谁不吃辣、谁要少盐；办 50 桌婚宴，只能提前炖一大锅，来了都一样。不是厨师变懒了，是"照顾到每个人"这件事在规模面前根本不成立。</p>
+<p><strong>自己的车 vs 扫码的车：</strong>自己买的车刮一下心疼半天，定期洗车打蜡；路边扫码的共享单车，链条生锈也没人管。同一辆车、同一批人，产权一变，爱惜程度就变——品牌方的店和加盟商的店，就是这个区别。</p>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角 1：商业——扩张的钱不是风投给的，是加盟商掏的</h3>
+<p>这家公司成立以来没拿过外部融资、零负债，却开出 1600 家店。钱从哪来：加盟费约 30-40 万、单店投入 60-70 万，由加盟商出。品牌方用别人的资本跑出了自己的规模，代价是把"品质的最后一公里"交给了上千个独立老板。所以它真正的护城河不是店多，是供应链（奶浆由头部乳企标准化生产、设 AB 双供应商防断供）。</p></div>
+      <div class="view"><h3>视角 2：数据——同一门生意，两条方向相反的曲线</h3>
+<p>门店这一侧在猛涨，冰柜那一侧在退潮。看数据比听骂声有用：</p>
+<table>
+<tr><th>观察面</th><th>关键数字</th></tr>
+<tr><td>门店侧（现制）</td><td>2024 年新开 244 家 → 2025 年新开 916 家；2025 年闭店率仅 3.75%</td></tr>
+<tr><td>冰柜侧（预包装）</td><td>12 元以上高价雪糕销售额占比：2023 年 5.99% → 2025 年 3.95%；3-5 元平价雪糕占约 45%</td></tr>
+<tr><td>对照组</td><td>钟薛高 2021 年销售额破 10 亿，2025 年破产审查时账面资产 1.86 亿 vs 到期债务 7.82 亿</td></tr>
+</table>
+<p>结论：真正的对手不是一条差评，是"贵得不值"这四个字。闭店率 3.75% 说明它的单店模型还活着，这是它比钟薛高强的地方。</p></div>
+      <div class="view"><h3>视角 3：舆论——评论区为什么齐刷"不要回答"</h3>
+<p>网友刷的是《三体》梗，但算的是现实账：2025 年 9 月西贝被吐槽预制菜，创始人扬言起诉索赔 1000 万，随后舆论反转、公开道歉、门店受冲击。当"贵"已经写进公众预期，任何回应都会被读成"傲慢"，沉默反而是成本最低的选择。这不是怂，是权衡过的博弈。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>规模不经济（Diseconomies of Scale）</h4><ul>
+<li><strong>一句话</strong>：规模越大，"每家店都一样"就越贵；当维持一致性的成本涨得比收入快，扩张就从加分项变成扣分项。</li>
+<li><strong>生活类比</strong>：① 给 10 个人做饭能照顾口味，办 50 桌婚宴只能大锅菜 ② 手写 10 张贺卡字迹漂亮，印 1000 张只能套模板 ③ 师傅带 3 个徒弟能手把手教，带 300 个只能发手册</li>
+</ul>
+<blockquote><p><strong>反差点</strong>：品牌方强调"从来没有过店面数量方面的考核目标"，但 2025 年一年就新开了 916 家店。嘴上不追数字，数字自己在跑——说明真正驱动扩张的从来不是考核表，是加盟商的钱和回本预期。</p></blockquote></div>
+      <div class="model"><h4>代理成本（Agency Cost）</h4><ul>
+<li><strong>一句话</strong>：干活的和承担后果的不是同一批人时，标准会被悄悄放松，而且没人觉得自己在偷懒。</li>
+<li><strong>生活类比</strong>：① 自己的车刮一下心疼，扫码的单车链条生锈没人管 ② 花自己钱吃饭点菜手会抖，报销的饭局点菜手不抖 ③ 租的房子懒得刷墙，自己的房子连地漏都要挑</li>
+</ul></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：这道题最该看的不是"1600 家"这个总数，而是三个口径——加盟占比超 80%、直营仅 7 家、闭店率 3.75%。同一组数字，换口径讲出的故事完全相反（"高速扩张" vs "品质失控"）。做分析的第一课就是先问"这个数是按什么口径算的"，口径一错，后面全错。</li>
+<li><span class="kw">《认知觉醒》呼应</span>：周岭讲能力圈要一点点扩。这家品牌前 13 年只开几十家店、打磨单店模型，2024 年开放加盟后一年 244 家、次年 916 家——扩张速度远超组织能力的成长速度。个人学习同理：一天刷完 3 本书不叫进步，能把 1 本书的方法用出来才算。</li>
+<li><span class="kw">《底层逻辑》呼应</span>：刘润讲"利润来自别人做不到的事"。"当天现做、拒绝隔夜"本来是这个品牌最硬的差异化，但 1600 家店之后，只能靠中央工厂的冷冻奶浆配送到店再加工——差异化一旦被自己规模化，就不再是差异化。你手上值钱的本事，也怕被自己无限复制。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p class="lead">今天做一次 15 分钟的"瓶颈测试"，任选一个你在用的连锁品牌（奶茶、咖啡、便利店都行）：</p>
+<blockquote><p>① 查它现在有多少家店、最近一年新开多少家（品牌官网或窄门餐眼）；② 在社交平台搜"品牌名 + 变差 / 难吃"，看差评集中在哪一环（口味、分量、服务、卫生）；③ 写一句话回答：如果它的门店再翻一倍，这一环撑得住吗？</p></blockquote>
+        <p>这就是最便宜的行业调研——练的不是搜集资料，是从一堆数字里认出"哪一环会先崩"。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">代理成本</span> <span class="en">(Agency Cost)</span>：老板和执行者不是同一人时，因为目标不完全一致而多出来的损耗。类比：请人帮你搬家，对方不会像你自己那样心疼墙皮。</p></div>
+      <div class="dict"><p><span class="term">单店模型</span> <span class="en">(Unit Economics)</span>：一家店单独算账能不能赚钱——收入减掉原料、房租、人工，看多久回本。类比：先算清"一天卖多少个煎饼才不亏"，再谈开 100 家。</p></div>
+      <div class="dict"><p><span class="term">闭店率</span> <span class="en">(Closure Rate)</span>：一年里关掉的店占开店数的比例，是判断"扩张健不健康"的体检指标。类比：招 100 个新人，一年内走了几个——走太多，说明招人标准出了问题。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

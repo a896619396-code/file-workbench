@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>识暗心法 · 周复盘 · 2026年10月11日 周日</title>
+<style>
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;
+  --surface:#ffffff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;--pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;
+  --blue-600:#3a6ea5;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --fs-xs:11.5px;--fs-sm:12.5px;--fs-base:14.5px;--fs-md:15.5px;--fs-lg:17px;--fs-xl:20px;--fs-2xl:24px;
+  --lh-tight:1.42;--lh-body:1.78;--lh-loose:1.95;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --shadow-md:0 4px 8px rgba(180,90,120,.09),0 12px 28px rgba(180,90,120,.12);
+  --shadow-lg:0 8px 18px rgba(120,60,90,.12),0 20px 44px rgba(120,60,90,.14);
+  --radius:16px;--radius-sm:10px;--radius-xs:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  background:radial-gradient(1100px 500px at 85% -5%,rgba(244,150,190,.14),transparent 60%),radial-gradient(900px 420px at -10% 12%,rgba(190,160,235,.12),transparent 55%),linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  background-attachment:fixed;
+  color:var(--ink);font-size:var(--fs-base);line-height:var(--lh-body);letter-spacing:.01em;
+  padding-bottom:70px;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+::selection{background:var(--pink-300);color:#fff}
+/* 顶栏 */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,246,249,.85);
+  backdrop-filter:blur(14px) saturate(1.4);
+  -webkit-backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid rgba(226,198,210,.55);
+}
+.topbar-inner{max-width:960px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.brand-logo{
+  width:40px;height:40px;border-radius:12px;flex:none;
+  background:linear-gradient(135deg,var(--pink-500) 0%,var(--pink-600) 55%,var(--purple-600) 100%);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:800;
+  box-shadow:var(--shadow-sm),inset 0 1px 0 rgba(255,255,255,.25);letter-spacing:0;
+}
+.brand-title{font-size:17px;font-weight:800;letter-spacing:.02em;line-height:1.32;color:var(--ink)}
+.brand-sub{font-size:11px;color:var(--ink-3);font-weight:600;letter-spacing:.08em;margin-top:1px}
+/* 主容器 */
+.container{max-width:960px;margin:0 auto;padding:26px 22px 0}
+/* 今日抬头 */
+.day-head{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-sm);margin-bottom:20px;
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;position:relative;overflow:hidden;
+}
+.day-head::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300));opacity:.9;
+}
+.day-title{font-size:var(--fs-2xl);font-weight:800;letter-spacing:.015em;line-height:var(--lh-tight)}
+.day-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-sm);font-weight:700;
+  padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);
+  border:1px solid rgba(212,61,111,.14);
+}
+.day-badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.day-badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.day-badge.gold{background:var(--gold-100);color:var(--gold-700);border-color:rgba(185,131,17,.16)}
+.day-badge.blue{background:var(--blue-100);color:var(--blue-600);border-color:rgba(58,110,165,.14)}
+.day-meta{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+/* 统计小卡 */
+.stat-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.stat-card{
+  flex:1 1 150px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:14px 16px;box-shadow:var(--shadow-xs);display:flex;flex-direction:column;gap:3px;
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.stat-card:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.stat-n{font-size:22px;font-weight:800;color:var(--pink-600);line-height:1.15;letter-spacing:0}
+.stat-l{font-size:12px;color:var(--ink-2);font-weight:600}
+.stat-n .u{font-size:12.5px;color:var(--ink-3);font-weight:700;margin-left:3px}
+/* 区块 */
+.section{
+  margin-bottom:22px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface);
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.section:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.section-head{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--border)}
+.section-head .icon{
+  width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;letter-spacing:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+  background:linear-gradient(135deg,var(--pink-500),var(--purple-600));
+}
+.section-title{font-size:var(--fs-lg);font-weight:800;flex:1;min-width:0;line-height:var(--lh-tight);letter-spacing:.01em}
+.section-sub{font-size:12px;color:var(--ink-3);font-weight:600;white-space:nowrap}
+.section-body{padding:20px 24px 24px}
+/* 本周回顾表格 */
+.week-table{width:100%;border-collapse:collapse;font-size:var(--fs-sm)}
+.week-table th{
+  background:var(--pink-050);color:var(--pink-700);font-size:11.5px;font-weight:800;letter-spacing:.06em;
+  padding:10px 12px;text-align:left;border-bottom:2px solid var(--pink-100);
+}
+.week-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:#51404a;vertical-align:top}
+.week-table tr:last-child td{border-bottom:none}
+.week-table tr:hover td{background:var(--surface-tint)}
+.week-table .wday{font-weight:800;color:var(--ink);white-space:nowrap}
+.week-table .scene{display:block;font-size:11.5px;color:var(--ink-3);margin-top:3px;line-height:1.6}
+.week-table .done{color:var(--green-600);font-weight:700;white-space:nowrap}
+.week-table .miss{color:var(--ink-3);font-weight:700;white-space:nowrap}
+.week-table .mk{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;margin:1px 2px;background:var(--pink-100);color:var(--pink-700)}
+.week-table .mk.practice{background:var(--purple-100);color:var(--purple-700)}
+.week-table .mk.gold{background:var(--gold-100);color:var(--gold-700)}
+.week-table tr.miss-row td{background:var(--surface-soft);opacity:.72}
+/* 心法覆盖条 */
+.cover-grid{display:flex;flex-wrap:wrap;gap:9px}
+.cover-item{
+  flex:1 1 120px;display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center;
+  background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 8px;
+  transition:all .2s ease;
+}
+.cover-item:hover{border-color:var(--pink-300);background:var(--surface-tint);transform:translateY(-1px)}
+.cover-item .c-n{font-size:13.5px;font-weight:800;color:var(--ink);letter-spacing:0}
+.cover-item .c-t{font-size:10.5px;color:var(--ink-2);font-weight:600}
+.cover-item .c-c{font-size:10px;font-weight:800;color:var(--pink-600);background:var(--pink-100);padding:1px 8px;border-radius:999px;margin-top:3px}
+.cover-item .c-c.hot{color:var(--gold-700);background:var(--gold-100)}
+.cover-item .c-c.low{color:var(--ink-2);background:#efe6ec}
+/* 载体速览 */
+.chip-wrap{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:11.5px;font-weight:600;color:#5f4c57;background:var(--surface-soft);border:1px solid var(--border);border-radius:999px;padding:3px 11px}
+.chip b{color:var(--pink-700);font-weight:800}
+/* 复盘提问 */
+.q-card{
+  border:1px solid var(--border);border-radius:var(--radius-sm);
+  background:var(--surface-soft);padding:15px 17px;margin-bottom:12px;
+}
+.q-card:last-child{margin-bottom:0}
+.q-k{font-size:12px;font-weight:800;color:var(--purple-700);letter-spacing:.06em;margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.q-k .qn{
+  width:21px;height:21px;border-radius:7px;background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.q-v{font-size:var(--fs-base);color:#4d3c44;line-height:1.75}
+.q-v strong{color:var(--ink)}
+/* 复盘折叠（先回忆再展开） */
+details.review{
+  margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;transition:border-color .2s ease;
+}
+details.review[open]{border-color:var(--pink-300)}
+details.review summary{
+  cursor:pointer;padding:14px 19px;font-size:15px;font-weight:800;color:var(--ink);
+  display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);
+  list-style:none;transition:background .2s ease;
+}
+details.review summary:hover{background:var(--pink-050)}
+details.review summary::-webkit-details-marker{display:none}
+details.review summary .arr{
+  width:22px;height:22px;border-radius:7px;background:var(--pink-100);color:var(--pink-700);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+  transition:transform .25s ease,background .2s ease;
+}
+details.review[open] summary .arr{transform:rotate(90deg);background:var(--pink-600);color:#fff}
+details.review summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.review .review-body{padding:18px 21px;border-top:1px dashed var(--border-strong);background:var(--surface)}
+.review-item{margin-bottom:14px;padding-left:15px;border-left:3px solid var(--pink-100)}
+.review-item:last-child{margin-bottom:0}
+.review-item .r-k{font-size:12px;font-weight:800;color:var(--pink-700);margin-bottom:4px;letter-spacing:.06em}
+.review-item .r-v{font-size:var(--fs-base);color:#4d3c44;line-height:1.75}
+.review-item .r-s{display:inline-block;font-size:11px;font-weight:700;color:var(--ink-2);background:var(--pink-050);border:1px solid var(--border);border-radius:999px;padding:1px 9px;margin:3px 3px 0 0}
+/* 下周预告 */
+.next-week{display:flex;flex-wrap:wrap;gap:9px}
+.nw-item{
+  flex:1 1 250px;background:var(--surface-soft);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:12px 14px;transition:all .2s ease;
+}
+.nw-item:hover{border-color:var(--pink-300);background:var(--surface-tint);transform:translateY(-1px)}
+.nw-item .nw-d{font-size:12px;font-weight:800;color:var(--pink-700);margin-bottom:7px;letter-spacing:.04em;display:flex;align-items:center;gap:7px}
+.nw-item .nw-d .n{
+  width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.nw-item .nw-c{font-size:12.5px;color:#5f4c57;line-height:1.7}
+.nw-item .nw-c b{color:var(--ink)}
+/* 提示条 */
+.tip-box{
+  background:var(--gold-100);border:1px solid rgba(185,131,17,.2);border-radius:var(--radius-sm);
+  padding:13px 16px;font-size:var(--fs-sm);color:#6b4a06;line-height:1.75;
+}
+.tip-box b{color:var(--gold-700)}
+/* 底部 */
+.foot-note{max-width:960px;margin:30px auto 0;padding:0 22px;font-size:12px;color:var(--ink-3);line-height:1.9}
+.foot-note b{color:var(--ink-2)}
+/* 移动端自适应 */
+@media (max-width:680px){
+  .topbar-inner{padding:11px 16px}
+  .day-meta{margin-left:0}
+  .section-body{padding:16px 18px 20px}
+  .section-head{padding:14px 16px}
+  .section-title{font-size:15.5px}
+  .section-sub{display:none}
+  .container{padding:20px 14px 0}
+  .day-title{font-size:20px}
+  .week-table{font-size:11.5px}
+  .week-table th,.week-table td{padding:8px 8px}
+  details.review summary{font-size:14px;padding:13px 15px}
+  details.review summary .hint{display:none}
+  details.review .review-body{padding:15px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">暗</div>
+      <div>
+        <div class="brand-title">识暗心法</div>
+        <div class="brand-sub">v2.0 · 每日3案例 · 2教1练</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 顶部标题卡片 -->
+  <div class="day-head">
+    <div>
+      <div class="day-title">2026年10月11日 · 周日 · 本周复盘</div>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="day-badge">本周第 7 天</span>
+        <span class="day-badge gold">📋 周复盘：2026.10.5 ~ 10.10</span>
+        <span class="day-badge blue">📌 实收 4 天 · 12 案例（10.5 / 10.6 缺）</span>
+      </div>
+    </div>
+    <div class="day-meta">
+      <span class="day-badge purple">💡 周日休息 · 只回顾不新学</span>
+    </div>
+  </div>
+
+  <!-- 本周数据统计 -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-n">12<span class="u">个案例</span></div>
+      <div class="stat-l">实际 4 天 · 8 教 + 4 练</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-n">8<span class="u">条心法</span></div>
+      <div class="stat-l">仍全覆盖 · 强度不均</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-n">3<span class="u">次最高</span></div>
+      <div class="stat-l">⑦ 不透底居首</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-n">2<span class="u">天缺席</span></div>
+      <div class="stat-l">10.5 / 10.6 未生成</div>
+    </div>
+  </div>
+
+  <!-- 本周回顾表格 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="icon">📅</span>
+      <span class="section-title">本周回顾</span>
+      <span class="section-sub">看场景回忆当时的判断</span>
+    </div>
+    <div class="section-body">
+      <table class="week-table">
+        <thead>
+          <tr>
+            <th>日期</th>
+            <th>教学案例①</th>
+            <th>教学案例②</th>
+            <th>练习（考察）</th>
+            <th>完成</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="miss-row">
+            <td class="wday">10.5 周一</td>
+            <td colspan="3" style="color:var(--ink-3)">未生成 —— 原定 ① 默认预设 · ② 利益倒推 / 练 ③ 警觉信号</td>
+            <td class="miss">—</td>
+          </tr>
+          <tr class="miss-row">
+            <td class="wday">10.6 周二</td>
+            <td colspan="3" style="color:var(--ink-3)">未生成 —— 原定 ④ 信息不对称 · ⑤ 零和默认 / 练 ⑥ 留一手</td>
+            <td class="miss">—</td>
+          </tr>
+          <tr>
+            <td class="wday">10.7 周三</td>
+            <td><span class="mk">⑦ 不透底</span><span class="scene">开锁师傅进门前的四句话，报价从 80 变 660</span></td>
+            <td><span class="mk">⑧ 测试代替信任</span><span class="scene">隐形车衣四条承诺，四个测试全被挡回</span></td>
+            <td><span class="mk practice">① 默认预设</span><span class="scene">陈姨「你出差就交给我」，拿走了钥匙与现金</span></td>
+            <td class="done">✓</td>
+          </tr>
+          <tr>
+            <td class="wday">10.8 周四</td>
+            <td><span class="mk">③ 警觉信号</span><span class="scene">「我们双倍赔付您」——一个主动给你钱的电话</span></td>
+            <td><span class="mk">⑥ 留一手</span><span class="scene">装空调那天没拍的那张照片，返工 1120 自出</span></td>
+            <td><span class="mk practice">② 利益倒推</span><span class="scene">导购大姐一句「这款你别买」，提成差 250</span></td>
+            <td class="done">✓</td>
+          </tr>
+          <tr>
+            <td class="wday">10.9 周五</td>
+            <td><span class="mk">④ 信息不对称</span><span class="scene">付了干洗费，却没干洗：缩水 3 厘米的大衣</span></td>
+            <td><span class="mk">⑦ 不透底</span><span class="scene">续租三句话，把「我有多不想搬」说光了</span></td>
+            <td><span class="mk practice">⑤ 零和默认</span><span class="scene">「一人一半，公平吧？」5600 里转出 2800</span></td>
+            <td class="done">✓</td>
+          </tr>
+          <tr>
+            <td class="wday">10.10 周六</td>
+            <td><span class="mk gold">⑧ 测试代替信任</span><span class="scene">开荒保洁三条承诺，唯一可落纸的那条被拒写</span></td>
+            <td><span class="mk gold">① 默认预设</span><span class="scene">三个月照顾，换来一张 1200 的报销单签字</span></td>
+            <td><span class="mk gold practice">⑦ 不透底（综合）</span><span class="scene">家电清洗不问钱先问房，报价从 280 到 610</span></td>
+            <td class="done">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 心法覆盖条 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="icon">🎯</span>
+      <span class="section-title">本周心法覆盖</span>
+      <span class="section-sub">12 案例分布 · 强度不均</span>
+    </div>
+    <div class="section-body">
+      <div class="cover-grid">
+        <div class="cover-item"><div class="c-n">① 默认预设</div><div class="c-t">先当对手算</div><div class="c-c hot">2 次</div></div>
+        <div class="cover-item"><div class="c-n">② 利益倒推</div><div class="c-t">看谁得利</div><div class="c-c low">1 次</div></div>
+        <div class="cover-item"><div class="c-n">③ 警觉信号</div><div class="c-t">反常即是信号</div><div class="c-c low">1 次</div></div>
+        <div class="cover-item"><div class="c-n">④ 信息不对称</div><div class="c-t">先补信息再表态</div><div class="c-c low">1 次</div></div>
+        <div class="cover-item"><div class="c-n">⑤ 零和默认</div><div class="c-t">先看蛋糕多大</div><div class="c-c low">1 次</div></div>
+        <div class="cover-item"><div class="c-n">⑥ 留一手</div><div class="c-t">牌不打完</div><div class="c-c low">1 次</div></div>
+        <div class="cover-item"><div class="c-n">⑦ 不透底</div><div class="c-t">底牌不亮</div><div class="c-c hot">3 次</div></div>
+        <div class="cover-item"><div class="c-n">⑧ 测试代替信任</div><div class="c-t">小测试见真章</div><div class="c-c hot">2 次</div></div>
+      </div>
+      <div style="margin-top:14px" class="tip-box">
+        <b>⚠️ 本周强度提醒：</b>因 10.5、10.6 两天未生成，<b>②③④⑤⑥</b> 五条心法本周只出现 1 次，低于「每法 ≥2 次」的螺旋标准。
+        本周只有 4 条心法拿到练习机会（<b>①②⑤⑦</b>），<b>③④⑥⑧</b> 全部是「只教未练」——其中 <b>⑧</b> 在 10.7 与 10.10 教了两次，一次都没练过。
+      </div>
+    </div>
+  </div>
+
+  <!-- 本周载体速览 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="icon">🧩</span>
+      <span class="section-title">本周场景载体速览</span>
+      <span class="section-sub">全部换新，无重复套路</span>
+    </div>
+    <div class="section-body">
+      <div class="chip-wrap">
+        <span class="chip"><b>①</b> 邻居「我帮你盯工地」拿走钥匙+清单+现金 · 老员工三个月照顾换代签报销单</span>
+        <span class="chip"><b>②</b> 家电卖场导购「这款你别买」反向推荐高提成机型</span>
+        <span class="chip"><b>③</b> 陌生来电自称售后「双倍赔付」，八条信号成串</span>
+        <span class="chip"><b>④</b> 干洗店付了干洗费却没干洗 · 洗涤工艺不可验证</span>
+        <span class="chip"><b>⑤</b> 朋友合伙接单按人头平分，一次没算清就成了默认规则</span>
+        <span class="chip"><b>⑥</b> 空调上门安装的四个凭证空白位</span>
+        <span class="chip"><b>⑦</b> 开锁前四句话 · 续租三句话 · 家电清洗「不问钱问房」</span>
+        <span class="chip"><b>⑧</b> 隐形车衣四测试全拒 · 开荒保洁三条承诺拒写「不加价」</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 复盘提问 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="icon">🧠</span>
+      <span class="section-title">复盘提问 · 6 问</span>
+    </div>
+    <div class="section-body">
+      <div class="q-card">
+        <div class="q-k"><span class="qn">1</span>本周哪条心法最让你有共鸣？具体是哪个场景？</div>
+        <div class="q-v">本周 <strong>⑦ 不透底</strong> 出现 3 次，是唯一「教两次 + 练一次」的心法，而且三次的探底方式完全不同：开锁师傅问的是「你是不是一个人住」，房东听的是「我住得挺习惯」，清洗师傅问的是「你家油烟机几年没洗」。三次都没问钱，问的全是你的<strong>处境</strong>。哪一个场景让你最警觉？</div>
+      </div>
+      <div class="q-card">
+        <div class="q-k"><span class="qn">2</span>本周你有没有真的用上心法、避开了一次坑？</div>
+        <div class="q-v">本周「<strong>免费 / 不加价 / 双倍赔</strong>」三个词全都出现过：开荒保洁说「明码标价，一分不加」，陌生来电说「双倍赔付您 598」，隐形车衣说「不满意全额退」。这周你遇到「对方主动给你好处」时，第一反应是接受，还是先算一算<strong>兑现这一步他要付什么成本</strong>？</div>
+      </div>
+      <div class="q-card">
+        <div class="q-k"><span class="qn">3</span>哪条心法你觉得最难应用？卡在哪里？</div>
+        <div class="q-v">是 ⑦ 里「别人随口一问、你随口一答」的那一瞬间（开锁那四句话、清洗那七个问题），还是 ⑥ 里「师傅就在旁边，不好意思掏手机拍一张墙」？这两个卡点其实是同一个：现场的气氛让你觉得<strong>多问一句、多拍一张很失礼</strong>。记下你的卡点，下周刻意补练。</div>
+      </div>
+      <div class="q-card">
+        <div class="q-k"><span class="qn">4</span>本周有没有某个瞬间，你「事后才反应过来」本可以用心法识别？</div>
+        <div class="q-v">本周场景有一个共同的时间背景：<strong>国庆假期收尾、节后促销最后一天</strong>——装修赶工、家电清仓、房东催答复、冬衣送洗。这类时点的共同点是：你急着把事情办完，对方急着在假期结束前成单。把你事后才反应过来的那个瞬间写下来，它是下周最真实的靶场。</div>
+      </div>
+      <div class="q-card">
+        <div class="q-k"><span class="qn">5</span>本周 4 个练习（①②⑤⑦）你答对了几条？错在哪一步？</div>
+        <div class="q-v">错题价值高于对题：是<strong>现象识别</strong>漏了细节，还是<strong>动机归因</strong>想反了方向，或是<strong>落地行动</strong>给不出具体做法？另外本周出现一个新情况：<strong>⑧ 教了两次却一次都没练</strong>——你试着把那两次的测试设计（车衣四个测试、保洁三个测试）自己复述一遍。<strong>设计测试的能力，比识别套路更值钱。</strong></div>
+      </div>
+      <div class="q-card">
+        <div class="q-k"><span class="qn">6</span>给本周的自己打几分（1-10）？为什么？</div>
+        <div class="q-v">打分不是评价，是校准：低分找差距，高分别松懈，分数要配上理由。另外——本周又缺了两天（10.5、10.6），这是<strong>连续第二周出现两天缺口</strong>（上一周是 9.28、10.2）。打分的时候顺便想一想：<strong>缺卡的两天，是没时间，还是觉得「今天没什么可练的」？</strong></div>
+      </div>
+      <details class="review">
+        <summary>
+          <span class="arr">▶</span>
+          本周回顾 · 先自己回忆再展开
+          <span class="hint">点开对照每日组合与场景</span>
+        </summary>
+        <div class="review-body">
+          <div class="review-item">
+            <div class="r-k">周一 10.5 · 未生成（原定 ①默认预设 / ②利益倒推 / 练 ③警觉信号）</div>
+            <div class="r-v">该日未生成卡片，本周对应心法强度不足。可自行回看 9.21 的同组合（短视频「免费领养布偶猫」绑定条件 + 摆摊位置被竞争者劝退 + 金店一口价三金）做补充练习。</div>
+            <span class="r-s">建议回看 9.21</span>
+          </div>
+          <div class="review-item">
+            <div class="r-k">周二 10.6 · 未生成（原定 ④信息不对称 / ⑤零和默认 / 练 ⑥留一手）</div>
+            <div class="r-v">该日未生成卡片。可回看 9.22 的同组合（防水补漏按斤计价 + 婚礼随礼统一 800 + 兴趣班年费口头承诺）做补充练习。</div>
+            <span class="r-s">建议回看 9.22</span>
+          </div>
+          <div class="review-item">
+            <div class="r-k">周三 10.7 · ⑦不透底 / ⑧测试代替信任 / 练 ①默认预设</div>
+            <div class="r-v">国庆最后一天晚 7:30，钥匙落屋里，室友回老家、房东在隔壁市。楼道小广告电话里只报「开锁八十，二十分钟到」；师傅到了不先蹲下看锁，先问四句：这房子是你自己的还是租的？家里有人吗，就你一个住？身份证、钱包是不是都在里面？今晚得进去住吧，明天上班？问完才看一眼锁孔：「你这是 B 级锁芯，技术开不了，只能破坏性开，二百八」，再补「锁芯也废了，B 级锁芯三百八，一共六百六」和一句「你身份证在里面，明天要上班，我不着急」。小岑付了 660。物业说同款 B 级锁芯五金店一百二，那位师傅在派出所备案记录里光是「上门后临时加价」的投诉就有六条——「你一说完，价就归他定了」。四句话里没有一句跟锁有关，全是「人」。隐形车衣「进口 TPU，十年不发黄、起泡开边免费整片重贴、不满意当场撕掉全额退款」，原价 12800 国庆特惠 6800。小岑提四个测试，全被拒：看整卷原包装扫防伪码——「原包装在总部仓库」；回访三位老车主——「客户信息是隐私」；把三条承诺写进施工单双方签字——「这一行都是口头承诺」；先只贴一个引擎盖六百试一周——「整卷下料，剩下的料就废了」。四个理由各自成立，方向完全一致：拒绝任何形式的先验证。他改去一家开了十二年的老店：当场搬膜卷扫防伪码、型号质保写单签字、先贴引擎盖 500 试一周，全车 5200。一个月后促销店车主车衣泛黄开边，翻遍手机只有一张手写收据「车衣施工 6800」。邻居陈姨「你出差就交给我」：新房半包开工，小岑出差半个月，陈姨主动盯工地，拿走钥匙、材料清单和两千块现金；回来少两箱 800×800 砖（清单 46 片、现场 34 片）、现金只剩 800，理由分别是「怕你不喜欢让你表哥先搬走了」和「现钱哪记得那么清」。后来拼出三件事：她表弟在小区门口开五金店，辅料正是从他那买的、贵一成；她家去年也用同样名义借走楼上邻居整套电动工具至今没还；那两箱砖铺的正是她表哥家客厅。热情可以是真心的，但「示好」不等于「无害」。</div>
+            <span class="r-s">与标的无关的问题就是探底</span><span class="r-s">拒绝验证的承诺默认不存在</span><span class="r-s">示好不等于无害</span>
+          </div>
+          <div class="review-item">
+            <div class="r-k">周四 10.8 · ③警觉信号 / ⑥留一手 / 练 ②利益倒推</div>
+            <div class="r-v">10 月 6 日下午三点多，外地号码自称「××商城售后理赔部」，准确报出 9 月 12 日订单尾号 3871、299 元的灰色跑鞋，说「平台统一双倍赔付您 598」，要加微信、点链接、填银行卡；质疑走 APP 退款——「质量问题赔付 APP 没有入口」；催「今晚十二点通道关闭」；要打官方客服——「您别打，客服不知道这个活动，我们也不想闹大，您也别到处说」。八条信号方向完全一致：把你从官方渠道拽到一个只有你和他、没有任何记录的地方。小岑走 APP 官方客服核实，确认是诈骗；同栋楼六楼阿姨接了同样的电话，填了卡号和验证码，被转走 8600。品牌旗舰店买的空调 2780 含基础安装，第三方网点师傅上门先说加长铜管三米 360、支架 80、打孔 50、六楼高空费 100，一共 590 扫码付；打孔时被一句「你把阳台门关上，别让灰进去」支开；装完递手机让签字「确认安装完成」。一周后发现墙面裂纹 30 厘米、支架右低左高、铜管保温棉被拉破；官方售后说「安装是第三方网点承接的，个性化服务项目不在整机保修内」，翻手机没有工单号、没有师傅姓名、没有网点电话，短信里的链接显示「该工单已失效」；相册里那天只有两张照片——门口的快递箱和装好的挂机。返工 1120 全自出。四个凭证空白位：安装前的墙面地面、590 的辅材明细、网点名称与工单号、师傅姓名电话——事后想争的每一件事，正好都是事前没留的那一样。家电卖场节后最后一天促销，小岑看中国产滚筒 3299 活动价 2899，导购大姐走过来先看他站的位置，开口第一句「这款你别买」：返修率高、线上专供简配、铝线电机用两年就烧，转推贵一千五的进口电机十年质保；追问看中的那款有没有货——「没货了，仓库要等一个月」。小岑晚上做了三件事：问另一个品牌导购（参数页写的是铜线）、查电商 4000 多条评价（差评集中在物流和说明书）、打电话给同品牌另一家门店（「有货啊，你要几台」）。做家电的朋友点破：卖场推哪款不看哪款好，看哪款提成高——老三年的机型一台提成五十，新上的那款一台提成三百。她的每句话都可能是真的，但决定她开口方向的是她的收益结构。</div>
+            <span class="r-s">八条信号成串</span><span class="r-s">凭证空白位即争议点</span><span class="r-s">别听建议听收益</span>
+          </div>
+          <div class="review-item">
+            <div class="r-k">周五 10.9 · ④信息不对称 / ⑦不透底 / 练 ⑤零和默认</div>
+            <div class="r-v">一件米白羊绒混纺大衣（1680 元，标签写着「仅可干洗」）送进小区门口新开的洗衣店。姑娘翻了一下标签：「羊毛的，得干洗。六十块，三天取。」问「自己洗还是送厂」，她指指后面：「我们后面有干洗机。」手写单只有两行：大衣 1 件、干洗 60。三天后取衣：缩水 3 厘米、内衬起球、下摆一块灰色串色印。店员三挡——「羊毛洗了都会缩是正常的」／「客人的衣服混在一起洗，没有单独记录」／「我们不做记录，监控前两天坏了」。老洗衣店师傅点破：内衬是聚酯纤维，水洗才起球；干洗机一台十几万加四氯乙烯溶剂，开一次机成本两三百，六十块不可能为你开一次机，攒够一缸才开、攒不够就水洗加熨烫。给一件事贴上名字，不等于做了这件事；愿意提供的信息全部免费，能验证的信息全部无法提供。房东来电「房子还续吗」，小岑答「续啊，我住得挺习惯的，离公司骑车十分钟，东西也都搬过来了，再搬一次太麻烦」——电话那头停顿两三秒，然后「3200 太低了，小区都租到 3500 了」；他又补第二句「我住了两年房租一次没拖过，房子也一直爱护着」——「上周有人出 3600 我都没答应，就 3500，明天答复」。查证：同栋同户型挂 3300 一个多月租不出、隔壁 402 续租只涨 100、小区挂牌 3100~3500；最后签 3500，一年涨 3600。暴露的不是预算，是「我有多不想搬」——搬迁成本一旦被知道，涨价就成了零风险操作。练习：小岑接咖啡馆 3 条宣传视频 3000 元，找做摄影的朋友阿哲合作，他负责谈客户、写脚本、定方案、剪三条（15 小时），阿哲扛设备拍半天素材（4 小时，设备自带）；阿哲微信「3000 一人 1500，兄弟之间别算那么细，公平」。老板后续又找小岑两次共 2600 元，阿哲均未参与，小岑「不好意思改口」继续分一半：累计收 5600、转出 2800。「一人一半」假设了投入相等、且一次合作＝长期分成，两条前提都不成立。</div>
+            <span class="r-s">贴标签不等于做事</span><span class="r-s">暴露的不是预算是不想搬</span><span class="r-s">没算清的账会变成默认规则</span>
+          </div>
+          <div class="review-item">
+            <div class="r-k">周六 10.10（综合）· ⑧测试代替信任 / ①默认预设 / 练 ⑦不透底</div>
+            <div class="r-v">装修后的开荒保洁，电梯小广告写着「洁净到家 · 明码标价 · 5 人 4 小时 · 不满意重做」，电话里报「三室一厅 780，5 个人 4 小时，玻璃、地面、柜子全含，一分钱不加」。三个零成本测试全被拒：把「不加价、全含玻璃柜内」写进订单备注——「备注客户看不到，我们从来不写这个」；要当天工人名单与意外险——「工人当天派，定不下来」；先只做厨房一间按比例付费——「套餐不拆，来回一趟人工不够」。10 月 8 日来了三个人、干了两个半小时，结账 1250：外窗高空 200 ＋ 油烟机拆洗 150 ＋ 柜内清洁 120；「780 是基础价，加了活得加钱」「重做可以，明天再来一趟不收钱」——而「干净」的标准由对方判定。同事上个月同规格 580 全含、逐条写进合同、还签了验收单。三条承诺里只有「不加价」能落纸、能追责，而它恰好是唯一被拒绝写下来的一条。小岑入职三个月，老员工老谭（八年工龄）照顾有加：带流程、挡两次加班、给过一份旧资料；六月中旬在楼梯间递来一张 1200 元报销单，「我额度用完了，你帮我走一下，给你 200 跑腿费」「你额度空着也是空着，又不是你出钱，都是小事」；七月又签一次。八月审计查出同一家餐厅一个月 6 张 1200 连号发票，两张是小岑签的字——小岑通报批评加扣季度奖 3000，老谭仅「谈话提醒」，而且前两任助理都做过同样的事、都做不满一年。他付出的是两次加班八小时和一份旧资料，拿走的是 2400 元和两个可签字的「名字」；「为什么来找入职三个月的我」本身就是答案。练习：上门家电清洗，电话报价油烟机 150、洗衣机 150、两台 280；师傅进门不问机器先问人（自己的还是租的／自己住吗／几口人／做饭多不多／几年没洗／上次谁洗的／有小孩吗／洗内衣还是外衣），小岑随口全答；拆开外壳后报「重度油污拆洗 380」＋「洗内衣必须高温杀菌 150」＋「老款密封圈老化换 80」＝610；网上同款拆洗 180~260、杀菌 60~100、密封圈 20。不问你的钱，问你的房——套的不是预算，是「状况」。</div>
+            <span class="r-s">被拒写的那条才是不打算兑现的</span><span class="r-s">付出密度超出关系深度，差额即利息</span><span class="r-s">不问钱，问房</span>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- 下周预告 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="icon">🔮</span>
+      <span class="section-title">下周预告（10.12 ~ 10.17）</span>
+      <span class="section-sub">周循环表 · 第 6 轮螺旋</span>
+    </div>
+    <div class="section-body">
+      <div class="next-week">
+        <div class="nw-item">
+          <div class="nw-d"><span class="n">一</span>10.12 周一</div>
+          <div class="nw-c">教 <b>①默认预设 · ②利益倒推</b><br>练 <b>③警觉信号</b><br><span style="font-size:11.5px;color:var(--pink-600)">本周重点补 ②③</span></div>
+        </div>
+        <div class="nw-item">
+          <div class="nw-d"><span class="n">二</span>10.13 周二</div>
+          <div class="nw-c">教 <b>④信息不对称 · ⑤零和默认</b><br>练 <b>⑥留一手</b><br><span style="font-size:11.5px;color:var(--pink-600)">本周重点补 ④⑤⑥</span></div>
+        </div>
+        <div class="nw-item">
+          <div class="nw-d"><span class="n">三</span>10.14 周三</div>
+          <div class="nw-c">教 <b>⑦不透底 · ⑧测试代替信任</b><br>练 <b>①默认预设</b><br><span style="font-size:11.5px;color:var(--pink-600)">⑧ 需补练习</span></div>
+        </div>
+        <div class="nw-item">
+          <div class="nw-d"><span class="n">四</span>10.15 周四</div>
+          <div class="nw-c">教 <b>③警觉信号 · ⑥留一手</b><br>练 <b>②利益倒推</b></div>
+        </div>
+        <div class="nw-item">
+          <div class="nw-d"><span class="n">五</span>10.16 周五</div>
+          <div class="nw-c">教 <b>④信息不对称 · ⑦不透底</b><br>练 <b>⑤零和默认</b></div>
+        </div>
+        <div class="nw-item">
+          <div class="nw-d"><span class="n">六</span>10.17 周六</div>
+          <div class="nw-c">教 <b>⑧测试代替信任 · ①默认预设</b><br>练 <b>综合（随机）</b></div>
+        </div>
+      </div>
+      <div style="margin-top:14px" class="tip-box">
+        <b>📌 下周补强建议：</b><b>②③④⑤⑥</b> 五条本周各只出现 1 次，其中 <b>③④⑥</b> 更是「只教未练」；<b>⑧</b> 教了两次却一次没练过。
+        下周生成素材时：<b>②</b> 可在「熟人推荐 / 中介返点」方向换新载体；<b>③</b> 可在「节后促销收尾 / 上门服务」方向找新的反常信号串；<b>⑥</b> 继续在「上门安装、代收代管」方向找凭证类场景；
+        <b>⑧</b> 必须安排一次真正需要「自己设计测试」的练习，而不是只读别人的测试清单。
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部提示 -->
+  <div class="foot-note">
+    <b>💡 识暗心法 · 周复盘</b> — 本周实收 4 天 12 案例，8 条心法仍全覆盖，⑦ 不透底 3 次居首，①⑧ 各 2 次。<br>
+    10.5、10.6 两天未生成，②③④⑤⑥ 强度偏低，③④⑥⑧ 整周没有练习机会，下周将优先补强。<br>
+    明天（周一 10.12）恢复案例生成：① 默认预设 · ② 利益倒推，练习：③ 警觉信号。<br>
+    坚持每日练习，识人先识心。
+  </div>
+</div>
+
+</body>
+</html>

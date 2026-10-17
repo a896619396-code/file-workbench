@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="AIGC" content="Label=1; Producer=001191110102MACQD9K64018705">
+<title>热点认知卡 · 2026-10-11 文化教育 · 自家地下挖出宝贝为何不是你的</title>
+<style>
+
+  /* ===== 设计令牌：暖纸感 ===== */
+  :root {
+    --paper: #faf7f4;        /* 页面纸感 */
+    --card: #ffffff;         /* 卡片白 */
+    --line: #ece5e0;         /* 细分隔线 */
+    --line-strong: #e0d6cf;
+    --ink-strong: #2b2624;   /* 标题墨色 */
+    --ink: #4a4440;          /* 正文 */
+    --ink-soft: #8b837c;     /* 次要 */
+    --ink-mute: #b0a8a1;     /* 弱化 */
+    --brand: #a0495e;        /* 酒红主色 */
+    --brand-soft: #f3e4e9;   /* 酒红浅底 */
+    --amber: #e2cdb8;        /* 琥珀 */
+    --amber-soft: #fbf6ef;   /* 琥珀浅底 */
+    --rose-soft: #fcf7f5;    /* 暖粉 */
+    --gray-card: #faf8f6;    /* 极浅灰卡 */
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+
+  /* ===== 卡片 ===== */
+  .card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 30px 30px;
+    box-shadow: 0 16px 48px rgba(120, 90, 80, 0.07);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== 头部：克制层级 ===== */
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--brand);
+    padding: 3px 12px;
+    border: 1px solid var(--brand-soft);
+    background: #fff;
+    border-radius: 999px;
+  }
+  .date { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; letter-spacing: 0.5px; }
+  h1 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin: 8px 0 6px;
+    color: var(--ink-strong);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+  .sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ===== 模块标题：小字 + 细线 ===== */
+  section { margin-top: 32px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--ink-strong); margin: 0 0 8px; }
+  h4 { font-size: 14.5px; font-weight: 700; color: var(--brand); margin: 0 0 8px; }
+
+  /* ===== 正文 ===== */
+  p, li { font-size: 15px; color: var(--ink); line-height: 1.8; }
+  strong { font-weight: 700; color: #5a3438; }
+
+  /* ===== 关键词：酒红下划线 ===== */
+  .kw {
+    font-weight: 700;
+    color: var(--brand);
+    border-bottom: 2px solid #e5c8cf;
+    padding-bottom: 1px;
+  }
+
+  /* ===== 删除线 ===== */
+  .del { text-decoration: line-through; text-decoration-color: #d9c0c6; color: var(--ink-soft); }
+
+  /* ===== 事实层：开篇摘要 ===== */
+  .fact {
+    background: var(--rose-soft);
+    border-left: 3px solid #c27a8f;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 18px;
+  }
+  .fact p { font-size: 15px; color: #45312f; margin: 4px 0; }
+  .fact p:first-child { margin-top: 0; }
+  .fact p:last-child { margin-bottom: 0; }
+  .fact blockquote { background: transparent; border: none; padding: 8px 0 0; margin: 10px 0 0; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote p { font-size: 12.5px; color: var(--ink-soft); }
+  .fact blockquote a { color: var(--brand); text-decoration: none; word-break: break-all; }
+
+  /* ===== 类比：引述左线 ===== */
+  .analogy { border-left: 3px solid var(--amber); padding: 2px 0 2px 16px; margin: 14px 0; }
+  .analogy p { margin: 6px 0; }
+  .analogy strong { color: #6b4a2c; }
+
+  /* ===== 视角：极浅灰卡 ===== */
+  .view {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .view .tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .view p { margin: 6px 0; }
+
+  /* ===== 认知模型 ===== */
+  .model {
+    background: var(--gray-card);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 12px 0;
+  }
+  .model h4 { display: flex; align-items: center; gap: 8px; }
+  .model h4::before {
+    content: "";
+    width: 3px;
+    height: 14px;
+    background: var(--brand);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .model ul { padding-left: 18px; margin-top: 6px; }
+  .model li { font-size: 14px; color: #574d4a; margin: 4px 0; }
+  .model li strong { color: var(--brand); }
+  .model blockquote { background: var(--rose-soft); border-left: 3px solid #d9a8b4; border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .model blockquote p { font-size: 14px; color: #45312f; }
+  .model blockquote strong { color: var(--brand); }
+
+  /* ===== 个人关联 ===== */
+  .personal { margin: 4px 0; }
+  .personal ul, .personal ol { padding-left: 20px; }
+  .personal li { margin: 10px 0; }
+
+  /* ===== 行动启示：唯一强调色块 ===== */
+  .action {
+    background: var(--amber-soft);
+    border: 1.5px dashed var(--amber);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .action p { margin: 6px 0; }
+  .action .lead { font-weight: 800; color: #8a5a33; font-size: 15px; }
+  .action blockquote { background: #fff; border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 10px 14px; margin: 10px 0; }
+  .action blockquote p { font-size: 14px; }
+
+  /* ===== 今日小词典 ===== */
+  .dict { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+  .dict:last-child { border-bottom: none; }
+  .dict .term { font-weight: 800; color: var(--brand); font-size: 15px; }
+  .dict .en { font-weight: 400; color: var(--ink-soft); font-size: 12.5px; }
+  .dict p { font-size: 14px; color: #574d4a; margin: 2px 0; }
+
+  /* ===== 弱化 ===== */
+  .aigc { margin-top: 34px; text-align: center; font-size: 11.5px; color: var(--ink-mute); letter-spacing: 0.5px; }
+
+  /* ===== 通用 ===== */
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  blockquote {
+    background: var(--rose-soft);
+    border-left: 3px solid #d9a8b4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    color: var(--ink);
+  }
+  blockquote p { color: var(--ink); }
+  blockquote strong { color: var(--brand); }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+  th { background: var(--gray-card); color: var(--ink-strong); font-weight: 700; }
+  a { color: var(--brand); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 20px 0; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <span class="badge">文化教育 · 07 类</span>
+    <div class="date">2026-10-11 周日 · 热点认知卡</div>
+    <h1>自家地下挖出宝贝，为何不是你的</h1>
+    <div class="sub">所有权与载体分离 + 信源分级 · 3 分钟读完</div>
+
+    <section>
+      <h2>🎯 事实层</h2>
+      <div class="fact">
+        <p>最高法与国家文物局 10 月 10 日联合发布 6 件依法惩治文物犯罪典型案例。6 件里有 4 件，当事人不是蓄意犯罪，而是<strong>以为"这不算事"</strong>——官方通报把这批案例的选案理由直接写成一句话：部分行为人对文物违法犯罪活动存在"认知偏差"。</p>
+        <table>
+          <tr><th>情形</th><th>当事人以为</th><th>实际结果</th></tr>
+          <tr><td>自家宅基地下挖出古墓，取走 8 件青铜器欲倒卖</td><td>我家的地，挖出来算我的</td><td>盗掘古墓葬罪，有期徒刑 15 年</td></tr>
+          <tr><td>河道捞沙捡到铜编钟，藏两年后卖 30 万</td><td>捡的，又不是偷的</td><td>倒卖文物罪，有期徒刑 5 年，30 万全额追缴</td></tr>
+          <tr><td>明知是出土文物，仍"修复"三面汉代铜镜</td><td>我只修东西，没参与买卖</td><td>掩饰、隐瞒犯罪所得罪，10 个月缓刑 1 年</td></tr>
+        </table>
+        <p>还有一件更反直觉：有人只用探针勘探了遗址位置、还没开挖，被判有期徒刑 3 年 4 个月，理由是<strong>犯罪预备</strong>。6 件案例刑罚跨度从 15 年到 10 个月缓刑 1 年，没有一件因为"挖的是自家的地"或"只是捡的"而免责。</p>
+<blockquote>
+<p>来源：最高人民法院 <a href="https://www.court.gov.cn/zixun/xiangqing/513831.html">https://www.court.gov.cn/zixun/xiangqing/513831.html</a> ；中国新闻网 <a href="https://www.chinanews.com.cn/sh/2026/10-10/10710101.shtml">https://www.chinanews.com.cn/sh/2026/10-10/10710101.shtml</a></p>
+</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍋 生活类比锚点</h2>
+      <div class="analogy">
+        <p><strong>租的房子和柜子顶上的铁盒</strong>：打扫时在旧衣柜顶上摸到一个铁盒，里面是上一位租客留下的金饰。直觉是"在我住的地方找到的，当然归我"，但东西归谁看的是它本身是谁的，不看它躺在谁的地盘上。院子也一样：地是你的，地下的古墓不是。</p>
+        <p><strong>追剧和照做</strong>：看美食短视频学做菜，博主用的是猛火大灶，你家电磁炉照着来必糊；看盗墓剧觉得主角手法利落，是因为剧本给主角兜底。最高法这次专门点了一句：盗墓小说的人物和情节都经过大量夸张、幻想化加工，与现实中合规的考古勘探有本质区别——把剧本当说明书用，代价按现实算。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔭 多视角层</h2>
+            <div class="view"><h3>视角 1：法律——所有权跟土地是脱钩的</h3>
+<p>整批案例的支点只有一句话：文物保护法明确规定，古文化遗址、古墓葬属于国家所有，<strong>所有权不因所依附的土地所有权或使用权的改变而改变</strong>。所以"我家的地"这个前提从一开始就不成立。房产证写你的名字，不等于房子下面埋着的东西也是你的。</p></div>
+      <div class="view"><h3>视角 2：认知——案件的起点是"想当然"，不是"想犯罪"</h3>
+<p>官方通报的表述很直白：由于缺乏文物保护意识，部分行为人对文物违法犯罪活动存在"认知偏差"，逐步走上犯罪道路。选案标准也写明了——6 件案例"均为贴近社会公众生产生活、与群众利益密切相关的犯罪类型"，目的是"破除模糊认知，杜绝侥幸心理"。这批案例不是拍给职业盗墓团伙看的，是拍给普通人看的。</p></div>
+      <div class="view"><h3>视角 3：链条——打的是链条，不是某一个人</h3>
+<p>最高法的逻辑是：文物犯罪已经形成"盗、掘、贩、运、销"的上下游链条，只打其中一环治不了根。所以位置不同、责任一样在——只做勘探准备（犯罪预备）、只做修复加工（掩饰隐瞒）、甚至企业为生产挖掉遗址，都单独成罪。案例一那家煤矿矿长明知有全国重点文保单位仍继续施工，导致遗址本体灭失，判刑 7 年，另赔模拟修缮费 394 万余元。</p></div>
+    </section>
+
+    <section>
+      <h2>🧠 认知模型</h2>
+            <div class="model"><h4>所有权与载体分离（Ownership Detachment）</h4><ul>
+<li><strong>一句话</strong>：一件东西归谁，看它自身的法律身份，不看它躺在谁的地盘上——地是你的，不等于地下的是你的。</li>
+<li><strong>生活类比</strong>：① 租房时在旧衣柜顶上发现上一位租客落下的金饰，地方你租了，东西不归你 ② 邻居家的树枝伸进你家院子结了果子，院子是你的，果子不归你 ③ 在自家鱼塘里捞到上游水库跑下来的鱼，塘是你的，鱼不归你</li>
+</ul>
+<blockquote><p>这类错觉的根源是：人对"地盘"的直觉非常强，对"东西本身是谁的"却不敏感。宅基地是使用权，古墓葬是国家所有权，两者本来就在两套账本上，只是平时不需要区分，一旦动土就撞在一起。</p></blockquote></div>
+      <div class="model"><h4>信源分级（Source Tiering）</h4><ul>
+<li><strong>一句话</strong>：把小说、短视频、朋友转述和正式规则放在同一个可信度层级上，是很多代价的起点；娱乐作品是创作，不是操作手册。</li>
+<li><strong>生活类比</strong>：① 跟着短视频学做菜，博主猛火大灶，你家电磁炉照做必糊 ② 照着剧里的偏方治感冒，剧里三分钟就好，现实里得去医院 ③ 听同事说"这报销随便填"，真填了才知道制度里写着不行</li>
+</ul>
+<blockquote><p>判据很简单：这个信息源的作者，需不需要为"你照做之后的结果"负责。编剧不需要，法官需要。需要负责的那一层，才是可以照着做的那一层。</p></blockquote></div>
+    </section>
+
+    <section>
+      <h2>🔗 个人关联</h2>
+      <div class="personal">
+        <ul>
+<li><span class="kw">转行数据分析</span>：今天这张卡其实是一堂数据来源课。那个编钟是"捡来的"，但法律上属于国家——这跟数据是同一回事：你手上有一份数据，不等于你有权用它。做分析第一条纪律不是建模，是问清来源与授权边界（哪来的、能用到什么程度、能不能对外发）。再往上一层是信源分级：法规原文、统计公报、判决书、公司公告是一级；权威媒体、券商研报是二级；自媒体解读、短视频、群聊转发是三级。同一个数字在三级之间传一圈，常常已经变形。</li>
+<li><span class="kw">《认知觉醒》呼应</span>：周岭讲人天然"避难趋易"，遇到判断时更愿意凭感觉走，因为核查事实费劲。这批案例的共同起点就是"想当然"——地是我的，挖出来就是我的；捡的又不是偷的。这不是道德问题，是认知上跳过了一步：把"我以为"当成了"事实是"。元认知的作用，就是在这两步之间插一个停顿。</li>
+<li><span class="kw">《底层逻辑》呼应</span>：刘润反复讲要分清事实、观点、立场。盗墓小说是创作（观点加想象），文物保护法是规则（事实加边界），把前者当成后者的操作依据，就是逻辑层级用错了。最高法在通报里专门写下了这句话：盗墓小说的人物形象、故事情节"均进行了大量夸张、幻想化加工"，与现实中法定合规的考古勘探等文物保护工作有着本质区别。</li>
+</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>⚡ 行动启示</h2>
+      <div class="action">
+        <p class="lead">给信息源做一次分级盘点</p>
+        <p>今天花 20 分钟，把最近一周你看过的信息源列出来，每个标一级：</p>
+        <blockquote>
+          <p>① 一级（可作依据）：法规原文、统计公报、法院判决书、公司公告、原始数据集<br>② 二级（可作参考）：权威媒体、券商研报、行业白皮书<br>③ 三级（只作线索）：自媒体解读、短视频、群聊转发、AI 生成的摘要</p>
+        </blockquote>
+        <p>标完之后，回头看你最近下的三个结论分别建在哪一级上。三级建起来的结论不用删，改成"待核实"就行。这个动作很土，但它是"看新闻的人"和"做判断的人"之间最直观的分界线。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🍬 今日小词典</h2>
+            <div class="dict"><p><span class="term">盗掘古墓葬罪</span> <span class="en">(Illegal Excavation of Ancient Tombs)</span>：不用"挖到东西"才算，只要擅自挖掘受保护的古墓就构成犯罪，挖到多少、等级多高只影响判多重。类比闯红灯——不是撞到人才算违章。</p></div>
+      <div class="dict"><p><span class="term">犯罪预备</span> <span class="en">(Preparation for a Crime)</span>：为了犯罪做准备、创造条件，还没动手也可能被追究。案例三的当事人只拿探针勘探了遗址位置、没开挖，仍被判 3 年 4 个月。</p></div>
+      <div class="dict"><p><span class="term">掩饰、隐瞒犯罪所得罪</span> <span class="en">(Concealing Criminal Proceeds)</span>：明知东西是犯罪得来的，还帮忙加工、藏匿、代卖，本身也是犯罪。案例六的当事人只是"修复"了三面铜镜，照样判刑并赔了 1.9 万修复费。</p></div>
+    </section>
+
+
+    <div class="aigc">本内容由 Coze AI 生成，请遵循相关法律法规及《人工智能生成合成内容标识办法》使用与传播。</div>
+
+  </div>
+</div>
+</body>
+</html>

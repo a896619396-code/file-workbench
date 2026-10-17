@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年09月16日—⑦不透底·⑧测试代替信任·①默认预设</title>
+<style>
+/* ============================================================
+   识暗心法 v2.0 · 设计系统 v2.1（每日卡片版）
+   浅粉色调 · 教学案例粉色系 / 实战练习紫色系
+   ============================================================ */
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;
+  --surface:#ffffff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;
+  --pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;
+  --blue-600:#3a6ea5;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --fs-xs:11.5px;--fs-sm:12.5px;--fs-base:14.5px;--fs-md:15.5px;--fs-lg:17px;
+  --fs-xl:20px;--fs-2xl:24px;
+  --lh-tight:1.42;--lh-body:1.78;--lh-loose:1.95;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --shadow-md:0 4px 8px rgba(180,90,120,.09),0 12px 28px rgba(180,90,120,.12);
+  --radius:16px;--radius-sm:10px;--radius-xs:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  background:
+    radial-gradient(1100px 500px at 85% -5%, rgba(244,150,190,.14), transparent 60%),
+    radial-gradient(900px 420px at -10% 12%, rgba(190,160,235,.12), transparent 55%),
+    linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  background-attachment:fixed;
+  color:var(--ink);
+  font-size:var(--fs-base);
+  line-height:var(--lh-body);
+  letter-spacing:.01em;
+  padding-bottom:70px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--pink-300);color:#fff}
+.container{max-width:960px;margin:0 auto;padding:26px 22px 0}
+/* ---------- 今日抬头 ---------- */
+.day-head{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-sm);margin-bottom:20px;
+  position:relative;overflow:hidden;
+}
+.day-head::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300));
+  opacity:.9;
+}
+.day-head-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.day-title{font-size:var(--fs-2xl);font-weight:800;letter-spacing:.015em;line-height:var(--lh-tight)}
+.day-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-sm);font-weight:700;
+  padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);
+  border:1px solid rgba(212,61,111,.14);
+}
+.day-badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.day-badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.day-meta{margin-top:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.xf-chip{
+  display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;
+  padding:6px 13px;border-radius:10px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  box-shadow:var(--shadow-xs);
+}
+.xf-chip.ghost{background:var(--surface-soft);color:var(--ink-2);border:1px solid var(--border-strong);box-shadow:none}
+/* ---------- 案例卡片 ---------- */
+.case{
+  margin-bottom:22px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface);
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.case:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.case-head{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--border)}
+.case-head .num{
+  width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;letter-spacing:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+}
+.case-teach .case-head{background:linear-gradient(90deg,var(--pink-050),var(--surface) 70%)}
+.case-teach .num{background:linear-gradient(135deg,var(--pink-500),var(--pink-600))}
+.case-practice .case-head{background:linear-gradient(90deg,var(--purple-100),var(--surface) 70%)}
+.case-practice .num{background:linear-gradient(135deg,#8f66c0,var(--purple-600))}
+.case-type{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink-3);flex:none}
+.case-title{font-size:var(--fs-lg);font-weight:800;flex:1;min-width:0;line-height:var(--lh-tight);letter-spacing:.01em}
+.bf-badge{font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;flex:none;letter-spacing:.02em}
+.case-teach .bf-badge{background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.16)}
+.case-practice .bf-badge{background:var(--purple-100);color:var(--purple-700);border:1px solid rgba(122,75,165,.16)}
+.case-body{padding:20px 24px 24px}
+/* 场景背景 */
+.scene{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-left:3px solid var(--border-strong);
+  border-radius:var(--radius-sm);padding:15px 17px;margin-bottom:18px;
+  font-size:var(--fs-base);color:#5c4a54;line-height:var(--lh-loose);
+}
+.scene-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:9px;
+}
+.scene-label::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--border-strong)}
+.scene p{margin:0 0 8px}
+.scene p:last-child{margin-bottom:0}
+.scene em{font-style:normal;background:var(--gold-100);color:var(--gold-700);padding:0 4px;border-radius:4px;font-weight:600}
+/* 教学分析 */
+.analysis{border-top:2px solid var(--pink-100);padding-top:16px}
+.analysis-label{
+  display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:var(--pink-700);
+  letter-spacing:.18em;margin-bottom:15px;
+}
+.analysis-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--pink-100),transparent)}
+.aim-chip{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  font-size:14.5px;font-weight:800;padding:8px 17px;border-radius:12px;margin-bottom:18px;
+  box-shadow:var(--shadow-sm);letter-spacing:.02em;
+}
+.aim-chip .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.22)}
+.block{margin-bottom:18px}
+.block-t{
+  font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:9px;display:flex;align-items:center;gap:8px;
+  letter-spacing:.02em;
+}
+.block-t .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--pink-500),var(--pink-300));flex:none}
+.points{list-style:none;counter-reset:pt}
+.points li{
+  counter-increment:pt;position:relative;padding:7px 0 7px 36px;font-size:var(--fs-base);color:#51404a;
+}
+.points li::before{
+  content:counter(pt);position:absolute;left:0;top:9px;width:23px;height:23px;border-radius:8px;
+  background:var(--pink-100);color:var(--pink-700);font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,61,111,.12);
+}
+.points li strong{color:var(--ink);font-weight:800}
+.tip-quote{
+  background:linear-gradient(90deg,var(--gold-100),#fdf8ec);border-left:4px solid var(--gold-600);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:13px 17px;font-size:15.5px;font-weight:700;color:var(--gold-700);line-height:1.65;letter-spacing:.02em;
+}
+.tip-quote::before{content:"要诀";font-size:10px;font-weight:800;letter-spacing:.16em;display:block;color:var(--gold-600);margin-bottom:3px}
+/* 5步流程 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px}
+.step{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:11px 13px;transition:all .2s ease;
+}
+.step:hover{border-color:var(--pink-300);background:var(--surface-tint);transform:translateY(-1px)}
+.step .step-k{font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.04em;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .step-k .n{
+  width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.step .step-v{font-size:12.5px;color:#5f4c57;line-height:1.6}
+/* 练习任务 */
+.task-box{
+  background:linear-gradient(135deg,var(--purple-100),#f6f0fb);border:1.5px solid var(--purple-600);
+  border-radius:var(--radius-sm);padding:17px 19px;margin-bottom:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+.task-box-t{font-size:13px;font-weight:800;color:var(--purple-700);margin-bottom:11px;letter-spacing:.12em}
+.task-list{list-style:none;counter-reset:tk}
+.task-list li{
+  counter-increment:tk;position:relative;padding:8px 0 8px 44px;font-size:15px;font-weight:600;color:#4a3757;
+}
+.task-list li::before{
+  content:counter(tk);position:absolute;left:0;top:9px;width:27px;height:27px;border-radius:9px;
+  background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-xs);
+}
+.task-list li strong{color:var(--purple-700);font-weight:800}
+/* 参考答案折叠 */
+details.answer{
+  margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;transition:border-color .2s ease;
+}
+details.answer[open]{border-color:var(--pink-300)}
+details.answer summary{
+  cursor:pointer;padding:14px 19px;font-size:15px;font-weight:800;color:var(--ink);
+  display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);
+  list-style:none;transition:background .2s ease;
+}
+details.answer summary:hover{background:var(--pink-050)}
+details.answer summary::-webkit-details-marker{display:none}
+details.answer summary .arr{
+  width:22px;height:22px;border-radius:7px;background:var(--purple-100);color:var(--purple-700);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+  transition:transform .25s ease,background .2s ease;
+}
+details.answer[open] summary .arr{transform:rotate(90deg);background:var(--purple-600);color:#fff}
+details.answer summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.answer .answer-body{padding:18px 21px;border-top:1px dashed var(--border-strong);background:var(--surface)}
+.answer-item{margin-bottom:14px;padding-left:15px;border-left:3px solid var(--purple-100)}
+.answer-item:last-child{margin-bottom:0}
+.answer-item .a-k{font-size:12px;font-weight:800;color:var(--purple-700);margin-bottom:4px;letter-spacing:.06em}
+.answer-item .a-v{font-size:var(--fs-base);color:#4d3c44;line-height:1.75}
+.answer-item .a-v strong{color:var(--ink)}
+.answer-item .a-v ul{margin:5px 0 0 19px}
+.answer-item .a-v li{margin:3px 0}
+/* 页脚 */
+.foot{text-align:center;font-size:12px;color:var(--ink-3);padding:10px 0 0;letter-spacing:.06em}
+.foot b{color:var(--pink-600)}
+/* 移动端 */
+@media (max-width:640px){
+  .container{padding:18px 13px 0}
+  .day-head{padding:18px 17px}
+  .day-title{font-size:20px}
+  .case-head{flex-wrap:wrap;padding:14px 17px}
+  .case-body{padding:16px 15px 19px}
+  .scene{padding:13px 14px}
+  .day-title{font-size:var(--fs-xl)}
+  .task-list li{font-size:14px;padding-left:40px}
+  details.answer .answer-body{padding:15px 15px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ============ 今日抬头 ============ -->
+  <header class="day-head">
+    <div class="day-head-top">
+      <h1 class="day-title">2026年09月16日</h1>
+      <span class="day-badge">星期三</span>
+      <span class="day-badge green">本周第 3 天</span>
+    </div>
+    <div class="day-meta">
+      <span class="day-badge">📖 教学心法</span>
+      <span class="xf-chip">⑦ 不透底</span>
+      <span class="xf-chip">⑧ 测试代替信任</span>
+      <span class="day-badge purple">✍ 考察心法</span>
+      <span class="xf-chip ghost">① 默认预设（实战练习）</span>
+    </div>
+  </header>
+
+  <!-- ============ 案例① 教学 · ⑦不透底 ============ -->
+  <section class="case case-teach">
+    <div class="case-head">
+      <div class="num">①</div>
+      <span class="case-type">教学案例</span>
+      <h2 class="case-title">面试那天，你把现薪和期望价一起交了底</h2>
+      <span class="bf-badge">⑦ 不透底</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>你在一家小公司做了三年统计，想转数据分析。投了一个多月的简历，终于有家中型电商公司约你去面试。业务面聊得不错，HR 小姐姐很和气，简历、作品集都过了，下午进入最后一面。</p>
+        <p>面试官是个三十多岁的部门经理，聊完项目后翻着简历问："你现在薪资多少？"你想，坦诚一点显诚意，就老实说了："月薪 14k。"他点点头，又问："<em>那你的期望是多少？</em>"你心里盘算着，涨 30% 不过分："<em>期望 18k 左右吧。</em>"他笑了笑："明白。"</p>
+        <p>第三天 HR 打来电话："恭喜你，我们这边给你定 16k，你看可以吗？"你有点犹豫——离期望差了 2k，但毕竟是转行，机会难得，你说："那……行吧。"</p>
+        <p>入职三周，你和同组的小陈混熟了。小陈比你晚一年毕业、经验还浅一点，闲聊时说起薪资，他随口报了个数：<em>20k</em>。你心里咯噔一下——同一岗位、同一职级，他比你多 4k。后来你才知道，小陈面试那天，面试官问期望薪资，他说的是"我更关心这个岗位能给我什么，薪资相信公司会有合理的评估"——HR 最后给他报了 <em>19k</em>，他谈到了 20k。</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <div class="aim-chip"><span class="dot"></span>命中心法 · ⑦ 不透底</div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点</div>
+          <ul class="points">
+            <li><strong>你先报数，谈判就由对方主持。</strong>"14k→期望18k"这两句，等于你把地板价和天花板一次性交了出去。对 HR 来说，接下来的工作不是"评估你值多少"，而是在 14 与 18 之间挑一个数——16k 刚好是中间值，既能压住成本，又让你觉得"对方做了让步"。</li>
+            <li><strong>底牌的价值在于"对方不知道"。</strong>小陈那句"相信公司会有合理评估"看似客套，实质是把第一次报价的义务推回给了对方。一旦 HR 先开口，你才知道真正的区间在哪——19k 与 20k 的结果，差的就是"谁先亮牌"。</li>
+            <li><strong>不透底 ≠ 撒谎，而是不替对方省事。</strong>你完全可以说"我们先把岗位职责和考核目标对齐，再看整体回报"。不谈数字不违规，报出不等于报价——你的薪资从来不是你一个人的信息。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">底牌是最后一张牌，亮出去就不值钱了。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>应用要诀</div>
+          <p style="color:#51404a">谈薪这场博弈只有两个关键动作：<strong>谁先报数、按什么口径报</strong>。你的错误不在"报低了"，而在"报了"——一旦现薪 14k 出口，HR 的报价基准就固定了，后面所有话术（"我们预算有限""给你涨了 14% 已经很不错"）都建立在你自己给的那个数上。更稳的做法是：把话题从"我这个人的价格"转到"这个岗位的价值"——先问清职责范围、考核指标、晋升与调薪节奏，再让对方先报区间；如果一定要说，就报一个"含年终奖、补贴的完整年包"而不是月薪基数，把口径控制在自己手里。记住：你不需要为对方的预算做预算，你只需要让他在信息不足时先出价。</p>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>五步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">对方在谈条件前先打听两件事——你的现状（现薪）与上限（期望），这两问要的正是你的底牌。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">他问这些，是为了"匹配你的期望"还是"给出最低接受价"？看动作就明白：拿到区间后他报的是中点，不是高点。</div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果你只说"先聊岗位，薪资相信公司评估"，他会怎样？大概率会先给区间——而区间一旦由他给出，议价起点就变了。</div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕"出于流程必须知道"式的索要，以及"你现在才 14k，我们给 16k 已是大幅提升"这种拿你的过去当锚点的话术。</div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">先问岗位、问考核、问调薪，再谈钱；被逼问就说"年包合计多少我可以说，月薪基数我不方便单独报"；让对方先亮区间。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 案例② 教学 · ⑧测试代替信任 ============ -->
+  <section class="case case-teach">
+    <div class="case-head">
+      <div class="num">②</div>
+      <span class="case-type">教学案例</span>
+      <h2 class="case-title">"这活儿包在我身上"——那个始终没交出来的模型</h2>
+      <span class="bf-badge">⑧ 测试代替信任</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>十月初，部门来了个新同事老周，四十岁上下，据说是从一家大厂出来的。第一次团建聚餐，他就很健谈："我以前带的团队做过三亿用户的数据中台""你们现在这套口径设计，说实话有点初级""<em>以后有事儿尽管找我，我最擅长的就是数据建模。</em>"他说话有板有眼，还时不时冒出几个英文缩写，桌上几个年轻同事听得频频点头。</p>
+        <p>周三上午，领导临时交代：周五汇报要用一套新的用户分层模型，你手上另一个日报还得赶。<em>老周主动凑过来</em>："这个我来吧，我太熟了，明天上午发你。"你心里一暖，想着果然是老手，索性把相关数据源和需求文档一股脑发过去，也没留备份方案。</p>
+        <p>周四上午，你要用底稿，问他要。他说："昨晚家里有点事，下午给你。"下午三点，他又说："你们这个数据源的口径和我以前那些不一样，我得重新对一遍。"你有点急，但想着人家是认真，忍了。周五早上，他来了一句："你们这个表结构是真的有问题，字段全是乱的，做不了。"</p>
+        <p>周五下午两点，你顶着黑眼圈自己熬出一版，勉强撑过汇报。周一例会，你问老周模型进度，他摆摆手："<em>那个啊，我最近在帮张总弄另一摊事，你这个先放放呗。</em>"</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <div class="aim-chip"><span class="dot"></span>命中心法 · ⑧ 测试代替信任</div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点</div>
+          <ul class="points">
+            <li><strong>承诺免费，行为付费：只能看交付，不能听自述。</strong>老周说的每句话成本都为零——"我做过三亿用户的中台""我太熟了""包在我身上"。这些话能换来同事的尊重、领导的注意和你的依赖，却不需要他付出任何代价。唯一能检验的，就是他到底交不交得出东西。</li>
+            <li><strong>测试要低成本、可验证、无恶意。</strong>你本可以让他在动手前先交一页纸：分层逻辑、指标口径、需要的字段清单。半小时的工作量，就能看出他到底有没有上手能力。你没有设这个测试，直接把整块任务连同自己的时间一起押了上去。</li>
+            <li><strong>资历自述不是能力证据。</strong>"大厂""三亿用户""做过中台"，都属不可核验的自我介绍。可验证的只有作品：他写过什么、做过什么、能当场说清什么。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">嘴上的保证不算数，小测试见真章。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>应用要诀</div>
+          <p style="color:#51404a">这场事故里你犯了两个错：<strong>一是把"资历"当成了"能力"</strong>，二是<strong>把整块任务一次性托付，没留验证节点</strong>。更稳妥的做法是把大任务切成带交付物的小段——"你先给我一页分层逻辑和字段清单，我们确认后再往下做"；一段交付不出来，损失可控，也立刻看清了对方的成色。至于老周，他不是骗子，只是习惯用"我很行"建立人际位置，而真正需要动手时会把责任推给环境（数据源不对、表结构有问题、手上有别的摊子）。认清这一点，你就不必再问他进度，也不必在领导面前替他兜着——他的位置是"聊得来的同事"，不是"可以托付的搭档"；这不叫翻脸，叫把信任留给经得起测试的人。</p>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>五步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">对方频繁自报资历、反复许诺"有事找我／包在我身上"，却很少拿出可核验的作品或具体动作。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">他这样表态，是为了在新环境快速建立位置？还是真准备把时间花在你的任务上？前者几乎零成本，后者要付出周末和精力。</div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果他的许诺只是社交姿态，当我真把任务压上去时会怎样？——"家里有事""口径不对""表结构有问题"，理由永远在外部。</div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕答应得越快越满、交付时越含糊的人；留意他从不说"我什么时候给你什么"，只说"放心吧"。</div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">把大任务切段，先要最小可验证交付（一页逻辑、一份字段清单）；留自己的备份方案；一次通过也只说明小事靠谱，别立刻升级托付。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 案例③ 实战练习 · ①默认预设 ============ -->
+  <section class="case case-practice">
+    <div class="case-head">
+      <div class="num">③</div>
+      <span class="case-type">实战练习</span>
+      <h2 class="case-title">"名额只剩 3 个"——那个免费课讲得真不错的博主</h2>
+      <span class="bf-badge">① 默认预设</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>你决定转数据分析，开始在小红书上刷相关内容。有个博主挺对胃口，讲 SQL 的窗口函数、讲简历怎么用 STAR 写项目，条理清楚、不喊口号。你在评论区提过一个"多表关联取数为什么慢"的问题，他认真回了一大段，你顺手关注了他。</p>
+        <p>一周后他发私信："同学你好，看你在准备转行，我这周有场免费的直播课，讲『零基础到第一份数据分析 offer』，要不要来听？"你去了。两节课听下来，确实有货：讲了口径设计、讲了怎么用公开数据做作品集，还点评了几个同学的项目。<em>你笔记记了三页。</em></p>
+        <p>第三节直播末尾，他话锋一转："这周报名『陪跑营』的同学，4980，12 周一对一，我带你做 <em>3 个真实项目</em>，做完直接进作品集；今天 24 点前交 500 定金锁名额，<em>只剩 3 个位置了</em>。"顿了顿又补一句："其实我看了你的问题，你基础不错，思路是对的，学出来肯定能转型——别浪费这份潜力。"</p>
+        <p>你盯着屏幕，心里有点飘。他确实讲得不错，也确实免费回答过你的问题；可 4980 是你现在一个月的工资，"3 个真实项目"听上去又确实是简历上最缺的东西。截至时间在 24 点。</p>
+      </div>
+      <div class="task-box">
+        <div class="task-box-t">你的任务 · 先自己想，再看参考答案</div>
+        <ul class="task-list">
+          <li><strong>命中心法：</strong>这个场景最贴近哪条心法？它的一句话要诀是什么？</li>
+          <li><strong>现象识别：</strong>把"需要打个问号"的细节列出来——至少找出 3 处。</li>
+          <li><strong>动机归因：</strong>他可能的诉求是什么？列出至少 2 种，并说说各自该怎么验证。</li>
+          <li><strong>落地行动：</strong>接下来一周，你会具体做哪 3 件事？</li>
+        </ul>
+      </div>
+      <details class="answer">
+        <summary>
+          <span class="arr">▶</span>
+          参考答案
+          <span class="hint">先想再看 · 点击展开</span>
+        </summary>
+        <div class="answer-body">
+          <div class="answer-item">
+            <div class="a-k">1 · 命中心法</div>
+            <div class="a-v">命中 <strong>① 默认预设</strong>。要诀：<strong>先把他当对手算，再把他当朋友处。</strong>注意，这里的前提不是"他是坏人"——他免费课讲得确实好，回答也认真。默认预设的意思是：先假设他和你一样有自己的立场与算盘（免费内容是入口，盈利点是陪跑营），据此核算他的收益结构，再决定付不付钱；而不是默认"他这么关照我，是真心为我好"，把自己的判断交给对方的好意。</div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">2 · 现象识别（该打问号的细节）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>决策窗口被压缩到几小时：</strong>"今晚 24 点前交定金""只剩 3 个位置"——真正靠口碑吃饭的长期服务，不需要用倒计时逼单；而这种设计的作用，是让你来不及做尽调。</li>
+                <li><strong>用认同感替代证据：</strong>"你基础不错""别浪费潜力"——夸你、替你惋惜，都作用于情绪；但关于课程本身的可核验信息（谁讲、怎么交付、交付标准）一句没说。</li>
+                <li><strong>核心承诺不可验证：</strong>"3 个真实项目"是哪三个？数据从哪来？做到什么程度算交付？有没有毕业作品可查？——全是形容词，没有验收标准。</li>
+                <li><strong>只有一次性全款一种买法：</strong>没有试听期、没有分阶段付费、没有退款条款、没有往期学员名单——交易结构单边，风险全在你这边。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">3 · 动机归因（可能的图谋与验证）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>可能一：他确实靠这个吃饭，教学模式是"免费内容引流 + 高阶服务变现"。</strong>这是最普遍也最正常的一种——课是真教，话术也是真话术。你的钱买的是"陪跑服务与节奏约束"，不是"能力本身"。验证：索要 2–3 位往期学员的作品集链接或联系方式，自己去问交付到底怎么样。</li>
+                <li><strong>可能二：他是分销方，课程由上游团队交付，他拿转化佣金。</strong>那样"一对一"可能变成助教带班，他本人只在开班时出现。验证：直接问"12 周里您本人带多少次、每次多久、是直播还是录播"，看他是否愿意把承诺写进协议。</li>
+                <li><strong>可能三（别忽略）：内容确实值这个价，只是销售手法激进。</strong>验证：把自己的目标拆成清单，和课程大纲逐条对齐——如果一半以上是你用免费资料 + 手头真实数据就能练到的，"值不值"的答案会自己浮出来。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">4 · 落地行动（马上能做）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>先交作业再交钱：</strong>你手上有一份真实数据——挑一张表，独立做完一次完整分析（清洗 → 指标设计 → 可视化 → 一页结论），限两周。做不出来，问题不在缺课，在缺执行；做出来了，你已经有了作品集的第一块，也知道自己卡在哪，那时再决定要不要买课。</li>
+                <li><strong>要可核验的材料：</strong>向他要三位往期学员的作品或联系方式，并让他把"3 个真实项目"的项目说明、交付标准、他本人参与时长写成一份书面说明。愿意写，说明他接受被验收；找理由推脱，也是一种答案。</li>
+                <li><strong>改交易结构：</strong>提出"先付第一期（比如 800 元）走一个月，看交付效果再续"。对方接受，你风险可控；坚决要求全款锁名额，那"名额稀缺"多半只是话术。</li>
+                <li><strong>守住时间：</strong>不管最后买不买，都不要在 24 点前交定金。凡是要求你在信息不足时立刻决策的，都值得先放一晚——真机会不怕多等一天。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer class="foot">
+    识暗心法 v2.0 · 每日学习卡 · <b>2026.09.16 周三</b><br>
+    教 ⑦不透底 · ⑧测试代替信任 ｜ 练 ①默认预设
+  </footer>
+</div>
+</body>
+</html>

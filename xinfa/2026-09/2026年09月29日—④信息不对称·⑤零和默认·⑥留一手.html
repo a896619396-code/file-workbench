@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年09月29日—④信息不对称·⑤零和默认·⑥留一手</title>
+<style>
+/* ============================================================
+   识暗心法 v2.0 · 设计系统 v2.1（每日卡片版）
+   浅粉色调 · 教学案例粉色系 / 实战练习紫色系
+   ============================================================ */
+:root{
+  --bg-1:#fdf5f8;--bg-2:#fbf0f4;
+  --surface:#ffffff;--surface-soft:#faf0f4;--surface-tint:#fef8fa;
+  --ink:#3b2a33;--ink-2:#7a6470;--ink-3:#b39aa6;
+  --pink-700:#b22e55;--pink-600:#d43d6f;--pink-500:#e0608e;
+  --pink-300:#f2a8c4;--pink-100:#fce4ec;--pink-050:#fef2f6;
+  --purple-700:#68408f;--purple-600:#7a4ba5;--purple-100:#f0e6f8;
+  --gold-700:#8a5d05;--gold-600:#b98311;--gold-100:#fbf0d8;
+  --green-600:#2e8b57;--green-100:#e4f3ea;
+  --blue-600:#3a6ea5;--blue-100:#e7eef7;
+  --border:#f2e0e8;--border-strong:#e2c6d2;
+  --font-sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --fs-xs:11.5px;--fs-sm:12.5px;--fs-base:14.5px;--fs-md:15.5px;--fs-lg:17px;
+  --fs-xl:20px;--fs-2xl:24px;
+  --lh-tight:1.42;--lh-body:1.78;--lh-loose:1.95;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;
+  --shadow-xs:0 1px 2px rgba(180,90,120,.06),0 2px 6px rgba(180,90,120,.05);
+  --shadow-sm:0 2px 4px rgba(180,90,120,.07),0 6px 16px rgba(180,90,120,.08);
+  --shadow-md:0 4px 8px rgba(180,90,120,.09),0 12px 28px rgba(180,90,120,.12);
+  --radius:16px;--radius-sm:10px;--radius-xs:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-sans);
+  background:
+    radial-gradient(1100px 500px at 85% -5%, rgba(244,150,190,.14), transparent 60%),
+    radial-gradient(900px 420px at -10% 12%, rgba(190,160,235,.12), transparent 55%),
+    linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  background-attachment:fixed;
+  color:var(--ink);
+  font-size:var(--fs-base);
+  line-height:var(--lh-body);
+  letter-spacing:.01em;
+  padding-bottom:70px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:var(--pink-300);color:#fff}
+.container{max-width:960px;margin:0 auto;padding:26px 22px 0}
+/* ---------- 今日抬头 ---------- */
+.day-head{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-sm);margin-bottom:20px;
+  position:relative;overflow:hidden;
+}
+.day-head::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--pink-500),var(--purple-600),var(--pink-300));
+  opacity:.9;
+}
+.day-head-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.day-title{font-size:var(--fs-2xl);font-weight:800;letter-spacing:.015em;line-height:var(--lh-tight)}
+.day-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-sm);font-weight:700;
+  padding:4px 12px;border-radius:999px;background:var(--pink-100);color:var(--pink-700);
+  border:1px solid rgba(212,61,111,.14);
+}
+.day-badge.purple{background:var(--purple-100);color:var(--purple-700);border-color:rgba(122,75,165,.14)}
+.day-badge.green{background:var(--green-100);color:var(--green-600);border-color:rgba(46,139,87,.14)}
+.day-meta{margin-top:13px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.xf-chip{
+  display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;
+  padding:6px 13px;border-radius:10px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  box-shadow:var(--shadow-xs);
+}
+.xf-chip.ghost{background:var(--surface-soft);color:var(--ink-2);border:1px solid var(--border-strong);box-shadow:none}
+/* ---------- 案例卡片 ---------- */
+.case{
+  margin-bottom:22px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-xs);border:1px solid var(--border);background:var(--surface);
+  transition:box-shadow .25s ease,transform .25s ease;
+}
+.case:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.case-head{display:flex;align-items:center;gap:12px;padding:16px 22px;border-bottom:1px solid var(--border)}
+.case-head .num{
+  width:32px;height:32px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:800;color:#fff;letter-spacing:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+}
+.case-teach .case-head{background:linear-gradient(90deg,var(--pink-050),var(--surface) 70%)}
+.case-teach .num{background:linear-gradient(135deg,var(--pink-500),var(--pink-600))}
+.case-practice .case-head{background:linear-gradient(90deg,var(--purple-100),var(--surface) 70%)}
+.case-practice .num{background:linear-gradient(135deg,#8f66c0,var(--purple-600))}
+.case-type{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink-3);flex:none}
+.case-title{font-size:var(--fs-lg);font-weight:800;flex:1;min-width:0;line-height:var(--lh-tight);letter-spacing:.01em}
+.bf-badge{font-size:11px;font-weight:800;padding:4px 11px;border-radius:999px;flex:none;letter-spacing:.02em}
+.case-teach .bf-badge{background:var(--pink-100);color:var(--pink-700);border:1px solid rgba(212,61,111,.16)}
+.case-practice .bf-badge{background:var(--purple-100);color:var(--purple-700);border:1px solid rgba(122,75,165,.16)}
+.case-body{padding:20px 24px 24px}
+/* 场景背景 */
+.scene{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-left:3px solid var(--border-strong);
+  border-radius:var(--radius-sm);padding:15px 17px;margin-bottom:18px;
+  font-size:var(--fs-base);color:#5c4a54;line-height:var(--lh-loose);
+}
+.scene-label{
+  display:flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:9px;
+}
+.scene-label::before{content:"";width:16px;height:2px;border-radius:2px;background:var(--border-strong)}
+.scene p{margin:0 0 8px}
+.scene p:last-child{margin-bottom:0}
+.scene em{font-style:normal;background:var(--gold-100);color:var(--gold-700);padding:0 4px;border-radius:4px;font-weight:600}
+/* 教学分析 */
+.analysis{border-top:2px solid var(--pink-100);padding-top:16px}
+.analysis-label{
+  display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:var(--pink-700);
+  letter-spacing:.18em;margin-bottom:15px;
+}
+.analysis-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--pink-100),transparent)}
+.aim-chip{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,var(--pink-600),var(--purple-600));color:#fff;
+  font-size:14.5px;font-weight:800;padding:8px 17px;border-radius:12px;margin-bottom:18px;
+  box-shadow:var(--shadow-sm);letter-spacing:.02em;
+}
+.aim-chip .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.22)}
+.block{margin-bottom:18px}
+.block-t{
+  font-size:13.5px;font-weight:800;color:var(--ink);margin-bottom:9px;display:flex;align-items:center;gap:8px;
+  letter-spacing:.02em;
+}
+.block-t .bar{width:4px;height:16px;border-radius:3px;background:linear-gradient(180deg,var(--pink-500),var(--pink-300));flex:none}
+.points{list-style:none;counter-reset:pt}
+.points li{
+  counter-increment:pt;position:relative;padding:7px 0 7px 36px;font-size:var(--fs-base);color:#51404a;
+}
+.points li::before{
+  content:counter(pt);position:absolute;left:0;top:9px;width:23px;height:23px;border-radius:8px;
+  background:var(--pink-100);color:var(--pink-700);font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,61,111,.12);
+}
+.points li strong{color:var(--ink);font-weight:800}
+.tip-quote{
+  background:linear-gradient(90deg,var(--gold-100),#fdf8ec);border-left:4px solid var(--gold-600);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:13px 17px;font-size:15.5px;font-weight:700;color:var(--gold-700);line-height:1.65;letter-spacing:.02em;
+}
+.tip-quote::before{content:"要诀";font-size:10px;font-weight:800;letter-spacing:.16em;display:block;color:var(--gold-600);margin-bottom:3px}
+/* 5步流程 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:9px}
+.step{
+  background:var(--surface-soft);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:11px 13px;transition:all .2s ease;
+}
+.step:hover{border-color:var(--pink-300);background:var(--surface-tint);transform:translateY(-1px)}
+.step .step-k{font-size:12px;font-weight:800;color:var(--pink-700);letter-spacing:.04em;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.step .step-k .n{
+  width:19px;height:19px;border-radius:7px;background:linear-gradient(135deg,var(--pink-500),var(--pink-600));color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.step .step-v{font-size:12.5px;color:#5f4c57;line-height:1.6}
+/* 练习任务 */
+.task-box{
+  background:linear-gradient(135deg,var(--purple-100),#f6f0fb);border:1.5px solid var(--purple-600);
+  border-radius:var(--radius-sm);padding:17px 19px;margin-bottom:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+.task-box-t{font-size:13px;font-weight:800;color:var(--purple-700);margin-bottom:11px;letter-spacing:.12em}
+.task-list{list-style:none;counter-reset:tk}
+.task-list li{
+  counter-increment:tk;position:relative;padding:8px 0 8px 44px;font-size:15px;font-weight:600;color:#4a3757;
+}
+.task-list li::before{
+  content:counter(tk);position:absolute;left:0;top:9px;width:27px;height:27px;border-radius:9px;
+  background:linear-gradient(135deg,#8f66c0,var(--purple-600));color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-xs);
+}
+.task-list li strong{color:var(--purple-700);font-weight:800}
+/* 参考答案折叠 */
+details.answer{
+  margin-top:8px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);
+  background:var(--surface);overflow:hidden;transition:border-color .2s ease;
+}
+details.answer[open]{border-color:var(--pink-300)}
+details.answer summary{
+  cursor:pointer;padding:14px 19px;font-size:15px;font-weight:800;color:var(--ink);
+  display:flex;align-items:center;gap:11px;user-select:none;background:var(--surface-tint);
+  list-style:none;transition:background .2s ease;
+}
+details.answer summary:hover{background:var(--pink-050)}
+details.answer summary::-webkit-details-marker{display:none}
+details.answer summary .arr{
+  width:22px;height:22px;border-radius:7px;background:var(--pink-100);color:var(--pink-700);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+  transition:transform .25s ease,background .2s ease;
+}
+details.answer[open] summary .arr{transform:rotate(90deg);background:var(--pink-600);color:#fff}
+details.answer summary .hint{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-left:auto}
+details.answer .answer-body{padding:18px 21px;border-top:1px dashed var(--border-strong);background:var(--surface)}
+.answer-item{margin-bottom:14px;padding-left:15px;border-left:3px solid var(--pink-100)}
+.answer-item:last-child{margin-bottom:0}
+.answer-item .a-k{font-size:12px;font-weight:800;color:var(--pink-700);margin-bottom:4px;letter-spacing:.06em}
+.answer-item .a-v{font-size:var(--fs-base);color:#4d3c44;line-height:1.75}
+.answer-item .a-v strong{color:var(--ink)}
+.answer-item .a-v ul{margin:5px 0 0 19px}
+.answer-item .a-v li{margin:3px 0}
+/* 页脚 */
+.foot{text-align:center;font-size:12px;color:var(--ink-3);padding:10px 0 0;letter-spacing:.06em}
+.foot b{color:var(--pink-600)}
+/* 移动端 */
+@media (max-width:640px){
+  .container{padding:18px 13px 0}
+  .day-head{padding:18px 17px}
+  .day-title{font-size:20px}
+  .case-head{flex-wrap:wrap;padding:14px 17px}
+  .case-body{padding:16px 17px 20px}
+  .steps{grid-template-columns:1fr 1fr}
+  .case-title{flex-basis:100%;order:3}
+}
+@media (max-width:400px){
+  .steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ============ 今日抬头 ============ -->
+  <div class="day-head">
+    <div class="day-head-top">
+      <div class="day-title">识暗心法 · 每日三案</div>
+      <span class="day-badge">2026年09月29日 · 星期二</span>
+      <span class="day-badge green">本周第 2 天</span>
+    </div>
+    <div class="day-meta">
+      <span class="xf-chip">教学 ① ④ 信息不对称</span>
+      <span class="xf-chip">教学 ② ⑤ 零和默认</span>
+      <span class="xf-chip ghost">练习 ③ ⑥ 留一手</span>
+    </div>
+  </div>
+
+  <!-- ============ 案例① 教学 · ④ 信息不对称 ============ -->
+  <div class="case case-teach">
+    <div class="case-head">
+      <span class="num">①</span>
+      <span class="case-type">教学案例</span>
+      <span class="case-title">「保价 1000 就够了」——快递员的建议，服务于他自己的省事</span>
+      <span class="bf-badge">④ 信息不对称</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>九月二十六号下午，小岑拎着一个泡沫箱走进小区东门的快递驿站。箱子里是一台微单相机，两年前 6800 买的，闲置了大半年，现在二手行情大概 3200 元，他要寄给在外地上大学的表弟。</p>
+        <p>驿站老板老曹正低头扫码，头也没抬：「寄哪儿？」小岑说：「杭州，这个是相机，值三千多，要不要保价？」</p>
+        <p>老曹放下扫码枪，看了一眼箱子：「不用保价，我们这条线从来没丢过件。保价麻烦——要开箱验视、填保价单、还要按 1% 收保价费，你这三千多就得三十几块。你包装好了我直接贴单就行。」</p>
+        <p>小岑有点犹豫：「万一丢了呢？」老曹笑了：「丢了我们照价赔，你放心，我这驿站开了五年，从来没赔过钱。」小岑觉得老板挺实在，扫码付了 15 元运费，在电子面单上签了个名，把箱子放下了。</p>
+        <p>三天后，物流信息停在了中转中心，再没动过。小岑打客服电话，对方查了半天说：「您好，这个件确认丢失了。因为您<em>没有选择保价服务</em>，根据《快递服务协议》，未保价快件发生丢失的，<em>按实际运费的 3 倍赔偿</em>，也就是 45 元，我们会在 7 个工作日内打到您的账户。」</p>
+        <p>小岑愣住了：「45 元？那台相机三千多。」客服说：「抱歉，条款是这样写的，您寄件时签字的电子面单背面就有。」小岑翻出寄件记录，面单背面确实印着一行比蚂蚁还小的字：「未保价快件发生丢失、损毁、短少的，按实际运费的 3 倍予以赔偿。」他当时只看到了「签名」两个字。</p>
+        <p>他回去找老曹。老曹两手一摊：「我们小驿站哪懂这些条款，公司就这么定的。当时是你自己说不用保价的嘛。」</p>
+        <p>后来小岑才知道，隔壁小区同一个品牌的网点，寄贵重物品时工作人员会主动说一句：「相机建议保价，保价费 32 元，最高可赔 5000，需要开箱拍两张照片。」——原来「麻烦」的那道工序，本身就是保价的凭证。</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <span class="aim-chip"><span class="dot"></span>命中心法：④ 信息不对称</span>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点（3 条）</div>
+          <ul class="points">
+            <li><strong>信息差就是权力差。</strong>老曹手里有三样小岑没有的信息：赔偿规则（未保价只赔运费 3 倍）、保价成本（约 1%，32 元）、以及「开箱验视」这道工序的真实作用。三样都在他那边，小岑能做的判断就只剩「老板看着挺实在」这一条。</li>
+            <li><strong>「我以为」是最贵的词。</strong>小岑的整个决策建立在一句「丢了照价赔」上。但他从没问过：按什么价赔？谁定的价？凭证在哪里？——「照价赔」这三个字，只有在保价之后才成立；没保价时，它连一个字都不值。</li>
+            <li><strong>对方主动提供的信息，天然带有他的目的。</strong>老曹主动说的是「从来没丢过」「你放心」「麻烦」；他回避的是「如果丢了赔多少」「条款写在哪」。他劝你省下的那 32 元保价费，对他意味着少两道工序；对你意味着 3155 元的风险敞口。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">信息差即权力差，先补信息再表态。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>5 步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">对方用「从来没出过事」替代「出了事怎么办」，用「麻烦」劝你放弃一项服务。你真正掌握的事实只有：运费 15 元、箱子里的东西值 3200 元。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">保价意味着开箱验视、拍照、填单——全是老曹的工时。他劝你省下的不是你的钱，是他的事。风险从驿站转移到了你身上，而他没有任何成本。</div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">如果「照价赔」真的是行业惯例，为什么面单背面还要专门印一行「按运费 3 倍赔」？——两句话互相矛盾时，写在纸上的那句才是真的。</div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕「口头承诺 + 书面条款」的组合：嘴上给的是最宽松的版本，纸上写的是最严格的版本。凡是让你「签字就行、不用看」的文件，都值得翻到背面。</div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">寄贵重物品前先补信息：主动问「未保价赔多少、保价赔多少、保价费怎么算」，并让对方说出数字；接受保价与开箱验视（那两张照片就是你的凭证）；保留购买发票或价值证明；别让「怕麻烦」替你做决定。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 案例② 教学 · ⑤ 零和默认 ============ -->
+  <div class="case case-teach">
+    <div class="case-head">
+      <span class="num">②</span>
+      <span class="case-type">教学案例</span>
+      <span class="case-title">「三人平分最公平」——提出规则的人，正住在带独卫的主卧</span>
+      <span class="bf-badge">⑤ 零和默认</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>九月中旬，小岑在城西和朋友合租了一套三居室，整租 4500 元一个月。房子是标准的三室一厅：主卧带独立卫生间和朝南小阳台，15 平米；两间次卧各 9 平米左右，共用外面那个卫生间。</p>
+        <p>三个人里，阿豪是最先住进来的，签合同那天他先开口：「咱们别搞那么复杂，房租三人平分，一人 1500，水电也按人头，公平简单，省得算来算去伤感情。」小岑和小雅想了想，觉得有道理，当场就转钱给了阿豪——房租由阿豪统一交给房东，因为房子是阿豪先找的。</p>
+        <p>住到第三个月，小岑慢慢觉出不对。阿豪住的主卧比次卧大了六成，还自带卫生间和阳台；他自己每天早上七点和小雅抢那个共用卫生间，晚上洗澡也得排队。更细的一层是：阿豪的女朋友几乎每周来住三四天，洗漱、用水、晾衣服全在公共区域，公共卫生间里她的牙刷和洗面奶一直摆着。</p>
+        <p>有天晚饭后，小岑试着提了一句：「要不咱们房租按房间大小算一下？主卧带独卫，肯定要多出一点。」阿豪放下筷子：「合同都签了，当时不是说好平分吗？你现在提这个，是不是觉得我占了你们便宜？大家都是朋友，别把账算得那么细。」小雅低着头没接话，饭桌上的气氛一下子沉了。</p>
+        <p>小岑没再说什么，回房间打开租房软件，搜了同小区同户型的房源：带独卫主卧的市价大概 1800 到 2000，次卧 1100 到 1300。<em>按市价，阿豪该出 1900，小岑和小雅各 1300</em>。而现在三人各出 1500，等于小岑和小雅每个月各自替阿豪多垫 400 元——三个月，就是 1200 元。更微妙的是，那 1500 元是他自己提出的「公平」。</p>
+      </div>
+      <div class="analysis">
+        <div class="analysis-label">完整分析</div>
+        <span class="aim-chip"><span class="dot"></span>命中心法：⑤ 零和默认</span>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>心法要点（3 条）</div>
+          <ul class="points">
+            <li><strong>蛋糕有限时，「帮你」和「帮他」常常不可兼得，先算份额。</strong>总房租 4500 是固定的：有人少出，就一定有人多出。阿豪的「平分」让主卧、独卫、阳台、带人长住这些差异全部归零，而他是唯一因此受益的人。</li>
+            <li><strong>共赢要验证：他说「公平」，你要确认公平在哪里、谁多谁少。</strong>「按人头平分」听着最中性，但它假设三个房间价值相同。只要这个假设不成立，「平分」就不是公平，而是把差异偷偷转移给房间差的一方。</li>
+            <li><strong>零和心态不是让你敌对，是让你别把输赢算错。</strong>阿豪未必是坏人，他只是天然倾向对自己有利的算法；而小岑的问题不是遇到了坏人，是没算账就点头了——把「朋友不好意思算」当成了「不用算」。</li>
+          </ul>
+        </div>
+        <div class="block">
+          <div class="tip-quote">分蛋糕前，先看蛋糕多大、分给谁。</div>
+        </div>
+        <div class="block">
+          <div class="block-t"><span class="bar"></span>5 步识别流程</div>
+          <div class="steps">
+            <div class="step"><div class="step-k"><span class="n">1</span>现象识别</div><div class="step-v">涉及资源分配时，先把各方所得标出来：总额 4500；阿豪得主卧+独卫+阳台+常来的人，出 1500；小岑得 9 平次卧+排队上厕所，出 1500；小雅同小岑。同样的价格，不同的东西。</div></div>
+            <div class="step"><div class="step-k"><span class="n">2</span>动机归因</div><div class="step-v">他「让利」的部分是否正是他要的更大的部分？阿豪让出的是「我不计较、大家都一样」的姿态，要的是把 400 元的差价摊到另外两人头上。他让的是名，拿的是钱。</div></div>
+            <div class="step"><div class="step-k"><span class="n">3</span>反推逻辑</div><div class="step-v">若有人必须吃亏，按当前方案会是谁？答：住次卧的小岑和小雅，每月各 400。而「都是朋友，别算那么细」这句话的作用，正是让吃亏的人无法开口——因为一开口就成了「不够朋友」。</div></div>
+            <div class="step"><div class="step-k"><span class="n">4</span>提防要点</div><div class="step-v">警惕「为了我们大家好」掩盖的单方受益。三个高频包装词：<strong>公平、简单、别伤感情</strong>。越是听起来最中性的规则，越要看它假设了什么前提。</div></div>
+            <div class="step"><div class="step-k"><span class="n">5</span>落地行动</div><div class="step-v">搬进去之前就把分配规则谈明白：按「房间市价」而不是「人头」定房租（主卧多出、次卧少出），写明长期同住者的水电分摊方式、公共区域使用约定；谈的时候对着租房软件的行情报价谈，把数字摆上桌，再签合同。已经住进去了，就带着行情价重新谈一次——谈不拢可以换房间，也可以换房子。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 案例③ 实战练习 · ⑥ 留一手 ============ -->
+  <div class="case case-practice">
+    <div class="case-head">
+      <span class="num">③</span>
+      <span class="case-type">实战练习</span>
+      <span class="case-title">「字体不是我想要的感觉」——交完源文件，1800 就没了下文</span>
+      <span class="bf-badge">⑥ 留一手</span>
+    </div>
+    <div class="case-body">
+      <div class="scene">
+        <div class="scene-label">场景背景</div>
+        <p>小岑业余做手工插画和定制贺卡，接的都是熟人生意。八月初，大学室友阿琳介绍了一位客户——阿琳的表姐周女士，十月要办婚礼，想订 30 份伴手礼卡，手写新人名字加定制插画。</p>
+        <p>八月五号，周女士加微信，开门就说：「朋友介绍的，咱就不搞那些合同了，简单点。30 份，一份 60，一共 1800，婚礼前给我就行。」小岑说那先付个定金吧，周女士回得很快：「都是熟人，还怕我跑了？做完一起结，回头我再给你介绍两个客户。」</p>
+        <p>小岑花三个多星期的业余时间画了三版草稿，发给周女士看。对方回：「都挺好的，你看着定就行，我相信你的审美。」小岑选了第二版，做了 30 份，买卡纸、烫金、丝带一共花掉 480 元成本。期间他提过一次要不要先确认稿子，周女士说「不用不用，你专业」。</p>
+        <p>九月二十号交付：小岑把全套源文件（AI 源文件 + 印刷用 PDF）发给了周女士，30 份实物也寄了出去，还附了一张手写的小卡片。</p>
+        <p>九月二十二号，周女士回复了：「我看了下，这个字体不是我想要的感觉，太秀气了，跟我婚礼风格不搭。你重新做一版吧。」小岑说可以改，但已经定稿交付了，改版要另外计费。周女士说：「那就不用做了，钱我也不能给，东西我又没用上。」之后就不再回消息。</p>
+        <p>小岑手里现在有什么？一段微信聊天记录——里面有「30 份」「一份 60」「1800」这几个数字，但没有交付标准、没有验收时间点、没有定金记录；一套已经发出去的源文件；还有 480 元的成本单。<em>阿琳去问了一次，周女士说「她做的东西我不满意，凭什么给钱」</em>，阿琳夹在中间，最后钱也没要回来。</p>
+      </div>
+      <div class="task-box">
+        <div class="task-box-t">你的任务 · 4 个引导问题</div>
+        <ul class="task-list">
+          <li><strong>命中心法：</strong>这个场景对应八条心法中的哪一条？理由是什么？</li>
+          <li><strong>现象识别：</strong>场景里有哪些细节值得你提前警觉？至少找出 3 处。</li>
+          <li><strong>动机归因：</strong>周女士为什么坚决不要合同、不要定金，还说「你看着定就行」？这三句话分别给她留下了什么？</li>
+          <li><strong>落地行动：</strong>如果你是小岑，在接单前、交付时、出事后分别该怎么做，才能既保住这单生意、又不至于白干？</li>
+        </ul>
+      </div>
+      <details class="answer">
+        <summary>
+          <span class="arr">▶</span>查看参考答案
+          <span class="hint">先自己思考，再看答案</span>
+        </summary>
+        <div class="answer-body">
+          <div class="answer-item">
+            <div class="a-k">① 命中心法</div>
+            <div class="a-v">对应 <strong>⑥ 留一手</strong>。这个场景的重点不是「周女士是不是故意骗人」，而是小岑把三张牌一次性打完了：<strong>凭证</strong>（只有聊天记录里的三个数字，没有交付标准、没有验收节点）、<strong>退路</strong>（没收定金、没分期，全部风险自己扛）、<strong>后手</strong>（源文件与实物一次性全部交付，手里再无任何筹码）。三线全失，牌就没了——对方一句「不满意」就能让 1800 归零。</div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">② 现象识别（3 处以上）</div>
+            <div class="a-v">
+              <ul>
+                <li>「朋友介绍的，不搞合同」——用人情替代凭证，是这类纠纷最典型的开场；</li>
+                <li>拒绝定金，要求「做完一起结」——把全部资金风险单方面转移到你这边，同时给自己留下零成本反悔权；</li>
+                <li>「你看着定就行，我相信你的审美」——看似放权，实则不设验收标准；标准不定，事后就能任意解释「不是我想要的」；</li>
+                <li>三版草稿都回「都挺好」，没有一次明确的「确认第 X 版」——验收节点全程缺失；</li>
+                <li>交付时源文件与实物一次性全给，手里没留任何未交付的部分；</li>
+                <li>唯一的时间压力来自你（婚礼日期），而不是她——你的时间成本，她不用承担。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">③ 动机归因</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>不要合同</strong>：事后没有可主张的条款，争议只能靠情面解决，而情面在她这边（她是客户、是长辈、是介绍人的表姐）；</li>
+                <li><strong>不要定金</strong>：她保留了「随时不要」的权利，且不需要付任何代价——定金的作用恰恰是把反悔成本还给她；</li>
+                <li><strong>「你看着定」</strong>：把验收标准留成空白，等于把「满不满意」的最终解释权握在自己手里。加上「我这边不满意」，就能把责任从「我没说清」变成「你没做好」。</li>
+              </ul>
+              <p style="margin-top:6px">三句话合起来，是一套完整的结构：<strong>零成本反悔 + 无条款可主张 + 无限解释权</strong>。她未必是预谋的，但这套结构的结果一定对你不利。</p>
+            </div>
+          </div>
+          <div class="answer-item">
+            <div class="a-k">④ 落地行动（参考做法）</div>
+            <div class="a-v">
+              <ul>
+                <li><strong>接单前——把口头约定转成一条可确认的文字：</strong>哪怕客户是熟人，也发一段「确认单」微信：交付物（30 份伴手礼卡 + 全套源文件）、尺寸材质、单价与总价、交付日期、验收标准（以哪一版草稿为准）、定金比例（建议 ≥30%）、免费修改次数（如含 2 次，超出按次计费）、尾款支付时间。请对方回一句「确认」——这三个字，就是你的凭证。</li>
+                <li><strong>草稿阶段——把「你看着定」翻译成明确的确认：</strong>客户说「你看着定」时，主动追问一句：「那我按第二版做，字体用这一款，可以吗？」得到明确回复后截图保存。模糊表述必须被转成明确文字，否则它永远是一颗定时炸弹。</li>
+                <li><strong>交付时——留后手：</strong>先发带水印的低清预览图或部分成品照片，尾款到账后再发源文件与实物；实物量大可以分批寄（先寄 5 份确认，再寄剩余 25 份）。<strong>源文件是手作者的最后一张牌，先收钱，再交牌。</strong></li>
+                <li><strong>出事后——走可主张的路径：</strong>用微信文字（不是语音、不是电话）复述一遍约定内容与交付事实，给出明确的付款期限；保留成本凭证与设计过程文件。熟人介绍的，可以让介绍人帮忙转达，但不要指望情面能收款——能收款的永远是凭证。</li>
+                <li><strong>一句话记住：</strong>熟人订单不是不用规则，而是更需要规则——因为一旦出事，你连翻脸的成本都比别人高。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="foot">识暗心法 v2.0 · 每日三案 · 2026年09月29日（周二）· ④信息不对称 · ⑤零和默认 · 练习⑥留一手</div>
+</div>
+</body>
+</html>
